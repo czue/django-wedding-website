@@ -17,6 +17,7 @@
     });
 
     // Highlight the top nav as scrolling occurs
+    // (specifically turns the links orange)
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
@@ -35,7 +36,7 @@
         }
     );
 
-    // Offset for Main Navigation
+    // Offset for Main Navigation - this turns the nav bar white
     $('#mainNav').affix({
         offset: {
             top: 100
