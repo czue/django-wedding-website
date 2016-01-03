@@ -36,4 +36,12 @@
         }
     );
 
+    // Offset for Main Navigation - this turns the nav bar white
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+
+
 })(jQuery); // End of use strict
