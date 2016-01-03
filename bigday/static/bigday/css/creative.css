@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+ * Modified from Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
@@ -178,12 +178,15 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url('../images/twelve-apostles.jpg');
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+#main-header {
+    background-image: url('../images/twelve-apostles.jpg');
 }
 
 header .header-content {
@@ -211,9 +214,17 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255);
 }
 
+#second-header {
+    background-image: url('../images/chapmans-peak-view.jpg');
+}
+
 @media(min-width:768px) {
     header {
         min-height: 100%;
+    }
+
+    header.secondary {
+        min-height: 30%;
     }
 
     header .header-content {
