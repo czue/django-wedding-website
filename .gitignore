@@ -3,3 +3,4 @@
 *.pyc
 localsettings.py
 *.sqlite3
+static_root
