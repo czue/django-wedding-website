@@ -1,1 +1,2 @@
 django>=1.9
+Fabric==1.10.2
