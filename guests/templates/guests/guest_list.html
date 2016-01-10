@@ -1,0 +1,8 @@
+<h1>Guests</h1>
+<ul>
+{% for guest in object_list %}
+    <li>{{ guest.name }}</li>
+{% empty %}
+    <li>No guests yet.</li>
+{% endfor %}
+</ul>
