@@ -1,0 +1,5 @@
+Party,First Name,Last Name,email,Category,is child?
+The Starks,Ned,Stark,ned@winterfell.gov,formal,
+The Starks,Catelyn,Stark,cat@winterfell.gov,formal,
+The Starks,Arya,Stark,needle@winterfell.gov,formal,y
+Tyrion,Tyrion,Lannister,,fun,n
