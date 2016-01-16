@@ -12,8 +12,11 @@ class GuestListView(ListView):
     model = Guest
 
 
-class EmailPreviewView(TemplateView):
-    template_name = 'guests/email_templates/save_the_date.html'
+class RoEmailPreviewView(TemplateView):
+    template_name = 'guests/email_templates/save_the_date_ro.html'
+
+class CoryEmailPreviewView(TemplateView):
+    template_name = 'guests/email_templates/save_the_date_cory.html'
 
 
 def test_email(request):
