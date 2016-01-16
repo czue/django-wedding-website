@@ -1,2 +1,4 @@
 django>=1.9
 Fabric==1.10.2
+psycopg2==2.6.1
+python-postmark==0.4.7

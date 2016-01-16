@@ -127,7 +127,13 @@ STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
 
-# localsettings
+
+# postmark config
+POSTMARK_API_KEY = 'your-key'
+POSTMARK_SENDER = 'sender@signature.com'
+POSTMARK_TEST_MODE = False
+POSTMARK_TRACK_OPENS = True
+
 
 try:
     from .localsettings import *

@@ -29,7 +29,7 @@
                         <tr>
                           <td align="center" bgcolor="#ffffff"><a
                               href="#" target="_blank"><img alt="heart"
-src="{% static 'save-the-date/images/hearts.png' %}" style="display: block;
+src="{% if email_mode %}cid:hearts.png{% else %}{% static 'save-the-date/images/hearts.png' %}{% endif %}" style="display: block;
                                 font-family: Helvetica, Arial,
                                 sans-serif; color: #666666; font-size:
                                 16px; align-content:center; " border="0"
@@ -65,7 +65,7 @@ src="{% static 'save-the-date/images/hearts.png' %}" style="display: block;
                               <tbody>
                                 <tr>
                                   <td> <a href="#" target="_blank"><img
-src="{% static 'save-the-date/images/selfie.jpg' %}" alt="cory and rowena"
+src="{% if email_mode %}cid:selfie.jpg{% else %}{% static 'save-the-date/images/selfie.jpg' %}{% endif %}" alt="cory and rowena"
                                         style="display: block; padding:
                                         0; color: #666666;
                                         text-decoration: none;
