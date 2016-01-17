@@ -30,7 +30,7 @@
                                 {% with "save-the-date/images/"|add:header_filename as header_filepath %}
                                     <img alt="heart"
                                          src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
-                                         style="display: block;align-content:center;"
+                                         style="display: block; align-content:center; font-size: 16px;"
                                          border="0"
                                          height="60" width="60">
                                 {% endwith %}
