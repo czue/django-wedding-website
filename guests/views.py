@@ -22,17 +22,19 @@ class RoEmailPreviewView(TemplateView):
             'header_filename': 'hearts.png',
             'main_image': 'selfie.jpg',
             'main_color': '#fff3e8',
+            'font_color': '#666666',
         }
 
 
 class CoryEmailPreviewView(TemplateView):
-    template_name = 'guests/email_templates/save_the_date_cory.html'
+    template_name = 'guests/email_templates/save_the_date.html'
 
     def get_context_data(self, **kwargs):
         return {
             'header_filename': 'maple-leaf.png',
             'main_image': 'canada-cartoon.jpg',
-            'main_color': '#ea2e2e'
+            'main_color': '#ea2e2e',
+            'font_color': '#e5ddd9',
         }
 
 
