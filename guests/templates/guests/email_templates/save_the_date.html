@@ -26,18 +26,15 @@
                       cellspacing="0">
                       <tbody>
                         <tr>
-                        {% block header %}
                             <td align="center" bgcolor="#ffffff">
-                                <a href="#" target="_blank">
                                 {% with "save-the-date/images/"|add:header_filename as header_filepath %}
                                     <img alt="heart"
-                                         src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}" style="display: block;
-                                font-family: Helvetica, Arial,
-                                sans-serif; color: #666666; font-size:
-                                16px; align-content:center; " border="0"
-                                height="60" width="60"></a></td>
+                                         src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
+                                         style="display: block;align-content:center;"
+                                         border="0"
+                                         height="60" width="60">
                                 {% endwith %}
-                        {% endblock %}
+                            </td>
                         </tr>
                       </tbody>
                     </table>
