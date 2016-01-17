@@ -17,8 +17,19 @@ class GuestListView(ListView):
 class RoEmailPreviewView(TemplateView):
     template_name = 'guests/email_templates/save_the_date_ro.html'
 
+    def get_context_data(self, **kwargs):
+        return {
+            'header_filename': 'hearts.png'
+        }
+
+
 class CoryEmailPreviewView(TemplateView):
     template_name = 'guests/email_templates/save_the_date_cory.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'header_filename': 'maple-leaf.png'
+        }
 
 
 def test_email(request):
