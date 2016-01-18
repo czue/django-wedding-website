@@ -3,12 +3,12 @@ from .models import Guest, Party
 
 
 class PartyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type', 'category')
+    list_display = ('name', 'type', 'category', 'save_the_date_sent')
     list_filter = ('type', 'category')
 
 
 class GuestAdmin(admin.ModelAdmin):
-    list_display = ('party', 'first_name', 'last_name', 'email', 'is_attending')
+    list_display = ('first_name', 'last_name', 'party', 'email', 'is_attending')
     list_filter = ('is_attending',)
 
 
