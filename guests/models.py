@@ -33,6 +33,7 @@ class Guest(models.Model):
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField()
     is_attending = models.NullBooleanField(default=None)
+    is_child = models.BooleanField(default=False)
 
     def __unicode__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
