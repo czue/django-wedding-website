@@ -52,3 +52,7 @@ class GuestImporterTest(TestCase):
 
     def test_email_default(self):
         self.assertEqual('', Guest.objects.get(first_name='Tyrion').email)
+
+    def test_category(self):
+        self.assertEqual('starks', Party.objects.get(name='The Starks').category)
+        self.assertEqual('lannisters', Party.objects.get(name='Jaime').category)

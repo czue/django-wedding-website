@@ -13,6 +13,7 @@ def import_guests(path):
             party_name, first_name, last_name, party_type, is_child, category, is_invited, email = row[:8]
             party = Party.objects.get_or_create(name=party_name)[0]
             party.type = party_type
+            party.category = category
             party.is_invited = _is_true(is_invited)
             party.save()
             if email:

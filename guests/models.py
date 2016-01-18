@@ -16,6 +16,7 @@ class Party(models.Model):
     """
     name = models.TextField()
     type = models.CharField(max_length=10, choices=ALLOWED_TYPES)
+    category = models.CharField(max_length=20, null=True, blank=True)
     save_the_date_sent = models.DateTimeField(null=True, default=None)
     save_the_date_opened = models.DateTimeField(null=True, default=None)
     is_invited = models.BooleanField(default=False)
