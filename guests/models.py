@@ -6,7 +6,8 @@ from django.db import models
 # these will determine the default formality of correspondence
 ALLOWED_TYPES = [
     ('formal', 'formal'),
-    ('fun', 'fun')
+    ('fun', 'fun'),
+    ('dimagi', 'dimagi'),
 ]
 
 
