@@ -1,6 +1,7 @@
 from email.mime.image import MIMEImage
 import os
 from datetime import datetime
+import random
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from guests.models import Party
@@ -8,17 +9,29 @@ from guests.models import Party
 
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
 SAVE_THE_DATE_CONTEXT_MAP = {
-        'classy': {
+        'lions-head': {
             'header_filename': 'hearts.png',
-            'main_image': 'selfie.jpg',
+            'main_image': 'lions-head.jpg',
             'main_color': '#fff3e8',
             'font_color': '#666666',
+        },
+        'ski-trip': {
+            'header_filename': 'hearts.png',
+            'main_image': 'ski-trip.jpg',
+            'main_color': '#330033',
+            'font_color': '#ffffff',
         },
         'canada': {
             'header_filename': 'maple-leaf.png',
             'main_image': 'canada-cartoon-resized.jpg',
             'main_color': '#ea2e2e',
             'font_color': '#e5ddd9',
+        },
+        'plunge': {
+            'header_filename': 'plunger.png',
+            'main_image': 'plunge.jpg',
+            'main_color': '#b4e6ff',
+            'font_color': '#000000',
         },
         'dimagi': {
             'header_filename': 'commcare.png',
@@ -49,7 +62,9 @@ def send_save_the_date_to_party(party, test_only=False):
 
 def get_template_id_from_party(party):
     if party.type == 'formal':
-        return 'classy'
+        return random.choice('lions-head', 'ski-trip')
+    elif party.type == 'dimagi':
+        return 'dimagi'
     elif party.type == 'fun':
         return 'canada'
     else:
@@ -59,7 +74,7 @@ def get_template_id_from_party(party):
 def get_save_the_date_context(template_id):
     template_id = (template_id or '').lower()
     if template_id not in SAVE_THE_DATE_CONTEXT_MAP:
-        template_id = 'classy'
+        template_id = 'lions-head'
     return SAVE_THE_DATE_CONTEXT_MAP[template_id]
 
 
@@ -69,7 +84,8 @@ def send_save_the_date_email(context, recipients, test_only=False):
     template_text = 'sorry, you need to view this in html mode'
     subject = 'save the date!'
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
-    msg = EmailMultiAlternatives(subject, template_text, 'hello@coryandro.com', recipients)
+    msg = EmailMultiAlternatives(subject, template_text, 'hello@coryandro.com', recipients,
+                                 reply_to=['rsvp@coryandro.com'])
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
     for filename in (context['header_filename'], context['main_image']):
