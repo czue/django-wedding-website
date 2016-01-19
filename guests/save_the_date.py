@@ -7,6 +7,26 @@ from guests.models import Party
 
 
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
+SAVE_THE_DATE_CONTEXT_MAP = {
+        'classy': {
+            'header_filename': 'hearts.png',
+            'main_image': 'selfie.jpg',
+            'main_color': '#fff3e8',
+            'font_color': '#666666',
+        },
+        'canada': {
+            'header_filename': 'maple-leaf.png',
+            'main_image': 'canada-cartoon-resized.jpg',
+            'main_color': '#ea2e2e',
+            'font_color': '#e5ddd9',
+        },
+        'dimagi': {
+            'header_filename': 'commcare.png',
+            'main_image': 'join-us.jpg',
+            'main_color': '#003d71',
+            'font_color': '#d6d6d4',
+        }
+    }
 
 
 def send_all_save_the_dates(test_only=False, mark_as_sent=False):
@@ -37,24 +57,10 @@ def get_template_id_from_party(party):
 
 
 def get_save_the_date_context(template_id):
-    context_map = {
-        'classy': {
-            'header_filename': 'hearts.png',
-            'main_image': 'selfie.jpg',
-            'main_color': '#fff3e8',
-            'font_color': '#666666',
-        },
-        'canada': {
-            'header_filename': 'maple-leaf.png',
-            'main_image': 'canada-cartoon.jpg',
-            'main_color': '#ea2e2e',
-            'font_color': '#e5ddd9',
-        }
-    }
     template_id = (template_id or '').lower()
-    if template_id not in context_map:
+    if template_id not in SAVE_THE_DATE_CONTEXT_MAP:
         template_id = 'classy'
-    return context_map[template_id]
+    return SAVE_THE_DATE_CONTEXT_MAP[template_id]
 
 
 def send_save_the_date_email(context, recipients, test_only=False):
