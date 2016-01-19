@@ -1,19 +1,24 @@
 import base64
-from email.mime.image import MIMEImage
 import os
-from django.core.mail import EmailMultiAlternatives
+import random
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView
 from postmark import PMMail
 from guests.models import Guest
-from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE
+from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
+    SAVE_THE_DATE_CONTEXT_MAP
 
 
 class GuestListView(ListView):
     model = Guest
+
+
+def save_the_date_random(request):
+    template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
+    return save_the_date_preview(request, template_id)
 
 
 def save_the_date_preview(request, template_id):
@@ -22,7 +27,7 @@ def save_the_date_preview(request, template_id):
 
 def test_email(request, template_id):
     context = get_save_the_date_context(template_id)
-    send_save_the_date_email(context, ['cory.zue@gmail.com'])
+    send_save_the_date_email(context, ['cory.zue@gmail.com', 'rowenaluk@gmail.com'])
     return HttpResponse('sent!')
 
 
