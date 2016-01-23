@@ -103,8 +103,8 @@ def get_save_the_date_context(template_id):
 def send_save_the_date_email(context, recipients, test_only=False):
     context['email_mode'] = True
     template_html = render_to_string(SAVE_THE_DATE_TEMPLATE, context=context)
-    template_text = 'sorry, you need to view this in html mode'
-    subject = 'save the date!'
+    template_text = "Save the date for Cory and Rowena's wedding! July 2, 2016. Niagata-on-the-Lake, Ontario, Canada"
+    subject = 'Save the Date!'
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
     msg = EmailMultiAlternatives(subject, template_text, 'Cory and Rowena <hello@coryandro.com>', recipients,
                                  reply_to=['rsvp@coryandro.com'])

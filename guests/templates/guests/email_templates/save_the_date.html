@@ -121,8 +121,7 @@
                         <tr>
                             <td align="center" bgcolor="#ffffff">
                                 {% with "save-the-date/images/"|add:header_filename as header_filepath %}
-                                    <img alt="{{ header_filename }}"
-                                         src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
+                                    <img src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
                                          style="display: block; align-content:center; font-size: 16px;"
                                          border="0"
                                          height="60" width="60">
@@ -186,8 +185,9 @@
                                   <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
                                       class="padding-copy"
                                       align="center">
-                                          Save the Date for Cory &amp; Rowena<br>
-                                          Niagara-on-the-Lake, Ontario, Canada<br>
+                                          Cory &amp; Rowena<br>
+                                          Niagara-on-the-Lake<br>
+                                          Ontario, Canada<br>
                                   </td>
                                 </tr>
                               </tbody>
