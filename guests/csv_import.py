@@ -12,13 +12,16 @@ def import_guests(path):
                 first_row = False
                 continue
             party_name, first_name, last_name, party_type, is_child, category, is_invited, email = row[:8]
+            if not party_name:
+                print 'skipping row {}'.format(row)
+                continue
             party = Party.objects.get_or_create(name=party_name)[0]
             party.type = party_type
             party.category = category
             party.is_invited = _is_true(is_invited)
             party.save()
             if email:
-                guest = Guest.objects.get_or_create(party=party, email=email)[0]
+                guest created = Guest.objects.get_or_create(party=party, email=email)
                 guest.first_name = first_name
                 guest.last_name = last_name
             else:
