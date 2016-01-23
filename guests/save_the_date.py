@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+from copy import copy
 from email.mime.image import MIMEImage
 import os
 from datetime import datetime
@@ -53,20 +55,30 @@ def send_all_save_the_dates(test_only=False, mark_as_sent=False):
 
 def send_save_the_date_to_party(party, test_only=False):
     context = get_save_the_date_context(get_template_id_from_party(party))
+    recipients = filter(None, party.guest_set.values_list('email', flat=True))
+    if not recipients:
+        print '===== WARNING: no valid email addresses found for {} ====='.format(party)
     send_save_the_date_email(
         context,
-        filter(None, party.guest_set.values_list('email', flat=True)),
+        recipients,
         test_only=test_only
     )
 
 
 def get_template_id_from_party(party):
     if party.type == 'formal':
-        return random.choice('lions-head', 'ski-trip')
+        # all formal guests get formal invites
+        return random.choice(['lions-head', 'ski-trip'])
     elif party.type == 'dimagi':
+        # all non-formal dimagis get dimagi invites
         return 'dimagi'
     elif party.type == 'fun':
-        return 'canada'
+        all_options = SAVE_THE_DATE_CONTEXT_MAP.keys()
+        if party.category == 'ro':
+            # don't send the canada invitation to ro's crowd
+            all_options.remove('canada')
+        # otherwise choose randomly from all options for everyone else
+        return random.choice(all_options)
     else:
         return None
 
@@ -75,7 +87,9 @@ def get_save_the_date_context(template_id):
     template_id = (template_id or '').lower()
     if template_id not in SAVE_THE_DATE_CONTEXT_MAP:
         template_id = 'lions-head'
-    return SAVE_THE_DATE_CONTEXT_MAP[template_id]
+    context = copy(SAVE_THE_DATE_CONTEXT_MAP[template_id])
+    context['name'] = template_id
+    return context
 
 
 def send_save_the_date_email(context, recipients, test_only=False):
@@ -84,7 +98,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
     template_text = 'sorry, you need to view this in html mode'
     subject = 'save the date!'
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
-    msg = EmailMultiAlternatives(subject, template_text, 'hello@coryandro.com', recipients,
+    msg = EmailMultiAlternatives(subject, template_text, 'Cory and Rowena <hello@coryandro.com>', recipients,
                                  reply_to=['rsvp@coryandro.com'])
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
@@ -95,7 +109,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print u'sending {} to {}'.format(context['main_image'], ', '.join(recipients))
+    print 'sending {} to {}'.format(context['name'], ', '.join(recipients))
     if not test_only:
         msg.send()
 
