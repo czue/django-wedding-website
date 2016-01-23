@@ -29,6 +29,12 @@ SAVE_THE_DATE_CONTEXT_MAP = {
             'main_color': '#ea2e2e',
             'font_color': '#e5ddd9',
         },
+        'american-gothic': {
+            'header_filename': 'hearts.png',
+            'main_image': 'american-gothic.jpg',
+            'main_color': '#b6ccb5',
+            'font_color': '#000000',
+        },
         'plunge': {
             'header_filename': 'plunger.png',
             'main_image': 'plunge.jpg',
