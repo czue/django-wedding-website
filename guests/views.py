@@ -22,7 +22,9 @@ def save_the_date_random(request):
 
 
 def save_the_date_preview(request, template_id):
-    return render(request, SAVE_THE_DATE_TEMPLATE, context=get_save_the_date_context(template_id))
+    context = get_save_the_date_context(template_id)
+    context['email_mode'] = False
+    return render(request, SAVE_THE_DATE_TEMPLATE, context=context)
 
 
 def test_email(request, template_id):
