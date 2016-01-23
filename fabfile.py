@@ -23,7 +23,7 @@ if env.ssh_config_path and os.path.isfile(os.path.expanduser(env.ssh_config_path
 
 env.project = 'bigday'
 env.code_branch = 'master'
-env.sudo_user = 'root'
+env.sudo_user = 'czue'
 
 ENVIRONMENTS = ('production',)
 
@@ -144,7 +144,7 @@ def collectstatic():
 
 def _supervisor_command(command):
     require('hosts', provided_by=ENVIRONMENTS)
-    sudo('supervisorctl %s' % (command), shell=False)
+    sudo('supervisorctl %s' % (command), shell=False, user='root')
 
 @task
 def print_supervisor_files():
