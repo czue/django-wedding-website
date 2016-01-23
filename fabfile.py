@@ -23,7 +23,7 @@ if env.ssh_config_path and os.path.isfile(os.path.expanduser(env.ssh_config_path
 
 env.project = 'bigday'
 env.code_branch = 'master'
-env.sudo_user = 'czue'
+env.sudo_user = 'root'
 
 ENVIRONMENTS = ('production',)
 
