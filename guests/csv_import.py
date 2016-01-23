@@ -21,7 +21,7 @@ def import_guests(path):
             party.is_invited = _is_true(is_invited)
             party.save()
             if email:
-                guest created = Guest.objects.get_or_create(party=party, email=email)
+                guest, created = Guest.objects.get_or_create(party=party, email=email)
                 guest.first_name = first_name
                 guest.last_name = last_name
             else:
@@ -37,7 +37,7 @@ def export_guests():
     file = StringIO.StringIO()
     writer = csv.writer(file)
     writer.writerow(headers)
-    for party in Party.objects.order_by('category', '-is_invited', 'name'):
+    for party in Party.in_default_order():
         for guest in party.guest_set.all():
             writer.writerow([
                 party.name,

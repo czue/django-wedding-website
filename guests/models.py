@@ -26,6 +26,11 @@ class Party(models.Model):
     def __unicode__(self):
         return 'Party: {}'.format(self.name)
 
+    @classmethod
+    def in_default_order(cls):
+        return cls.objects.order_by('category', '-is_invited', 'name')
+
+
 class Guest(models.Model):
     """
     A single guest

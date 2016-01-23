@@ -45,7 +45,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
 
 
 def send_all_save_the_dates(test_only=False, mark_as_sent=False):
-    to_send_to = Party.objects.filter(is_invited=True, save_the_date_sent=None)
+    to_send_to = Party.in_default_order().filter(is_invited=True, save_the_date_sent=None)
     for party in to_send_to:
         send_save_the_date_to_party(party, test_only=test_only)
         if mark_as_sent:
@@ -58,11 +58,12 @@ def send_save_the_date_to_party(party, test_only=False):
     recipients = filter(None, party.guest_set.values_list('email', flat=True))
     if not recipients:
         print '===== WARNING: no valid email addresses found for {} ====='.format(party)
-    send_save_the_date_email(
-        context,
-        recipients,
-        test_only=test_only
-    )
+    else:
+        send_save_the_date_email(
+            context,
+            recipients,
+            test_only=test_only
+        )
 
 
 def get_template_id_from_party(party):
@@ -74,6 +75,7 @@ def get_template_id_from_party(party):
         return 'dimagi'
     elif party.type == 'fun':
         all_options = SAVE_THE_DATE_CONTEXT_MAP.keys()
+        all_options.remove('dimagi')
         if party.category == 'ro':
             # don't send the canada invitation to ro's crowd
             all_options.remove('canada')
