@@ -1,4 +1,5 @@
 import csv
+import StringIO
 from guests.models import Party, Guest
 
 
@@ -24,6 +25,28 @@ def import_guests(path):
                 guest = Guest.objects.get_or_create(party=party, first_name=first_name, last_name=last_name)[0]
             guest.is_child = _is_true(is_child)
             guest.save()
+
+
+def export_guests():
+    headers = [
+        'party_name', 'first_name', 'last_name', 'party_type', 'is_child', 'category', 'is_invited', 'email'
+    ]
+    file = StringIO.StringIO()
+    writer = csv.writer(file)
+    writer.writerow(headers)
+    for party in Party.objects.order_by('category', '-is_invited', 'name'):
+        for guest in party.guest_set.all():
+            writer.writerow([
+                party.name,
+                guest.first_name,
+                guest.last_name,
+                party.type,
+                guest.is_child,
+                party.category,
+                party.is_invited,
+                guest.email,
+            ])
+    return file
 
 
 def _is_true(value):

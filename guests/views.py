@@ -1,12 +1,14 @@
 import base64
 import os
 import random
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import ListView
 from postmark import PMMail
+from guests import csv_import
 from guests.models import Guest
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
@@ -14,6 +16,14 @@ from guests.save_the_date import get_save_the_date_context, send_save_the_date_e
 
 class GuestListView(ListView):
     model = Guest
+
+
+@login_required
+def export_guests(request):
+    export = csv_import.export_guests()
+    response = HttpResponse(export.getvalue(), content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=all-guests.csv'
+    return response
 
 
 def save_the_date_random(request):
@@ -27,12 +37,15 @@ def save_the_date_preview(request, template_id):
     return render(request, SAVE_THE_DATE_TEMPLATE, context=context)
 
 
+@login_required
 def test_email(request, template_id):
     context = get_save_the_date_context(template_id)
-    send_save_the_date_email(context, ['cory.zue@gmail.com', 'rowenaluk@gmail.com'])
+    send_save_the_date_email(context, ['cory.zue@gmail.com'])
+    # send_save_the_date_email(context, ['cory.zue@gmail.com', 'rowenaluk@gmail.com'])
     return HttpResponse('sent!')
 
 
+@login_required
 def test_postmark_email(request):
     template_text = render_to_string('guests/email_templates/save_the_date.html', context={'email_mode': True})
     attachments = []
