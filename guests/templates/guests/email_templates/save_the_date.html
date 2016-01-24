@@ -95,6 +95,9 @@
         }
     }
     </style>
+    {% if not email_mode %}
+        {% include "partials/google-analytics.html" %}
+    {% endif %}
   </head>
   <body bgcolor="#FFFFFF" text="#000000">
     <title>Cory and Rowena - Save the Date!</title>
