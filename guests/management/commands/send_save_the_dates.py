@@ -19,7 +19,7 @@ class Command(BaseCommand):
             action='store_true',
             dest='mark_sent',
             default=False,
-            help="Actually send emails"
+            help="Mark as sent"
         )
         parser.add_argument(
             '--reset',
