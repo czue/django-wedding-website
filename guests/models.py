@@ -38,7 +38,7 @@ class Guest(models.Model):
     party = models.ForeignKey(Party)
     first_name = models.TextField()
     last_name = models.TextField(null=True, blank=True)
-    email = models.TextField()
+    email = models.TextField(null=True, blank=True)
     is_attending = models.NullBooleanField(default=None)
     is_child = models.BooleanField(default=False)
 
