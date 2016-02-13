@@ -28,7 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    {% include "partials/google-analytics.html" %}
 </head>
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -56,7 +56,10 @@
                         <a class="page-scroll" href="#event">Event</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#accommodations">Accommodations</a>
+                        <a class="page-scroll" href="#accommodations">Where to Stay</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#save-the-dates">Save the Dates</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -133,7 +136,7 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Accommodations
+                                    Where to Stay
                                 </div>
                             </div>
                         </div>
@@ -193,6 +196,9 @@
 {% comment %}
         {% include 'partials/wedding-party.html' %}
 {% endcomment %}
+    <section id="save-the-dates">
+        {% include 'partials/save-the-dates.html' %}
+    </section>
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
@@ -222,7 +228,6 @@
     <script src="{% static 'creative/js/jquery.fittext.js' %}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'creative/js/creative.js' %}"></script>
-
 </body>
 
 </html>
