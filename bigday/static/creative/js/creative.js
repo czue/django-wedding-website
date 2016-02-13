@@ -13,6 +13,7 @@
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
         }, 1250, 'easeInOutExpo');
+        window.history.pushState({}, document.title, $anchor.attr('href'));
         event.preventDefault();
     });
 
