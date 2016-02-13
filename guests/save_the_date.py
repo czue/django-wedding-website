@@ -12,36 +12,42 @@ from guests.models import Party
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
 SAVE_THE_DATE_CONTEXT_MAP = {
         'lions-head': {
+            'title': "Lion's Head",
             'header_filename': 'hearts.png',
             'main_image': 'lions-head.jpg',
             'main_color': '#fff3e8',
             'font_color': '#666666',
         },
         'ski-trip': {
+            'title': 'Ski Trip',
             'header_filename': 'hearts.png',
             'main_image': 'ski-trip.jpg',
             'main_color': '#330033',
             'font_color': '#ffffff',
         },
         'canada': {
+            'title': 'Canada!',
             'header_filename': 'maple-leaf.png',
             'main_image': 'canada-cartoon-resized.jpg',
             'main_color': '#ea2e2e',
             'font_color': '#e5ddd9',
         },
         'american-gothic': {
+            'title': 'American Gothic',
             'header_filename': 'hearts.png',
             'main_image': 'american-gothic.jpg',
             'main_color': '#b6ccb5',
             'font_color': '#000000',
         },
         'plunge': {
+            'title': 'The Plunge',
             'header_filename': 'plunger.png',
             'main_image': 'plunge.jpg',
             'main_color': '#b4e6ff',
             'font_color': '#000000',
         },
         'dimagi': {
+            'title': 'Dimagi',
             'header_filename': 'commcare.png',
             'main_image': 'join-us.jpg',
             'main_color': '#003d71',
