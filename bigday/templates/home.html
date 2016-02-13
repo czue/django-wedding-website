@@ -43,12 +43,11 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Ro and Cory's Big Day</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="{% url 'home' %}">Home</a>
+                        <a class="page-scroll" href="#main-header">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#story">Story</a>
@@ -72,25 +71,31 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Rowena and Cory's Wedding</h1>
+                <h1>Cory and Rowena's Wedding</h1>
                 <hr>
-                <p>More than you ever wanted to know about Rowena, Cory, and the event.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <p>More than you ever wanted to know about Cory, Rowena, and the event.</p>
+                <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome Note</a>
+                <a href="#navigation" class="btn btn-primary btn-xl page-scroll">Look Around</a>
             </div>
         </div>
     </header>
-    <section class="bg-primary" id="about">
+    <section class="bg-info" id="welcome">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome to our website!</h2>
-                    <hr class="light">
-                    <p class="text-faded">
-                        This is your go to stop for information about Rowena and Cory's wedding.
-                        You can find out more about the event, the location, and of course read up on our history and check out pictures.
-                        We hope you enjoy!
+                    <h2 class="section-heading">Welcome!</h2>
+                    <hr>
+                    <p>
+                        Hello friends and family! Welcome to our website!
                     </p>
-                    <a href="#navigation" class="btn btn-default btn-xl page-scroll">Look Around!</a>
+                    <p>
+                        This is the go-to stop for all information about the wedding.
+                        We'll continue to update this site over time.
+                    </p>
+                    <p>
+                        We can't wait to celebrate the day with everyone!
+                    </p>
+                    <p class="pull-right">- Cory and Rowena</p>
                 </div>
             </div>
         </div>
@@ -100,7 +105,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'creative/img/portfolio/1.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -112,7 +117,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'creative/img/portfolio/2.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -124,7 +129,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#accommodations" class="portfolio-box page-scroll">
-                        <img src="{% static 'creative/img/portfolio/3.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -134,6 +139,7 @@
                         </div>
                     </a>
                 </div>
+{% comment %}
                 <div class="col-lg-4 col-sm-6">
                     <a href="#wedding-party" class="portfolio-box page-scroll">
                         <img src="{% static 'creative/img/portfolio/4.jpg' %}" class="img-responsive" alt="">
@@ -170,6 +176,7 @@
                         </div>
                     </a>
                 </div>
+{% endcomment %}
             </div>
         </div>
     </section>
@@ -180,10 +187,12 @@
     <section id="event" class="bg-dark">
         {% include 'partials/event.html' %}
     </section>
-    <section id="accommodations" class="bg-primary">
-        {% include 'partials/event.html' %}
+    <section id="accommodations">
+        {% include 'partials/accommodations.html' %}
     </section>
-    {% include 'partials/wedding-party.html' %}
+{% comment %}
+        {% include 'partials/wedding-party.html' %}
+{% endcomment %}
     <section id="contact">
         <div class="container">
             <div class="row">
