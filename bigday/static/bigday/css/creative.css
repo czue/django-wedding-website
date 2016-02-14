@@ -52,6 +52,7 @@ p {
     line-height: 1.5;
 }
 
+
 .bg-primary {
     background-color: #f05f40;
 }
@@ -192,7 +193,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/bikes.jpg');
+    background-image: url('../images/bikes-edited.jpg');
 }
 
 header .header-content {
