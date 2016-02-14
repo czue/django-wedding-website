@@ -21,7 +21,7 @@
                     {% with "save-the-date/images/"|add:context.main_image as main_static_url %}
                     <img src="{% static main_static_url %}" class="img-responsive center-block img-circle" alt="{{ context.title }}">
                     {% endwith %}
-                    <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption" style="background: rgba(49, 176, 213, .8);">
                         <div class="portfolio-box-caption-content">
                             <div class="project-name">
                                 {{ context.title }}
