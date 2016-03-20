@@ -37,6 +37,13 @@ class Party(models.Model):
         return cls.objects.order_by('category', '-is_invited', 'name')
 
 
+MEALS = [
+    ('beef', 'Cow'),
+    ('chicken', 'Chicken'),
+    ('vegetarian', 'Vegetable'),
+]
+
+
 class Guest(models.Model):
     """
     A single guest
@@ -46,6 +53,7 @@ class Guest(models.Model):
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField(null=True, blank=True)
     is_attending = models.NullBooleanField(default=None)
+    meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
     is_child = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -60,7 +68,6 @@ def track_invitation_opened_signal_catcher(sender, tracking_category, tracking_i
 
 
 def track_invitation_opened(tracking_id):
-
     try:
         party = Party.objects.get(invitation_id=tracking_id)
     except Party.DoesNotExist:
