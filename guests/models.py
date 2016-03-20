@@ -43,9 +43,9 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('beef', 'Cow'),
-    ('chicken', 'Chicken'),
-    ('vegetarian', 'Vegetable'),
+    ('beef', 'cow'),
+    ('chicken', 'chicken'),
+    ('vegetarian', 'vegetable'),
 ]
 
 
