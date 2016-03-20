@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 {% with 'meal-'|add:guest.unique_id as meal_label %}
-                <label for="{{ meal_label }}" class="col-sm-2 control-label">... and will have</label>
+                <label for="{{ meal_label }}" class="col-sm-2 control-label">... and will eat</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
                     <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}"> {{ meal_name }}
