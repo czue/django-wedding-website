@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block page_head %}
+    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_content %}
+<div class="container">
+    <h1>Hello World!</h1>
+    <div class="responsive-video">
+        <iframe src="https://www.youtube.com/embed/m86ae_e_ptU?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</div>
+{% endblock %}
+{% block page_js %}
+<script>
+</script>
+{% endblock %}

@@ -26,6 +26,10 @@ def export_guests(request):
     return response
 
 
+def invitation(request):
+    return render(request, template_name='guests/invitation.html')
+
+
 def save_the_date_random(request):
     template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
     return save_the_date_preview(request, template_id)
