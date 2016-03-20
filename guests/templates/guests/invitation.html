@@ -1,18 +1,59 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block page_head %}
-    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet">
+    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 {% block page_content %}
-<div class="container">
-    <h1>Hello World!</h1>
-    <div class="responsive-video">
-        <iframe src="https://www.youtube.com/embed/m86ae_e_ptU?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <div class="container">
+        <h2>Welcome friends and family!</h2>
 
-</div>
+        <div class="responsive-video">
+            <iframe src="https://www.youtube.com/embed/m86ae_e_ptU?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="text-center">
+            Zue and Luk Wedding<br>
+            July 2, 2016, at 4:30 pm<br>
+            Ravine Vineyard<br>
+            Niagara-on-the-Lake, ON, Canada
+        </p>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="attending" class="col-sm-2 control-label">Guest and partner</label>
+                <label class="radio-inline">
+                    <input type="radio" name="attending" id="attending-yes" value="yes"> will attend
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="attending" id="attending-no" value="no"> will not attend
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="meat" class="col-sm-2 control-label">Meat </label>
+                <div class="col-sm-1">
+                    <input type="number" class="form-control" id="meat" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fish" class="col-sm-2 control-label">Fish </label>
+                <div class="col-sm-1">
+                    <input type="number" class="form-control" id="fish" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="veg" class="col-sm-2 control-label">Vegetarian </label>
+                <div class="col-sm-1">
+                    <input type="number" class="form-control" id="veg" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-primary" value="Submit Response" />
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
 {% block page_js %}
-<script>
-</script>
+    <script>
+    </script>
 {% endblock %}
