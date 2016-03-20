@@ -26,6 +26,7 @@ def export_guests(request):
     return response
 
 
+@login_required
 def invitation(request):
     return render(request, template_name='guests/invitation.html')
 
