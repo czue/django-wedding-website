@@ -103,6 +103,7 @@ def get_save_the_date_context(template_id):
         template_id = 'lions-head'
     context = copy(SAVE_THE_DATE_CONTEXT_MAP[template_id])
     context['name'] = template_id
+    context['page_title'] = 'Cory and Rowena - Save the Date!'
     return context
 
 
