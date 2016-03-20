@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import datetime
+import uuid
 
 from django.db import models
 from django.dispatch import receiver
@@ -14,6 +15,10 @@ ALLOWED_TYPES = [
 ]
 
 
+def _random_uuid():
+    return uuid.uuid4().hex
+
+
 class Party(models.Model):
     """
     A party consists of one or more guests.
@@ -23,7 +28,7 @@ class Party(models.Model):
     category = models.CharField(max_length=20, null=True, blank=True)
     save_the_date_sent = models.DateTimeField(null=True, blank=True, default=None)
     save_the_date_opened = models.DateTimeField(null=True, blank=True, default=None)
-    invitation_id = models.CharField(max_length=32, null=True, blank=True, db_index=True)
+    invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
     is_invited = models.BooleanField(default=False)
@@ -55,6 +60,14 @@ class Guest(models.Model):
     is_attending = models.NullBooleanField(default=None)
     meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
     is_child = models.BooleanField(default=False)
+
+    @property
+    def name(self):
+        return u'{} {}'.format(self.first_name, self.last_name)
+
+    @property
+    def unique_id(self):
+        return u'{}-{}'.format(self.party.invitation_id, self.pk)
 
     def __unicode__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
