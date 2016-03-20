@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block page_content %}
-<body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -146,19 +145,4 @@
         </div>
     </section>
     {% endblock %}
-    <!-- jQuery -->
-{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>#}
-    <script src="{% static 'creative/js/jquery.js' %}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}"></script>
-
-    <!-- Plugin JavaScript -->
-    <!-- Easing is for the vertical scroll animations -->
-    <script src="{% static 'creative/js/jquery.easing.min.js' %}"></script>
-    <!-- Automatically fit text based on screen size.-->
-    <script src="{% static 'creative/js/jquery.fittext.js' %}"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="{% static 'creative/js/creative.js' %}"></script>
-</body>
 {% endblock %}
