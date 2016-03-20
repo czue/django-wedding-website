@@ -1,14 +1,16 @@
 import base64
 import os
 import random
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import ListView
 from postmark import PMMail
 from guests import csv_import
+from guests.invitation import get_invitation_context, INVITATION_TEMPLATE
 from guests.models import Guest, Party, MEALS
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
@@ -31,11 +33,35 @@ def invitation(request, invite_id):
     try:
         party = Party.objects.get(invitation_id=invite_id)
     except Party.DoesNotExist:
-        party = Party.objects.get(id=int(invite_id))
+        if settings.DEBUG:
+            # in debug mode allow access by ID
+            party = Party.objects.get(id=int(invite_id))
+        else:
+            raise Http404()
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
         'meals': MEALS,
     })
+
+
+@login_required
+def invitation_email_preview(request, invite_id):
+    try:
+        party = Party.objects.get(invitation_id=invite_id)
+    except Party.DoesNotExist:
+        if settings.DEBUG:
+            # in debug mode allow access by ID
+            party = Party.objects.get(id=int(invite_id))
+        else:
+            raise Http404()
+
+    context = get_invitation_context()
+    context.update({
+        'invitation_id': party.invitation_id,
+        'party': party,
+        'meals': MEALS,
+    })
+    return render(request, INVITATION_TEMPLATE, context=context)
 
 
 def save_the_date_random(request):

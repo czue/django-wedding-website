@@ -1,0 +1,41 @@
+{% extends 'guests/email_templates/email_base.html' %}
+{% load staticfiles %}
+{% block lead_copy %}
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" align="center">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="{% url 'invitation' invitation_id %}" target="_blank"
+                           style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color: #EB7035; border-top: 12px solid #EB7035; border-bottom: 12px solid #EB7035; border-right: 18px solid #EB7035; border-left: 18px solid #EB7035; display: inline-block;">
+                            View Invitation
+                        </a>
+                    </td>
+                </tr>
+                <tr><td><br></td></tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+{% endblock %}
+{% block main_copy %}
+    <table border="0" width="100%" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
+                class="padding-copy" align="center">
+                Zue &amp; Luk Wedding<br>
+                July 2, 2015<br>
+                Niagara-on-the-Lake, Ontario, Canada<br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
+{% block footer_content %}
+    Please <a href="{% url 'invitation' invitation_id %}">view the invitation online</a> to rsvp.<br>
+    {% if email_mode %}
+        <p><a href="http://coryandro.com">http://coryandro.com</a></p>
+    {% endif %}
+{% endblock %}
