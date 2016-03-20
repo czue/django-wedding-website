@@ -5,46 +5,6 @@
       <tbody>
         <tr>
           <td style="padding: 20px 15px 20px 15px;"
-            class="section-header" align="center" bgcolor="#ffffff"
-            width="100%">
-            <!-- HIDDEN PREHEADER TEXT -->
-            <div style="display: none; font-size: 1px; color: #fefefe;
-              line-height: 1px; font-family: Helvetica, Arial,
-              sans-serif; max-height: 0px; max-width: 0px; opacity: 0;
-              overflow: hidden;"> The date that you've eagerly been waiting for is finally here.
-                Cory and Ro are getting married! Save the date!</div>
-            <table class="wrapper" align="center" border="0" width="500"
-              cellpadding="0" cellspacing="0">
-              <!-- LOGO/PREHEADER TEXT --> <tbody>
-                <tr>
-                  <td align="center">
-                    <table border="0" width="100%" cellpadding="0"
-                      cellspacing="0">
-                      <tbody>
-                        <tr>
-                            <td align="center" bgcolor="#ffffff">
-                                {% with "save-the-date/images/"|add:header_filename as header_filepath %}
-                                    <img src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
-                                         style="display: block; align-content:center; font-size: 16px;"
-                                         border="0"
-                                         height="60" width="60">
-                                {% endwith %}
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table border="0" width="100%" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td style="padding: 20px 15px 20px 15px;"
             class="section-padding" align="center" bgcolor="{{ main_color }}">
             <table class="responsive-table" border="0" width="500"
               cellpadding="0" cellspacing="0">
