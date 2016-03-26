@@ -2,6 +2,7 @@ import base64
 from collections import namedtuple
 import os
 import random
+from datetime import datetime
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
@@ -33,6 +34,9 @@ def export_guests(request):
 @login_required
 def invitation(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
+    if party.invitation_opened is None:
+        party.invitation_opened = datetime.utcnow()
+        party.save()
     if request.method == 'POST':
         for response in _parse_invite_params(request.POST):
             guest = Guest.objects.get(pk=response.guest_pk)
