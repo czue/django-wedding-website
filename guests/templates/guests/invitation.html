@@ -15,7 +15,7 @@
             Ravine Vineyard<br>
             Niagara-on-the-Lake, ON, Canada
         </p>
-        <form class="form-horizontal" method="get">
+        <form class="form-horizontal" method="post">
             {% csrf_token %}
             {% for guest in party.guest_set.all %}
             <div class="form-group">

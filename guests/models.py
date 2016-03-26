@@ -67,7 +67,8 @@ class Guest(models.Model):
 
     @property
     def unique_id(self):
-        return u'{}-{}'.format(self.party.invitation_id, self.pk)
+        # convert to string so it can be used in the "add" templatetag
+        return unicode(self.pk)
 
     def __unicode__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
