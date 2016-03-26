@@ -1,5 +1,6 @@
 from email.mime.image import MIMEImage
 import os
+from datetime import datetime
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
@@ -35,7 +36,14 @@ def get_invitation_context(party):
     }
 
 
-def send_invitation_email(context, recipients, test_only=False):
+def send_invitation_email(party, test_only=False, recipients=None):
+    if recipients is None:
+        recipients = filter(None, party.guest_set.values_list('email', flat=True))
+    if not recipients:
+        print '===== WARNING: no valid email addresses found for {} ====='.format(party)
+        return
+
+    context = get_invitation_context(party)
     context['email_mode'] = True
     template_html = render_to_string(INVITATION_TEMPLATE, context=context)
     template_text = "You're invited to Cory and Rowena's wedding. To view this invitation, visit {} in any browser.".format(
@@ -57,3 +65,12 @@ def send_invitation_email(context, recipients, test_only=False):
     print 'sending invitation to {}'.format(', '.join(recipients))
     if not test_only:
         msg.send()
+
+
+def send_all_invitations(test_only, mark_as_sent):
+    to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+    for party in to_send_to:
+        send_invitation_email(party, test_only=test_only)
+        if mark_as_sent:
+            party.invitation_sent = datetime.now()
+            party.save()

@@ -77,8 +77,7 @@ def invitation_email_preview(request, invite_id):
 @login_required
 def invitation_email_test(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
-    context = get_invitation_context(party)
-    send_invitation_email(context, ['cory.zue@gmail.com'])
+    send_invitation_email(party, recipients=['cory.zue@gmail.com'])
     return HttpResponse('sent!')
 
 
