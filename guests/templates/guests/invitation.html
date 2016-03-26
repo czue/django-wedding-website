@@ -22,10 +22,10 @@
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-2 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
-                    <input type="radio" name="{{ attending_label }}" value="yes"> will attend
+                    <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %}> will attend
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="{{ attending_label }}" value="no"> will not attend
+                    <input type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %}> will not attend
                 </label>
                 {% endwith %}
             </div>
@@ -34,7 +34,7 @@
                 <label for="{{ meal_label }}" class="col-sm-2 control-label">... and will eat</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
-                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}"> {{ meal_name }}
+                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %}> {{ meal_name }}
                 </label>
                 {% endfor %}
                 {% endwith %}
