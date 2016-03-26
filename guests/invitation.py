@@ -24,7 +24,6 @@ def guess_party_by_invite_id_or_404(invite_id):
 def get_invitation_context(party):
     return {
         'title': "Lion's Head",
-        'header_filename': 'hearts.png',
         'main_image': 'bride-groom.png',
         'main_color': '#fff3e8',
         'font_color': '#666666',
@@ -48,7 +47,7 @@ def send_invitation_email(context, recipients, test_only=False):
                                  reply_to=['hello@coryandro.com'])
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
-    for filename in (context['header_filename'], context['main_image']):
+    for filename in (context['main_image'], ):
         attachment_path = os.path.join(os.path.dirname(__file__), 'static', 'invitation', 'images', filename)
         with open(attachment_path, "rb") as image_file:
             msg_img = MIMEImage(image_file.read())

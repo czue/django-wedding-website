@@ -82,11 +82,6 @@
         /* MOBILE STYLES */
         @media screen and (max-width: 525px) {
 
-            /* ALLOWS FOR FLUID TABLES */
-            table[class="wrapper"] {
-                width: 100% !important;
-            }
-
             /* ADJUSTS LAYOUT OF LOGO IMAGE */
             td[class="logo"] {
                 text-align: left;
@@ -170,7 +165,8 @@
               sans-serif; max-height: 0px; max-width: 0px; opacity: 0;
               overflow: hidden;">{{ preheader_text }}
             </div>
-            <table class="wrapper" align="center" border="0" width="500"
+            {% block header_image %}
+            <table class="responsive-table" align="center" border="0" width="500"
                    cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>
@@ -182,7 +178,7 @@
                                 <td align="center" bgcolor="#ffffff">
                                     {% with "save-the-date/images/"|add:header_filename as header_filepath %}
                                         <img src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
-                                             style="display: block; align-content:center; font-size: 16px;"
+                                             style="display: inline-block; align-content:center; font-size: 16px;"
                                              border="0"
                                              height="60" width="60">
                                     {% endwith %}
@@ -194,6 +190,7 @@
                 </tr>
                 </tbody>
             </table>
+            {% endblock %}
         </td>
     </tr>
     </tbody>
@@ -240,7 +237,6 @@
     </tr>
     </tbody>
 </table>
-
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
