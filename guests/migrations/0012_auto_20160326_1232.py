@@ -10,7 +10,6 @@ def reset_invitation_ids(apps, schema_editor):
     Party = apps.get_model("guests", "Party")
     for party in Party.objects.all():
         party.invitation_id = uuid.uuid4().hex
-        print 'set {} to {}'.format(party, party.invitation_id)
         party.save()
 
 
