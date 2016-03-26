@@ -28,7 +28,7 @@ class Party(models.Model):
     category = models.CharField(max_length=20, null=True, blank=True)
     save_the_date_sent = models.DateTimeField(null=True, blank=True, default=None)
     save_the_date_opened = models.DateTimeField(null=True, blank=True, default=None)
-    invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid)
+    invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
     is_invited = models.BooleanField(default=False)
