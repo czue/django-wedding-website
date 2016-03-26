@@ -218,16 +218,9 @@
                                     <table border="0" width="100%" cellpadding="0" cellspacing="0">
                                         <tbody>
                                         <tr>
-                                            <td><a href="http://coryandro.com/"
-                                                   {% if email_mode %}target="_blank"{% endif %}>
-                                                {% with "save-the-date/images/"|add:main_image as main_static_url %}
-                                                    <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
-                                                         alt="cory and rowena"
-                                                         style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px;"
-                                                         class="img-max" border="0"
-                                                         height="400" width="500">
-                                                {% endwith %}
-                                            </a></td>
+                                            <td>
+                                            {% block main_image %}{% endblock %}
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
