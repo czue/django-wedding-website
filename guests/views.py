@@ -11,7 +11,8 @@ from django.template.loader import render_to_string
 from django.views.generic import ListView
 from postmark import PMMail
 from guests import csv_import
-from guests.invitation import get_invitation_context, INVITATION_TEMPLATE
+from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
+    send_invitation_email
 from guests.models import Guest, Party, MEALS
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
@@ -31,7 +32,7 @@ def export_guests(request):
 
 @login_required
 def invitation(request, invite_id):
-    party = _guess_party_by_invite_id_or_404(invite_id)
+    party = guess_party_by_invite_id_or_404(invite_id)
     if request.method == 'POST':
         for response in _parse_invite_params(request.POST):
             guest = Guest.objects.get(pk=response.guest_pk)
@@ -43,17 +44,6 @@ def invitation(request, invite_id):
         'party': party,
         'meals': MEALS,
     })
-
-
-def _guess_party_by_invite_id_or_404(invite_id):
-    try:
-        return Party.objects.get(invitation_id=invite_id)
-    except Party.DoesNotExist:
-        if settings.DEBUG:
-            # in debug mode allow access by ID
-            return Party.objects.get(id=int(invite_id))
-        else:
-            raise Http404()
 
 
 InviteResponse = namedtuple('InviteResponse', ['guest_pk', 'is_attending', 'meal'])
@@ -79,22 +69,17 @@ def _parse_invite_params(params):
 
 @login_required
 def invitation_email_preview(request, invite_id):
-    try:
-        party = Party.objects.get(invitation_id=invite_id)
-    except Party.DoesNotExist:
-        if settings.DEBUG:
-            # in debug mode allow access by ID
-            party = Party.objects.get(id=int(invite_id))
-        else:
-            raise Http404()
-
-    context = get_invitation_context()
-    context.update({
-        'invitation_id': party.invitation_id,
-        'party': party,
-        'meals': MEALS,
-    })
+    party = guess_party_by_invite_id_or_404(invite_id)
+    context = get_invitation_context(party)
     return render(request, INVITATION_TEMPLATE, context=context)
+
+
+@login_required
+def invitation_email_test(request, invite_id):
+    party = guess_party_by_invite_id_or_404(invite_id)
+    context = get_invitation_context(party)
+    send_invitation_email(context, ['cory.zue@gmail.com'])
+    return HttpResponse('sent!')
 
 
 def save_the_date_random(request):
