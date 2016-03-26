@@ -1,4 +1,5 @@
 import base64
+from collections import namedtuple
 import os
 import random
 from django.conf import settings
@@ -30,18 +31,50 @@ def export_guests(request):
 
 @login_required
 def invitation(request, invite_id):
-    try:
-        party = Party.objects.get(invitation_id=invite_id)
-    except Party.DoesNotExist:
-        if settings.DEBUG:
-            # in debug mode allow access by ID
-            party = Party.objects.get(id=int(invite_id))
-        else:
-            raise Http404()
+    party = _guess_party_by_invite_id_or_404(invite_id)
+    if request.method == 'POST':
+        for response in _parse_invite_params(request.POST):
+            guest = Guest.objects.get(pk=response.guest_pk)
+            assert guest.party == party
+            guest.is_attending = response.is_attending
+            guest.meal = response.meal
+            guest.save()
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
         'meals': MEALS,
     })
+
+
+def _guess_party_by_invite_id_or_404(invite_id):
+    try:
+        return Party.objects.get(invitation_id=invite_id)
+    except Party.DoesNotExist:
+        if settings.DEBUG:
+            # in debug mode allow access by ID
+            return Party.objects.get(id=int(invite_id))
+        else:
+            raise Http404()
+
+
+InviteResponse = namedtuple('InviteResponse', ['guest_pk', 'is_attending', 'meal'])
+
+
+def _parse_invite_params(params):
+    responses = {}
+    for param, value in params.items():
+        if param.startswith('attending'):
+            pk = int(param.split('-')[-1])
+            response = responses.get(pk, {})
+            response['attending'] = True if value == 'yes' else False
+            responses[pk] = response
+        elif param.startswith('meal'):
+            pk = int(param.split('-')[-1])
+            response = responses.get(pk, {})
+            response['meal'] = value
+            responses[pk] = response
+
+    for pk, response in responses.items():
+        yield InviteResponse(pk, response['attending'], response['meal'])
 
 
 @login_required
