@@ -63,7 +63,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print 'sending invitation to {}'.format(', '.join(recipients))
+    print 'sending invitation to {} ({})'.format(party.name, ', '.join(recipients))
     if not test_only:
         msg.send()
 
