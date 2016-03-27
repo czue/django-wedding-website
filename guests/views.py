@@ -3,10 +3,9 @@ from collections import namedtuple
 import os
 import random
 from datetime import datetime
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect, HttpResponse, Http404
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import ListView
@@ -14,7 +13,7 @@ from postmark import PMMail
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
-from guests.models import Guest, Party, MEALS
+from guests.models import Guest, MEALS
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
 
