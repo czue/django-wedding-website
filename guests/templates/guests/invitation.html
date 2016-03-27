@@ -10,16 +10,18 @@
                 <iframe src="https://www.youtube.com/embed/J_AIs7_Yu5A" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
-        <div class="col-lg-5 col-sm-5 invitation-details text-center">
+        <section class="col-md-6 text-center">
+            <div id="invitation-details">
             <h2>Zue and Luk Wedding</h2>
             <p class="lead">
                 July 2, 2016, at 4:30 pm<br>
                 Ravine Vineyard<br>
                 Niagara-on-the-Lake, ON, Canada
             </p>
-        </div>
-        <div class="col-lg-7 col-sm-7">
-        <form id="rsvp-form" class="form-horizontal" method="post">
+            </div>
+        </section>
+        <section class="col-md-6">
+        <form id="invitation-details" class="form-horizontal" method="post">
             <h2 id="rsvp-header" class="text-center">RSVP</h2>
             <div class="clearfix"></div>
             {% csrf_token %}
@@ -52,7 +54,7 @@
                 </div>
             </div>
         </form>
-        </div>
+        </section>
     </div>
 {% endblock %}
 {% block page_js %}

@@ -19,14 +19,13 @@
     background-color: #000000;
     padding: 2em;
     margin-top: 2em;
-    margin-bottom: 2em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     opacity: 1.0;
 }
 
-.invitation-details, #rsvp-form {
+#invitation-details, #rsvp-form {
     margin-top: 2em;
     padding: 1em;
     -webkit-border-radius: 10px;
