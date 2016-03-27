@@ -4,7 +4,8 @@ from .models import Guest, Party
 
 class GuestInline(admin.TabularInline):
     model = Guest
-    readonly_fields = ('first_name', 'last_name', 'email', 'is_attending', 'meal', 'is_child')
+    fields = ('first_name', 'last_name', 'email', 'is_attending', 'meal', 'is_child')
+    readonly_fields = ('first_name', 'last_name', 'email')
 
 
 class PartyAdmin(admin.ModelAdmin):
