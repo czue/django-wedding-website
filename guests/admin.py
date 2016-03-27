@@ -3,8 +3,8 @@ from .models import Guest, Party
 
 
 class PartyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type', 'category', 'save_the_date_sent', 'is_invited')
-    list_filter = ('type', 'category', 'is_invited')
+    list_display = ('name', 'type', 'category', 'save_the_date_sent', 'is_invited', 'is_attending')
+    list_filter = ('type', 'category', 'is_invited', 'is_attending')
 
 
 class GuestAdmin(admin.ModelAdmin):
