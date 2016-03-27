@@ -4,23 +4,29 @@
     <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 {% block page_content %}
-    <div class="container">
-        <h2>Hi {{ party.name }}!</h2>
-        <div class="responsive-video">
-            <iframe src="https://www.youtube.com/embed/J_AIs7_Yu5A" frameborder="0" allowfullscreen></iframe>
+    <div class="container" id="invitation-body">
+        <section class="video-container">
+            <div class="responsive-video">
+                <iframe src="https://www.youtube.com/embed/J_AIs7_Yu5A" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <div class="col-lg-5 col-sm-5 invitation-details text-center">
+            <h2>Zue and Luk Wedding</h2>
+            <p class="lead">
+                July 2, 2016, at 4:30 pm<br>
+                Ravine Vineyard<br>
+                Niagara-on-the-Lake, ON, Canada
+            </p>
         </div>
-        <p class="text-center lead">
-            Zue and Luk Wedding<br>
-            July 2, 2016, at 4:30 pm<br>
-            Ravine Vineyard<br>
-            Niagara-on-the-Lake, ON, Canada
-        </p>
-        <form class="form-horizontal" method="post">
+        <div class="col-lg-7 col-sm-7">
+        <form id="rsvp-form" class="form-horizontal" method="post">
+            <h2 id="rsvp-header" class="text-center">RSVP</h2>
+            <div class="clearfix"></div>
             {% csrf_token %}
             {% for guest in party.guest_set.all %}
             <div class="form-group">
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
-                <label for="{{ attending_label }}" class="col-sm-2 control-label">{{ guest.name }}</label>
+                <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
                     <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %}> will attend
                 </label>
@@ -31,7 +37,7 @@
             </div>
             <div class="form-group">
                 {% with 'meal-'|add:guest.unique_id as meal_label %}
-                <label for="{{ meal_label }}" class="col-sm-2 control-label">... and will eat</label>
+                <label for="{{ meal_label }}" class="col-sm-3 control-label">... and will eat</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
                     <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %}> {{ meal_name }}
@@ -39,14 +45,14 @@
                 {% endfor %}
                 {% endwith %}
             </div>
-                <hr>
             {% endfor %}
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="text-center">
                     <input type="submit" class="btn btn-primary" value="Submit Response" />
                 </div>
             </div>
         </form>
+        </div>
     </div>
 {% endblock %}
 {% block page_js %}

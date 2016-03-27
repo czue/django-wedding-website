@@ -14,3 +14,42 @@
     width: 100%;
     height: 100%;
 }
+
+.video-container {
+    background-color: #000000;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    opacity: 1.0;
+}
+
+.invitation-details, #rsvp-form {
+    margin-top: 2em;
+    padding: 1em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: .2em solid grey;
+}
+
+
+body {
+    background: url('../images/invite-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#invitation-body {
+    background-color: #fff;
+    padding-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
