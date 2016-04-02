@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from guests.views import GuestListView, test_email, save_the_date_preview, save_the_date_random, export_guests, \
-    invitation, invitation_email_preview, invitation_email_test
+    invitation, invitation_email_preview, invitation_email_test, rsvp_confirm
 
 urlpatterns = [
     url(r'^guests/$', GuestListView.as_view(), name='guest-list'),
@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^save-the-date/$', save_the_date_random, name='save-the-date-random'),
     url(r'^save-the-date/(?P<template_id>[\w-]+)/$', save_the_date_preview, name='save-the-date'),
     url(r'^email-test/(?P<template_id>[\w-]+)/$', test_email, name='test-email'),
+    url(r'^rsvp/confirm/$', rsvp_confirm, name='rsvp-confirm'),
+    url(r'^rsvp/confirm/(?P<invite_id>[\w-]+)/$', rsvp_confirm, name='rsvp-confirm-invite'),
 ]

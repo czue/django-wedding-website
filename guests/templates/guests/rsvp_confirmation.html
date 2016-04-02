@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block page_head %}
+    <link href="{% static 'bigday/css/rsvp-confirmation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
+{% endblock %}
+{% block page_content %}
+    <div class="layer"></div>
+    <div class="container" id="main">
+        <h2>Thanks for your response!</h2>
+        <p>
+            We can't wait to celebrate with you in Niagara!
+        </p>
+        <p>
+            If you've got a minute, you can help us out by filling in a <a href="http://goo.gl/forms/AFszTcpPRW">super quick survey</a> that will help us plan for the most fun and smooth event possible.
+        </p>
+        <p>
+            - Cory and Rowena
+        </p>
+    </div>
+{% endblock %}

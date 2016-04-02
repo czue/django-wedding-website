@@ -71,6 +71,14 @@ def _parse_invite_params(params):
 
 
 @login_required
+def rsvp_confirm(request, invite_id=None):
+    return render(request, template_name='guests/rsvp_confirmation.html', context={
+        # 'party': party,
+        # 'meals': MEALS,
+    })
+
+
+@login_required
 def invitation_email_preview(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
     context = get_invitation_context(party)
