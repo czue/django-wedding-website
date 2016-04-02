@@ -45,6 +45,10 @@ class Party(models.Model):
     def ordered_guests(self):
         return self.guest_set.order_by('pk')
 
+    @property
+    def any_guests_attending(self):
+        return any(self.guest_set.values_list('is_attending', flat=True))
+
 
 MEALS = [
     ('beef', 'cow'),
