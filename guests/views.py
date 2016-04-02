@@ -67,7 +67,7 @@ def _parse_invite_params(params):
             responses[pk] = response
 
     for pk, response in responses.items():
-        yield InviteResponse(pk, response['attending'], response['meal'])
+        yield InviteResponse(pk, response['attending'], response.get('meal', None))
 
 
 @login_required
