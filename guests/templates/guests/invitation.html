@@ -30,10 +30,10 @@
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
-                    <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %}> will attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %}> will attend
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %}> will not attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %}> will not attend
                 </label>
                 {% endwith %}
             </div>
@@ -59,5 +59,26 @@
 {% endblock %}
 {% block page_js %}
     <script>
+    $(function () {
+        // enable/disable meal choices based on attendance
+        $("input.attending-radio").change(function (e) {
+            var target = $(e.target);
+            var value = target.attr('value');
+            var mealButtonContainer = target.closest('.form-group').next('.form-group');
+            var mealButtons = mealButtonContainer.find('[type=radio]');
+            if (value === 'yes') {
+                mealButtonContainer.removeClass('text-muted');
+                mealButtons.each(function (index, button) {
+                    button.disabled = false;
+                });
+            } else if (value === "no") {
+                mealButtonContainer.addClass('text-muted');
+                mealButtons.each(function (index, button) {
+                    button.checked = false;
+                    button.disabled = true;
+                });
+            }
+        });
+    });
     </script>
 {% endblock %}
