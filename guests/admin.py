@@ -17,7 +17,7 @@ class PartyAdmin(admin.ModelAdmin):
 
 class GuestAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'party', 'email', 'is_attending', 'is_child', 'meal')
-    list_filter = ('is_attending', 'is_child', 'meal')
+    list_filter = ('is_attending', 'is_child', 'meal', 'party__is_invited', 'party__category')
 
 
 admin.site.register(Party, PartyAdmin)
