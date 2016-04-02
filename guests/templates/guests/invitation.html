@@ -21,7 +21,7 @@
             </div>
         </section>
         <section class="col-md-6">
-        <form id="invitation-details" class="form-horizontal" method="post">
+        <form data-toggle="validator" id="invitation-details" class="form-horizontal" method="post">
             <h2 id="rsvp-header" class="text-center">RSVP</h2>
             <div class="clearfix"></div>
             {% csrf_token %}
@@ -30,10 +30,10 @@
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
-                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %}> will attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required> will attend
                 </label>
                 <label class="radio-inline">
-                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %}> will not attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> will not attend
                 </label>
                 {% endwith %}
             </div>
@@ -43,7 +43,7 @@
                 <label for="{{ meal_label }}" class="col-sm-3 control-label">... and will eat</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
-                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %}> {{ meal_name }}
+                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %} required> {{ meal_name }}
                 </label>
                 {% endfor %}
                 {% endwith %}
@@ -60,6 +60,7 @@
     </div>
 {% endblock %}
 {% block page_js %}
+    <script src="{% static 'validator.js' %}"></script>
     <script>
     $(function () {
         // enable/disable meal choices based on attendance
@@ -76,13 +77,18 @@
                 mealButtonContainer.removeClass('text-muted');
                 mealButtons.each(function (index, button) {
                     button.disabled = false;
+                    button.required = true;
                 });
             } else if (value === "no") {
                 mealButtonContainer.addClass('text-muted');
                 mealButtons.each(function (index, button) {
                     button.checked = false;
                     button.disabled = true;
+                    button.required = false;
                 });
+                // reload validation
+                $(document.forms[0]).validator('destroy');
+                $(document.forms[0]).validator();
             }
         });
     });
