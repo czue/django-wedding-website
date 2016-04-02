@@ -26,7 +26,7 @@
             <div class="clearfix"></div>
             {% csrf_token %}
             {% for guest in party.ordered_guests.all %}
-            <div class="form-group">
+            <div class="form-group" data-is-child="{{ guest.is_child }}">
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
@@ -37,6 +37,7 @@
                 </label>
                 {% endwith %}
             </div>
+            {% if not guest.is_child %}
             <div class="form-group">
                 {% with 'meal-'|add:guest.unique_id as meal_label %}
                 <label for="{{ meal_label }}" class="col-sm-3 control-label">... and will eat</label>
@@ -47,6 +48,7 @@
                 {% endfor %}
                 {% endwith %}
             </div>
+            {% endif %}
             {% endfor %}
             <div class="form-group">
                 <div class="text-center">
@@ -63,6 +65,10 @@
         // enable/disable meal choices based on attendance
         $("input.attending-radio").change(function (e) {
             var target = $(e.target);
+            if (target.closest('.form-group').data('is-child') === "True") {
+                // don't attempt to update meals for children, who don't have them.
+                return;
+            }
             var value = target.attr('value');
             var mealButtonContainer = target.closest('.form-group').next('.form-group');
             var mealButtons = mealButtonContainer.find('[type=radio]');
