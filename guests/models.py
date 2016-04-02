@@ -43,7 +43,7 @@ class Party(models.Model):
 
     @property
     def ordered_guests(self):
-        return self.guest_set.order_by('pk')
+        return self.guest_set.order_by('is_child', 'pk')
 
     @property
     def any_guests_attending(self):
