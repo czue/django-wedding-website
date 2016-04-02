@@ -25,7 +25,7 @@
             <h2 id="rsvp-header" class="text-center">RSVP</h2>
             <div class="clearfix"></div>
             {% csrf_token %}
-            {% for guest in party.guest_set.all %}
+            {% for guest in party.ordered_guests.all %}
             <div class="form-group">
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
@@ -42,7 +42,7 @@
                 <label for="{{ meal_label }}" class="col-sm-3 control-label">... and will eat</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
-                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %}> {{ meal_name }}
+                    <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %}> {{ meal_name }}
                 </label>
                 {% endfor %}
                 {% endwith %}

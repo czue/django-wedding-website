@@ -41,6 +41,10 @@ class Party(models.Model):
     def in_default_order(cls):
         return cls.objects.order_by('category', '-is_invited', 'name')
 
+    @property
+    def ordered_guests(self):
+        return self.guest_set.order_by('pk')
+
 
 MEALS = [
     ('beef', 'cow'),
