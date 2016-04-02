@@ -29,7 +29,7 @@ def get_invitation_context(party):
         'main_color': '#fff3e8',
         'font_color': '#666666',
         'page_title': "Cory and Rowena - You're Invited!",
-        'preheader_text': "Lucky you! You made the cut!",  # todo: make better
+        'preheader_text': "You are invited!",
         'invitation_id': party.invitation_id,
         'party': party,
         'meals': MEALS,
