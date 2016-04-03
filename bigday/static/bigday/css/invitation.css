@@ -52,3 +52,7 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
+#footer {
+    padding-bottom: 30px;
+}

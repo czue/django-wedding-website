@@ -31,12 +31,21 @@
 </head>
 <body id="page-top">
 {% block page_content %}{% endblock %}
+{% include "partials/footer.html"  %}
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 {#    <script src="{% static 'creative/js/jquery.js' %}"></script>#}
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bigday/js/footer.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            setFooterStyle();
+            setFooterStyle();  // hack, for some reason this needs to be called twice on load
+            window.onresize = setFooterStyle;
+        });
+    </script>
 {% block page_js %}
 {% endblock %}
 </body>

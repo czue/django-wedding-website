@@ -7,7 +7,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
 #main {
@@ -19,4 +18,8 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
     opacity: 0.8;
+}
+
+#footer {
+    padding-bottom: 30px;
 }
