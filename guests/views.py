@@ -30,7 +30,6 @@ def export_guests(request):
     return response
 
 
-@login_required
 def invitation(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
     if party.invitation_opened is None:
@@ -72,7 +71,6 @@ def _parse_invite_params(params):
         yield InviteResponse(pk, response['attending'], response.get('meal', None))
 
 
-@login_required
 def rsvp_confirm(request, invite_id=None):
     party = guess_party_by_invite_id_or_404(invite_id)
     return render(request, template_name='guests/rsvp_confirmation.html', context={
