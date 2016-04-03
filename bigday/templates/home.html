@@ -33,7 +33,7 @@
                         <a class="page-scroll" href="#niagara">Niagara-on-the-Lake</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#save-the-dates">Save the Dates</a>
+                        <a class="page-scroll" href="#other-stuff">Everything Else</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -132,7 +132,10 @@
 {% comment %}
         {% include 'partials/wedding-party.html' %}
 {% endcomment %}
-    <section id="gifts" class="bg-primary">
+    <section id="other-stuff" class="bg-primary">
+        {% include 'partials/misc.html' %}
+    </section>
+    <section id="gifts">
         {% include 'partials/gifts.html' %}
     </section>
     {% include 'partials/save-the-dates.html' %}
