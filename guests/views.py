@@ -43,6 +43,7 @@ def invitation(request, invite_id):
             guest.meal = response.meal
             guest.save()
         party.is_attending = party.any_guests_attending
+        party.save()
         return HttpResponseRedirect(reverse('rsvp-confirm', args=[invite_id]))
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
