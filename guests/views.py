@@ -42,6 +42,9 @@ def invitation(request, invite_id):
             guest.is_attending = response.is_attending
             guest.meal = response.meal
             guest.save()
+        if request.POST.get('comments'):
+            comments = request.POST.get('comments')
+            party.comments = comments if not party.comments else '{}; {}'.format(party.comments, comments)
         party.is_attending = party.any_guests_attending
         party.save()
         return HttpResponseRedirect(reverse('rsvp-confirm', args=[invite_id]))

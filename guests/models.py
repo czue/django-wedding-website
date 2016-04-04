@@ -33,6 +33,7 @@ class Party(models.Model):
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
     is_invited = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
+    comments = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
         return 'Party: {}'.format(self.name)
