@@ -9,7 +9,7 @@
     <tbody>
     {% for party in party_list %}
         <tr>
-            <td>{{ party.name }}</td>
+            <td><a href="{% url 'admin:guests_party_change' party.pk %}" >{{ party.name }}</a></td>
             <td>{{ party.category }}</td>
             <td>{{ party.guest_emails|join:"<br>" }}</td>
         </tr>
