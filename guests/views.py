@@ -13,7 +13,7 @@ from postmark import PMMail
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
-from guests.models import Guest, MEALS
+from guests.models import Guest, MEALS, Party
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
 
@@ -28,6 +28,26 @@ def export_guests(request):
     response = HttpResponse(export.getvalue(), content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename=all-guests.csv'
     return response
+
+
+@login_required
+def dashboard(request):
+    parties_with_pending_invites = Party.objects.filter(
+        is_invited=True, is_attending=None
+    ).order_by('category', 'name')
+    parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
+    parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
+    return render(request, 'guests/dashboard.html', context={
+        'guests': Guest.objects.filter(is_attending=True).count(),
+        'possible_guests': Guest.objects.filter(party__is_invited=True).exclude(is_attending=False).count(),
+        'not_coming_guests': Guest.objects.filter(is_attending=False).count(),
+        'pending_invites': parties_with_pending_invites.count(),
+        'pending_guests': Guest.objects.filter(party__is_invited=True, is_attending=None).count(),
+        'parties_with_unopen_invites': parties_with_unopen_invites,
+        'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
+        'unopened_invite_count': parties_with_unopen_invites.count(),
+        'total_invites': Party.objects.filter(is_invited=True).count(),
+    })
 
 
 def invitation(request, invite_id):
