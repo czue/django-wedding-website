@@ -50,6 +50,10 @@ class Party(models.Model):
     def any_guests_attending(self):
         return any(self.guest_set.values_list('is_attending', flat=True))
 
+    @property
+    def guest_emails(self):
+        return filter(None, self.guest_set.values_list('email', flat=True))
+
 
 MEALS = [
     ('beef', 'cow'),

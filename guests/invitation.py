@@ -38,7 +38,7 @@ def get_invitation_context(party):
 
 def send_invitation_email(party, test_only=False, recipients=None):
     if recipients is None:
-        recipients = filter(None, party.guest_set.values_list('email', flat=True))
+        recipients = party.guest_emails
     if not recipients:
         print '===== WARNING: no valid email addresses found for {} ====='.format(party)
         return
