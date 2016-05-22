@@ -21,17 +21,82 @@
             </tr>
             </tbody>
         </table>
-        <div class="col-lg-6">
-            <h1>Unopened Invitations</h1>
-            {% with party_list=parties_with_unopen_invites %}
-                {% include "guests/partials/party_list.html" %}
-            {% endwith %}
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Guests by category</h1>
+{#                <table class="table table-striped">#}
+{#                    {% for category in category_breakdown %}#}
+{#                        <tr>#}
+{#                            <td>{{ category.party__category }}</td>#}
+{#                            <td>{{ category.count }}</td>#}
+{#                        </tr>#}
+{#                    {% endfor %}#}
+{#                </table>#}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for category in category_breakdown %}
+                            <th>{{ category.party__category }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for category in category_breakdown %}
+                            <td>{{ category.count }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <h1>Meal choices</h1>
+{#                <table class="table table-striped">#}
+{#                    {% for meal in meal_breakdown %}#}
+{#                        <tr>#}
+{#                            <td>{{ meal.meal }}</td>#}
+{#                            <td>{{ meal.count }}</td>#}
+{#                        </tr>#}
+{#                    {% endfor %}#}
+{#                </table>#}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for meal in meal_breakdown %}
+                            <th>{{ meal.meal }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for meal in meal_breakdown %}
+                            <td>{{ meal.count }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Unopened Invitations</h1>
+                {% with party_list=parties_with_unopen_invites %}
+                    {% include "guests/partials/party_list.html" %}
+                {% endwith %}
+            </div>
+            <div class="col-lg-6">
+                <h1>Open Unresponded Invitations</h1>
+                {% with parties_with_open_unresponded_invites as party_list %}
+                    {% include "guests/partials/party_list.html" %}
+                {% endwith %}
+            </div>
         </div>
         <div class="col-lg-6">
-            <h1>Open Unresponded Invitations</h1>
-            {% with parties_with_open_unresponded_invites as party_list %}
-                {% include "guests/partials/party_list.html" %}
-            {% endwith %}
+                <h1>Attending Guests Without Meals</h1>
+                {% with guest_list=guests_without_meals %}
+                    {% include "guests/partials/guest_list.html" %}
+                {% endwith %}
+            </div>
         </div>
     </div>
 {% endblock %}
