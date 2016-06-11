@@ -35,23 +35,29 @@ def import_guests(path):
 
 def export_guests():
     headers = [
-        'party_name', 'first_name', 'last_name', 'party_type', 'is_child', 'category', 'is_invited', 'email'
+        'party_name', 'first_name', 'last_name', 'party_type',
+        'is_child', 'category', 'is_invited', 'is_attending',
+        'meal', 'email', 'comments'
     ]
     file = StringIO.StringIO()
     writer = csv.writer(file)
     writer.writerow(headers)
     for party in Party.in_default_order():
         for guest in party.guest_set.all():
-            writer.writerow([
-                party.name,
-                guest.first_name,
-                guest.last_name,
-                party.type,
-                guest.is_child,
-                party.category,
-                party.is_invited,
-                guest.email,
-            ])
+            if guest.is_attending:
+                writer.writerow([
+                    party.name,
+                    guest.first_name,
+                    guest.last_name,
+                    party.type,
+                    guest.is_child,
+                    party.category,
+                    party.is_invited,
+                    guest.is_attending,
+                    guest.meal,
+                    guest.email,
+                    party.comments,
+                ])
     return file
 
 
