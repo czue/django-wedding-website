@@ -5,7 +5,7 @@ import random
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
-from django.db.models import Count
+from django.db.models import Count, Q
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
@@ -39,7 +39,11 @@ def dashboard(request):
     parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
     attending_guests = Guest.objects.filter(is_attending=True)
-    guests_without_meals = attending_guests.filter(is_child=False, meal=None).order_by(
+    guests_without_meals = attending_guests.filter(
+        is_child=False
+    ).filter(
+        Q(meal__isnull=True) | Q(meal='')
+    ).order_by(
         'party__category', 'first_name'
     )
     meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
