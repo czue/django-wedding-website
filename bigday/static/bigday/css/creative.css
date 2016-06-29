@@ -109,7 +109,7 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: rgb(28,56,81);
 }
 
 .navbar-default .nav > li>a:hover,
@@ -130,12 +130,12 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
+        border-color: rgba(28,56,81,.3);
         background-color: transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: rgba(28,56,81,.7);
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -145,12 +145,12 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: rgba(28,56,81,.7);
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: rgb(28,56,81);
     }
 
     .navbar-default.affix {
@@ -170,7 +170,7 @@ aside {
 
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
-        color: #222;
+        color: rgb(28,56,81);
     }
 
     .navbar-default.affix .nav > li>a:hover,
