@@ -184,7 +184,7 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
+    color: rgb(28,56,81);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -193,7 +193,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/bikes-edited.jpg');
+    background-image: url('../images/engagement.jpg');
 }
 
 header .header-content {
