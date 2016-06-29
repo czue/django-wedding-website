@@ -51,8 +51,9 @@
                 <h1>Cory and Rowena's Wedding</h1>
                 <hr>
                 <h2>It's wedding week!</h2>
-                <a href="#event" class="btn btn-info btn-xl page-scroll">Event Info</a>
-                <a href="#navigation" class="btn btn-primary btn-xl page-scroll">Look Around</a>
+                <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome Note</a>
+                <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
+                <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
             </div>
         </div>
     </header>
@@ -67,7 +68,7 @@
                     </p>
                     <p>
                         If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding Friday night's welcome party and Saturday's event.
+                        Please see below for all the details regarding <a href="#event" class="page-scroll">Friday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
                     </p>
                     </p>
                         Looking forward to seeing everyone soon!
@@ -126,9 +127,7 @@
         {% include 'partials/story.html' %}
     </section>
     {% include 'partials/proposal.html' %}
-    <section id="event" class="bg-dark">
-        {% include 'partials/event.html' %}
-    </section>
+    {% include 'partials/event.html' %}
     <section id="niagara">
         {% include 'partials/niagara.html' %}
     </section>
