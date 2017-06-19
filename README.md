@@ -43,7 +43,7 @@ There's also a field to track whether they are invited to the rehearsal dinner.
 
 ### Guest model
 
-The guest model contains all of your individual guests.
+The `Guest` model contains all of your individual guests.
 In addition to standard name/email it has fields to represent whether the guest is a child (for kids meals/pricing differences),
 and, after sending invitations, marking whether the guest is attending and what meal they are having.
 
@@ -104,4 +104,4 @@ If you want to use this project for your wedding just [get in touch](http://www.
 you encounter.
 I haven't built out complete docs yet because I wasn't sure anyone would be interested, but am happy to do that if people are!
 
----Cory
+-Cory
