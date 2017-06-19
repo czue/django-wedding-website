@@ -23,7 +23,7 @@ class InvitationTrackerTest(TestCase):
         self.assertEqual(None, self.get_latest_party().invitation_opened)
 
     def test_update_status(self):
-        before = datetime.now(tz=timezone.UTC())
+        before = datetime.now(tz=timezone.utc)
         track_invitation_opened(self.invitation_id)
-        after = datetime.now(tz=timezone.UTC())
+        after = datetime.now(tz=timezone.utc)
         self.assertTrue(before <= self.get_latest_party().invitation_opened <= after)
