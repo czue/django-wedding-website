@@ -1,16 +1,16 @@
 # A django-powered wedding website and guest-management system
 
-Live site:
+Live site examples:
 
 - [Standard Wedding Website](http://coryandro.com/)
-- [Random Save The Date](http://coryandro.com/save-the-date/) (refresh for more)
+- [Random Save The Date Email](http://coryandro.com/save-the-date/) (refresh for more examples
 - [Sample Personal Invitation Page](http://coryandro.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
 
 ## What's included?
 
 This includes everything we did for our own wedding:
 
-- A standard wedding/event single-page static site
+- A responsive, single-page traditional wedding website
 - A complete guest management application
 - Email framework for sending save the dates
 - Email framework for invitations and built in RSVP system
