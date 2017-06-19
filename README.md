@@ -34,14 +34,13 @@ It is completely customizable to your needs and the content is laid out in stand
 ### Guest management
 
 The guest management functionality acts as a central place for you to manage your entire guest list.
-It includes two data models - the Party and the Guest.
+It includes two data models - the `Party` and the `Guest`.
 
 #### Party model
 
 The `Party` model allows you to group your guests together for things like sending a single invitation to a couple.
-You can also add parties that you're not sure you're going to invite using the `is_invited` field.
-This works great for sending tiered invitations.
-There's also a field to track whether they are invited to the rehearsal dinner.
+You can also add parties that you're not sure you're going to invite using the `is_invited` field, which works great for sending tiered invitations.
+There's also a field to track whether the party is invited to the rehearsal dinner.
 
 #### Guest model
 
@@ -100,10 +99,15 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Contributing
+## Customization
 
-If you want to use this project for your wedding just [get in touch](http://www.coryzue.com/contact/) or make an issue for anything
-you encounter.
-I haven't built out complete docs yet because I wasn't sure anyone would be interested, but am happy to do that if people are!
+I recommend forking this project and just manually modifying it by hand to replace everything with what you want.
+Searching for the text on a page in the repository is a great way to find where something lives.
+
+If you want to use this project for your wedding but need help getting started just [get in touch](http://www.coryzue.com/contact/) or make an issue
+for anything you encounter and I'm happy to help.
+
+I haven't built out more complete customization docs yet because I wasn't sure anyone would be interested in this,
+but am happy to do that if people are!
 
 -Cory
