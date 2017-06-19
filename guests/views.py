@@ -10,7 +10,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import ListView
-from postmark import PMMail
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
@@ -147,28 +146,6 @@ def test_email(request, template_id):
     send_save_the_date_email(context, ['cory.zue@gmail.com'])
     # send_save_the_date_email(context, ['cory.zue@gmail.com', 'rowenaluk@gmail.com'])
     return HttpResponse('sent!')
-
-
-@login_required
-def test_postmark_email(request):
-    template_text = render_to_string('guests/email_templates/save_the_date.html', context={'email_mode': True})
-    attachments = []
-    for filename in ('hearts.png', 'selfie.jpg'):
-        attachment_path = os.path.join(os.path.dirname(__file__), 'static', 'save-the-date', 'images', filename)
-        encoded_attachment = _base64_encode(attachment_path)
-        attachments.append(
-            (filename, encoded_attachment, 'image/{}'.format(filename.split('.')[-1]), 'cid:{}'.format(filename))
-        )
-
-    mail = PMMail(
-        to='Cory Zue <cory.zue@gmail.com>',
-        subject='save the date!',
-        html_body=template_text,
-        text_body='sorry, you need to view this in html mode',
-        attachments=attachments
-    )
-    mail.send()
-    return HttpResponseRedirect(reverse('save-the-date'))
 
 
 def _base64_encode(filepath):
