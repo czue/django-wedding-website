@@ -79,8 +79,27 @@ After your invitations go out you can use the guest dashboard to see how many pe
 has to respond, people who haven't selected a meal, etc.
 It's a great way of tracking your big picture numbers in terms of how many guests to expect.
 
-Just acces `/dashboard/` from an account with admin access. Your other guests won't be able to see it.
+Just access `/dashboard/` from an account with admin access. Your other guests won't be able to see it.
 
 ## Other details
 
 You can easily hook up Google analytics by editing the tracking ID in `google-analytics.html`.
+
+
+## Installation
+
+It's recommended that you setup a virtualenv before development.
+
+Then just install requirements, migrate, and runserver to get started:
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+## Contributing
+
+If you actually want to use for your wedding just [get in touch](http://www.coryzue.com/contact/) or make an issue for anything
+you encounter.
+I haven't built out complete docs yet because I wasn't sure anyone would be interested, but am happy to do that if people are!
