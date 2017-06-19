@@ -1,6 +1,5 @@
 import base64
 from collections import namedtuple
-import os
 import random
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
@@ -8,7 +7,6 @@ from django.core.urlresolvers import reverse
 from django.db.models import Count, Q
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
-from django.template.loader import render_to_string
 from django.views.generic import ListView
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
