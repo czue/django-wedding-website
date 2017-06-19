@@ -25,11 +25,13 @@ The standard wedding website is a responsive, single-page, twitter bootstrap-bas
 
 It is completely customizable to your needs and the content is laid out in standard django templates. By default it includes:
 
-- A hero splash screen for a photo
+- A "hero" splash screen for a photo
 - A mobile-friendly top nav with scrollspy
 - A photo/hover navigation pane
 - Configurable content sections for every aspect of your site that you want
 - A set of different styles you can use for different sections
+
+![Hero Section of Wedding Website](https://raw.githubusercontent.com/czue/django-wedding-website/master/screenshots/hero-page.png)
 
 ### Guest management
 
@@ -81,6 +83,8 @@ has to respond, people who haven't selected a meal, etc.
 It's a great way of tracking your big picture numbers in terms of how many guests to expect.
 
 Just access `/dashboard/` from an account with admin access. Your other guests won't be able to see it.
+
+![Wedding Dashboard](https://raw.githubusercontent.com/czue/django-wedding-website/master/screenshots/wedding-dashboard.png)
 
 ### Other details
 
