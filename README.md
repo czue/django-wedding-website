@@ -6,7 +6,7 @@ Live site examples:
 - [Random Save The Date Email](http://coryandro.com/save-the-date/) (refresh for more examples)
 - [Sample Personal Invitation Page](http://coryandro.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
 
-There is also [a longer writeup on this project here](https://www.placecard.me/django-wedding-website/).
+There is also [a longer writeup on this project here](https://www.placecard.me/blog/django-wedding-website/).
 
 ## What's included?
 
