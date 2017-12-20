@@ -69,7 +69,7 @@ def send_save_the_date_to_party(party, test_only=False):
     context = get_save_the_date_context(get_template_id_from_party(party))
     recipients = party.guest_emails
     if not recipients:
-        print '===== WARNING: no valid email addresses found for {} ====='.format(party)
+        print('===== WARNING: no valid email addresses found for {} =====').format(party)
     else:
         send_save_the_date_email(
             context,
@@ -128,7 +128,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print 'sending {} to {}'.format(context['name'], ', '.join(recipients))
+    print('sending {} to {}').format(context['name'], ', '.join(recipients))
     if not test_only:
         msg.send()
 
