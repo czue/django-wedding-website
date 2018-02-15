@@ -1,0 +1,42 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Augustin <a.borsu@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 10:24+0000\n"
+"PO-Revision-Date: 2018-02-15 10:50+0100\n"
+"Last-Translator: Augustin <a.borsu@gmail.com>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: bigday/settings.py:124
+msgid "English"
+msgstr "Anglais"
+
+#: bigday/settings.py:125
+msgid "Spanish"
+msgstr "Espagnol"
+
+#: bigday/settings.py:126
+msgid "French"
+msgstr "Français"
+
+#: bigday/templates/base.html:12 bigday/templates/home.html:19
+msgid "Théo et Violetta's big day"
+msgstr "Le grand jour de Théo et Violetta"
+
+#: bigday/templates/home.html:28
+msgid "Event"
+msgstr "Cérémonie"
+
+#: bigday/templates/home.html:49
+msgid "We did it!!"
+msgstr "On l'a fait!!"
