@@ -1,163 +1,45 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
-{% block page_head %}
-    <!-- Custom CSS -->
-    <link href="{% static 'bigday/css/creative.css' %}" rel="stylesheet">
-{% endblock %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block page_content %}
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">{% trans "Théo et Violetta's big day" %}</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#main-header">Home</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#event">{% trans "Event" %}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#niagara">Niagara-on-the-Lake</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#other-stuff">Everything Else</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">{% trans "Théo et Violetta's big day" %}</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">{% trans "Home" %}<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Event" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Practical Information" %}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">{{ LANGUAGE_CODE }}</a>
+                    <div class="dropdown-menu">
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            {% if lang_code != LANGUAGE_CODE %}
+                                {% language lang_code %}
+                                    <a class="dropdown-item" href="{% url 'home' %}"
+                                       title="{{ lang_name }}">{{ lang_code }}</a>
+                                {% endlanguage %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+            </ul>
+
         </div>
-        <!-- /.container-fluid -->
     </nav>
     {% block main %}
-    <header id="main-header">
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>{% trans "We did it!!" %}</h1>
-                {% comment %}
-                <hr>
-                <h2>It's wedding week!</h2>
-                <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
-                <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
-                <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
-                {% endcomment %}
-            </div>
-        </div>
-    </header>
-    <section class="bg-info" id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
-                    <hr>
-                    <p>
-                        Hello friends and family! It's the week of the wedding!
-                    </p>
-                    <p>
-                        If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Friday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
-                    </p>
-                    <p>
-                        To get added to the wedding whatsapp group first create an account and then send an
-                        email to <a href="mailto:whatsapp@coryandro.com">whatsapp@coryandro.com</a>.
-                        Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky.
-                    </p>
-                    <p>
-                        Looking forward to seeing everyone soon!
-                    </p>
-                    <p class="pull-right">- Cory and Rowena</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="no-padding" id="navigation">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    The Event
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#niagara" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    Niagara-on-the-Lake
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    Our Story
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% include 'partials/event.html' %}
-    <section id="niagara">
-        {% include 'partials/niagara.html' %}
-    </section>
-{% comment %}
-        {% include 'partials/wedding-party.html' %}
-{% endcomment %}
-    <section id="other-stuff" class="bg-primary">
-        {% include 'partials/misc.html' %}
-    </section>
-    <section id="gifts">
-        {% include 'partials/gifts.html' %}
-    </section>
-    <section id="story" class="bg-dark">
-        {% include 'partials/story.html' %}
-    </section>
-    {% include 'partials/proposal.html' %}
-    {% include 'partials/save-the-dates.html' %}
-    <section id="contact" class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contact us!</h2>
-                    <hr class="primary">
-                    <p>If you have any questions don't hesitate to reach out!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:hello@coryandro.com">hello@coryandro.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <h1>{% trans "Théo and Violetta are getting maried!" %}</h1>
     {% endblock %}
 {% endblock %}
 {% block page_js %}

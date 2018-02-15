@@ -14,38 +14,28 @@
     <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
 
     <!-- Bootstrap Core CSS -->
-    <link href="{% static 'bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    {% include "partials/google-analytics.html" %}
     {% block page_head %}
     {% endblock %}
 </head>
 <body id="page-top">
 {% block page_content %}{% endblock %}
-{% include "partials/footer.html"  %}
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-{#    <script src="{% static 'creative/js/jquery.js' %}"></script>#}
-
     <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'bigday/js/footer.js' %}"></script>
-    <script>
-        $(document).ready(function() {
-            setFooterStyle();
-            setFooterStyle();  // hack, for some reason this needs to be called twice on load
-            window.onresize = setFooterStyle;
-        });
-    </script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 {% block page_js %}
 {% endblock %}
 </body>
