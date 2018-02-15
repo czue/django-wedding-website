@@ -10,12 +10,12 @@ Server layout:
         Each environment has its own subfolder named for its evironment
         (i.e. ~/www/staging/logs and ~/www/demo/logs).
 """
-from fabric.context_managers import cd
-from fabric.operations import require
-from fabric.api import run, execute, task, sudo, env
 import os
 import posixpath
 
+from fabric.api import execute, task, sudo, env
+from fabric.context_managers import cd
+from fabric.operations import require
 
 if env.ssh_config_path and os.path.isfile(os.path.expanduser(env.ssh_config_path)):
     env.use_ssh_config = True
@@ -150,5 +150,5 @@ def _supervisor_command(command):
 def print_supervisor_files():
     for fname in os.listdir('deploy/supervisor'):
         with open(os.path.join('deploy', 'supervisor', fname)) as f:
-            print '%s:\n\n' % fname
-            print f.read() % env
+            print('%s:\n\n' % fname)
+            print(f.read() % env)
