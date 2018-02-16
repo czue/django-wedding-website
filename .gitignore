@@ -3,7 +3,7 @@
 *.pyc
 localsettings.py
 *.sqlite3
-static_root
+static
 _working/
 data/
 guests/static/save-the-date/images/archive/
