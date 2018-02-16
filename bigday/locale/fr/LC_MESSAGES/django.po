@@ -1,21 +1,22 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Augustin <a.borsu@gmail.com>, 2018.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 13:55+0000\n"
-"PO-Revision-Date: 2018-02-15 10:50+0100\n"
-"Last-Translator: Augustin <a.borsu@gmail.com>\n"
-"Language-Team: French <kde-i18n-doc@kde.org>\n"
-"Language: fr\n"
+"POT-Creation-Date: 2018-02-16 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
 
 #: bigday/settings.py:124
 msgid "English"
@@ -31,31 +32,44 @@ msgstr "Français"
 
 #: bigday/templates/base.html:12
 msgid "Théo et Violetta's big day"
-msgstr "Le grand jour de Théo et Violetta"
+msgstr "Le grand jour de Théo et Violetta."
 
-#: bigday/templates/home.html:10
-#, fuzzy
-#| msgid "Théo et Violetta's big day"
+#: bigday/templates/home.html:12
 msgid "Théo and Violetta get married"
 msgstr "Théo et Violetta se marient"
 
-#: bigday/templates/home.html:15
+#: bigday/templates/home.html:17
 msgid "Home"
-msgstr "Accueil"
+msgstr ""
 
-#: bigday/templates/home.html:18
+#: bigday/templates/home.html:20
 msgid "Event"
-msgstr "Cérémonie"
+msgstr ""
 
-#: bigday/templates/home.html:21
+#: bigday/templates/home.html:23
 msgid "Pictures"
-msgstr "Photos"
+msgstr ""
 
-#: bigday/templates/home.html:41
-#, fuzzy
-#| msgid "Théo et Violetta's big day"
+#: bigday/templates/home.html:44
 msgid "Théo and Violetta are getting maried!"
 msgstr "Théo et Violetta se marient!"
 
-#~ msgid "We did it!!"
-#~ msgstr "On l'a fait!!"
+#: bigday/templates/home.html:46
+msgid "Translation"
+msgstr "Traduction"
+
+#: bigday/templates/home.html:47
+msgid "Test"
+msgstr ""
+
+#: bigday/templates/home.html:48
+msgid "Théo"
+msgstr ""
+
+#: bigday/templates/home.html:49
+msgid "Violetta"
+msgstr ""
+
+#: bigday/templates/home.html:50
+msgid "are getting maried"
+msgstr "se marient"

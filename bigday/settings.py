@@ -127,7 +127,7 @@ LANGUAGES = (
 )
 
 LOCALE_PATHS = (
-    os.path.join('bigday', 'locale'),
+    os.path.join(BASE_DIR, 'bigday', 'locale'),
 )
 
 # Static files (CSS, JavaScript, Images)
