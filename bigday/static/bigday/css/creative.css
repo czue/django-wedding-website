@@ -83,37 +83,38 @@ aside {
     padding: 0;
 }
 
-.navbar-default {
+.navbar {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    background-color: transparent;
 }
 
-.navbar-default .navbar-header .navbar-brand {
+.navbar .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
     color: #f05f40;
 }
 
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
+.navbar .navbar-header .navbar-brand:hover,
+.navbar .navbar-header .navbar-brand:focus {
     color: #eb3812;
 }
 
-.navbar-default .nav > li>a,
-.navbar-default .nav>li>a:focus {
+.navbar .nav > li > a,
+.navbar .nav > li > a:focus {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
     color: rgb(28,56,81);
 }
 
-.navbar-default .nav > li>a:hover,
-.navbar-default .nav>li>a:focus:hover {
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus:hover {
     color: #f05f40;
 }
 
@@ -123,8 +124,8 @@ aside {
     background-color: transparent;
 }
 
-.navbar-default .nav > li.active>a:hover,
-.navbar-default .nav>li.active>a:focus:hover {
+.navbar .nav > li.active > a:hover,
+.navbar .nav > li.active > a:focus:hover {
     background-color: transparent;
 }
 
@@ -193,7 +194,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    background-image: url('../images/high_res/DSC_2043-Modifier-1.jpg');
 }
 
 header .header-content {
@@ -204,7 +205,7 @@ header .header-content {
 }
 
 header .header-content .header-content-inner h1 {
-    margin-top: 0;
+    margin-top: 150%;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;

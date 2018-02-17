@@ -9,7 +9,7 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">{% trans "Théo and Violetta get married" %}</a>
+    <a class="navbar-brand" href="#">{% trans "Théo and Violeta get married" %}</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -41,7 +41,62 @@
     </div>
   </nav>
   {% block main %}
-    <h1>{% trans "Théo and Violetta are getting maried!" %}</h1>
+    <header id="main-header">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1>{% trans "Théo and Violeta are getting maried!" %}</h1>
+          <hr>
+          <p>TIMER GOES HERE</p>
+          {% comment %}
+            <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
+            <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
+            <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
+          {% endcomment %}
+        </div>
+      </div>
+    </header>
+    <section class="no-padding" id="navigation">
+      <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="col-lg-4 col-sm-6">
+            <a href="#event" class="portfolio-box page-scroll">
+              <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    The Event
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a href="#niagara" class="portfolio-box page-scroll">
+              <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    Niagara-on-the-Lake
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a href="#story" class="portfolio-box page-scroll">
+              <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    Our Story
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   {% endblock %}
 {% endblock %}
 {% block page_js %}

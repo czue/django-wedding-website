@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 13:55+0000\n"
+"POT-Creation-Date: 2018-02-16 14:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,25 +31,25 @@ msgid "French"
 msgstr ""
 
 #: bigday/templates/base.html:12
-msgid "Théo et Violetta's big day"
+msgid "Théo et Violeta's big day"
 msgstr ""
 
-#: bigday/templates/home.html:10
-msgid "Théo and Violetta get married"
+#: bigday/templates/home.html:12
+msgid "Théo and Violeta get married"
 msgstr ""
 
-#: bigday/templates/home.html:15
+#: bigday/templates/home.html:17
 msgid "Home"
 msgstr ""
 
-#: bigday/templates/home.html:18
+#: bigday/templates/home.html:20
 msgid "Event"
 msgstr ""
 
-#: bigday/templates/home.html:21
+#: bigday/templates/home.html:23
 msgid "Pictures"
 msgstr ""
 
-#: bigday/templates/home.html:41
-msgid "Théo and Violetta are getting maried!"
+#: bigday/templates/home.html:44
+msgid "Théo and Violeta are getting maried!"
 msgstr ""

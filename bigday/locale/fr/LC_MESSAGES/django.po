@@ -31,12 +31,12 @@ msgid "French"
 msgstr "Français"
 
 #: bigday/templates/base.html:12
-msgid "Théo et Violetta's big day"
-msgstr "Le grand jour de Théo et Violetta."
+msgid "Théo et Violeta's big day"
+msgstr "Le grand jour de Théo et Violeta."
 
 #: bigday/templates/home.html:12
-msgid "Théo and Violetta get married"
-msgstr "Théo et Violetta se marient"
+msgid "Théo and Violeta get married"
+msgstr "Théo et Violeta se marient"
 
 #: bigday/templates/home.html:17
 msgid "Home"
@@ -51,8 +51,8 @@ msgid "Pictures"
 msgstr ""
 
 #: bigday/templates/home.html:44
-msgid "Théo and Violetta are getting maried!"
-msgstr "Théo et Violetta se marient!"
+msgid "Théo and Violeta are getting maried!"
+msgstr "Théo et Violeta se marient!"
 
 #: bigday/templates/home.html:46
 msgid "Translation"
@@ -67,7 +67,7 @@ msgid "Théo"
 msgstr ""
 
 #: bigday/templates/home.html:49
-msgid "Violetta"
+msgid "Violeta"
 msgstr ""
 
 #: bigday/templates/home.html:50
