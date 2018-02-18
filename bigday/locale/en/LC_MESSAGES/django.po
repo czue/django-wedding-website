@@ -43,7 +43,7 @@ msgid "Home"
 msgstr ""
 
 #: bigday/templates/home.html:20
-msgid "Event"
+msgid "The wedding"
 msgstr ""
 
 #: bigday/templates/home.html:23
@@ -51,5 +51,5 @@ msgid "Pictures"
 msgstr ""
 
 #: bigday/templates/home.html:44
-msgid "Théo and Violeta are getting maried!"
+msgid "Wedding list"
 msgstr ""
