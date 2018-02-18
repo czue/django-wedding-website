@@ -51,4 +51,4 @@ msgstr "Fotos"
 
 #: bigday/templates/home.html:44
 msgid "Théo and Violeta are getting maried!"
-msgstr "?? la lista de marido"
+msgstr "?? la lista de matrimonio"
