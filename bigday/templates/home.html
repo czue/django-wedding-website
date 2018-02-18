@@ -3,108 +3,84 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block page_content %}
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">{% trans "Théo and Violeta get married" %}</a>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">{% trans "Home" %}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">{% trans "Event" %}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">{% trans "Pictures" %}</a>
-        </li>
-      </ul>
-      <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-          {{ LANGUAGE_CODE }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          {% for lang_code, lang_name in LANGUAGES %}
-            {% if lang_code != LANGUAGE_CODE %}
-              {% language lang_code %}
-                <a class="dropdown-item" href="{% url 'home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
-              {% endlanguage %}
-            {% endif %}
-          {% endfor %}
+  <section class="cover text-center" style="height: 100vh">
+    <nav class="navbar navbar-toggleable-sm navbar-trans navbar-inverse">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarToggler-1" aria-controls="navbarToggler-1" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">{% trans "Wedding" %}</a>
+        <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
+          <ul class="navbar-nav mt-2 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">{% trans "Pictures" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{% trans "Wedding List" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{% trans "FAQ" %}</a>
+            </li>
+          </ul>
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              {{ LANGUAGE_CODE }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              {% for lang_code, lang_name in LANGUAGES %}
+                {% if lang_code != LANGUAGE_CODE %}
+                  {% language lang_code %}
+                    <a class="dropdown-item" href="{% url 'home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                  {% endlanguage %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
+      </div>
+    </nav>
+    <div class="cover-container pb-5">
+      <div class="cover-inner container">
+        <h1>{% trans "We're getting married!" %}</h1>
+        <p id="wedding_timer"></p>
       </div>
     </div>
-  </nav>
-  {% block main %}
-    <header id="main-header">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1>{% trans "Théo and Violeta are getting maried!" %}</h1>
-          <hr>
-          <p>TIMER GOES HERE</p>
-          {% comment %}
-            <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
-            <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
-            <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
-          {% endcomment %}
-        </div>
-      </div>
-    </header>
-    <section class="no-padding" id="navigation">
-      <div class="container-fluid">
-        <div class="row no-gutter">
-          <div class="col-lg-4 col-sm-6">
-            <a href="#event" class="portfolio-box page-scroll">
-              <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    The Event
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a href="#niagara" class="portfolio-box page-scroll">
-              <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    Niagara-on-the-Lake
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a href="#story" class="portfolio-box page-scroll">
-              <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    Our Story
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endblock %}
+  </section>
 {% endblock %}
 {% block page_js %}
-  <!-- Plugin JavaScript -->
-  <!-- Easing is for the vertical scroll animations -->
-  <script src="{% static 'creative/js/jquery.easing.min.js' %}"></script>
-  <!-- Automatically fit text based on screen size.-->
-  <script src="{% static 'creative/js/jquery.fittext.js' %}"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src="{% static 'creative/js/creative.js' %}"></script>
+  <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jul 5, 2018 11:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("wedding_timer").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+
+          // If the count down is finished, write some text
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("wedding_timer").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+
+  </script>
 {% endblock %}
