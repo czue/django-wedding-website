@@ -19,36 +19,36 @@ msgstr ""
 
 #: bigday/settings.py:124
 msgid "English"
-msgstr "Ingles"
+msgstr "Inglés"
 
 #: bigday/settings.py:125
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 #: bigday/settings.py:126
 msgid "French"
-msgstr ""
+msgstr "Francés"
 
 #: bigday/templates/base.html:12
 msgid "Théo et Violeta's big day"
-msgstr ""
+msgstr "Théo y Violeta"
 
 #: bigday/templates/home.html:12
 msgid "Théo and Violeta get married"
-msgstr ""
+msgstr "¡Nos casamos!"
 
 #: bigday/templates/home.html:17
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: bigday/templates/home.html:20
 msgid "Event"
-msgstr ""
+msgstr "El matrimonio"
 
 #: bigday/templates/home.html:23
 msgid "Pictures"
-msgstr ""
+msgstr "Fotos"
 
 #: bigday/templates/home.html:44
 msgid "Théo and Violeta are getting maried!"
-msgstr ""
+msgstr "?? la lista de marido"
