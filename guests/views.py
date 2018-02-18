@@ -131,7 +131,7 @@ def invitation_email_test(request, invite_id):
 
 
 def save_the_date_random(request):
-    template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
+    template_id = random.choice(list(SAVE_THE_DATE_CONTEXT_MAP.keys()))
     return save_the_date_preview(request, template_id)
 
 
