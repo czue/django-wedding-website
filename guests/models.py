@@ -21,8 +21,6 @@ class Party(models.Model):
     name = models.TextField()
     type = models.CharField(max_length=10, choices=ALLOWED_TYPES)
     category = models.CharField(max_length=20, null=True, blank=True)
-    save_the_date_sent = models.DateTimeField(null=True, blank=True, default=None)
-    save_the_date_opened = models.DateTimeField(null=True, blank=True, default=None)
     invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
@@ -52,10 +50,8 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('beef', 'cow'),
-    ('fish', 'fish'),
-    ('hen', 'hen'),
-    ('vegetarian', 'vegetable'),
+    ('meat', 'meat'),
+    ('vegetarian', 'vegetarian'),
 ]
 
 
