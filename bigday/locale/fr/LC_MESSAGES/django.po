@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-19 02:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-02-19 04:03+0100\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: bigday/settings.py:112
 msgid "English"
@@ -36,7 +36,7 @@ msgstr "Notre mariage"
 
 #: bigday/templates/home.html:14
 msgid "Wedding"
-msgstr ""
+msgstr "Mariage"
 
 #: bigday/templates/home.html:18
 msgid "Pictures"
@@ -44,21 +44,19 @@ msgstr "Photos"
 
 #: bigday/templates/home.html:21
 msgid "Wedding List"
-msgstr ""
+msgstr "Liste de mariage"
 
 #: bigday/templates/home.html:24
 msgid "FAQ"
-msgstr ""
+msgstr "Info"
 
 #: bigday/templates/home.html:48
-#, fuzzy
-#| msgid "are getting maried"
 msgid "We're getting married!"
-msgstr "se marient"
+msgstr "Nous nous marions!"
 
 #: bigday/templates/home.html:84
 msgid "We're married!"
-msgstr ""
+msgstr "Nous sommes mariés!"
 
 #: bigday/templates/partials/story.html:8
 msgid ""
@@ -87,58 +85,52 @@ msgid ""
 msgstr ""
 
 #: guests/invitation.py:34
-#, fuzzy
-#| msgid "Théo and Violeta are getting maried!"
 msgid "Théo and Violeta - You're Invited!"
-msgstr "On se marie !"
+msgstr "Théo and Violeta - Nous vous invitons!"
 
 #: guests/invitation.py:35
 msgid "You are invited!"
-msgstr ""
+msgstr "Nous vous invitons!"
 
 #: guests/invitation.py:53
 msgid ""
 "You're invited to Théo and Violeta's wedding. To view this invitation, visit "
 "{} in any browser."
 msgstr ""
+"Vous êtes invités au mariage de Théo et Violeta. Pour voir cette invitation, "
+"visitez {} dans votre navigateur."
 
 #: guests/invitation.py:56
 msgid "You're invited"
-msgstr ""
+msgstr "Vous êtes invités"
 
 #: guests/templates/guests/email_templates/invitation.html:14
 msgid "View invitation"
-msgstr ""
+msgstr "Voir l'invitation"
 
 #: guests/templates/guests/email_templates/invitation.html:26
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "Théo and Violeta"
 msgstr "Théo et Violeta"
 
 #: guests/templates/guests/email_templates/invitation.html:38
-#, fuzzy
-#| msgid "Théo et Violeta's big day"
 msgid "Théo & Violeta's wedding"
-msgstr "Notre mariage"
+msgstr "Le mariage de Théo & Violeta"
 
 #: guests/templates/guests/email_templates/invitation.html:46
 msgid "Please view the invitation online to rsvp."
-msgstr ""
+msgstr "Merci d'ouvrir l'invitation en ligne pour confirmer votre présence."
 
 #: guests/templates/guests/invitation.html:10
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "Théo and Violetta Wedding"
-msgstr "Théo et Violeta"
+msgstr "Mariage de Théo et Violeta"
 
 #: guests/templates/guests/invitation.html:12
 msgid "Thursday, July 5th at 3:00 pm"
-msgstr ""
+msgstr "Jeudi 5 juillet à 15h"
 
 #: guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
-msgstr ""
+msgstr "Mairie de Strasbourg"
 
 #: guests/templates/guests/invitation.html:14
 msgid "Place Broglie, 67000 Strasbourg, France"
@@ -146,28 +138,28 @@ msgstr ""
 
 #: guests/templates/guests/invitation.html:29
 msgid "will attend"
-msgstr ""
+msgstr "assitera"
 
 #: guests/templates/guests/invitation.html:34
 msgid "will not attend"
-msgstr ""
+msgstr "n'assistera pas"
 
 #: guests/templates/guests/invitation.html:41
 msgid "... and will eat"
-msgstr ""
+msgstr "et souhaite manger ..."
 
 #: guests/templates/guests/invitation.html:52
 msgid "Questions/comments/well wishes"
-msgstr ""
+msgstr "Questions/commentaires/voeux"
 
 #: guests/templates/guests/invitation.html:56
 msgid "Submit Response"
-msgstr ""
+msgstr "Soumettre votre réponse"
 
 #: guests/templates/guests/rsvp_confirmation.html:11
 #, python-format
 msgid "Hi %(party.name)s! Thanks for your response!"
-msgstr ""
+msgstr "Bonjour %(party.name)s! Merci pour votre réponse!"
 
 #: guests/templates/guests/rsvp_confirmation.html:15
 msgid "We can't wait to celebrate with you in Niagara!"
@@ -175,21 +167,20 @@ msgstr ""
 
 #: guests/templates/guests/rsvp_confirmation.html:18
 msgid "If you have any other questions, don't hesitate to email us at"
-msgstr ""
+msgstr "Si vous avez d'autres questions n'hésitez pas à nous écrire à"
 
 #: guests/templates/guests/rsvp_confirmation.html:23
 msgid "We're sorry you won't be able to join us in Strasbourg!"
 msgstr ""
+"Nous sommes désolés que vous ne puissiez pas être des nôtres à Strasbourg!"
 
 #: guests/templates/guests/rsvp_confirmation.html:26
 msgid "We look forward to catching up with you some other time!"
-msgstr ""
+msgstr "Nous espérons avoir l'occasion de vous voir à un autre moment!"
 
 #: guests/templates/guests/rsvp_confirmation.html:29
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "- Théo and Violeta"
-msgstr "Théo et Violeta"
+msgstr "- Théo et Violeta"
 
 #~ msgid "Home"
 #~ msgstr "Accueil"
