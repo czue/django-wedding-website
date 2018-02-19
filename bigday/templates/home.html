@@ -45,10 +45,10 @@
     </nav>
     <div class="cover-container pb-5">
       <div class="cover-inner container">
-        <h1>{% trans "We're getting married!" %}</h1>
+        <h1 id="wedding_title">{% trans "We're getting married!" %}</h1>
         <p id="wedding_timer"></p>
         <audio autoplay loop>
-              <source src="{% static 'bigday/music/countdown.mp3' %}"00>0
+          <source src="{% static 'bigday/music/countdown.mp3' %}">
         </audio>
       </div>
     </div>
@@ -57,7 +57,7 @@
 {% block page_js %}
   <script>
       // Set the date we're counting down to
-      var countDownDate = new Date("Jul 5, 2018 11:00:00").getTime();
+      var countDownDate = new Date("Jul 5, 2018 15:00:00 UTC+0100").getTime();
 
       // Update the count down every 1 second
       var x = setInterval(function () {
@@ -81,7 +81,8 @@
           // If the count down is finished, write some text
           if (distance < 0) {
               clearInterval(x);
-              document.getElementById("wedding_timer").innerHTML = "EXPIRED";
+              document.getElementById("wedding_timer").innerHTML = "";
+              document.getElementById("wedding_title").innerHTML = "{% trans "We're married!" %}";
           }
       }, 1000);
 
