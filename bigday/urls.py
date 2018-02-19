@@ -1,6 +1,7 @@
 from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+
 from . import views
 
 urlpatterns = [
@@ -10,7 +11,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^', views.home, name='home'),
+    url(r'^$', views.home, name='home'),
     url(r'^', include('guests.urls')),
     url('^accounts/', include('django.contrib.auth.urls'))
 )

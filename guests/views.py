@@ -123,7 +123,7 @@ def invitation_email_preview(request, invite_id):
 @login_required
 def invitation_email_test(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
-    send_invitation_email(party, recipients=['cory.zue@gmail.com'])
+    send_invitation_email(party, recipients=['a.borsu@gmail.com'])
     return HttpResponse('sent!')
 
 

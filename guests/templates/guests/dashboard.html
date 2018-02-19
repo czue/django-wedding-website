@@ -69,7 +69,7 @@
             </div>
             <div class="col-lg-6">
                 <h1>Open Unresponded Invitations</h1>
-                {% parties_with_open_unresponded_invites as party_list %}
+              {% with parties_with_open_unresponded_invites=party_list %}
                     {% include "guests/partials/party_list.html" %}
                 {% endwith %}
             </div>

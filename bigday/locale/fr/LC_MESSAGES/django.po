@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 14:21+0000\n"
+"POT-Creation-Date: 2018-02-19 02:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,58 +18,193 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: bigday/settings.py:124
+#: bigday/settings.py:112
 msgid "English"
 msgstr "Anglais"
 
-#: bigday/settings.py:125
+#: bigday/settings.py:113
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: bigday/settings.py:126
+#: bigday/settings.py:114
 msgid "French"
 msgstr "Français"
 
-#: bigday/templates/base.html:12
+#: bigday/templates/base.html:10
 msgid "Théo et Violeta's big day"
 msgstr "Notre mariage"
 
-#: bigday/templates/home.html:12
-msgid "Théo and Violeta get married"
-msgstr "Théo et Violeta"
+#: bigday/templates/home.html:14
+msgid "Wedding"
+msgstr ""
 
-#: bigday/templates/home.html:17
-msgid "Home"
-msgstr "Accueil"
-
-#: bigday/templates/home.html:20
-msgid "Event"
-msgstr "Le mariage"
-
-#: bigday/templates/home.html:23
+#: bigday/templates/home.html:18
 msgid "Pictures"
 msgstr "Photos"
 
-#: bigday/templates/home.html:44
-msgid "Théo and Violeta are getting maried!"
-msgstr "On se marie !"
+#: bigday/templates/home.html:21
+msgid "Wedding List"
+msgstr ""
 
-#: bigday/templates/home.html:46
-msgid "Translation"
-msgstr "Traduction"
-
-#: bigday/templates/home.html:47
-msgid "Test"
-msgstr "?? liste de mariage"
+#: bigday/templates/home.html:24
+msgid "FAQ"
+msgstr ""
 
 #: bigday/templates/home.html:48
-msgid "Théo"
-msgstr "Théo"
-
-#: bigday/templates/home.html:49
-msgid "Violeta"
-msgstr "Violeta"
-
-#: bigday/templates/home.html:50
-msgid "are getting maried"
+#, fuzzy
+#| msgid "are getting maried"
+msgid "We're getting married!"
 msgstr "se marient"
+
+#: bigday/templates/home.html:84
+msgid "We're married!"
+msgstr ""
+
+#: bigday/templates/partials/story.html:8
+msgid ""
+"\n"
+"                People have referred to Théo and Violeta as \"the greatest "
+"couple in the history of time\".\n"
+"                They have also called them \"a power couple the likes of "
+"which the world has never before seen\".\n"
+"                Okay, the people that said those things are Cory and Ro and "
+"they may be a little biased.\n"
+"              "
+msgstr ""
+
+#: bigday/templates/partials/story.html:15
+msgid ""
+"\n"
+"                Despite their self-proclaimed greatness, Théo and Violeta "
+"have a pretty typical story. They met working together.\n"
+"                Théo was blown away by Violeta's passion and thirst for "
+"adventure.\n"
+"                Violeta thought Théo was alright looking and a pretty good "
+"programmer.\n"
+"                It did take years, but somehow he managed to woo her into "
+"considering him as a partner, and the rest has been history.\n"
+"              "
+msgstr ""
+
+#: guests/invitation.py:34
+#, fuzzy
+#| msgid "Théo and Violeta are getting maried!"
+msgid "Théo and Violeta - You're Invited!"
+msgstr "On se marie !"
+
+#: guests/invitation.py:35
+msgid "You are invited!"
+msgstr ""
+
+#: guests/invitation.py:53
+msgid ""
+"You're invited to Théo and Violeta's wedding. To view this invitation, visit "
+"{} in any browser."
+msgstr ""
+
+#: guests/invitation.py:56
+msgid "You're invited"
+msgstr ""
+
+#: guests/templates/guests/email_templates/invitation.html:14
+msgid "View invitation"
+msgstr ""
+
+#: guests/templates/guests/email_templates/invitation.html:26
+#, fuzzy
+#| msgid "Théo and Violeta get married"
+msgid "Théo and Violeta"
+msgstr "Théo et Violeta"
+
+#: guests/templates/guests/email_templates/invitation.html:38
+#, fuzzy
+#| msgid "Théo et Violeta's big day"
+msgid "Théo & Violeta's wedding"
+msgstr "Notre mariage"
+
+#: guests/templates/guests/email_templates/invitation.html:46
+msgid "Please view the invitation online to rsvp."
+msgstr ""
+
+#: guests/templates/guests/invitation.html:10
+#, fuzzy
+#| msgid "Théo and Violeta get married"
+msgid "Théo and Violetta Wedding"
+msgstr "Théo et Violeta"
+
+#: guests/templates/guests/invitation.html:12
+msgid "Thursday, July 5th at 3:00 pm"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:13
+msgid "Strasbourg Townhall"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:14
+msgid "Place Broglie, 67000 Strasbourg, France"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:29
+msgid "will attend"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:34
+msgid "will not attend"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:41
+msgid "... and will eat"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:52
+msgid "Questions/comments/well wishes"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:56
+msgid "Submit Response"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:11
+#, python-format
+msgid "Hi %(party.name)s! Thanks for your response!"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:15
+msgid "We can't wait to celebrate with you in Niagara!"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:18
+msgid "If you have any other questions, don't hesitate to email us at"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:23
+msgid "We're sorry you won't be able to join us in Strasbourg!"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:26
+msgid "We look forward to catching up with you some other time!"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:29
+#, fuzzy
+#| msgid "Théo and Violeta get married"
+msgid "- Théo and Violeta"
+msgstr "Théo et Violeta"
+
+#~ msgid "Home"
+#~ msgstr "Accueil"
+
+#~ msgid "Event"
+#~ msgstr "Le mariage"
+
+#~ msgid "Translation"
+#~ msgstr "Traduction"
+
+#~ msgid "Test"
+#~ msgstr "?? liste de mariage"
+
+#~ msgid "Théo"
+#~ msgstr "Théo"
+
+#~ msgid "Violeta"
+#~ msgstr "Violeta"
