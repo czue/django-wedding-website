@@ -20,9 +20,11 @@
             <li class="nav-item">
               <a class="nav-link" href="#wedding_list">{% trans "Wedding List" %}</a>
             </li>
+            {% comment %}
             <li class="nav-item">
               <a class="nav-link" href="#">{% trans "Pictures" %}</a>
             </li>
+            {% endcomment %}
           </ul>
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -51,9 +53,9 @@
     </div>
   </section>
   <section id="event" class="bg-dark">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-12 ">
+        <div class="col-lg-8 ">
           <a name="info"></a>
           <h2 class="section-heading text-center">{% trans "The civil wedding" %}</h2>
           <hr class="primary">
@@ -86,13 +88,20 @@
             </dd>
           </dl>
         </div>
+        <div class="col-md-auto"
+             style="background: #2b2d34 url({% static "bigday/images/high_res/DSC_2048-1.jpg" %}) top;background-size: cover;width:500px;min-width:300px;min-height:500px">
+        </div>
+
       </div>
     </div>
   </section>
   <section id="saturday-event" class="bg-info">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 ">
+    <div class="container-fluid" style="width: 100vw">
+      <div class="row " style="width: 100vw">
+        <div class="col-md-auto"
+             style="background: #2b2d34 url({% static "bigday/images/high_res/DSC_2048-1.jpg" %}) top;background-size: cover;width:500px;min-width:300px;min-height:500px">
+        </div>
+        <div class="col col-lg-6">
           <h2 class="section-heading text-center">{% trans "Thursday celebration" %}</h2>
           <hr class="primary">
           <dl class="dl-horizontal lead">
@@ -120,23 +129,28 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 ">
+
+        </div>
+        <div class="col-lg-12 ">
+
+        </div>
+      </div>
+    </div>
   </section>
-  <section class="container">
+  <section class="container" style="min-height: 80vh">
     <a name="wedding_list"></a>
-    <h2 class="section-heading text-center">Wedding list</h2>
+    <h2 class="section-heading text-center">{%  trans"Wedding list" %}</h2>
     <hr class="primary">
     <p>
       {% blocktrans %}
-        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre
-        leur
-        chemin heureuxen famille.
-        Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une
-        contribution à une association caritative qui leur tient a coeur.
+        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.
+        Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur.
       {% endblocktrans %}
     </p>
   </section>
-
-
 {% endblock %}
 {% block page_js %}
   <script>

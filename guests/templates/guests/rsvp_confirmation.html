@@ -2,17 +2,16 @@
 {% load i18n %}
 {% load staticfiles %}
 {% block page_head %}
-  <link href="{% static 'bigday/css/rsvp-confirmation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 {% block page_content %}
   <div class="layer"></div>
-  <div class="container" id="main">
+  <div class="container">
     <h2>
       {% blocktrans %}Hi {{ party.name }}! Thanks for your response!{% endblocktrans %}
     </h2>
     {% if party.any_guests_attending %}
       <p>
-        {% trans "We can't wait to celebrate with you in Niagara!" %}
+        {% trans "We can't wait to celebrate with you in Strasbourg!" %}
       </p>
       <p>
         {% trans "If you have any other questions, don't hesitate to email us at" %}
@@ -27,6 +26,6 @@
       </p>
     {% endif %}
     <p>{% trans "- Théo and Violeta" %}</p>
+    <a href="../../../../"><button>{% trans "Return to the landing page" %}</button></a>
   </div>
 {% endblock %}
-0

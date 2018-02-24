@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 19:46+0000\n"
+"POT-Creation-Date: 2018-02-24 20:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,121 +46,116 @@ msgstr ""
 msgid "Wedding List"
 msgstr ""
 
-#: bigday/templates/home.html:24
-msgid "Pictures"
-msgstr ""
-
-#: bigday/templates/home.html:48
+#: bigday/templates/home.html:51
 msgid "We're getting married!"
 msgstr ""
 
-#: bigday/templates/home.html:58
+#: bigday/templates/home.html:61
 msgid "The civil wedding"
 msgstr ""
 
-#: bigday/templates/home.html:61 bigday/templates/home.html:99
+#: bigday/templates/home.html:64 bigday/templates/home.html:109
 msgid "What"
 msgstr ""
 
-#: bigday/templates/home.html:63
+#: bigday/templates/home.html:66
 msgid "Wedding at the Townhall"
 msgstr ""
 
-#: bigday/templates/home.html:65 bigday/templates/home.html:101
+#: bigday/templates/home.html:68 bigday/templates/home.html:111
 msgid "When"
 msgstr ""
 
-#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:12
+#: bigday/templates/home.html:69 guests/templates/guests/invitation.html:12
 msgid "Thursday, July 5th at 3:00 pm"
 msgstr ""
 
-#: bigday/templates/home.html:67 bigday/templates/home.html:103
+#: bigday/templates/home.html:70 bigday/templates/home.html:113
 msgid "Where"
 msgstr ""
 
-#: bigday/templates/home.html:70 guests/templates/guests/invitation.html:13
+#: bigday/templates/home.html:73 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
 msgstr ""
 
-#: bigday/templates/home.html:74 bigday/templates/home.html:111
+#: bigday/templates/home.html:77 bigday/templates/home.html:121
 msgid "Attire"
 msgstr ""
 
-#: bigday/templates/home.html:75
+#: bigday/templates/home.html:78
 msgid "Smart"
 msgstr ""
 
-#: bigday/templates/home.html:76 bigday/templates/home.html:114
+#: bigday/templates/home.html:79 bigday/templates/home.html:124
 msgid "Transportation"
 msgstr ""
 
-#: bigday/templates/home.html:77 bigday/templates/home.html:115
+#: bigday/templates/home.html:80 bigday/templates/home.html:125
 msgid "Transportation is not provided. Tips in the info part."
 msgstr ""
 
-#: bigday/templates/home.html:78 bigday/templates/home.html:117
+#: bigday/templates/home.html:81 bigday/templates/home.html:127
 msgid "Parking"
 msgstr ""
 
-#: bigday/templates/home.html:79
+#: bigday/templates/home.html:82
 msgid "Tips in the info part."
 msgstr ""
 
-#: bigday/templates/home.html:80
+#: bigday/templates/home.html:83
 msgid "Other info"
 msgstr ""
 
-#: bigday/templates/home.html:82
+#: bigday/templates/home.html:85
 msgid ""
 "\n"
-"              We are getting married on July 5th at 15:00 in the Strasbourg "
-"Townhall.\n"
-"              Civil wedding is open and celebrated later.\n"
+"                We are getting married on July 5th at 15:00 in the "
+"Strasbourg Townhall.\n"
+"                Civil wedding is open and celebrated later.\n"
 "              "
 msgstr ""
 
-#: bigday/templates/home.html:96
+#: bigday/templates/home.html:106
 msgid "Thursday celebration"
 msgstr ""
 
-#: bigday/templates/home.html:100
+#: bigday/templates/home.html:110
 msgid "Celebrate our marriage"
 msgstr ""
 
-#: bigday/templates/home.html:102
+#: bigday/templates/home.html:112
 msgid "Thursday, July 5th, from 16:00"
 msgstr ""
 
-#: bigday/templates/home.html:106
+#: bigday/templates/home.html:116
 msgid "Pavillon Josephine, Strasbourg"
 msgstr ""
 
-#: bigday/templates/home.html:108
+#: bigday/templates/home.html:118
 msgid "Phone: +33 3 88 36 52 53"
 msgstr ""
 
-#: bigday/templates/home.html:112
+#: bigday/templates/home.html:122
 msgid "Same as Civil wedding"
 msgstr ""
 
-#: bigday/templates/home.html:118
+#: bigday/templates/home.html:128
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
 msgstr ""
 
-#: bigday/templates/home.html:129
+#: bigday/templates/home.html:149
 msgid ""
 "\n"
-"      Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
-"souhait le plus cher est de poursuivre leur\n"
-"      chemin heureuxen famille.\n"
-"      Deux options vous sont proposées pour le cadeau : une contribution au "
-"voyage de noce de leurs reves ou une\n"
-"      contribution à une association caritative qui leur tient a coeur.\n"
+"        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
+"Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.\n"
+"        Deux options vous sont proposées pour le cadeau : une contribution "
+"au voyage de noce de leurs reves ou une contribution à une association "
+"caritative qui leur tient a coeur.\n"
 "      "
 msgstr ""
 
-#: bigday/templates/home.html:168
+#: bigday/templates/home.html:184
 msgid "We're married!"
 msgstr ""
 
@@ -253,27 +248,31 @@ msgstr ""
 msgid "Submit Response"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:11
+#: guests/templates/guests/rsvp_confirmation.html:10
 #, python-format
 msgid "Hi %(party.name)s! Thanks for your response!"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:15
-msgid "We can't wait to celebrate with you in Niagara!"
+#: guests/templates/guests/rsvp_confirmation.html:14
+msgid "We can't wait to celebrate with you in Strasbourg!"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:18
+#: guests/templates/guests/rsvp_confirmation.html:17
 msgid "If you have any other questions, don't hesitate to email us at"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:23
+#: guests/templates/guests/rsvp_confirmation.html:22
 msgid "We're sorry you won't be able to join us in Strasbourg!"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:26
+#: guests/templates/guests/rsvp_confirmation.html:25
 msgid "We look forward to catching up with you some other time!"
 msgstr ""
 
-#: guests/templates/guests/rsvp_confirmation.html:29
+#: guests/templates/guests/rsvp_confirmation.html:28
 msgid "- Théo and Violeta"
+msgstr ""
+
+#: guests/templates/guests/rsvp_confirmation.html:29
+msgid "Return to the landing page"
 msgstr ""
