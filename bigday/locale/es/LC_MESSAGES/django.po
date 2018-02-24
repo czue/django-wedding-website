@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-19 02:47+0000\n"
+"POT-Creation-Date: 2018-02-24 19:46+0000\n"
 "PO-Revision-Date: 2018-02-15 10:51+0100\n"
 "Last-Translator: Augustin <a.borsu@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: bigday/settings.py:112
+#: bigday/settings.py:113
 msgid "English"
 msgstr "Inglés"
 
-#: bigday/settings.py:113
+#: bigday/settings.py:114
 msgid "Spanish"
 msgstr "Español"
 
-#: bigday/settings.py:114
+#: bigday/settings.py:115
 msgid "French"
 msgstr "Francés"
 
@@ -38,16 +38,16 @@ msgid "Wedding"
 msgstr ""
 
 #: bigday/templates/home.html:18
-msgid "Pictures"
-msgstr "Fotos"
+msgid "Info"
+msgstr ""
 
 #: bigday/templates/home.html:21
 msgid "Wedding List"
 msgstr ""
 
 #: bigday/templates/home.html:24
-msgid "FAQ"
-msgstr ""
+msgid "Pictures"
+msgstr "Fotos"
 
 #: bigday/templates/home.html:48
 #, fuzzy
@@ -55,7 +55,115 @@ msgstr ""
 msgid "We're getting married!"
 msgstr "?? la lista de matrimonio"
 
-#: bigday/templates/home.html:84
+#: bigday/templates/home.html:58
+#, fuzzy
+#| msgid "Théo et Violeta's big day"
+msgid "The civil wedding"
+msgstr "Théo y Violeta"
+
+#: bigday/templates/home.html:61 bigday/templates/home.html:99
+msgid "What"
+msgstr ""
+
+#: bigday/templates/home.html:63
+msgid "Wedding at the Townhall"
+msgstr ""
+
+#: bigday/templates/home.html:65 bigday/templates/home.html:101
+msgid "When"
+msgstr ""
+
+#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:12
+msgid "Thursday, July 5th at 3:00 pm"
+msgstr ""
+
+#: bigday/templates/home.html:67 bigday/templates/home.html:103
+msgid "Where"
+msgstr ""
+
+#: bigday/templates/home.html:70 guests/templates/guests/invitation.html:13
+msgid "Strasbourg Townhall"
+msgstr ""
+
+#: bigday/templates/home.html:74 bigday/templates/home.html:111
+msgid "Attire"
+msgstr ""
+
+#: bigday/templates/home.html:75
+msgid "Smart"
+msgstr ""
+
+#: bigday/templates/home.html:76 bigday/templates/home.html:114
+msgid "Transportation"
+msgstr ""
+
+#: bigday/templates/home.html:77 bigday/templates/home.html:115
+msgid "Transportation is not provided. Tips in the info part."
+msgstr ""
+
+#: bigday/templates/home.html:78 bigday/templates/home.html:117
+msgid "Parking"
+msgstr ""
+
+#: bigday/templates/home.html:79
+msgid "Tips in the info part."
+msgstr ""
+
+#: bigday/templates/home.html:80
+msgid "Other info"
+msgstr ""
+
+#: bigday/templates/home.html:82
+msgid ""
+"\n"
+"              We are getting married on July 5th at 15:00 in the Strasbourg "
+"Townhall.\n"
+"              Civil wedding is open and celebrated later.\n"
+"              "
+msgstr ""
+
+#: bigday/templates/home.html:96
+msgid "Thursday celebration"
+msgstr ""
+
+#: bigday/templates/home.html:100
+msgid "Celebrate our marriage"
+msgstr ""
+
+#: bigday/templates/home.html:102
+msgid "Thursday, July 5th, from 16:00"
+msgstr ""
+
+#: bigday/templates/home.html:106
+msgid "Pavillon Josephine, Strasbourg"
+msgstr ""
+
+#: bigday/templates/home.html:108
+msgid "Phone: +33 3 88 36 52 53"
+msgstr ""
+
+#: bigday/templates/home.html:112
+msgid "Same as Civil wedding"
+msgstr ""
+
+#: bigday/templates/home.html:118
+msgid ""
+"Parking is available at the parc entrance an along the Avenue de l'Europe"
+msgstr ""
+
+#: bigday/templates/home.html:129
+msgid ""
+"\n"
+"      Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
+"souhait le plus cher est de poursuivre leur\n"
+"      chemin heureuxen famille.\n"
+"      Deux options vous sont proposées pour le cadeau : une contribution au "
+"voyage de noce de leurs reves ou une\n"
+"      contribution à une association caritative qui leur tient a coeur.\n"
+"      "
+msgstr ""
+
+#: bigday/templates/home.html:168
 msgid "We're married!"
 msgstr ""
 
@@ -75,7 +183,8 @@ msgstr ""
 msgid ""
 "\n"
 "                Despite their self-proclaimed greatness, Théo and Violeta "
-"have a pretty typical story. They met working together.\n"
+"have a pretty typical story. They met working\n"
+"                together.\n"
 "                Théo was blown away by Violeta's passion and thirst for "
 "adventure.\n"
 "                Violeta thought Théo was alright looking and a pretty good "
@@ -105,23 +214,23 @@ msgstr ""
 msgid "You're invited"
 msgstr ""
 
-#: guests/templates/guests/email_templates/invitation.html:14
+#: guests/templates/guests/email_templates/invitation.html:15
 msgid "View invitation"
 msgstr ""
 
-#: guests/templates/guests/email_templates/invitation.html:26
+#: guests/templates/guests/email_templates/invitation.html:27
 #, fuzzy
 #| msgid "Théo and Violeta get married"
 msgid "Théo and Violeta"
 msgstr "¡Nos casamos!"
 
-#: guests/templates/guests/email_templates/invitation.html:38
+#: guests/templates/guests/email_templates/invitation.html:39
 #, fuzzy
 #| msgid "Théo et Violeta's big day"
 msgid "Théo & Violeta's wedding"
 msgstr "Théo y Violeta"
 
-#: guests/templates/guests/email_templates/invitation.html:46
+#: guests/templates/guests/email_templates/invitation.html:47
 msgid "Please view the invitation online to rsvp."
 msgstr ""
 
@@ -130,14 +239,6 @@ msgstr ""
 #| msgid "Théo and Violeta get married"
 msgid "Théo and Violetta Wedding"
 msgstr "¡Nos casamos!"
-
-#: guests/templates/guests/invitation.html:12
-msgid "Thursday, July 5th at 3:00 pm"
-msgstr ""
-
-#: guests/templates/guests/invitation.html:13
-msgid "Strasbourg Townhall"
-msgstr ""
 
 #: guests/templates/guests/invitation.html:14
 msgid "Place Broglie, 67000 Strasbourg, France"
@@ -155,11 +256,11 @@ msgstr ""
 msgid "... and will eat"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:52
+#: guests/templates/guests/invitation.html:53
 msgid "Questions/comments/well wishes"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:56
+#: guests/templates/guests/invitation.html:57
 msgid "Submit Response"
 msgstr ""
 
