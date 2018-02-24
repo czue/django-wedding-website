@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 20:59+0000\n"
+"POT-Creation-Date: 2018-02-24 21:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,6 +142,10 @@ msgstr ""
 #: bigday/templates/home.html:128
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
+msgstr ""
+
+#: bigday/templates/home.html:146
+msgid "Wedding list"
 msgstr ""
 
 #: bigday/templates/home.html:149
