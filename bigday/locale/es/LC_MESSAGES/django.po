@@ -31,83 +31,83 @@ msgstr "Francés"
 
 #: bigday/templates/base.html:10
 msgid "Théo et Violeta's big day"
-msgstr "Théo y Violeta"
+msgstr "El gran día de Théo y Violeta"
 
 #: bigday/templates/home.html:14
 msgid "Wedding"
-msgstr ""
+msgstr "Matrimonio"
 
 #: bigday/templates/home.html:18
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #: bigday/templates/home.html:21
 msgid "Wedding List"
-msgstr ""
+msgstr "Lista de bodas"
 
 #: bigday/templates/home.html:51
 #, fuzzy
 #| msgid "Théo and Violeta are getting maried!"
 msgid "We're getting married!"
-msgstr "?? la lista de matrimonio"
+msgstr "¡Nos vamos a casar!"
 
 #: bigday/templates/home.html:61
 #, fuzzy
 #| msgid "Théo et Violeta's big day"
 msgid "The civil wedding"
-msgstr "Théo y Violeta"
+msgstr "La ceremonia civil"
 
 #: bigday/templates/home.html:64 bigday/templates/home.html:109
 msgid "What"
-msgstr ""
+msgstr "¿Qué?"
 
 #: bigday/templates/home.html:66
 msgid "Wedding at the Townhall"
-msgstr ""
+msgstr "Matrimonio en el ayuntamiento"
 
 #: bigday/templates/home.html:68 bigday/templates/home.html:111
 msgid "When"
-msgstr ""
+msgstr "¿Cuándo?"
 
 #: bigday/templates/home.html:69 guests/templates/guests/invitation.html:12
 msgid "Thursday, July 5th at 3:00 pm"
-msgstr ""
+msgstr "Jueves, 5 de julio a las 3 pm"
 
 #: bigday/templates/home.html:70 bigday/templates/home.html:113
 msgid "Where"
-msgstr ""
+msgstr "¿Dónde?"
 
 #: bigday/templates/home.html:73 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
-msgstr ""
+msgstr "Ayuntamiento de Estrasburgo"
 
 #: bigday/templates/home.html:77 bigday/templates/home.html:121
 msgid "Attire"
-msgstr ""
+msgstr "Traje"
 
 #: bigday/templates/home.html:78
 msgid "Smart"
-msgstr ""
+msgstr "Formal con un toque exótico"
 
 #: bigday/templates/home.html:79 bigday/templates/home.html:124
 msgid "Transportation"
-msgstr ""
+msgstr "¿Cómo llegar?"
 
 #: bigday/templates/home.html:80 bigday/templates/home.html:125
 msgid "Transportation is not provided. Tips in the info part."
-msgstr ""
+msgstr "No se proporcionará transporte. Para más información sobre cómo llegar, consulta la página de información"
 
 #: bigday/templates/home.html:81 bigday/templates/home.html:127
 msgid "Parking"
-msgstr ""
+msgstr "Estacionamiento"
 
 #: bigday/templates/home.html:82
 msgid "Tips in the info part."
-msgstr ""
+msgstr "Si necesitas ayuda, consulta la página de información"
 
 #: bigday/templates/home.html:83
 msgid "Other info"
-msgstr ""
+msgstr "Más información"
 
 #: bigday/templates/home.html:85
 msgid ""
@@ -117,10 +117,15 @@ msgid ""
 "                Civil wedding is open and celebrated later.\n"
 "              "
 msgstr ""
+"\n"
+"                Nuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el "
+"Ayuntamiento de Estrasburgo.\n"
+"                Habrá una recepción después de la ceremonia civil.\n"
+"              "
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
-msgstr ""
+msgstr "La recepción"
 
 #: bigday/templates/home.html:110
 msgid "Celebrate our marriage"
