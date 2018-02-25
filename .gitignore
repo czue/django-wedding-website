@@ -8,3 +8,5 @@ _working/
 data/
 guests/static/save-the-date/images/archive/
 *.mo
+venv
+

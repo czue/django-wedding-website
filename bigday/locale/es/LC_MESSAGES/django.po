@@ -163,15 +163,15 @@ msgid ""
 "Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.\n"
 "        Deux options vous sont proposées pour le cadeau : une contribution "
 "au voyage de noce de leurs reves ou une contribution à une association "
-"caritative qui leur tient a coeur.\n
+"caritative qui leur tient a coeur.\n "
 "      "
 msgstr ""
-""\n"
+"\n"
 "        Théo y Viole son felices juntos en su hogar y no les hace falta nada. "
 "Su más grande deseo es seguir su camino juntos en familia.\n"
 "        Hay dos opciones de regalo: un aporte para "
 "la luna de miel de sus sueños o una donación a una asociación. "
-"caritative qui leur tient a coeur.\n
+"caritative qui leur tient a coeur.\n "
 "      "
 #: bigday/templates/home.html:184
 msgid "We're married!"
