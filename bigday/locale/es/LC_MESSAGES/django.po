@@ -158,7 +158,7 @@ msgstr "Lista de bodas"
 
 #: bigday/templates/home.html:149
 msgid ""
-""\n"
+"\n"
 "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
 "Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.\n"
 "        Deux options vous sont proposées pour le cadeau : une contribution "
