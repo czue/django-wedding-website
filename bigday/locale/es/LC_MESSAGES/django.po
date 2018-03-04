@@ -49,7 +49,7 @@ msgstr "Lista de bodas"
 #, fuzzy
 #| msgid "Théo and Violeta are getting maried!"
 msgid "We're getting married!"
-msgstr "Nos vamos a casar"
+msgstr "¡Nos vamos a casar!"
 
 #: bigday/templates/home.html:61
 #, fuzzy
