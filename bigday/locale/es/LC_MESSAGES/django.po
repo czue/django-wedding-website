@@ -49,7 +49,7 @@ msgstr "Lista de bodas"
 #, fuzzy
 #| msgid "Théo and Violeta are getting maried!"
 msgid "We're getting married!"
-msgstr "¡Nos vamos a casar!"
+msgstr "Nos vamos a casar"
 
 #: bigday/templates/home.html:61
 #, fuzzy
@@ -116,12 +116,7 @@ msgid ""
 "Strasbourg Townhall.\n"
 "                Civil wedding is open and celebrated later.\n"
 "              "
-msgstr ""
-"\n"
-"                Nuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el "
-"Ayuntamiento de Estrasburgo.\n"
-"                Habrá una recepción después de la ceremonia civil.\n"
-"              "
+msgstr "Nuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la ceremonia civil."
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
@@ -165,14 +160,12 @@ msgid ""
 "au voyage de noce de leurs reves ou une contribution à une association "
 "caritative qui leur tient a coeur.\n "
 "      "
-msgstr ""
-"\n"
+msgstr "\n"
 "        Théo y Viole son felices juntos en su hogar y no les hace falta nada. "
 "Su más grande deseo es seguir su camino juntos en familia.\n"
 "        Hay dos opciones de regalo: un aporte para "
-"la luna de miel de sus sueños o una donación a una asociación. "
-"caritative qui leur tient a coeur.\n "
-"      "
+"la luna de miel de sus sueños o una donación a una asociación.\n"
+
 #: bigday/templates/home.html:184
 msgid "We're married!"
 msgstr "¡Nos vamos a casar!"
