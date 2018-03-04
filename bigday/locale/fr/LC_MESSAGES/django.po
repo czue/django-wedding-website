@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 21:33+0000\n"
+"POT-Creation-Date: 2018-03-04 19:11+0000\n"
 "PO-Revision-Date: 2018-02-24 21:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -96,7 +96,7 @@ msgstr "Transport"
 
 #: bigday/templates/home.html:80 bigday/templates/home.html:125
 msgid "Transportation is not provided. Tips in the info part."
-msgstr "Le transport n'est pas prévu. Tu as besoin de plus d'information ? Va voir les indications dans la partie "information"."
+msgstr "Le transport n'est pas prévu. Tu as besoin de plus d'information ? Va voir les indications dans la partie \"information\"."
 
 #: bigday/templates/home.html:81 bigday/templates/home.html:127
 msgid "Parking"
@@ -117,7 +117,10 @@ msgid ""
 "Strasbourg Townhall.\n"
 "                Civil wedding is open and celebrated later.\n"
 "              "
-msgstr "\nNous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville de Strasbourg. La réception aura lieu par la suite."
+msgstr ""
+"\n"
+"Nous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville "
+"de Strasbourg. La réception aura lieu par la suite."
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
@@ -148,7 +151,9 @@ msgstr "La même que pour la cérémonie civil"
 #: bigday/templates/home.html:128
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
-msgstr "Un parking est disponible à l'entrée du parc et le long de l'Avenue de l'Europe"
+msgstr ""
+"Un parking est disponible à l'entrée du parc et le long de l'Avenue de "
+"l'Europe"
 
 #: bigday/templates/home.html:146
 #, fuzzy
@@ -165,7 +170,13 @@ msgid ""
 "au voyage de noce de leurs reves ou une contribution à une association "
 "caritative qui leur tient a coeur.\n"
 "      "
-msgstr "\nThéo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux main dans la main. Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs rêves ou une contribution à une association caritative."
+msgstr ""
+"\n"
+"Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
+"souhait le plus cher est de poursuivre leur chemin heureux main dans la "
+"main. Deux options vous sont proposées pour le cadeau : une contribution au "
+"voyage de noce de leurs rêves ou une contribution à une association "
+"caritative."
 
 #: bigday/templates/home.html:184
 msgid "We're married!"
@@ -228,11 +239,14 @@ msgstr "Théo et Violeta"
 
 #: guests/templates/guests/email_templates/invitation.html:39
 msgid "Théo & Violeta's wedding"
-msgstr "Le mariage de Théo & Violeta. Nous avons le plaisir de te faire part de notre union et nous serions heureux que tu puisses te joindre à nous en ce moment spécial de nos vies."
+msgstr ""
+"Le mariage de Théo & Violeta. Nous avons le plaisir de te faire part de "
+"notre union et nous serions heureux que tu puisses te joindre à nous en ce "
+"moment spécial de nos vies."
 
 #: guests/templates/guests/email_templates/invitation.html:47
 msgid "Please view the invitation online to rsvp."
-msgstr "Merci d'ouvrir l'invitation en ligne pour confirmer votre présence via le bouton "voir l'invitation"."
+msgstr "Merci d'ouvrir l'invitation en ligne pour confirmer votre présence via le bouton \"voir l'invitation\"."
 
 #: guests/templates/guests/invitation.html:10
 msgid "Théo and Violetta Wedding"
@@ -265,7 +279,7 @@ msgstr "Envoyer"
 #: guests/templates/guests/rsvp_confirmation.html:10
 #, python-format
 msgid "Hi %(party.name)s! Thanks for your response!"
-msgstr "Bonjour %(party.name) ! Merci pour votre réponse !"
+msgstr "Bonjour %(party.name)s! Merci pour votre réponse !"
 
 #: guests/templates/guests/rsvp_confirmation.html:14
 msgid "We can't wait to celebrate with you in Strasbourg!"
@@ -303,9 +317,6 @@ msgstr "Retour à la page d'accueil"
 
 #~ msgid "Event"
 #~ msgstr "Le mariage"
-
-#~ msgid "Test"
-#~ msgstr ""
 
 #~ msgid "Théo"
 #~ msgstr "Théo"
