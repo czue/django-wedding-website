@@ -160,11 +160,7 @@ msgid ""
 "au voyage de noce de leurs reves ou une contribution à une association "
 "caritative qui leur tient a coeur.\n "
 "      "
-msgstr "\n"
-"        Théo y Viole son felices juntos en su hogar y no les hace falta nada. "
-"Su más grande deseo es seguir su camino juntos en familia.\n"
-"        Hay dos opciones de regalo: un aporte para "
-"la luna de miel de sus sueños o una donación a una asociación.\n"
+msgstr "Théo y Viole son felices juntos en su hogar y no les hace falta nada. Su más grande deseo es seguir su camino juntos en familia. Hay dos opciones de regalo: un aporte para la luna de miel de sus sueños o una donación a una asociación."
 
 #: bigday/templates/home.html:184
 msgid "We're married!"
