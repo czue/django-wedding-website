@@ -79,7 +79,7 @@ msgstr "¿Dónde?"
 
 #: bigday/templates/home.html:73 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
-msgstr "Ayuntamiento de Estrasburgo"
+msgstr "Ayuntamiento de Estrasburgo - Plaza Brogli, 67000 Estrasburgo"
 
 #: bigday/templates/home.html:77 bigday/templates/home.html:121
 msgid "Attire"
@@ -116,7 +116,7 @@ msgid ""
 "Strasbourg Townhall.\n"
 "                Civil wedding is open and celebrated later.\n"
 "              "
-msgstr "\nNuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la ceremonia civil."
+msgstr "\n Nuestro matrimonio se llevará a cabo el 5 de julio - hora por definir - en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la ceremonia civil."
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
@@ -132,7 +132,7 @@ msgstr "Jueves, 5 de julio, hora por definir"
 
 #: bigday/templates/home.html:116
 msgid "Pavillon Josephine, Strasbourg"
-msgstr "Pavillon Joséphine, Estrasburgo"
+msgstr "Pavillon Joséphine, 67000 Estrasburgo"
 
 #: bigday/templates/home.html:118
 msgid "Phone: +33 3 88 36 52 53"
@@ -197,25 +197,26 @@ msgstr ""
 #, fuzzy
 #| msgid "Théo and Violeta are getting maried!"
 msgid "Théo and Violeta - You're Invited!"
-msgstr "?? la lista de matrimonio"
+msgstr "¡Théo y Violeta se casan!"
 
 #: guests/invitation.py:35
 msgid "You are invited!"
-msgstr ""
+msgstr "Nos encantaría celebrar contigo nuestra unión."
 
 #: guests/invitation.py:53
 msgid ""
 "You're invited to Théo and Violeta's wedding. To view this invitation, visit "
 "{} in any browser."
-msgstr ""
+msgstr "Te invitamos a nuestro matrimonio. Para ver esta invitación, por favor visita"
+"{} desde cualquier navegador."
 
 #: guests/invitation.py:56
 msgid "You're invited"
-msgstr ""
+msgstr "Estás invitado"
 
 #: guests/templates/guests/email_templates/invitation.html:15
 msgid "View invitation"
-msgstr ""
+msgstr "Ver la invitación"
 
 #: guests/templates/guests/email_templates/invitation.html:27
 #, fuzzy
@@ -227,11 +228,11 @@ msgstr "¡Nos casamos!"
 #, fuzzy
 #| msgid "Théo et Violeta's big day"
 msgid "Théo & Violeta's wedding"
-msgstr "Théo y Violeta"
+msgstr "Acompáñanos a celebrar nuestro matrimonio"
 
 #: guests/templates/guests/email_templates/invitation.html:47
 msgid "Please view the invitation online to rsvp."
-msgstr ""
+msgstr "Consulta tu invitación y confirma tu asistencia."
 
 #: guests/templates/guests/invitation.html:10
 #, fuzzy
@@ -241,48 +242,48 @@ msgstr "¡Nos casamos!"
 
 #: guests/templates/guests/invitation.html:14
 msgid "Place Broglie, 67000 Strasbourg, France"
-msgstr ""
+msgstr "Plaza Broglie, 67000 Estrasburgo, Francia"
 
 #: guests/templates/guests/invitation.html:29
 msgid "will attend"
-msgstr ""
+msgstr "va a asistir"
 
 #: guests/templates/guests/invitation.html:34
 msgid "will not attend"
-msgstr ""
+msgstr "no va a asistir"
 
 #: guests/templates/guests/invitation.html:41
 msgid "... and will eat"
-msgstr ""
+msgstr "... y va a comer"
 
 #: guests/templates/guests/invitation.html:53
 msgid "Questions/comments/well wishes"
-msgstr ""
+msgstr "Preguntas, comentarios:"
 
 #: guests/templates/guests/invitation.html:57
 msgid "Submit Response"
-msgstr ""
+msgstr "Enviar"
 
 #: guests/templates/guests/rsvp_confirmation.html:10
 #, python-format
 msgid "Hi %(party.name)s! Thanks for your response!"
-msgstr ""
+msgstr "¡Hola, %(party.name)! Gracias por tu mensaje."
 
 #: guests/templates/guests/rsvp_confirmation.html:14
 msgid "We can't wait to celebrate with you in Strasbourg!"
-msgstr ""
+msgstr "¡Nos alegra mucho que te unas a nuestra celebración!"
 
 #: guests/templates/guests/rsvp_confirmation.html:17
 msgid "If you have any other questions, don't hesitate to email us at"
-msgstr ""
+msgstr "Si tienes alguna duda, no dudes en escribirnos a nuestra dirección de correo electrónico:"
 
 #: guests/templates/guests/rsvp_confirmation.html:22
 msgid "We're sorry you won't be able to join us in Strasbourg!"
-msgstr ""
+msgstr "¡Qué lástima que no puedas asistir a nuestra celebración!"
 
 #: guests/templates/guests/rsvp_confirmation.html:25
 msgid "We look forward to catching up with you some other time!"
-msgstr ""
+msgstr "Esperamos poder verte en otra oportunidad."
 
 #: guests/templates/guests/rsvp_confirmation.html:28
 #, fuzzy
@@ -292,7 +293,7 @@ msgstr "¡Nos casamos!"
 
 #: guests/templates/guests/rsvp_confirmation.html:29
 msgid "Return to the landing page"
-msgstr ""
+msgstr "Volver a la página de inicio"
 
 #~ msgid "Pictures"
 #~ msgstr "Fotos"
