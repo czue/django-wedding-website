@@ -228,11 +228,11 @@ msgstr "¡Nos casamos!"
 #, fuzzy
 #| msgid "Théo et Violeta's big day"
 msgid "Théo & Violeta's wedding"
-msgstr "Acompáñanos a celebrar nuestro matrimonio"
+msgstr "Acompáñanos a celebrar nuestro matrimonio. Tenemos el placer de invitarte a compartir y nos encantaría poder celebrar contigo este momento especial de nuestras vidas."
 
 #: guests/templates/guests/email_templates/invitation.html:47
 msgid "Please view the invitation online to rsvp."
-msgstr "Consulta tu invitación y confirma tu asistencia."
+msgstr "Consulta tu invitación y confirma tu asistencia. Para ver la invitación haz clic en el botón "Ver la invitación"."
 
 #: guests/templates/guests/invitation.html:10
 #, fuzzy
