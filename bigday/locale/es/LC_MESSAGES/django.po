@@ -116,7 +116,7 @@ msgid ""
 "Strasbourg Townhall.\n"
 "                Civil wedding is open and celebrated later.\n"
 "              "
-msgstr "Nuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la ceremonia civil."
+msgstr "\nNuestro matrimonio se llevará a cabo el 5 de julio a las 3 pm en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la ceremonia civil."
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
@@ -160,7 +160,7 @@ msgid ""
 "au voyage de noce de leurs reves ou une contribution à une association "
 "caritative qui leur tient a coeur.\n "
 "      "
-msgstr "Théo y Viole son felices juntos en su hogar y no les hace falta nada. Su más grande deseo es seguir su camino juntos en familia. Hay dos opciones de regalo: un aporte para la luna de miel de sus sueños o una donación a una asociación."
+msgstr "\nThéo y Viole son felices juntos en su hogar y no les hace falta nada. Su más grande deseo es seguir su camino juntos en familia. Hay dos opciones de regalo: un aporte para la luna de miel de sus sueños o una donación a una asociación."
 
 #: bigday/templates/home.html:184
 msgid "We're married!"

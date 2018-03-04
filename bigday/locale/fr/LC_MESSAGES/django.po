@@ -117,7 +117,7 @@ msgid ""
 "Strasbourg Townhall.\n"
 "                Civil wedding is open and celebrated later.\n"
 "              "
-msgstr "Nous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville de Strasbourg. La cérémonier est célébrée plus tard."
+msgstr "\nNous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville de Strasbourg. La cérémonier est célébrée plus tard."
 
 #: bigday/templates/home.html:106
 msgid "Thursday celebration"
@@ -165,7 +165,7 @@ msgid ""
 "au voyage de noce de leurs reves ou une contribution à une association "
 "caritative qui leur tient a coeur.\n"
 "      "
-msgstr "Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille. Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur"
+msgstr "\nThéo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille. Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur"
 
 #: bigday/templates/home.html:184
 msgid "We're married!"
