@@ -1,6 +1,7 @@
 import uuid
 
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 # these will determine the default formality of correspondence
 ALLOWED_TYPES = [
@@ -50,8 +51,8 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('meat', 'meat'),
-    ('vegetarian', 'vegetarian'),
+    ('meat', _('meat')),
+    ('vegetarian', _('vegetarian')),
 ]
 
 

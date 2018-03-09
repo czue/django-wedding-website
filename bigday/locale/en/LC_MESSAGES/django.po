@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-04 19:11+0000\n"
+"POT-Creation-Date: 2018-03-09 19:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,6 +206,14 @@ msgstr ""
 
 #: guests/invitation.py:56
 msgid "You're invited"
+msgstr ""
+
+#: guests/models.py:54
+msgid "meat"
+msgstr ""
+
+#: guests/models.py:55
+msgid "vegetarian"
 msgstr ""
 
 #: guests/templates/guests/email_templates/invitation.html:15

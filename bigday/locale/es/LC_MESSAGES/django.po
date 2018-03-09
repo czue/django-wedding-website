@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-04 19:11+0000\n"
+"POT-Creation-Date: 2018-03-09 19:56+0000\n"
 "PO-Revision-Date: 2018-02-15 10:51+0100\n"
 "Last-Translator: Augustin <a.borsu@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -46,14 +46,10 @@ msgid "Wedding List"
 msgstr "Lista de bodas"
 
 #: bigday/templates/home.html:51
-#, fuzzy
-#| msgid "Théo and Violeta are getting maried!"
 msgid "We're getting married!"
 msgstr "¡Nos vamos a casar!"
 
 #: bigday/templates/home.html:61
-#, fuzzy
-#| msgid "Théo et Violeta's big day"
 msgid "The civil wedding"
 msgstr "La ceremonia civil"
 
@@ -160,16 +156,6 @@ msgid "Wedding list"
 msgstr "Lista de bodas"
 
 #: bigday/templates/home.html:149
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
-#| "Leur souhait le plus cher est de poursuivre leur chemin heureux en "
-#| "famille.\n"
-#| "        Deux options vous sont proposées pour le cadeau : une "
-#| "contribution au voyage de noce de leurs reves ou une contribution à une "
-#| "association caritative qui leur tient a coeur.\n"
-#| "       "
 msgid ""
 "\n"
 "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
@@ -217,8 +203,6 @@ msgid ""
 msgstr ""
 
 #: guests/invitation.py:34
-#, fuzzy
-#| msgid "Théo and Violeta are getting maried!"
 msgid "Théo and Violeta - You're Invited!"
 msgstr "¡Théo y Violeta se casan!"
 
@@ -238,19 +222,23 @@ msgstr ""
 msgid "You're invited"
 msgstr "Estás invitado"
 
+#: guests/models.py:54
+msgid "meat"
+msgstr ""
+
+#: guests/models.py:55
+msgid "vegetarian"
+msgstr ""
+
 #: guests/templates/guests/email_templates/invitation.html:15
 msgid "View invitation"
 msgstr "Ver la invitación"
 
 #: guests/templates/guests/email_templates/invitation.html:27
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "Théo and Violeta"
 msgstr "¡Nos casamos!"
 
 #: guests/templates/guests/email_templates/invitation.html:39
-#, fuzzy
-#| msgid "Théo et Violeta's big day"
 msgid "Théo & Violeta's wedding"
 msgstr ""
 "Acompáñanos a celebrar nuestro matrimonio. Tenemos el placer de invitarte a "
@@ -259,11 +247,11 @@ msgstr ""
 
 #: guests/templates/guests/email_templates/invitation.html:47
 msgid "Please view the invitation online to rsvp."
-msgstr "Consulta tu invitación y confirma tu asistencia. Para ver la invitación haz clic en el botón \"Ver la invitación\"."
+msgstr ""
+"Consulta tu invitación y confirma tu asistencia. Para ver la invitación haz "
+"clic en el botón \"Ver la invitación\"."
 
 #: guests/templates/guests/invitation.html:10
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "Théo and Violetta Wedding"
 msgstr "¡Nos casamos!"
 
@@ -315,8 +303,6 @@ msgid "We look forward to catching up with you some other time!"
 msgstr "Esperamos poder verte en otra oportunidad."
 
 #: guests/templates/guests/rsvp_confirmation.html:28
-#, fuzzy
-#| msgid "Théo and Violeta get married"
 msgid "- Théo and Violeta"
 msgstr "¡Nos casamos!"
 
