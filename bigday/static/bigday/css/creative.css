@@ -192,3 +192,54 @@ li.nav-item .btn-white {
     color: #46484a;
     background: #fff;
 }
+
+/* ADRIEN */
+.container-banner {
+    background-color: #545B6277;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+}
+
+.section {
+    height: 100vh;
+}
+.section-civil-wedding {
+    background-color: #eee;
+}
+
+.container-civil-wedding {
+    position: inherit;
+    height: 100%;
+}
+
+
+/* grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    height: 100%;
+}
+
+.grid-container .grid-item .block-picture img {
+    height:50%;
+    width: 30rem;
+  }
+
+.grid-container .grid-item .block-picture > img {
+    margin: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #ddd;
+    padding: 10px;
+    color: #fff;
+}
+
+
+
+/* 
+purple : #683090;
+burgundy: #9B2C52;
+Orange: #F16031;
+*/
