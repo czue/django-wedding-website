@@ -51,9 +51,9 @@ def send_invitation_email(party, test_only=False, recipients=None):
     )
     subject = "You're invited"
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
-    msg = EmailMultiAlternatives(subject, template_text, 'Cory and Rowena <cory.zue@gmail.com>', recipients,
-                                 cc=['Rowena Luk <rowenaluk@gmail.com>'],
-                                 reply_to=['hello@coryandro.com'])
+    msg = EmailMultiAlternatives(subject, template_text, settings.DEFAULT_WEDDING_FROM_EMAIL, recipients,
+                                 cc=settings.WEDDING_CC_LIST,
+                                 reply_to=[settings.DEFAULT_WEDDING_FROM_EMAIL])
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
     for filename in (context['main_image'], ):
