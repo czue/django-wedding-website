@@ -208,14 +208,35 @@ li.nav-item .btn-white {
     background-color: #eee;
 }
 
-.container-civil-wedding {
+/* .container-civil-wedding {
     position: inherit;
     height: 100%;
+} */
+
+.container-civil-wedding {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35em, 1fr));
 }
 
+article {
+    position: relative;
+  }
 
+  .article-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .article-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 /* grid */
-.grid-container {
+/* .grid-container {
     display: grid;
     grid-template-columns: 50% 50%;
     align-content: center;
@@ -239,7 +260,7 @@ li.nav-item .btn-white {
     box-shadow: 2px 2px 4px #ddd;
     padding: 10px;
     color: #fff;
-}
+} */
 
 
 
