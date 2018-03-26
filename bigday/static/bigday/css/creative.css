@@ -213,38 +213,6 @@ li.nav-item .btn-white {
     height: 100%;
 }
 
-.grid-item-picture {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-
-
-/* ===== Responsive === */
-.responsive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-}
-/* 
-article {
-    position: relative;
-  }
-
-  .article-img {
-    height: 200px; 
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .article-title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-  } */
-
 .grid-item .block-picture > img {
     margin: 5px;
     background: #fff;
@@ -252,6 +220,18 @@ article {
     box-shadow: 2px 2px 4px #ddd;
     padding: 10px;
     color: #fff;
+}
+
+.grid-item-picture {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* ===== Responsive === */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
 }
 
   /* Large desktop */
@@ -262,20 +242,33 @@ article {
 }
 
 /* Portrait tablet to landscape and desktop */
-@media screen and (min-width: 768px) and (max-width: 979px) { 
+@media screen and (min-width: 768px) and (max-width: 1199px) { 
     .grid-item .block-picture img {
         width: 35em;
+    }
+
+    .section-civil-wedding {
+        height: 100%;
     }
 }
 
 /* Landscape phone to portrait tablet */
-@media screen and (min-width: 480px) and (max-width: 760px) { 
+@media screen and (min-width: 480px) and (max-width: 767px) { 
     .grid-item .block-picture img {
-        width: 5em;
+        width: 25em;
+    }
+
+    .section-civil-wedding {
+        height: 100%;
     }
 }
-/* 
-purple : #683090;
-burgundy: #9B2C52;
-Orange: #F16031;
-*/
+
+@media screen and (max-width: 480px) { 
+    .grid-item .block-picture img {
+        width: 15em;
+    }
+
+    .section-civil-wedding {
+        height: 100%;
+    }
+ }
