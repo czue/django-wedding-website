@@ -217,14 +217,19 @@ li.nav-item .btn-white {
 /* grid */
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     align-content: center;
-    height: 100%;
+    height: 50em;
+}
+
+.grid-container .grid-item-picture {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .grid-container .grid-item .block-picture img {
-    height:50%;
-    width: 30rem;
+    width: 25em;
   }
 
 .grid-container .grid-item .block-picture > img {
