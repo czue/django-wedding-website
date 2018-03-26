@@ -4,10 +4,15 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ @font-face {
+    font-family: optima;
+    src: url(/static/bigday/fonts/optima/optima.ttf);
+}
+
 html,
 
 body {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     background-color: #ffffff;
     color: #46484a;
@@ -18,25 +23,25 @@ a {
 }
 
 h1 {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima,"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 4rem;
     font-weight: 600;
 }
 
 h2 {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima,"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.8rem;
     font-weight: 500;
 }
 
 h3 {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima,"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2rem;
     font-weight: 500;
 }
 
 h4 {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima,"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -60,7 +65,7 @@ p {
 }
 
 a.navbar-brand, a.logo {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: optima,"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff !important;
     font-size: 2rem;
     font-weight: bold;
