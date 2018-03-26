@@ -205,15 +205,17 @@ li.nav-item .btn-white {
     height: 100vh;
 }
 .section-civil-wedding {
-    background-color: #eee;
+    background-image: url("/static/bigday/images/pattern_2.png");
+    background-repeat: repeat;
 }
 
 .container-civil-wedding {
     position: inherit;
     height: 100%;
+    background-color: #252020db;
 }
 
-.grid-item .block-picture > img {
+.block-picture > img {
     margin: 5px;
     background: #fff;
     border: 1px solid #ddd;
@@ -222,20 +224,25 @@ li.nav-item .btn-white {
     color: #fff;
 }
 
+/* ===== Responsive === */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    align-content: center;
+}
+
 .grid-item-picture {
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-/* ===== Responsive === */
-.responsive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-}
-
   /* Large desktop */
 @media screen and (min-width: 1200px) { 
+    .responsive-grid {
+        height: 70em;
+    }
+    
     .grid-item .block-picture img {
         width: 25em;
     } 
