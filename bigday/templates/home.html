@@ -57,23 +57,48 @@
     </div> -->
   </section>
   <section id="event" class="section section-civil-wedding">
-          <a name="info"></a>
-          <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
-         <section class="container-civil-wedding">
-          <article>
-            <img class="article-img" src="http://placekitten.com/305/205" alt=" ">
-            <h1 class="article-title">
-              Title of article
-            </h1>
-          </article>
-          <article>
-            <img class="article-img" src="http://placekitten.com/320/220" alt=" ">
-            <h1 class="article-title">
-              Title of article
-            </h1>
-          </article>
-        </section>
-   
+    <a name="info"></a>
+    <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
+    <div class="container container-civil-wedding">
+      <section class="responsive-grid">
+        <article>
+            <hr class="primary">
+            <dl class="dl-horizontal lead">
+              <dt>{% trans "What" %}</dt>
+              <dd>
+                {% trans "Wedding at the Townhall" %}
+              </dd>
+              <dt>{% trans "When" %}</dt>
+              <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
+              <dt>{% trans "Where" %}</dt>
+              <dd>
+                <address>
+                  {% trans "Strasbourg Townhall" %}<br>
+                  <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
+                </address>
+              </dd>
+              <dt>{% trans "Attire" %}</dt>
+              <dd>{% trans "Smart" %}</dd>
+              <dt>{% trans "Transportation" %}</dt>
+              <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
+              <dt>{% trans "Parking" %}</dt>
+              <dd>{% trans "Tips in the info part." %}</dd>
+              <dt>{% trans "Other info" %}</dt>
+              <dd>
+                {% blocktrans %}
+                  We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
+                  Civil wedding is open and celebrated later.
+                {% endblocktrans %}
+              </dd>
+            </dl>
+        </article>
+        <article class="grid-item grid-item-picture">
+            <div class="block-picture">
+                <img src="/static/bigday/images/image1.jpg"/>
+            </div>
+        </article>
+      </section>
+    </div>
     <!-- V1
       
       <div class="container container-civil-wedding">

@@ -208,22 +208,31 @@ li.nav-item .btn-white {
     background-color: #eee;
 }
 
-/* .container-civil-wedding {
+.container-civil-wedding {
     position: inherit;
     height: 100%;
-} */
-
-.container-civil-wedding {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35em, 1fr));
 }
 
+.grid-item-picture {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+/* ===== Responsive === */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+}
+/* 
 article {
     position: relative;
   }
 
   .article-img {
-    height: 200px;
+    height: 200px; 
     width: 100%;
     object-fit: cover;
   }
@@ -234,36 +243,37 @@ article {
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
-  }
-/* grid */
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: center;
-    height: 50em;
-}
+  } */
 
-.grid-container .grid-item-picture {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.grid-container .grid-item .block-picture img {
-    width: 25em;
-  }
-
-.grid-container .grid-item .block-picture > img {
+.grid-item .block-picture > img {
     margin: 5px;
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 4px #ddd;
     padding: 10px;
     color: #fff;
-} */
+}
 
+  /* Large desktop */
+@media screen and (min-width: 1200px) { 
+    .grid-item .block-picture img {
+        width: 25em;
+    } 
+}
 
+/* Portrait tablet to landscape and desktop */
+@media screen and (min-width: 768px) and (max-width: 979px) { 
+    .grid-item .block-picture img {
+        width: 35em;
+    }
+}
 
+/* Landscape phone to portrait tablet */
+@media screen and (min-width: 480px) and (max-width: 760px) { 
+    .grid-item .block-picture img {
+        width: 5em;
+    }
+}
 /* 
 purple : #683090;
 burgundy: #9B2C52;
