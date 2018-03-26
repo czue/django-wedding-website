@@ -210,14 +210,15 @@ li.nav-item .btn-white {
     height: 100vh;
 }
 .section-civil-wedding {
-    background-image: url("/static/bigday/images/pattern_2.png");
+    background-image: url("/static/bigday/images/pattern_3.png");
     background-repeat: repeat;
 }
 
 .container-civil-wedding {
     position: inherit;
     height: 100%;
-    background-color: #252020db;
+    background-color: #dacecedb;
+    -webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(5%,rgba(0,0,0,1)), color-stop(95%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0.8)));
 }
 
 .block-picture > img {
@@ -245,7 +246,7 @@ li.nav-item .btn-white {
   /* Large desktop */
 @media screen and (min-width: 1200px) { 
     .responsive-grid {
-        height: 70em;
+        height: 50em;
     }
     
     .grid-item .block-picture img {
@@ -284,3 +285,20 @@ li.nav-item .btn-white {
         height: 100%;
     }
  }
+
+ /*
+ navy: 000080
+
+ eggplant: 614051*
+ contrast:
+ - A17b8f 
+ - 825b6f* 
+ - 472637* 
+ - 3f172b
+
+ gold: ffd700
+
+ old:
+
+ bg 2E2828
+ elem: 693D3D
