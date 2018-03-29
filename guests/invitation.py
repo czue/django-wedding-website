@@ -29,8 +29,8 @@ def get_invitation_context(party):
     return {
         'title': "Lion's Head",
         'main_image': 'DSC_2094-2.jpg',
-        'main_color': '#fff3e8',
-        'font_color': '#666666',
+        'main_color': '#472637',
+        'font_color': '#eeeeee',
         'page_title': _("Théo and Violeta - You're Invited!"),
         'preheader_text': _("You are invited!"),
         'invitation_id': party.invitation_id,
