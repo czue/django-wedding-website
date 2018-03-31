@@ -218,14 +218,14 @@ li.nav-item .btn-white {
     position: inherit;
     height: 100%;
     background-color: #dacecedb;
-    -webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(5%,rgba(0,0,0,1)), color-stop(95%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0.8)));
+    /*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(5%,rgba(0,0,0,1)), color-stop(95%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0.8))); */
 }
 
 .block-picture > img {
     margin: 5px;
     background: #fff;
     border: 1px solid #ddd;
-    box-shadow: 2px 2px 4px #ddd;
+    box-shadow: 2px 2px 4px #999;
     padding: 10px;
     color: #fff;
 }
@@ -287,7 +287,7 @@ li.nav-item .btn-white {
  }
 
  /*
- navy: 000080
+ navy: 000080 => 00335A
 
  eggplant: 614051*
  contrast:
