@@ -231,6 +231,11 @@ msgstr "Choucroute garnie avec cassoulet de foi gras"
 msgid "vegetarian"
 msgstr "Salade et étuvée de légume"
 
+#: guests/templates/guests/email_templates/invitation.html:8
+msgid "Théo & Violeta's wedding title"
+msgstr ""
+"Le mariage de Théo & Violeta."
+
 #: guests/templates/guests/email_templates/invitation.html:15
 msgid "View invitation"
 msgstr "Voir l'invitation"
@@ -242,7 +247,7 @@ msgstr "Théo et Violeta"
 #: guests/templates/guests/email_templates/invitation.html:39
 msgid "Théo & Violeta's wedding"
 msgstr ""
-"Le mariage de Théo & Violeta. Nous avons le plaisir de te faire part de "
+"Nous avons le plaisir de te faire part de "
 "notre union et nous serions heureux que tu puisses te joindre à nous en ce "
 "moment spécial de nos vies."
 
