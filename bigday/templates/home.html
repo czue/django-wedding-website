@@ -3,7 +3,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block page_content %}
-  <section class="cover text-center" style="height: 100vh">
+  <section class="section cover text-center">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -45,15 +45,108 @@
         </div>
       </div>
     </nav>
-    <div class="cover-container pb-5">
-      <div class="cover-inner container">
+    <div class="container-banner">
         <h1 id="wedding_title">{% trans "We're getting married!" %}</h1>
-        <p id="wedding_timer"></p>
-      </div>
+        <h2 id="wedding_timer"></H3>
     </div>
+    <!-- <div class="cover-container pb-5">
+      <div class="cover-inner container main-title">
+        <h2 id="wedding_title">{% trans "We're getting married!" %}</h2>
+        <h3 id="wedding_timer"></H3>
+      </div>
+    </div> -->
   </section>
-  <section id="event" style="background: #afd9ee">
-    <div class="container-fluid">
+  <section id="event" class="section section-civil-wedding">
+    <a name="info"></a>
+    <div class="container container-civil-wedding">
+      <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
+      <section class="responsive-grid">
+        <article>
+            <hr class="primary">
+            <dl class="dl-horizontal lead">
+              <dt>{% trans "What" %}</dt>
+              <dd>
+                {% trans "Wedding at the Townhall" %}
+              </dd>
+              <dt>{% trans "When" %}</dt>
+              <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
+              <dt>{% trans "Where" %}</dt>
+              <dd>
+                <address>
+                  {% trans "Strasbourg Townhall" %}<br>
+                  <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
+                </address>
+              </dd>
+              <dt>{% trans "Attire" %}</dt>
+              <dd>{% trans "Smart" %}</dd>
+              <dt>{% trans "Transportation" %}</dt>
+              <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
+              <dt>{% trans "Parking" %}</dt>
+              <dd>{% trans "Tips in the info part." %}</dd>
+              <dt>{% trans "Other info" %}</dt>
+              <dd>
+                {% blocktrans %}
+                  We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
+                  Civil wedding is open and celebrated later.
+                {% endblocktrans %}
+              </dd>
+            </dl>
+        </article>
+        <article class="grid-item grid-item-picture">
+            <div class="block-picture">
+                <img src="/static/bigday/images/image1.jpg"/>
+            </div>
+        </article>
+      </section>
+    </div>
+    <!-- V1
+      
+      <div class="container container-civil-wedding">
+        <a name="info"></a>
+        <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
+        <div class="grid-container">
+                <div class="grid-item">
+                        <hr class="primary">
+                        <dl class="dl-horizontal lead">
+                          <dt>{% trans "What" %}</dt>
+                          <dd>
+                            {% trans "Wedding at the Townhall" %}
+                          </dd>
+                          <dt>{% trans "When" %}</dt>
+                          <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
+                          <dt>{% trans "Where" %}</dt>
+                          <dd>
+                            <address>
+                              {% trans "Strasbourg Townhall" %}<br>
+                              <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
+                            </address>
+                          </dd>
+                          <dt>{% trans "Attire" %}</dt>
+                          <dd>{% trans "Smart" %}</dd>
+                          <dt>{% trans "Transportation" %}</dt>
+                          <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
+                          <dt>{% trans "Parking" %}</dt>
+                          <dd>{% trans "Tips in the info part." %}</dd>
+                          <dt>{% trans "Other info" %}</dt>
+                          <dd>
+                            {% blocktrans %}
+                              We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
+                              Civil wedding is open and celebrated later.
+                            {% endblocktrans %}
+                          </dd>
+                        </dl>
+                </div>
+                <div class="grid-item grid-item-picture">
+                    <div class="block-picture">
+                            <img src="/static/bigday/images/image1.jpg"/>
+                    </div>
+                </div>
+        </div>
+    </div> -->
+
+    <!-- OLD ONE
+      
+      <div class="cover-inner container container-fluid">
       <div class="row">
         <div class="col-lg-8 ">
           <a name="info"></a>
@@ -93,7 +186,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
   </section>
   <section id="saturday-event">
     <div class="container-fluid" style="background: #b2dba1">
