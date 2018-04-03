@@ -199,6 +199,21 @@ li.nav-item .btn-white {
 }
 
 /* ADRIEN */
+@import url('https://fonts.googleapis.com/css?family=Raleway|Redressed');
+
+#wedding_title, #wedding_timer, .section {
+    color: #eee;
+    font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
+}
+
+.section-heading {
+    padding-top: 1em;
+}
+
+a.navbar-brand,  .section-heading {
+    font-weight: normal;
+    font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important; 
+}
 .container-banner {
     background-color: #545B6277;
     padding: 15px;
@@ -206,18 +221,16 @@ li.nav-item .btn-white {
     bottom: 0;
 }
 
-.section {
-    height: 100vh;
-}
 .section-civil-wedding {
-    background-image: url("/static/bigday/images/pattern_3.png");
-    background-repeat: repeat;
+    /*background-image: url("/static/bigday/images/pattern_3.png");
+    background-repeat: repeat;*/
+    background-color: #472637;
 }
 
 .container-civil-wedding {
     position: inherit;
     height: 100%;
-    background-color: #dacecedb;
+    /*background-color: #dacecedb;*/
     /*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(5%,rgba(0,0,0,1)), color-stop(95%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0.8))); */
 }
 
@@ -228,13 +241,14 @@ li.nav-item .btn-white {
     box-shadow: 2px 2px 4px #999;
     padding: 10px;
     color: #fff;
-}
+} 
 
 /* ===== Responsive === */
 .responsive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+   /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));*/
     align-content: center;
+    color: #eee;
 }
 
 .grid-item-picture {
@@ -243,10 +257,39 @@ li.nav-item .btn-white {
     margin-bottom: auto;
 }
 
+dt {
+    line-height: 42px;
+    font-size: 30px;
+    color: #eee;
+    font-weight: 500;
+    padding: 5px 0 5px 0;
+    background: url(/static/bigday/images/line.png) repeat-x bottom left;
+}
+dd a {
+    color: #C4A606;
+}
+
+dd a:hover {
+    color: rgb(212, 184, 42);
+}
+
+a.navbar-brand {
+    color: #472637 !important;
+    font-size: 60px;
+}
   /* Large desktop */
 @media screen and (min-width: 1200px) { 
+    .section {
+        height: 100vh;
+        min-height: 700px;
+    }
+
     .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        align-content: center;
         height: 50em;
+        margin-top: 10em;
     }
     
     .grid-item .block-picture img {
@@ -256,6 +299,12 @@ li.nav-item .btn-white {
 
 /* Portrait tablet to landscape and desktop */
 @media screen and (min-width: 768px) and (max-width: 1199px) { 
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        align-content: center;
+    }
+
     .grid-item .block-picture img {
         width: 35em;
     }
@@ -267,6 +316,12 @@ li.nav-item .btn-white {
 
 /* Landscape phone to portrait tablet */
 @media screen and (min-width: 480px) and (max-width: 767px) { 
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        align-content: center;
+    }
+
     .grid-item .block-picture img {
         width: 25em;
     }
