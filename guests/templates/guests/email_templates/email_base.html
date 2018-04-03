@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Redressed" rel="stylesheet">
     <style type="text/css">
         /* CLIENT-SPECIFIC STYLES */
         #outlook a {
@@ -75,7 +76,7 @@
         }
 
         .appleFooter a {
-            color: #999999;
+            color: #eeeeee;
             text-decoration: none;
         }
 
@@ -146,19 +147,29 @@
                 padding: 50px 15px 0 15px !important;
             }
         }
+
+        @import url('https://fonts.googleapis.com/css?family=Raleway|Redressed');
+
+        @media screen { /* hides this rule from unsupported clients */ 
+            .webfont {
+                font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
+            }
+
+            .webfont-title {
+                font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
+            }
+        }
     </style>
     {% if not email_mode %}
         {% include "partials/google-analytics.html" %}
     {% endif %}
 </head>
-<body bgcolor="#FFFFFF" text="#000000">
+<body bgcolor="#472637" text="#eeeeee" class="webfont">
 <title>{{ page_title }}</title>
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
-        <td style="padding: 20px 15px 20px 15px;"
-            class="section-header" align="center" bgcolor="#ffffff"
-            width="100%">
+        <td style="padding: 20px 15px 20px 15px;" class="section-header" align="center"  width="100%">
             <!-- HIDDEN PREHEADER TEXT -->
             <div style="display: none; font-size: 1px; color: #fefefe;
               line-height: 1px; font-family: Helvetica, Arial,
@@ -175,10 +186,10 @@
                                cellspacing="0">
                             <tbody>
                             <tr>
-                                <td align="center" bgcolor="#ffffff">
+                                <td align="center">
                                     {% with "save-the-date/images/"|add:header_filename as header_filepath %}
                                         <img src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
-                                             style="display: inline-block; align-content:center; font-size: 16px;"
+                                             style="display: inline-block; align-content:center; font-size: 16px; border-radius: 10px;"
                                              border="0"
                                              height="60" width="60">
                                     {% endwith %}
@@ -203,34 +214,41 @@
             <table class="responsive-table" border="0" width="500"
                    cellpadding="0" cellspacing="0">
                 <tbody>
-                <tr>
-                    <td>
-                        <table border="0" width="100%" cellpadding="0"
-                               cellspacing="0">
-                            <tbody>
-                            {% block lead_copy %}{% endblock %}
-                            <tr>
-                                <td class="padding-copy">
-                                    <table border="0" width="100%" cellpadding="0" cellspacing="0">
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                            {% block main_image %}{% endblock %}
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {% block main_copy %}{% endblock %}
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            <h1 style="text-align: center; font-family: 'Redressed', cursive !important; font-weight: 400; font-size: 35;" class="webfont-title">
+                                {% trans "Théo & Violeta's wedding title" %}
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" width="100%" cellpadding="0"
+                                cellspacing="0">
+                                <tbody>
+                                {% block lead_copy %}{% endblock %}
+                                <tr>
+                                    <td class="padding-copy">
+                                        <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                {% block main_image %}{% endblock %}
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {% block main_copy %}{% endblock %}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </td>
@@ -240,7 +258,7 @@
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
-        <td align="center" bgcolor="#ffffff">
+        <td align="center" bgcolor="#825B6F">
             <table align="center" border="0" width="100%" cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>
@@ -249,9 +267,9 @@
                             <tbody>
                             <tr>
                                 <td class="padding-copy"
-                                    style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;"
+                                    style="font-size: 12px; line-height: 18px; font-family: Raleway, Calibri, Arial, Helvetica, sans-serif; color:#fff;"
                                     align="center">
-                              <span class="appleFooter" style="color:#666666; align-content:center;">
+                              <span class="appleFooter" style="color:#fff; align-content:center;">
                               {% block footer_content %}{% endblock %}
                               </span>
                                 </td>

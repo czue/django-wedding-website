@@ -230,6 +230,11 @@ msgstr ""
 msgid "vegetarian"
 msgstr ""
 
+#: guests/templates/guests/email_templates/invitation.html:8
+msgid "Théo & Violeta's wedding title"
+msgstr ""
+"Théo & Violeta's wedding title"
+
 #: guests/templates/guests/email_templates/invitation.html:15
 msgid "View invitation"
 msgstr "Ver la invitación"
