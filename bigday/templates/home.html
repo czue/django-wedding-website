@@ -47,7 +47,7 @@
     </nav>
     <div class="container-banner">
         <h1 id="wedding_title">{% trans "We're getting married!" %}</h1>
-        <h2 id="wedding_timer"></H3>
+        <p id="wedding_timer"></p>
     </div>
     <!-- <div class="cover-container pb-5">
       <div class="cover-inner container main-title">
@@ -266,8 +266,12 @@
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
           // Display the result in the element with id="demo"
-          document.getElementById("wedding_timer").innerHTML = days + "d " + hours + "h "
-              + minutes + "m " + seconds + "s ";
+          document.getElementById("wedding_timer").innerHTML = '' +
+          '<ul class="final-countdown list-inline">' +
+          '<li class="item item-days list-inline-item"><span class="span-days">' + days + '</span><span class="span-days-label">D</span></li>' +
+          '<li class="item item-hours list-inline-item"><span>' + hours + '</span><span class="span-hours-label">H</span></li>' +
+          '<li class="item item-minutes list-inline-item"><span>' + minutes + '</span><span class="span-minutes-label">M</span></li>' +
+          '<li class="item item-seconds list-inline-item"><span>' + seconds + '</span><span class="span-seconds-label">S</span></li>';
 
           // If the count down is finished, write some text
           if (distance < 0) {
