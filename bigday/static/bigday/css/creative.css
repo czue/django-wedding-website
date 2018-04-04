@@ -4,249 +4,257 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- html,
- body {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     font-size: 16px;
-     background-color: #472637;
-     color: #eee;
- }
- 
- a {
-     color: #59a0d7;
- }
- 
- h1 {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     font-size: 4rem;
-     font-weight: 600;
- }
- 
- h2 {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     font-size: 2.8rem;
-     font-weight: 500;
- }
- 
- h3 {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     font-size: 2rem;
-     font-weight: 500;
- }
- 
- h4 {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     font-size: 1rem;
-     font-weight: 700;
-     text-transform: uppercase;
- }
- 
- p {
-     color: #696b6e;
-     font-size: .9rem;
- }
- 
- .divider {
-     display: block;
-     width: 6rem;
-     height: 0.3rem;
-     background-color: #dfe1e5;
-     margin: 2rem auto;
- }
- 
- .navbar-trans {
-     background: transparent;
- }
- 
- a.navbar-brand,
- a.logo {
-     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-     color: #fff !important;
-     font-size: 2rem;
-     font-weight: bold;
-     margin-top: 0;
- }
- 
- a.logo:hover,
- a.logo:active,
- a.logo:focus {
-     text-decoration: none;
- }
- 
- li.nav-item .btn {
-     margin-top: .2rem;
-     margin-left: .4rem;
- }
- 
- li.nav-item .btn-white {
-     color: #46484a;
- }
- 
- .cover {
-     position: relative;
-     background: #2b2d34 url(../images/high_res/main.jpg) top;
-     background-size: cover;
-     min-height: 1.5rem;
-     height: 60rem;
-     border-radius: 0;
-     width: 100%;
-     color: #fff;
-     padding-top: 1rem;
- }
- 
- .cover h1 {
-     font-weight: 400;
- }
- 
- .cover p {
-     margin: 2rem auto;
-     color: white;
- }
- 
- .cover .cover-container {
-     position: absolute;
-     bottom: 0;
-     left: 50%;
-     transform: translate(-50%, 0);
- }
- 
- .btn-primary,
- .btn-outline-primary,
- .btn-secondary,
- .btn-outline-secondary,
- .btn-white,
- .btn-outline-white,
- .btn-success,
- .btn-outline-success,
- .btn-info,
- .btn-outline-info,
- .btn-warning,
- .btn-outline-warning,
- .btn-danger,
- .btn-outline-danger {
-     font-size: .75rem;
-     text-transform: uppercase;
-     font-weight: 700;
-     border-radius: .3rem;
- }
- 
- .btn-outline-primary,
- .btn-outline-secondary,
- .btn-outline-white,
- .btn-outline-success,
- .btn-outline-info,
- .btn-outline-warning,
- .btn-outline-danger {
-     border-width: 0.15rem;
- }
- 
- .btn-lg {
-     padding: 1.1rem 2.5rem;
-     font-size: .9rem;
- }
- 
- .btn-primary,
- .btn-primary:hover,
- .btn-primary:focus,
- .btn-primary:active {
-     background-color: #59a0d7;
-     border-color: #59a0d7;
- }
- 
- .btn-primary:hover,
- .btn-primary:focus,
- .btn-primary:active {
-     background-color: #4089c1;
-     border-color: #4089c1;
- }
- 
- .btn-outline-primary,
- .btn-outline-primary:visited {
-     color: #59a0d7;
-     border-color: #59a0d7;
-     background: none;
- }
- 
- .btn-outline-primary:hover,
- .btn-outline-primary:focus,
- .btn-outline-primary:active {
-     background-color: #59a0d7;
-     border-color: #59a0d7;
-     color: #fff;
- }
- 
- .btn-secondary {
-     border-color: #696b6e;
-     background-color: #696b6e;
-     color: #fff;
- }
- 
- .btn-secondary:hover,
- .btn-secondary:focus,
- .btn-secondary:active {
-     border-color: #46484a;
-     background-color: #46484a;
-     color: #fff;
- }
- 
- .btn-outline-secondary,
- .btn-outline-secondary:visited {
-     color: #696b6e;
-     border-color: #696b6e;
-     background: none;
- }
- 
- .btn-outline-secondary:hover,
- .btn-outline-secondary:focus,
- .btn-outline-secondary:active {
-     border-color: #696b6e;
-     background: #696b6e;
-     color: #fff;
- }
- 
- .btn-white {
-     border-color: #fff;
-     background-color: #fff;
-     color: #46484a;
- }
- 
- .btn-white:hover,
- .btn-white:focus,
- .btn-white:active {
-     border-color: #dfe1e5;
-     background-color: #dfe1e5;
-     color: #46484a;
- }
- 
- .btn-outline-white,
- .btn-outline-white:visited {
-     background: none;
-     color: #fff;
-     border-color: #fff;
- }
- 
- .btn-outline-white:hover,
- .btn-outline-white:focus,
- .btn-outline-white:active {
-     color: #46484a;
-     background: #fff;
- }
- 
- /* ADRIEN */
- 
- @import url('https://fonts.googleapis.com/css?family=Raleway|Redressed');
- #wedding_title,
- #wedding_timer,
- .section {
-     color: #eee;
-     font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
- }
- 
- #wedding_timer {
-     font-size: 30px;
- }
+html,
+body {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #472637;
+    color: #eee;
+}
 
- .final-countdown .item {
+a {
+    color: #59a0d7;
+}
+
+h1 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    color: #696b6e;
+    font-size: .9rem;
+}
+
+.divider {
+    display: block;
+    width: 6rem;
+    height: 0.3rem;
+    background-color: #dfe1e5;
+    margin: 2rem auto;
+}
+
+.navbar-trans {
+    background: transparent;
+}
+
+a.navbar-brand,
+a.logo {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff !important;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+a.logo:hover,
+a.logo:active,
+a.logo:focus {
+    text-decoration: none;
+}
+
+li.nav-item .btn {
+    margin-top: .2rem;
+    margin-left: .4rem;
+}
+
+li.nav-item .btn-white {
+    color: #46484a;
+}
+
+.cover {
+    position: relative;
+    background: #2b2d34 url(../images/high_res/main.jpg) top;
+    background-size: cover;
+    min-height: 1.5rem;
+    height: 60rem;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.cover h1 {
+    font-weight: 400;
+}
+
+.cover p {
+    margin: 2rem auto;
+    color: white;
+}
+
+.cover .cover-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.btn-primary,
+.btn-outline-primary,
+.btn-secondary,
+.btn-outline-secondary,
+.btn-white,
+.btn-outline-white,
+.btn-success,
+.btn-outline-success,
+.btn-info,
+.btn-outline-info,
+.btn-warning,
+.btn-outline-warning,
+.btn-danger,
+.btn-outline-danger {
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .3rem;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-white,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning,
+.btn-outline-danger {
+    border-width: 0.15rem;
+}
+
+.btn-lg {
+    padding: 1.1rem 2.5rem;
+    font-size: .9rem;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #59a0d7;
+    border-color: #59a0d7;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #4089c1;
+    border-color: #4089c1;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:visited {
+    color: #59a0d7;
+    border-color: #59a0d7;
+    background: none;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: #59a0d7;
+    border-color: #59a0d7;
+    color: #fff;
+}
+
+.btn-secondary {
+    border-color: #696b6e;
+    background-color: #696b6e;
+    color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    border-color: #46484a;
+    background-color: #46484a;
+    color: #fff;
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:visited {
+    color: #696b6e;
+    border-color: #696b6e;
+    background: none;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+    border-color: #696b6e;
+    background: #696b6e;
+    color: #fff;
+}
+
+.btn-white {
+    border-color: #fff;
+    background-color: #fff;
+    color: #46484a;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active {
+    border-color: #dfe1e5;
+    background-color: #dfe1e5;
+    color: #46484a;
+}
+
+.btn-outline-white,
+.btn-outline-white:visited {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active {
+    color: #46484a;
+    background: #fff;
+}
+
+/* ADRIEN */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway|Redressed');
+#wedding_title,
+#wedding_timer,
+.section,
+.bigday p {
+    color: #eee;
+    font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
+}
+
+.bigday p {
+    font-size: 20px;
+}
+
+.bigday article {
+    margin-bottom: 5rem;
+}
+#wedding_timer {
+    font-size: 30px;
+}
+
+.final-countdown .item {
     list-style: none;
     width: 70px;
     padding: 10px 5px 10px 5px;
@@ -256,160 +264,171 @@
     border-radius: 5px;
     position: relative;
     z-index: 2;
- }
- .section-heading {
-     padding-top: 1em;
- }
- 
- .navbar-dark .navbar-nav .nav-link {
+}
+
+.section-heading {
+    padding-top: 1em;
+}
+
+.section-saturday-event {
+    background: #825B6F;
+}
+
+.navbar-dark .navbar-nav .nav-link {
     color: #472637;
-    padding-right:15px;
+    padding-right: 15px;
     font-size: 25px;
     font-weight: 800;
-  }
+}
 
-  navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
     color: #eee;
-  }
+}
 
- a.navbar-brand,
- .section-heading {
-     font-weight: normal;
-     font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
- }
- 
- .container-banner {
-     background-color: #545b6245;
-     padding: 15px;
-     position: relative;
-     bottom: 0;
- }
+a.navbar-brand,
+.section-heading {
+    font-weight: normal;
+    font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
+}
 
- .btn-secondary:hover, 
- .btn-secondary:focus, 
- .btn-secondary:active,
- .btn-secondary,
- .btn-secondary:not(:disabled):not(.disabled).active, 
- .btn-secondary:not(:disabled):not(.disabled):active, 
- .show>.btn-secondary.dropdown-toggle {
+.container-banner {
+    background-color: #545b6245;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
     border-color: #472637;
     background-color: #472637;
     color: #eee;
     font-size: 20px;
-  }
+}
 
-  .dropdown-menu {
-      background-color: rgb(179, 164, 171);
-      /*min-width: 2rem;*/
-  }
+.dropdown-menu {
+    background-color: rgb(179, 164, 171);
+}
 
-  .dropdown-item {
+.dropdown-item {
     font-size: 20px;
-  }
-  .dropdown-item:focus, .dropdown-item:hover {
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
     color: #eee;
     font-weight: 600;
     text-decoration: none;
     background-color: #825B6F;
-  }
- .section-civil-wedding {
-     /*background-image: url("/static/bigday/images/pattern_3.png");
-      background-repeat: repeat;*/
-     background-color: #472637;
- }
- 
- .container-civil-wedding {
-     position: inherit;
-     height: 100%;
-     /*background-color: #dacecedb;*/
-     /*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(5%,rgba(0,0,0,1)), color-stop(95%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0.8))); */
- }
- 
- .block-picture>img {
-     margin: 5px;
-     background: #fff;
-     border: 1px solid #ddd;
-     box-shadow: 2px 2px 4px #999;
-     padding: 10px;
-     color: #fff;
- }
- 
- /* ===== Responsive === */
- 
- .responsive-grid {
-     /* display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));*/
-     align-content: center;
-     color: #eee;
- }
- 
- .grid-item-picture {
-     text-align: center;
-     margin-top: auto;
-     margin-bottom: auto;
- }
- 
- dt {
-     line-height: 42px;
-     font-size: 30px;
-     color: #eee;
-     font-weight: 500;
-     padding: 5px 0 5px 0;
-     background: url(/static/bigday/images/line.png) repeat-x bottom left;
- }
- 
- dd a {
-     color: #C4A606;
- }
- 
- dd a:hover {
-     color: rgb(212, 184, 42);
- }
- 
- a.navbar-brand {
-     color: #472637 !important;
-     font-size: 60px;
- }
- 
- /* Large desktop */
- 
- @media screen and (min-width: 1200px) {
-     .section {
-         height: 100vh;
-         min-height: 700px;
-     }
-     .responsive-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-         align-content: center;
-         height: 50em;
-         margin-top: 10em;
-     }
-     .grid-item .block-picture img {
-         width: 25em;
-     }
+}
 
- }
- 
- /* Portrait tablet to landscape and desktop */
- 
- @media screen and (min-width: 768px) and (max-width: 1199px) {
-     .responsive-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-         align-content: center;
-     }
-     .grid-item .block-picture img {
-         width: 35em;
-     }
-     .section-civil-wedding {
-         height: 100%;
-     }
+.section-civil-wedding {
+    background-color: #472637;
+}
 
-     .container-banner {
-        margin-top: 38rem;
+.container-civil-wedding {
+    position: inherit;
+    height: 100%;
+}
+
+.block-picture>img {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #494949;
+    padding: 10px;
+    color: #fff;
+}
+
+/* ===== Responsive === */
+
+.responsive-grid {
+    align-content: center;
+    color: #eee;
+}
+
+.grid-item-picture {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+dt {
+    line-height: 42px;
+    font-size: 30px;
+    color: #eee;
+    font-weight: 500;
+    padding: 5px 0 5px 0;
+    background: url(/static/bigday/images/line.png) repeat-x bottom left;
+}
+
+dd a {
+    color: #C4A606;
+}
+
+dd a:hover {
+    color: rgb(212, 184, 42);
+}
+
+a.navbar-brand {
+    color: #472637 !important;
+    font-size: 60px;
+}
+
+.section-cover {
+    height: 100vh !important;
+    min-height: 700px;
+}
+
+.dropdown .dropdown-menu {
+    min-width: 100%;
+    text-align: center;
+}
+
+/* Large desktop */
+
+@media screen and (min-width: 1200px) {
+    .section {
+        height: 100vh;
+        min-height: 700px;
     }
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+        align-content: center;
+        height: 50em;
+        margin-top: 10em;
+    }
+    .grid-item .block-picture img {
+        width: 100%;
+    }
+}
 
+/* Portrait tablet to landscape and desktop */
+
+@media screen and (min-width: 770px) and (max-width: 1199px) {
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+        align-content: center;
+    }
+    .grid-item .block-picture img {
+        width: 35em;
+    }
+    .section-heading,
+    .section-saturday-event,
+    .section-civil-wedding {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
     #wedding_title {
         font-size: 25px;
         font-weight: 800;
@@ -417,27 +436,26 @@
     #wedding_timer {
         font-size: 20px;
     }
- }
- 
- /* Landscape phone to portrait tablet */
- 
- @media screen and (min-width: 480px) and (max-width: 767px) {
-     .responsive-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-         align-content: center;
-     }
-     .grid-item .block-picture img {
-         width: 25em;
-     }
-     .section-civil-wedding {
-         height: 100%;
-     }
+}
 
-     .container-banner {
-        margin-top: 38rem;
+/* Landscape phone to portrait tablet */
+
+@media screen and (min-width: 480px) and (max-width: 769px) {
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+        align-content: center;
     }
-
+    .grid-item .block-picture img {
+        width: 25em;
+    }
+    .section-heading,
+    .section-saturday-event,
+    .section-civil-wedding {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
     #wedding_title {
         font-size: 25px;
         font-weight: 800;
@@ -445,21 +463,33 @@
     #wedding_timer {
         font-size: 20px;
     }
- }
- 
- @media screen and (max-width: 480px) {
-     .grid-item .block-picture img {
-         width: 15em;
-     }
-     .section-civil-wedding {
-         height: 100%;
-     }
+    .navbar-dark .navbar-nav .nav-link {
+        color: #eee;
+    }
+    .navbar-collapse {
+        background-color: #545b6245;
+        padding: 30px;
+    }
+    .dropdown {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
-     .container-banner {
-        margin-top: 38rem;
+@media screen and (max-width: 480px) {
+    .grid-item .block-picture img {
+        width: 15em;
+    }
+    .section-heading,
+    .section-saturday-event,
+    .section-civil-wedding {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .container-banner {
         font-size: 12px
     }
-
     #wedding_title {
         font-size: 25px;
         font-weight: 800;
@@ -467,147 +497,158 @@
     #wedding_timer {
         font-size: 20px;
     }
- }
- 
- /*========================= RSVP ============================ */
- 
- .rsvp-container {
-     color: #eee;
-     font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
- }
- 
- .rsvp-container h2,
- .rsvp-container h3 {
-     font-weight: normal;
-     font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
- }
- 
- .rsvp-container h2,
- .rsvp-container h3 {
-     margin-bottom: 2rem;
- }
- 
- .rsvp-container p {
-     color: #eee;
- }
- 
- .rsvp-container a,
- .rsvp-container .attending-label {
-     font-weight: 800;
-     color: #C4A606;
- }
- 
- .rsvp-container input {
-     background-color: #eee;
- }
- 
- .rsvp-container input[type=text],
- textarea {
-     -webkit-transition: all 0.30s ease-in-out;
-     -moz-transition: all 0.30s ease-in-out;
-     -ms-transition: all 0.30s ease-in-out;
-     -o-transition: all 0.30s ease-in-out;
-     outline: none;
-     border: 1px solid #eee;
- }
- 
- .rsvp-container input[type=text]:focus,
- textarea:focus {
-     box-shadow: 0 0 5px #825B6F;
-     border: 1px solid #825B6F;
- }
- 
- .rsvp-container .btn-primary {
-     font-size: 20px;
-     font-family: Helvetica, Arial, sans-serif;
-     color: #eeeeee;
-     text-decoration: none;
-     border-radius: 3px;
-     -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-     background-color: #825B6F;
-     border-top: 12px solid #825B6F;
-     border-bottom: 12px solid #825B6F;
-     border-right: 18px solid #825B6F;
-     border-left: 18px solid #825B6F;
-     display: inline-block;
- }
- 
- input.btn.btn-primary.disabled {
-     background-color: #9e1f35;
-     border-top: 12px solid #9e1f35;
-     border-bottom: 12px solid #9e1f35;
-     border-right: 18px solid #9e1f35;
-     border-left: 18px solid #9e1f35;
- }
- 
- .text-muted {
-     color: #825B6F !important;
- }
- 
- .rsvp-container .radio-inline {
-     padding-left: 10px;
- }
- 
- .rsvp-container .radio-inline input[type='radio'] {
-     margin: 5px;
-     margin-top: 5px;
-     margin-bottom: 5px;
- }
- 
- /* Large desktop */
- 
- @media screen and (min-width: 1200px) {
-     .rsvp-container .control-label {
-         -webkit-box-flex: 0;
-         -ms-flex: 0 0 25%;
-         flex: 0 0 25%;
-         max-width: 25%;
-     }
- }
- 
- /* Portrait tablet to landscape and desktop */
- 
- @media screen and (min-width: 768px) and (max-width: 1199px) {
- }
- 
- /* Landscape phone to portrait tablet */
- 
- @media screen and (min-width: 480px) and (max-width: 767px) {
-     .rsvp-container label {
-         font-size: 1.2rem;
-     }
-     .rsvp-container .radio-inline {
-         font-size: 1rem;
-     }
-     .rsvp-container .form-group {
-         display: grid;
-         grid-template-columns: auto;
-     }
-     .rsvp-container .control-label {
-         -webkit-box-flex: 0;
-         -ms-flex: 0 0 50%;
-         flex: 0 0 50%;
-         max-width: 50%;
-     }
- }
- 
- @media screen and (max-width: 480px) {
-     .rsvp-container label {
-         display: block;
-         font-size: 1.5rem;
-     }
-     .rsvp-container .radio-inline {
-         display: block;
-         font-size: 1rem;
-     }
-     .rsvp-container .form-group {
-         display: grid;
-         grid-template-columns: auto;
-     }
- }
- 
- /*
+    .navbar-dark .navbar-nav .nav-link {
+        color: #eee;
+    }
+    .navbar-collapse {
+        background-color: #545b6245;
+        padding: 30px;
+    }
+    .dropdown {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*========================= RSVP ============================ */
+
+.rsvp-container {
+    color: #eee;
+    font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
+}
+
+.rsvp-container h2,
+.rsvp-container h3 {
+    font-weight: normal;
+    font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
+}
+
+.rsvp-container h2,
+.rsvp-container h3 {
+    margin-bottom: 2rem;
+}
+
+.rsvp-container p {
+    color: #eee;
+}
+
+.rsvp-container a,
+.rsvp-container .attending-label {
+    font-weight: 800;
+    color: #C4A606;
+}
+
+.rsvp-container input {
+    background-color: #eee;
+}
+
+.rsvp-container input[type=text],
+textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #eee;
+}
+
+.rsvp-container input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px #825B6F;
+    border: 1px solid #825B6F;
+}
+
+.rsvp-container .btn-primary {
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #eeeeee;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-color: #825B6F;
+    border-top: 12px solid #825B6F;
+    border-bottom: 12px solid #825B6F;
+    border-right: 18px solid #825B6F;
+    border-left: 18px solid #825B6F;
+    display: inline-block;
+}
+
+input.btn.btn-primary.disabled {
+    background-color: #9e1f35;
+    border-top: 12px solid #9e1f35;
+    border-bottom: 12px solid #9e1f35;
+    border-right: 18px solid #9e1f35;
+    border-left: 18px solid #9e1f35;
+}
+
+.text-muted {
+    color: #825B6F !important;
+}
+
+.rsvp-container .radio-inline {
+    padding-left: 10px;
+}
+
+.rsvp-container .radio-inline input[type='radio'] {
+    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Large desktop */
+
+@media screen and (min-width: 1200px) {
+    .rsvp-container .control-label {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {}
+
+/* Landscape phone to portrait tablet */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .rsvp-container label {
+        font-size: 1.2rem;
+    }
+    .rsvp-container .radio-inline {
+        font-size: 1rem;
+    }
+    .rsvp-container .form-group {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .rsvp-container .control-label {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rsvp-container label {
+        display: block;
+        font-size: 1.5rem;
+    }
+    .rsvp-container .radio-inline {
+        display: block;
+        font-size: 1rem;
+    }
+    .rsvp-container .form-group {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+/*
    navy: 000080 => 00335A
   
    eggplant: 614051*

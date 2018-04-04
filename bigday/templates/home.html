@@ -3,7 +3,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block page_content %}
-  <section class="section cover text-center">
+  <section class="section-cover cover text-center">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -49,20 +49,13 @@
         <h1 id="wedding_title">{% trans "We're getting married!" %}</h1>
         <p id="wedding_timer"></p>
     </div>
-    <!-- <div class="cover-container pb-5">
-      <div class="cover-inner container main-title">
-        <h2 id="wedding_title">{% trans "We're getting married!" %}</h2>
-        <h3 id="wedding_timer"></H3>
-      </div>
-    </div> -->
   </section>
   <section id="event" class="section section-civil-wedding">
     <a name="info"></a>
     <div class="container container-civil-wedding">
       <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
       <section class="responsive-grid">
-        <article>
-            <hr class="primary">
+        <article  class="grid-item">
             <dl class="dl-horizontal lead">
               <dt>{% trans "What" %}</dt>
               <dd>
@@ -99,150 +92,63 @@
         </article>
       </section>
     </div>
-    <!-- V1
-      
-      <div class="container container-civil-wedding">
-        <a name="info"></a>
-        <h2 class="section-heading">{% trans "The civil wedding" %}</h2>
-        <div class="grid-container">
-                <div class="grid-item">
-                        <hr class="primary">
-                        <dl class="dl-horizontal lead">
-                          <dt>{% trans "What" %}</dt>
-                          <dd>
-                            {% trans "Wedding at the Townhall" %}
-                          </dd>
-                          <dt>{% trans "When" %}</dt>
-                          <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
-                          <dt>{% trans "Where" %}</dt>
-                          <dd>
-                            <address>
-                              {% trans "Strasbourg Townhall" %}<br>
-                              <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
-                            </address>
-                          </dd>
-                          <dt>{% trans "Attire" %}</dt>
-                          <dd>{% trans "Smart" %}</dd>
-                          <dt>{% trans "Transportation" %}</dt>
-                          <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
-                          <dt>{% trans "Parking" %}</dt>
-                          <dd>{% trans "Tips in the info part." %}</dd>
-                          <dt>{% trans "Other info" %}</dt>
-                          <dd>
-                            {% blocktrans %}
-                              We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
-                              Civil wedding is open and celebrated later.
-                            {% endblocktrans %}
-                          </dd>
-                        </dl>
-                </div>
-                <div class="grid-item grid-item-picture">
-                    <div class="block-picture">
-                            <img src="/static/bigday/images/image1.jpg"/>
-                    </div>
-                </div>
-        </div>
-    </div> -->
-
-    <!-- OLD ONE
-      
-      <div class="cover-inner container container-fluid">
-      <div class="row">
-        <div class="col-lg-8 ">
-          <a name="info"></a>
-          <h2 class="section-heading text-center">{% trans "The civil wedding" %}</h2>
-          <hr class="primary">
-          <dl class="dl-horizontal lead">
-            <dt>{% trans "What" %}</dt>
-            <dd>
-              {% trans "Wedding at the Townhall" %}
-            </dd>
-            <dt>{% trans "When" %}</dt>
-            <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
-            <dt>{% trans "Where" %}</dt>
-            <dd>
-              <address>
-                {% trans "Strasbourg Townhall" %}<br>
-                <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
-              </address>
-            </dd>
-            <dt>{% trans "Attire" %}</dt>
-            <dd>{% trans "Smart" %}</dd>
-            <dt>{% trans "Transportation" %}</dt>
-            <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
-            <dt>{% trans "Parking" %}</dt>
-            <dd>{% trans "Tips in the info part." %}</dd>
-            <dt>{% trans "Other info" %}</dt>
-            <dd>
-              {% blocktrans %}
-                We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
-                Civil wedding is open and celebrated later.
-              {% endblocktrans %}
-            </dd>
-          </dl>
-        </div>
-        <div class="col-md-auto"
-             style="background: #2b2d34 url({% static "bigday/images/image1.jpg" %}) top;background-size: cover;width:500px;min-width:300px;min-height:500px">
-        </div>
-
-      </div>
-    </div> -->
   </section>
-  <section id="saturday-event">
-    <div class="container-fluid" style="background: #b2dba1">
-      <div class="row ">
-        <div class="col-md-auto"
-             style="background: #2b2d34 url({% static "bigday/images/image3.jpg" %}) top;background-size: cover;width:500px;min-width:300px;min-height:500px">
-        </div>
-        <div class="col col-lg-6">
-          <h2 class="section-heading text-center">{% trans "Thursday celebration" %}</h2>
-          <hr class="primary">
-          <dl class="dl-horizontal lead">
-            <dt>{% trans "What" %}</dt>
-            <dd>{% trans "Celebrate our marriage" %}</dd>
-            <dt>{% trans "When" %}</dt>
-            <dd>{% trans "Thursday, July 5th, from 16:00" %}</dd>
-            <dt>{% trans "Where" %}</dt>
-            <dd>
-              <address>
-                {% trans "Pavillon Josephine, Strasbourg" %}<br>
-                <a href="https://goo.gl/maps/wXSMP2gZSqG2">Avenue de l'Europe, 67000 Strasbourg, France</a><br>
-                {% trans "Phone: +33 3 88 36 52 53" %}
-              </address>
-            </dd>
-            <dt>{% trans "Attire" %}</dt>
-            <dd>{% trans "Same as Civil wedding" %}
-            </dd>
-            <dt>{% trans "Transportation" %}</dt>
-            <dd>{% trans "Transportation is not provided. Tips in the info part." %}
-            </dd>
-            <dt>{% trans "Parking" %}</dt>
-            <dd>{% trans "Parking is available at the parc entrance an along the Avenue de l'Europe" %}</dd>
-          </dl>
-        </div>
+  <section id="saturday-event" class="section section-saturday-event">
+      <div class="container container-saturday-event">
+        <h2 class="section-heading">{% trans "Thursday celebration" %}</h2>
+        <section class="responsive-grid">
+          <article class="grid-item grid-item-picture">
+              <div class="block-picture">
+                  <img src="/static/bigday/images/image3.jpg"/>
+              </div>
+          </article>
+          <article class="grid-item">
+              <dl class="dl-horizontal lead">
+                  <dt>{% trans "What" %}</dt>
+                  <dd>{% trans "Celebrate our marriage" %}</dd>
+                  <dt>{% trans "When" %}</dt>
+                  <dd>{% trans "Thursday, July 5th, from 16:00" %}</dd>
+                  <dt>{% trans "Where" %}</dt>
+                  <dd>
+                    <address>
+                      {% trans "Pavillon Josephine, Strasbourg" %}<br>
+                      <a href="https://goo.gl/maps/wXSMP2gZSqG2">Avenue de l'Europe, 67000 Strasbourg, France</a><br>
+                      {% trans "Phone: +33 3 88 36 52 53" %}
+                    </address>
+                  </dd>
+                  <dt>{% trans "Attire" %}</dt>
+                  <dd>{% trans "Same as Civil wedding" %}
+                  </dd>
+                  <dt>{% trans "Transportation" %}</dt>
+                  <dd>{% trans "Transportation is not provided. Tips in the info part." %}
+                  </dd>
+                  <dt>{% trans "Parking" %}</dt>
+                  <dd>{% trans "Parking is available at the parc entrance an along the Avenue de l'Europe" %}</dd>
+                </dl>
+          </article>
+          </section>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 ">
-
-        </div>
-        <div class="col-lg-12 ">
-
-        </div>
-      </div>
-    </div>
   </section>
-  <section class="container" style="min-height: 80vh">
+  <section class="section section-wedding-list">
     <a name="wedding_list"></a>
-    <h2 class="section-heading text-center">{%  trans "Wedding list" %}</h2>
-    <hr class="primary">
-    <p>
-      {% blocktrans %}
-        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.
-        Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur.
-      {% endblocktrans %}
-    </p>
+    <div class="container container-saturday-event">
+    <h2 class="section-heading">{%  trans "Wedding list" %}</h2>
+    <section class="responsive-grid">
+        <article  class="grid-item">
+          <p>
+              {% blocktrans %}
+                Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.
+                Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur.
+              {% endblocktrans %}
+            </p>
+        </article>
+        <article class="grid-item grid-item-picture">
+            <div class="block-picture">
+                <img src="/static/bigday/images/montagne.jpg"/>
+            </div>
+        </article>
+      </section>
+    </div>
   </section>
 {% endblock %}
 {% block page_js %}
