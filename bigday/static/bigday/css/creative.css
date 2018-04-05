@@ -234,159 +234,157 @@ li.nav-item .btn-white {
 
 /* ADRIEN */
 
+/** fonts **/
 @import url('https://fonts.googleapis.com/css?family=Raleway|Redressed');
-#wedding_title,
-#wedding_timer,
-.section,
-.bigday p {
-    color: #eee;
-    font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
-}
 
+.bigday #wedding_title,
+.bigday #wedding_timer,
+.bigday .section,
+.bigday p {
+    font-family: "Raleway", Calibri, Arial, Helvetica, sans-serif !important;
+
+    color: #eee;
+}
+.bigday a.navbar-brand,
+.bigday .section-heading {
+    font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
+    font-weight: normal;
+}
+.bigday .dropdown-item {
+    font-size: 20px;
+}
 .bigday p {
     font-size: 20px;
 }
+.bigday #wedding_timer {
+    font-size: 30px;
+}
+.bigday .navbar-dark .navbar-nav .nav-link {
+    font-size: 25px;
+    font-weight: 800;
 
+    color: #472637;
+}
+.bigday .navbar-dark .navbar-nav .nav-link:focus,
+.bigday .navbar-dark .navbar-nav .nav-link:hover {
+    color: #eee;
+}
+.bigday dt {
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: 500;
+
+    color: #eee;
+}
+.bigday dd a {
+    color: #C4A606;
+}
+.bigday dd a:hover {
+    color: rgb(212, 184, 42);
+}
+.bigday a.navbar-brand {
+    font-size: 60px;
+
+    color: #472637 !important;
+}
+/** disposition **/
+.bigday .navbar-dark .navbar-nav .nav-link {
+    padding-right: 15px;
+}
+.bigday .container-banner {
+    position: absolute;
+
+    width: 100%;
+    padding: 15px;
+    bottom: 0;
+    
+    background-color: #545b6245;
+}
+.bigday .final-countdown .item {
+    position: relative;
+
+    width: 70px;
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+    z-index: 2;
+    text-align: center;
+    list-style: none;
+
+    background-color: #472637;
+}
+.bigday .section-heading {
+    padding-top: 1em;
+}
+.bigday .section-saturday-event {
+    background: #825B6F;
+}
 .bigday article {
     margin-bottom: 5rem;
 }
-#wedding_timer {
-    font-size: 30px;
-}
-
-.final-countdown .item {
-    list-style: none;
-    width: 70px;
-    padding: 10px 5px 10px 5px;
-    text-align: center;
-    margin-bottom: 20px;
-    background: #472637;
-    border-radius: 5px;
-    position: relative;
-    z-index: 2;
-}
-
-.section-heading {
-    padding-top: 1em;
-}
-
-.section-saturday-event {
-    background: #825B6F;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #472637;
-    padding-right: 15px;
-    font-size: 25px;
-    font-weight: 800;
-}
-
-navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #eee;
-}
-
-a.navbar-brand,
-.section-heading {
-    font-weight: normal;
-    font-family: "Redressed", Calibri, Arial, Helvetica, sans-serif !important;
-}
-
-.container-banner {
-    background-color: #545b6245;
-    padding: 15px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active,
-.btn-secondary,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show>.btn-secondary.dropdown-toggle {
+.bigday .btn-secondary:hover,
+.bigday .btn-secondary:focus,
+.bigday .btn-secondary:active,
+.bigday .btn-secondary,
+.bigday .btn-secondary:not(:disabled):not(.disabled).active,
+.bigday .btn-secondary:not(:disabled):not(.disabled):active,
+.bigday .show>.btn-secondary.dropdown-toggle {
     border-color: #472637;
     background-color: #472637;
-    color: #eee;
-    font-size: 20px;
-}
 
-.dropdown-menu {
+    font-size: 20px;
+    color: #eee;
+}
+.bigday .dropdown-menu {
     background-color: rgb(179, 164, 171);
 }
-
-.dropdown-item {
-    font-size: 20px;
-}
-
-.dropdown-item:focus,
-.dropdown-item:hover {
-    color: #eee;
-    font-weight: 600;
+.bigday .dropdown-item:focus,
+.bigday .dropdown-item:hover {
     text-decoration: none;
     background-color: #825B6F;
+    
+    font-weight: 600;
+    color: #eee;
 }
-
-.section-civil-wedding {
+.bigday .section-civil-wedding {
     background-color: #472637;
 }
-
-.container-civil-wedding {
+.bigday .container-civil-wedding {
     position: inherit;
+
     height: 100%;
 }
+.bigday .block-picture>img {
+    padding: 10px;
 
-.block-picture>img {
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 4px #494949;
-    padding: 10px;
-    color: #fff;
+
 }
 
 /* ===== Responsive === */
 
-.responsive-grid {
+.bigday .responsive-grid {
     align-content: center;
     color: #eee;
 }
-
-.grid-item-picture {
+.bigday .grid-item-picture {
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
-
-dt {
-    line-height: 42px;
-    font-size: 30px;
-    color: #eee;
-    font-weight: 500;
+.bigday dt {
     padding: 5px 0 5px 0;
     background: url(/static/bigday/images/line.png) repeat-x bottom left;
 }
 
-dd a {
-    color: #C4A606;
-}
-
-dd a:hover {
-    color: rgb(212, 184, 42);
-}
-
-a.navbar-brand {
-    color: #472637 !important;
-    font-size: 60px;
-}
-
-.section-cover {
+.bigday .section-cover {
     height: 100vh !important;
     min-height: 700px;
 }
-
-.dropdown .dropdown-menu {
+.bigday .dropdown .dropdown-menu {
     min-width: 100%;
     text-align: center;
 }
@@ -394,18 +392,21 @@ a.navbar-brand {
 /* Large desktop */
 
 @media screen and (min-width: 1200px) {
-    .section {
+    .bigday .section {
         min-height: 700px;
     }
-    .responsive-grid {
+    .bigday .responsive-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-        grid-column-gap: 30px;
-        align-content: center;
+
         height: 50em;
         margin-top: 10em;
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+
+        align-content: center;
+       
     }
-    .grid-item .block-picture img {
+    .bigday .grid-item .block-picture img {
         width: 100%;
     }
 }
@@ -413,100 +414,106 @@ a.navbar-brand {
 /* Portrait tablet to landscape and desktop */
 
 @media screen and (min-width: 770px) and (max-width: 1199px) {
-    .responsive-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-        grid-column-gap: 30px;
-        align-content: center;
-    }
-    .grid-item .block-picture img {
-        width: 35em;
-    }
-    .section-heading,
-    .section-saturday-event,
-    .section-civil-wedding {
-        height: 100%;
-        margin-bottom: 2rem;
-    }
-    #wedding_title {
+    .bigday #wedding_title {
         font-size: 25px;
         font-weight: 800;
     }
-    #wedding_timer {
+    .bigday #wedding_timer {
         font-size: 20px;
+    }
+    .bigday .section-heading,
+    .bigday .section-saturday-event,
+    .bigday .section-civil-wedding {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .bigday .responsive-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+
+        align-content: center;
+    }
+    .bigday .grid-item .block-picture img {
+        width: 35em;
     }
 }
 
 /* Landscape phone to portrait tablet */
 
 @media screen and (min-width: 480px) and (max-width: 769px) {
-    .responsive-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-        grid-column-gap: 30px;
-        align-content: center;
-    }
-    .grid-item .block-picture img {
-        width: 25em;
-    }
-    .section-heading,
-    .section-saturday-event,
-    .section-civil-wedding {
-        height: 100%;
-        margin-bottom: 2rem;
-    }
-    #wedding_title {
+    .bigday #wedding_title {
         font-size: 25px;
         font-weight: 800;
     }
-    #wedding_timer {
-        font-size: 20px;
-    }
-    .navbar-dark .navbar-nav .nav-link {
+    .bigday .navbar-dark .navbar-nav .nav-link {
         color: #eee;
     }
-    .navbar-collapse {
-        background-color: #545b6245;
+    .bigday .navbar-collapse {
         padding: 30px;
+
+        background-color: #545b6245;
     }
-    .dropdown {
+    .bigday .dropdown {
         width: 100px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .bigday #wedding_timer {
+        font-size: 20px;
+    }
+    .bigday .section-heading,
+    .bigday .section-saturday-event,
+    .bigday .section-civil-wedding {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .bigday .responsive-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+        grid-column-gap: 30px;
+
+        align-content: center;
+    }
+    .bigday .grid-item .block-picture img {
+        width: 25em;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .grid-item .block-picture img {
-        width: 15em;
-    }
-    .section-heading,
-    .section-saturday-event,
-    .section-civil-wedding {
+    .bigday .section-heading,
+    .bigday .section-saturday-event,
+    .bigday .section-civil-wedding {
         height: 100%;
         margin-bottom: 2rem;
     }
-    .container-banner {
+    .bigday .container-banner {
         font-size: 12px
     }
-    #wedding_title {
+    .bigday #wedding_title {
         font-size: 25px;
         font-weight: 800;
     }
-    #wedding_timer {
+    .bigday #wedding_timer {
         font-size: 20px;
     }
-    .navbar-dark .navbar-nav .nav-link {
+    .bigday .navbar-dark .navbar-nav .nav-link {
         color: #eee;
     }
-    .navbar-collapse {
-        background-color: #545b6245;
+    .bigday .navbar-collapse {
         padding: 30px;
+
+        background-color: #545b6245;
     }
-    .dropdown {
+    .bigday .dropdown {
         width: 100px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .bigday .grid-item .block-picture img {
+        width: 15em;
     }
 }
 
@@ -646,20 +653,3 @@ input.btn.btn-primary.disabled {
         grid-template-columns: auto;
     }
 }
-
-/*
-   navy: 000080 => 00335A
-  
-   eggplant: 614051*
-   contrast:
-   - A17b8f 
-   - 825b6f* 
-   - 472637* 
-   - 3f172b
-  
-   gold: ffd700
-  
-   old:
-  
-   bg 2E2828
-   elem: 693D3D
