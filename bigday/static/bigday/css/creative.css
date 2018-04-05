@@ -395,7 +395,6 @@ a.navbar-brand {
 
 @media screen and (min-width: 1200px) {
     .section {
-        height: 100vh;
         min-height: 700px;
     }
     .responsive-grid {
