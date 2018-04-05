@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-05 21:02+0000\n"
+"POT-Creation-Date: 2018-04-05 21:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,121 +46,122 @@ msgstr ""
 msgid "Wedding List"
 msgstr ""
 
-#: bigday/templates/home.html:50
+#: bigday/templates/home.html:44
 msgid "We're getting married!"
 msgstr ""
 
-#: bigday/templates/home.html:57
+#: bigday/templates/home.html:51
 msgid "The civil wedding"
 msgstr ""
 
-#: bigday/templates/home.html:61 bigday/templates/home.html:108
+#: bigday/templates/home.html:55 bigday/templates/home.html:101
 msgid "What"
 msgstr ""
 
-#: bigday/templates/home.html:63
+#: bigday/templates/home.html:57
 msgid "Wedding at the Townhall"
 msgstr ""
 
-#: bigday/templates/home.html:65 bigday/templates/home.html:110
+#: bigday/templates/home.html:59 bigday/templates/home.html:103
 msgid "When"
 msgstr ""
 
-#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:12
-msgid "Thursday, July 5th at 3:00 pm"
+#: bigday/templates/home.html:60
+msgid "Thursday, July 5th at 4:00 pm"
 msgstr ""
 
-#: bigday/templates/home.html:67 bigday/templates/home.html:112
+#: bigday/templates/home.html:61 bigday/templates/home.html:105
 msgid "Where"
 msgstr ""
 
-#: bigday/templates/home.html:70 guests/templates/guests/invitation.html:13
+#: bigday/templates/home.html:64 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
 msgstr ""
 
-#: bigday/templates/home.html:74 bigday/templates/home.html:120
-msgid "Attire"
+#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:14
+msgid "Place Broglie, 67000 Strasbourg, France"
 msgstr ""
 
-#: bigday/templates/home.html:75
-msgid "Smart"
-msgstr ""
-
-#: bigday/templates/home.html:76 bigday/templates/home.html:123
+#: bigday/templates/home.html:69 bigday/templates/home.html:113
 msgid "Transportation"
 msgstr ""
 
-#: bigday/templates/home.html:77 bigday/templates/home.html:124
-msgid "Transportation is not provided. Tips in the info part."
+#: bigday/templates/home.html:71
+msgid "Tram B, C and F Broglie stop. "
 msgstr ""
 
-#: bigday/templates/home.html:78 bigday/templates/home.html:126
+#: bigday/templates/home.html:72
+msgid "Parking ticket + tram are available at the "
+msgstr ""
+
+#: bigday/templates/home.html:75
+msgid "following link."
+msgstr ""
+
+#: bigday/templates/home.html:77 bigday/templates/home.html:117
 msgid "Parking"
 msgstr ""
 
 #: bigday/templates/home.html:79
-msgid "Tips in the info part."
-msgstr ""
-
-#: bigday/templates/home.html:80
-msgid "Other info"
-msgstr ""
-
-#: bigday/templates/home.html:82
 msgid ""
-"\n"
-"                  We are getting married on July 5th at 15:00 in the "
-"Strasbourg Townhall.\n"
-"                  Civil wedding is open and celebrated later.\n"
-"                "
+"The following parkings are available next to the Town hall: Kléber, Opéra, "
+"Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du "
+"Marché Neuf"
 msgstr ""
 
-#: bigday/templates/home.html:99
+#: bigday/templates/home.html:92
 msgid "Thursday celebration"
 msgstr ""
 
-#: bigday/templates/home.html:109
+#: bigday/templates/home.html:102
 msgid "Celebrate our marriage"
 msgstr ""
 
-#: bigday/templates/home.html:111
-msgid "Thursday, July 5th, from 16:00"
+#: bigday/templates/home.html:104
+msgid "Thursday, July 5th after the ceremony"
 msgstr ""
 
-#: bigday/templates/home.html:115
+#: bigday/templates/home.html:108
 msgid "Pavillon Josephine, Strasbourg"
 msgstr ""
 
-#: bigday/templates/home.html:117
+#: bigday/templates/home.html:110
 msgid "Phone: +33 3 88 36 52 53"
 msgstr ""
 
-#: bigday/templates/home.html:121
-msgid "Same as Civil wedding"
+#: bigday/templates/home.html:115
+msgid ""
+"Problems finding your way ? Call us on +32 475 98 02 42 or +33 7 69 82 01 57."
 msgstr ""
 
-#: bigday/templates/home.html:127
+#: bigday/templates/home.html:118
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
 msgstr ""
 
-#: bigday/templates/home.html:136
+#: bigday/templates/home.html:127
 msgid "Wedding list"
 msgstr ""
 
-#: bigday/templates/home.html:140
+#: bigday/templates/home.html:131
 msgid ""
 "\n"
-"                Théo et Vio sont heureux ensemble et ont tout ce qu'il leur "
-"faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en "
-"famille.\n"
-"                Deux options vous sont proposées pour le cadeau : une "
-"contribution au voyage de noce de leurs reves ou une contribution à une "
-"association caritative qui leur tient a coeur.\n"
+"                  Thank you all for your good wishes and we will be happy "
+"for\n"
+"                  you to celebrate our unions with us. We have already had "
+"time\n"
+"                  to install ourselves and prepare our future. Your "
+"presence\n"
+"                  is our gift. If nevertheless you wish, you may contribute\n"
+"                  to our honeymoon! 😊<br /><br />\n"
+"                  Bank information:<br />\n"
+"                  Fieche – Gutierrez Figueroa<br />\n"
+"                  IBAN : BE35 0017 3448 9837<br />\n"
+"                  BIC : GEBABEBB\n"
 "              "
 msgstr ""
 
-#: bigday/templates/home.html:187
+#: bigday/templates/home.html:185
 msgid "We're married!"
 msgstr ""
 
@@ -241,8 +242,8 @@ msgstr ""
 msgid "Théo and Violetta Wedding"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:14
-msgid "Place Broglie, 67000 Strasbourg, France"
+#: guests/templates/guests/invitation.html:12
+msgid "Thursday, July 5th at 3:00 pm"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:29

@@ -20,11 +20,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#wedding_list">{% trans "Wedding List" %}</a>
             </li>
-            {% comment %}
-            <li class="nav-item">
-              <a class="nav-link" href="#">{% trans "Pictures" %}</a>
-            </li>
-            {% endcomment %}
           </ul>
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -62,27 +57,26 @@
                 {% trans "Wedding at the Townhall" %}
               </dd>
               <dt>{% trans "When" %}</dt>
-              <dd>{% trans "Thursday, July 5th at 3:00 pm" %}</dd>
+              <dd>{% trans "Thursday, July 5th at 4:00 pm" %}</dd>
               <dt>{% trans "Where" %}</dt>
               <dd>
                 <address>
                   {% trans "Strasbourg Townhall" %}<br>
-                  <a href="https://goo.gl/maps/WshPW2PNFUH2">Place Broglie, 67000 Strasbourg, France</a><br>
+                  <a href="https://goo.gl/maps/WshPW2PNFUH2">
+                      {% trans "Place Broglie, 67000 Strasbourg, France" %}</a><br>
                 </address>
               </dd>
-              <dt>{% trans "Attire" %}</dt>
-              <dd>{% trans "Smart" %}</dd>
               <dt>{% trans "Transportation" %}</dt>
-              <dd>{% trans "Transportation is not provided. Tips in the info part." %}</dd>
-              <dt>{% trans "Parking" %}</dt>
-              <dd>{% trans "Tips in the info part." %}</dd>
-              <dt>{% trans "Other info" %}</dt>
               <dd>
-                {% blocktrans %}
-                  We are getting married on July 5th at 15:00 in the Strasbourg Townhall.
-                  Civil wedding is open and celebrated later.
-                {% endblocktrans %}
+                  {% trans "Tram B, C and F Broglie stop. " %}
+                  {% trans "Parking ticket + tram are available at the " %}
+                  <a href="https://www.cts-strasbourg
+                  .eu/fr/se-deplacer/Parkings-relais/">
+                      {% trans "following link." %}</a>
               </dd>
+              <dt>{% trans "Parking" %}</dt>
+              <dd>
+                  {% trans "The following parkings are available next to the Town hall: Kléber, Opéra, Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du Marché Neuf" %}</dd>
             </dl>
         </article>
         <article class="grid-item grid-item-picture">
@@ -107,7 +101,7 @@
                   <dt>{% trans "What" %}</dt>
                   <dd>{% trans "Celebrate our marriage" %}</dd>
                   <dt>{% trans "When" %}</dt>
-                  <dd>{% trans "Thursday, July 5th, from 16:00" %}</dd>
+                  <dd>{% trans "Thursday, July 5th after the ceremony" %}</dd>
                   <dt>{% trans "Where" %}</dt>
                   <dd>
                     <address>
@@ -116,11 +110,9 @@
                       {% trans "Phone: +33 3 88 36 52 53" %}
                     </address>
                   </dd>
-                  <dt>{% trans "Attire" %}</dt>
-                  <dd>{% trans "Same as Civil wedding" %}
-                  </dd>
                   <dt>{% trans "Transportation" %}</dt>
-                  <dd>{% trans "Transportation is not provided. Tips in the info part." %}
+                  <dd>
+                      {% trans "Problems finding your way ? Call us on +32 475 98 02 42 or +33 7 69 82 01 57." %}
                   </dd>
                   <dt>{% trans "Parking" %}</dt>
                   <dd>{% trans "Parking is available at the parc entrance an along the Avenue de l'Europe" %}</dd>
@@ -137,8 +129,15 @@
         <article  class="grid-item">
           <p>
               {% blocktrans %}
-                Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.
-                Deux options vous sont proposées pour le cadeau : une contribution au voyage de noce de leurs reves ou une contribution à une association caritative qui leur tient a coeur.
+                  Thank you all for your good wishes and we will be happy for
+                  you to celebrate our unions with us. We have already had time
+                  to install ourselves and prepare our future. Your presence
+                  is our gift. If nevertheless you wish, you may contribute
+                  to our honeymoon! 😊<br /><br />
+                  Bank information:<br />
+                  Fieche – Gutierrez Figueroa<br />
+                  IBAN : BE35 0017 3448 9837<br />
+                  BIC : GEBABEBB
               {% endblocktrans %}
             </p>
         </article>

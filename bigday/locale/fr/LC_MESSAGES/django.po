@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-05 21:02+0000\n"
-"PO-Revision-Date: 2018-02-24 21:26+0100\n"
+"POT-Creation-Date: 2018-04-05 21:43+0000\n"
+"PO-Revision-Date: 2018-04-05 23:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -46,151 +46,138 @@ msgstr "Information"
 msgid "Wedding List"
 msgstr "Liste de mariage"
 
-#: bigday/templates/home.html:50
+#: bigday/templates/home.html:44
 msgid "We're getting married!"
 msgstr "Nous nous marions !"
 
-#: bigday/templates/home.html:57
+#: bigday/templates/home.html:51
 msgid "The civil wedding"
 msgstr "Le mariage de Théo & Violeta"
 
-#: bigday/templates/home.html:61 bigday/templates/home.html:108
+#: bigday/templates/home.html:55 bigday/templates/home.html:101
 msgid "What"
 msgstr "Quoi"
 
-#: bigday/templates/home.html:63
+#: bigday/templates/home.html:57
 msgid "Wedding at the Townhall"
 msgstr "Mariage à la Mairie"
 
-#: bigday/templates/home.html:65 bigday/templates/home.html:110
+#: bigday/templates/home.html:59 bigday/templates/home.html:103
 msgid "When"
 msgstr "Quand ?"
 
-#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:12
-msgid "Thursday, July 5th at 3:00 pm"
-msgstr "Jeudi 5 juillet - heure à déterminer"
+#: bigday/templates/home.html:60
+msgid "Thursday, July 5th at 4:00 pm"
+msgstr " Jeudi 5 juillet – 16h00"
 
-#: bigday/templates/home.html:67 bigday/templates/home.html:112
+#: bigday/templates/home.html:61 bigday/templates/home.html:105
 msgid "Where"
 msgstr "Où ?"
 
-#: bigday/templates/home.html:70 guests/templates/guests/invitation.html:13
+#: bigday/templates/home.html:64 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
 msgstr "À la Mairie de Strasbourg"
 
-#: bigday/templates/home.html:74 bigday/templates/home.html:120
-msgid "Attire"
-msgstr "Tenue vestimentaire"
+#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:14
+msgid "Place Broglie, 67000 Strasbourg, France"
+msgstr "Place Broglie, 67000 Strasbourg, France"
 
-#: bigday/templates/home.html:75
-msgid "Smart"
-msgstr "Formelle, avec une touche exotique !"
-
-#: bigday/templates/home.html:76 bigday/templates/home.html:123
+#: bigday/templates/home.html:69 bigday/templates/home.html:113
 msgid "Transportation"
 msgstr "Transport"
 
-#: bigday/templates/home.html:77 bigday/templates/home.html:124
-msgid "Transportation is not provided. Tips in the info part."
-msgstr ""
-"Le transport n'est pas prévu. Tu as besoin de plus d'information ? Va voir "
-"les indications dans la partie \"information\"."
+#: bigday/templates/home.html:71
+msgid "Tram B, C and F Broglie stop. "
+msgstr "Tram B, C et F, arrêt Broglie."
 
-#: bigday/templates/home.html:78 bigday/templates/home.html:126
+#: bigday/templates/home.html:72
+msgid "Parking ticket + tram are available at the "
+msgstr "Ticket parking + tram possible sur le "
+
+#: bigday/templates/home.html:75
+msgid "following link."
+msgstr "lien suivant."
+
+#: bigday/templates/home.html:77 bigday/templates/home.html:117
 msgid "Parking"
 msgstr "Parking"
 
 #: bigday/templates/home.html:79
-msgid "Tips in the info part."
-msgstr "Indications dans la partie info"
-
-#: bigday/templates/home.html:80
-msgid "Other info"
-msgstr "Autres informations"
-
-#: bigday/templates/home.html:82
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                We are getting married on July 5th at 15:00 in the "
-#| "Strasbourg Townhall.\n"
-#| "                Civil wedding is open and celebrated later.\n"
-#| "              "
 msgid ""
-"\n"
-"                  We are getting married on July 5th at 15:00 in the "
-"Strasbourg Townhall.\n"
-"                  Civil wedding is open and celebrated later.\n"
-"                "
+"The following parkings are available next to the Town hall: Kléber, Opéra, "
+"Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du "
+"Marché Neuf"
 msgstr ""
-"\n"
-"Nous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville "
-"de Strasbourg. La réception aura lieu par la suite."
+"Parkings à proximité immédiate de l’hôtel de ville : Kléber, Opéra, Broglie, "
+"Église Saint-Pierre le Jeune, Place du Temple-Neuf et Place du Marché Neuf"
 
-#: bigday/templates/home.html:99
+#: bigday/templates/home.html:92
 msgid "Thursday celebration"
 msgstr "La réception"
 
-#: bigday/templates/home.html:109
+#: bigday/templates/home.html:102
 msgid "Celebrate our marriage"
 msgstr "Célébrons notre Mariage"
 
-#: bigday/templates/home.html:111
-msgid "Thursday, July 5th, from 16:00"
-msgstr "Jeudi 5 juillet - heure à déterminer"
+#: bigday/templates/home.html:104
+msgid "Thursday, July 5th after the ceremony"
+msgstr "Jeudi 5 juillet, après la cérémonie"
 
-#: bigday/templates/home.html:115
+#: bigday/templates/home.html:108
 msgid "Pavillon Josephine, Strasbourg"
 msgstr "Pavillon Josephine, Strasbourg"
 
-#: bigday/templates/home.html:117
+#: bigday/templates/home.html:110
 msgid "Phone: +33 3 88 36 52 53"
 msgstr "Téléphone : +32 4 75 98 02 42"
 
-#: bigday/templates/home.html:121
-msgid "Same as Civil wedding"
-msgstr "La même que pour la cérémonie civil"
+#: bigday/templates/home.html:115
+msgid ""
+"Problems finding your way ? Call us on +32 475 98 02 42 or +33 7 69 82 01 57."
+msgstr ""
+"Des problèmes pour arriver ? Appelez-nous au +32 475 98 02 42 or +33 7 69 82 "
+"01 57."
 
-#: bigday/templates/home.html:127
+#: bigday/templates/home.html:118
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
 msgstr ""
 "Un parking est disponible à l'entrée du parc et le long de l'Avenue de "
 "l'Europe"
 
-#: bigday/templates/home.html:136
+#: bigday/templates/home.html:127
 msgid "Wedding list"
 msgstr "Liste de mariage"
 
-#: bigday/templates/home.html:140
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
-#| "Leur souhait le plus cher est de poursuivre leur chemin heureux en "
-#| "famille.\n"
-#| "        Deux options vous sont proposées pour le cadeau : une "
-#| "contribution au voyage de noce de leurs reves ou une contribution à une "
-#| "association caritative qui leur tient a coeur.\n"
-#| "      "
+#: bigday/templates/home.html:131
 msgid ""
 "\n"
-"                Théo et Vio sont heureux ensemble et ont tout ce qu'il leur "
-"faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en "
-"famille.\n"
-"                Deux options vous sont proposées pour le cadeau : une "
-"contribution au voyage de noce de leurs reves ou une contribution à une "
-"association caritative qui leur tient a coeur.\n"
+"                  Thank you all for your good wishes and we will be happy "
+"for\n"
+"                  you to celebrate our unions with us. We have already had "
+"time\n"
+"                  to install ourselves and prepare our future. Your "
+"presence\n"
+"                  is our gift. If nevertheless you wish, you may contribute\n"
+"                  to our honeymoon! 😊<br /><br />\n"
+"                  Bank information:<br />\n"
+"                  Fieche – Gutierrez Figueroa<br />\n"
+"                  IBAN : BE35 0017 3448 9837<br />\n"
+"                  BIC : GEBABEBB\n"
 "              "
 msgstr ""
 "\n"
-"Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
-"souhait le plus cher est de poursuivre leur chemin heureux main dans la "
-"main. Deux options vous sont proposées pour le cadeau : une contribution au "
-"voyage de noce de leurs rêves ou une contribution à une association "
-"caritative."
+"Merci à tous pour les vœux et vos bons sentiments et nous vous serons "
+"heureux que vous fêtiez avec nous notre union. Nous avons déjà eu le temps "
+"de nous installer et de préparer notre avenir. Votre présence suffira à nous "
+"combler. Si toutefois vous souhaitiez nous faire cadeau, une contribution à "
+"la réalisation à notre voyage de noces est possible ! 😊<br /><br />\n"
+"Coordonnées bancaires :<br />\n"
+"Fieche – Gutierrez Figueroa<br />\n"
+"IBAN : BE35 0017 3448 9837<br />\n"
+"BIC : GEBABEBB"
 
-#: bigday/templates/home.html:187
+#: bigday/templates/home.html:185
 msgid "We're married!"
 msgstr "Nous sommes mariés !"
 
@@ -277,9 +264,9 @@ msgstr ""
 msgid "Théo and Violetta Wedding"
 msgstr "Le mariage de Théo et Violeta"
 
-#: guests/templates/guests/invitation.html:14
-msgid "Place Broglie, 67000 Strasbourg, France"
-msgstr "Place Broglie, 67000 Strasbourg, France"
+#: guests/templates/guests/invitation.html:12
+msgid "Thursday, July 5th at 3:00 pm"
+msgstr "Jeudi 5 juillet - heure à déterminer"
 
 #: guests/templates/guests/invitation.html:29
 msgid "will attend"
@@ -330,6 +317,74 @@ msgstr "- Théo et Violeta"
 #: guests/templates/guests/rsvp_confirmation.html:29
 msgid "Return to the landing page"
 msgstr "Retour à la page d'accueil"
+
+#~ msgid "Attire"
+#~ msgstr "Tenue vestimentaire"
+
+#~ msgid "Smart"
+#~ msgstr "Formelle, avec une touche exotique !"
+
+#~ msgid "Transportation is not provided. Tips in the info part."
+#~ msgstr ""
+#~ "Le transport n'est pas prévu. Tu as besoin de plus d'information ? Va "
+#~ "voir les indications dans la partie \"information\"."
+
+#~ msgid "Tips in the info part."
+#~ msgstr "Indications dans la partie info"
+
+#~ msgid "Other info"
+#~ msgstr "Autres informations"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                We are getting married on July 5th at 15:00 in the "
+#~| "Strasbourg Townhall.\n"
+#~| "                Civil wedding is open and celebrated later.\n"
+#~| "              "
+#~ msgid ""
+#~ "\n"
+#~ "                  We are getting married on July 5th at 15:00 in the "
+#~ "Strasbourg Townhall.\n"
+#~ "                  Civil wedding is open and celebrated later.\n"
+#~ "                "
+#~ msgstr ""
+#~ "\n"
+#~ "Nous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de "
+#~ "ville de Strasbourg. La réception aura lieu par la suite."
+
+#~ msgid "Thursday, July 5th, from 16:00"
+#~ msgstr "Jeudi 5 juillet - heure à déterminer"
+
+#~ msgid "Same as Civil wedding"
+#~ msgstr "La même que pour la cérémonie civil"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur "
+#~| "faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en "
+#~| "famille.\n"
+#~| "        Deux options vous sont proposées pour le cadeau : une "
+#~| "contribution au voyage de noce de leurs reves ou une contribution à une "
+#~| "association caritative qui leur tient a coeur.\n"
+#~| "      "
+#~ msgid ""
+#~ "\n"
+#~ "                Théo et Vio sont heureux ensemble et ont tout ce qu'il "
+#~ "leur faut. Leur souhait le plus cher est de poursuivre leur chemin "
+#~ "heureux en famille.\n"
+#~ "                Deux options vous sont proposées pour le cadeau : une "
+#~ "contribution au voyage de noce de leurs reves ou une contribution à une "
+#~ "association caritative qui leur tient a coeur.\n"
+#~ "              "
+#~ msgstr ""
+#~ "\n"
+#~ "Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
+#~ "souhait le plus cher est de poursuivre leur chemin heureux main dans la "
+#~ "main. Deux options vous sont proposées pour le cadeau : une contribution "
+#~ "au voyage de noce de leurs rêves ou une contribution à une association "
+#~ "caritative."
 
 #~ msgid "Pictures"
 #~ msgstr "Photos"
