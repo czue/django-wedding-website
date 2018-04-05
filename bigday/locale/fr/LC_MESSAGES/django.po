@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-09 19:56+0000\n"
+"POT-Creation-Date: 2018-04-05 21:02+0000\n"
 "PO-Revision-Date: 2018-02-24 21:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -30,7 +30,7 @@ msgstr "Espagnol"
 msgid "French"
 msgstr "Français"
 
-#: bigday/templates/base.html:10
+#: bigday/templates/base.html:11
 msgid "Théo et Violeta's big day"
 msgstr "Notre mariage"
 
@@ -46,124 +46,142 @@ msgstr "Information"
 msgid "Wedding List"
 msgstr "Liste de mariage"
 
-#: bigday/templates/home.html:51
+#: bigday/templates/home.html:50
 msgid "We're getting married!"
 msgstr "Nous nous marions !"
 
-#: bigday/templates/home.html:61
+#: bigday/templates/home.html:57
 msgid "The civil wedding"
 msgstr "Le mariage de Théo & Violeta"
 
-#: bigday/templates/home.html:64 bigday/templates/home.html:109
+#: bigday/templates/home.html:61 bigday/templates/home.html:108
 msgid "What"
 msgstr "Quoi"
 
-#: bigday/templates/home.html:66
+#: bigday/templates/home.html:63
 msgid "Wedding at the Townhall"
 msgstr "Mariage à la Mairie"
 
-#: bigday/templates/home.html:68 bigday/templates/home.html:111
+#: bigday/templates/home.html:65 bigday/templates/home.html:110
 msgid "When"
 msgstr "Quand ?"
 
-#: bigday/templates/home.html:69 guests/templates/guests/invitation.html:12
+#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:12
 msgid "Thursday, July 5th at 3:00 pm"
 msgstr "Jeudi 5 juillet - heure à déterminer"
 
-#: bigday/templates/home.html:70 bigday/templates/home.html:113
+#: bigday/templates/home.html:67 bigday/templates/home.html:112
 msgid "Where"
 msgstr "Où ?"
 
-#: bigday/templates/home.html:73 guests/templates/guests/invitation.html:13
+#: bigday/templates/home.html:70 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Townhall"
 msgstr "À la Mairie de Strasbourg"
 
-#: bigday/templates/home.html:77 bigday/templates/home.html:121
+#: bigday/templates/home.html:74 bigday/templates/home.html:120
 msgid "Attire"
 msgstr "Tenue vestimentaire"
 
-#: bigday/templates/home.html:78
+#: bigday/templates/home.html:75
 msgid "Smart"
 msgstr "Formelle, avec une touche exotique !"
 
-#: bigday/templates/home.html:79 bigday/templates/home.html:124
+#: bigday/templates/home.html:76 bigday/templates/home.html:123
 msgid "Transportation"
 msgstr "Transport"
 
-#: bigday/templates/home.html:80 bigday/templates/home.html:125
+#: bigday/templates/home.html:77 bigday/templates/home.html:124
 msgid "Transportation is not provided. Tips in the info part."
 msgstr ""
 "Le transport n'est pas prévu. Tu as besoin de plus d'information ? Va voir "
 "les indications dans la partie \"information\"."
 
-#: bigday/templates/home.html:81 bigday/templates/home.html:127
+#: bigday/templates/home.html:78 bigday/templates/home.html:126
 msgid "Parking"
 msgstr "Parking"
 
-#: bigday/templates/home.html:82
+#: bigday/templates/home.html:79
 msgid "Tips in the info part."
 msgstr "Indications dans la partie info"
 
-#: bigday/templates/home.html:83
+#: bigday/templates/home.html:80
 msgid "Other info"
 msgstr "Autres informations"
 
-#: bigday/templates/home.html:85
+#: bigday/templates/home.html:82
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                We are getting married on July 5th at 15:00 in the "
+#| "Strasbourg Townhall.\n"
+#| "                Civil wedding is open and celebrated later.\n"
+#| "              "
 msgid ""
 "\n"
-"                We are getting married on July 5th at 15:00 in the "
+"                  We are getting married on July 5th at 15:00 in the "
 "Strasbourg Townhall.\n"
-"                Civil wedding is open and celebrated later.\n"
-"              "
+"                  Civil wedding is open and celebrated later.\n"
+"                "
 msgstr ""
 "\n"
 "Nous nous marions le 5 Juillet - heure à déterminer - dans l'hôtel de ville "
 "de Strasbourg. La réception aura lieu par la suite."
 
-#: bigday/templates/home.html:106
+#: bigday/templates/home.html:99
 msgid "Thursday celebration"
 msgstr "La réception"
 
-#: bigday/templates/home.html:110
+#: bigday/templates/home.html:109
 msgid "Celebrate our marriage"
 msgstr "Célébrons notre Mariage"
 
-#: bigday/templates/home.html:112
+#: bigday/templates/home.html:111
 msgid "Thursday, July 5th, from 16:00"
 msgstr "Jeudi 5 juillet - heure à déterminer"
 
-#: bigday/templates/home.html:116
+#: bigday/templates/home.html:115
 msgid "Pavillon Josephine, Strasbourg"
 msgstr "Pavillon Josephine, Strasbourg"
 
-#: bigday/templates/home.html:118
+#: bigday/templates/home.html:117
 msgid "Phone: +33 3 88 36 52 53"
 msgstr "Téléphone : +32 4 75 98 02 42"
 
-#: bigday/templates/home.html:122
+#: bigday/templates/home.html:121
 msgid "Same as Civil wedding"
 msgstr "La même que pour la cérémonie civil"
 
-#: bigday/templates/home.html:128
+#: bigday/templates/home.html:127
 msgid ""
 "Parking is available at the parc entrance an along the Avenue de l'Europe"
 msgstr ""
 "Un parking est disponible à l'entrée du parc et le long de l'Avenue de "
 "l'Europe"
 
-#: bigday/templates/home.html:146
+#: bigday/templates/home.html:136
 msgid "Wedding list"
 msgstr "Liste de mariage"
 
-#: bigday/templates/home.html:149
+#: bigday/templates/home.html:140
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
+#| "Leur souhait le plus cher est de poursuivre leur chemin heureux en "
+#| "famille.\n"
+#| "        Deux options vous sont proposées pour le cadeau : une "
+#| "contribution au voyage de noce de leurs reves ou une contribution à une "
+#| "association caritative qui leur tient a coeur.\n"
+#| "      "
 msgid ""
 "\n"
-"        Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. "
-"Leur souhait le plus cher est de poursuivre leur chemin heureux en famille.\n"
-"        Deux options vous sont proposées pour le cadeau : une contribution "
-"au voyage de noce de leurs reves ou une contribution à une association "
-"caritative qui leur tient a coeur.\n"
-"      "
+"                Théo et Vio sont heureux ensemble et ont tout ce qu'il leur "
+"faut. Leur souhait le plus cher est de poursuivre leur chemin heureux en "
+"famille.\n"
+"                Deux options vous sont proposées pour le cadeau : une "
+"contribution au voyage de noce de leurs reves ou une contribution à une "
+"association caritative qui leur tient a coeur.\n"
+"              "
 msgstr ""
 "\n"
 "Théo et Vio sont heureux ensemble et ont tout ce qu'il leur faut. Leur "
@@ -172,7 +190,7 @@ msgstr ""
 "voyage de noce de leurs rêves ou une contribution à une association "
 "caritative."
 
-#: bigday/templates/home.html:184
+#: bigday/templates/home.html:187
 msgid "We're married!"
 msgstr "Nous sommes mariés !"
 
@@ -231,27 +249,25 @@ msgstr "Choucroute garnie avec cassoulet de foi gras"
 msgid "vegetarian"
 msgstr "Salade et étuvée de légume"
 
-#: guests/templates/guests/email_templates/invitation.html:8
+#: guests/templates/guests/email_templates/email_base.html:221
 msgid "Théo & Violeta's wedding title"
-msgstr ""
-"Le mariage de Théo & Violeta."
+msgstr "Le mariage de Théo & Violeta."
 
-#: guests/templates/guests/email_templates/invitation.html:15
-msgid "View invitation"
-msgstr "Voir l'invitation"
-
-#: guests/templates/guests/email_templates/invitation.html:27
+#: guests/templates/guests/email_templates/invitation.html:11
 msgid "Théo and Violeta"
 msgstr "Théo et Violeta"
 
-#: guests/templates/guests/email_templates/invitation.html:39
+#: guests/templates/guests/email_templates/invitation.html:27
+msgid "View invitation"
+msgstr "Voir l'invitation"
+
+#: guests/templates/guests/email_templates/invitation.html:45
 msgid "Théo & Violeta's wedding"
 msgstr ""
-"Nous avons le plaisir de te faire part de "
-"notre union et nous serions heureux que tu puisses te joindre à nous en ce "
-"moment spécial de nos vies."
+"Nous avons le plaisir de te faire part de notre union et nous serions "
+"heureux que tu puisses te joindre à nous en ce moment spécial de nos vies."
 
-#: guests/templates/guests/email_templates/invitation.html:47
+#: guests/templates/guests/email_templates/invitation.html:53
 msgid "Please view the invitation online to rsvp."
 msgstr ""
 "Merci d'ouvrir l'invitation en ligne pour confirmer votre présence via le "
