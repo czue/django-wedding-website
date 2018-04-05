@@ -3,38 +3,44 @@
 {% load staticfiles %}
 {% block header_image %}{% endblock %}
 {% block lead_copy %}
-    <tr>
-        <td>
-            <table border="0" cellpadding="0" cellspacing="0" align="center">
-                <tbody>
-                <tr>
-                    <td>
-                      <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}"
-                         target="_blank"
-                         style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color: #337ab7; border-top: 12px solid #337ab7; border-bottom: 12px solid #337ab7; border-right: 18px solid #337ab7; border-left: 18px solid #337ab7; display: inline-block;">
-                        {% trans "View invitation" %}
-                        </a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
 {% endblock %}
 {% block main_image %}
     {% with "invitation/images/"|add:main_image as main_static_url %}
-    <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
-         alt="{% trans "Théo and Violeta" %}"
-         style="display: block; padding: 0; color: #666666;"
-         class="img-max" border="0"
-         height="512" width="512">
+    <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}" target="_blank">
+        <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
+            alt="{% trans "Théo and Violeta" %}"
+            style="display: block; padding: 0; color: #666666; margin: 15px 0"
+            class="img-max" border="0"
+            height="auto" width="100%">
+    </a>
+    <table width="100%" cellpadding="0" cellspacing="0" align="center">
+        <tbody>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}" 
+                                    target="_blank" 
+                                    style="font-size: 20px; font-family: Raleway, Calibri, Arial, Helvetica, sans-serif; color: #fff; text-decoration: none; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; background-color: #825B6F; border-top: 12px solid #825B6F; border-bottom: 12px solid #825B6F; border-right: 18px solid #825B6F; border-left: 18px solid #825B6F; display: inline-block;">
+                                        {% trans "View invitation" %}
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     {% endwith %}
 {% endblock %}
 {% block main_copy %}
     <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
         <tbody>
         <tr>
-            <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
+            <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Raleway, Calibri, Arial, Helvetica, sans-serif; color: {{ font_color }};"
                 class="padding-copy" align="center">
               {% trans "Théo & Violeta's wedding" %}<br>
             </td>
