@@ -9,9 +9,8 @@
     <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}" target="_blank">
         <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
             alt="{% trans "Théo and Violeta" %}"
-            style="display: block; padding: 0; color: #666666; margin: 15px 0"
-            class="img-max" border="0"
-            height="auto" width="100%">
+            style="display: inline; padding: 0; color: #666666; margin: 15px 0"
+            class="img-max" border="0" height="auto" width="100%" />
     </a>
     <table width="100%" cellpadding="0" cellspacing="0" align="center">
         <tbody>
@@ -49,10 +48,10 @@
     </table>
 {% endblock %}
 {% block footer_content %}
-  <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}">
+  <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}" style="text-decoration:none; color:#eeeeee;">
     {% trans "Please view the invitation online to rsvp." %}
   </a>
     {% if email_mode %}
-      <p><a href="https://fiechegutierrez.com">https://fiechegutierrez.com</a></p>
+      <p><a href="https://fiechegutierrez.com" style="text-decoration:none; color:#eeeeee;">https://fiechegutierrez.com</a></p>
     {% endif %}
 {% endblock %}
