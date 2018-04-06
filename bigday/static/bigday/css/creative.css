@@ -377,7 +377,7 @@ li.nav-item .btn-white {
 }
 .bigday dt {
     padding: 5px 0 5px 0;
-    background: url(/static/bigday/images/line.png) repeat-x bottom left;
+    /* background: url(/static/bigday/images/line.png) repeat-x bottom left; */
 }
 
 .bigday .section-cover {
