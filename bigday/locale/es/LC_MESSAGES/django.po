@@ -258,9 +258,8 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"Acompáñanos a celebrar nuestro matrimonio. Tenemos el placer de invitarte a "
-"compartir y nos encantaría poder celebrar contigo este momento especial de "
-"nuestras vidas."
+"Tenemos el placer de invitarte a compartir y nos encantaría poder celebrar "
+"contigo este momento especial de nuestras vidas."
 
 #: guests/templates/guests/email_templates/invitation.html:55
 msgid "Please view the invitation online to rsvp."
