@@ -7,7 +7,9 @@ from django.core.mail import EmailMultiAlternatives
 from django.http import Http404
 from django.template.loader import render_to_string
 from django.urls import reverse
+from django.utils import translation
 from django.utils.translation import gettext as _
+
 
 from guests.models import Party, MEALS
 
@@ -48,6 +50,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
 
     context = get_invitation_context(party)
     context['email_mode'] = True
+    translation.activate(party.lang or 'en')
     template_html = render_to_string(INVITATION_TEMPLATE, context=context)
     template_text = _(
         "You're invited to Théo and Violeta's wedding. To view this invitation, visit {} in any browser.").format(

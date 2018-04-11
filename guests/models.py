@@ -3,16 +3,16 @@ import uuid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-# these will determine the default formality of correspondence
-ALLOWED_TYPES = [
-    ('formal', 'formal'),
-    ('fun', 'fun'),
-    ('dimagi', 'dimagi'),
-]
-
 
 def _random_uuid():
     return uuid.uuid4().hex
+
+
+LANGS = [
+    ('en', 'en'),
+    ('es', 'es'),
+    ('fr', 'fr'),
+]
 
 
 class Party(models.Model):
@@ -20,13 +20,11 @@ class Party(models.Model):
     A party consists of one or more guests.
     """
     name = models.TextField()
-    type = models.CharField(max_length=10, choices=ALLOWED_TYPES)
-    category = models.CharField(max_length=20, null=True, blank=True)
     invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
+    lang = models.CharField(max_length=2, choices=LANGS, null=True, blank=True)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
     is_invited = models.BooleanField(default=False)
-    rehearsal_dinner = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
 
@@ -54,7 +52,6 @@ MEALS = [
     ('meat', _('meat option')),
     ('vegetarian', _('vegetarian option')),
 ]
-
 
 class Guest(models.Model):
     """
