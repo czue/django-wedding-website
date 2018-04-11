@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-05 21:43+0000\n"
+"POT-Creation-Date: 2018-04-11 18:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "We're getting married!"
 msgstr ""
 
 #: bigday/templates/home.html:51
-msgid "The civil wedding"
+msgid "the Wedding Ceremony"
 msgstr ""
 
 #: bigday/templates/home.html:55 bigday/templates/home.html:101
@@ -59,7 +59,7 @@ msgid "What"
 msgstr ""
 
 #: bigday/templates/home.html:57
-msgid "Wedding at the Townhall"
+msgid "Our Wedding at Strasbourg Town Hall"
 msgstr ""
 
 #: bigday/templates/home.html:59 bigday/templates/home.html:103
@@ -67,7 +67,7 @@ msgid "When"
 msgstr ""
 
 #: bigday/templates/home.html:60
-msgid "Thursday, July 5th at 4:00 pm"
+msgid "Thursday, July 5th at 4 pm"
 msgstr ""
 
 #: bigday/templates/home.html:61 bigday/templates/home.html:105
@@ -75,7 +75,7 @@ msgid "Where"
 msgstr ""
 
 #: bigday/templates/home.html:64 guests/templates/guests/invitation.html:13
-msgid "Strasbourg Townhall"
+msgid "Strasbourg Town Hall"
 msgstr ""
 
 #: bigday/templates/home.html:66 guests/templates/guests/invitation.html:14
@@ -87,11 +87,11 @@ msgid "Transportation"
 msgstr ""
 
 #: bigday/templates/home.html:71
-msgid "Tram B, C and F Broglie stop. "
+msgid "Trams B, C and F; tram stop Broglie. "
 msgstr ""
 
 #: bigday/templates/home.html:72
-msgid "Parking ticket + tram are available at the "
+msgid "Both parking and tram tickets are available at"
 msgstr ""
 
 #: bigday/templates/home.html:75
@@ -104,21 +104,21 @@ msgstr ""
 
 #: bigday/templates/home.html:79
 msgid ""
-"The following parkings are available next to the Town hall: Kléber, Opéra, "
+"The following car parks are available next to the Town Hall: Kléber, Opéra,"
 "Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du "
 "Marché Neuf"
 msgstr ""
 
 #: bigday/templates/home.html:92
-msgid "Thursday celebration"
+msgid "Thursday Celebration"
 msgstr ""
 
 #: bigday/templates/home.html:102
-msgid "Celebrate our marriage"
+msgid "Our Marriage Celebration"
 msgstr ""
 
 #: bigday/templates/home.html:104
-msgid "Thursday, July 5th after the ceremony"
+msgid "Thursday, July 5th after the wedding ceremony"
 msgstr ""
 
 #: bigday/templates/home.html:108
@@ -131,12 +131,14 @@ msgstr ""
 
 #: bigday/templates/home.html:115
 msgid ""
-"Problems finding your way ? Call us on +32 475 98 02 42 or +33 7 69 82 01 57."
+"Are you having troubles finding your way ? Call us on +32 475 98 02 42 or "
+"+33 7 69 82 01 57."
 msgstr ""
 
 #: bigday/templates/home.html:118
 msgid ""
-"Parking is available at the parc entrance an along the Avenue de l'Europe"
+"Parking is available at the entrance to the park and along theAvenue de "
+"l'Europe"
 msgstr ""
 
 #: bigday/templates/home.html:127
@@ -146,13 +148,14 @@ msgstr ""
 #: bigday/templates/home.html:131
 msgid ""
 "\n"
-"                  Thank you all for your good wishes and we will be happy "
-"for\n"
-"                  you to celebrate our unions with us. We have already had "
+"                  Thank you all for your kind thoughts and wishes, and we "
+"will be thrilled  for\n"
+"                  you to celebrate our union with us. We have already had "
 "time\n"
-"                  to install ourselves and prepare our future. Your "
+"                  to settle down and prepare for our future, and your "
 "presence\n"
-"                  is our gift. If nevertheless you wish, you may contribute\n"
+"                  is already a gift to us. If, howewer, you wish to give us "
+"a gift, you are welcome to contribute\n"
 "                  to our honeymoon! 😊<br /><br />\n"
 "                  Bank information:<br />\n"
 "                  Fieche – Gutierrez Figueroa<br />\n"
@@ -211,11 +214,11 @@ msgid "You're invited"
 msgstr ""
 
 #: guests/models.py:54
-msgid "meat"
+msgid "meat option"
 msgstr ""
 
 #: guests/models.py:55
-msgid "vegetarian"
+msgid "vegetarian option"
 msgstr ""
 
 #: guests/templates/guests/email_templates/email_base.html:221
@@ -226,20 +229,20 @@ msgstr "Théo & Violeta's wedding title"
 msgid "Théo and Violeta"
 msgstr ""
 
-#: guests/templates/guests/email_templates/invitation.html:27
+#: guests/templates/guests/email_templates/invitation.html:26
 msgid "View invitation"
 msgstr ""
 
-#: guests/templates/guests/email_templates/invitation.html:45
+#: guests/templates/guests/email_templates/invitation.html:44
 msgid "Théo & Violeta's wedding"
 msgstr ""
 
-#: guests/templates/guests/email_templates/invitation.html:53
+#: guests/templates/guests/email_templates/invitation.html:52
 msgid "Please view the invitation online to rsvp."
 msgstr ""
 
 #: guests/templates/guests/invitation.html:10
-msgid "Théo and Violetta Wedding"
+msgid "Théo and Violeta Wedding"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:12
@@ -247,15 +250,15 @@ msgid "Thursday, July 5th at 3:00 pm"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:29
-msgid "will attend"
+msgid "is able to attend"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:34
-msgid "will not attend"
+msgid "is unable to attend"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:41
-msgid "... and will eat"
+msgid "... and will eat the"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:53

@@ -7,10 +7,10 @@
     <div class="container rsvp-container" id="invitation-body">
         <section class="col-md-12 text-center">
             <div id="invitation-details">
-              <h2>{% trans "Théo and Violetta Wedding" %}</h2>
+              <h2>{% trans "Théo and Violeta Wedding" %}</h2>
             <p class="lead">
               {% trans "Thursday, July 5th at 3:00 pm" %}<br>
-              {% trans "Strasbourg Townhall" %}<br>
+              {% trans "Strasbourg Town Hall" %}<br>
               <a href="https://goo.gl/maps/WshPW2PNFUH2">{% trans "Place Broglie, 67000 Strasbourg, France" %}</a>
             </p>
             </div>
@@ -26,19 +26,19 @@
                 <label class="attending-label" for="{{ attending_label }}" class=" control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
                   <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes"
-                         {% if guest.is_attending %}checked="checked"{% endif %} required>{% trans "will attend" %}
+                         {% if guest.is_attending %}checked="checked"{% endif %} required>{% trans "is able to attend" %}
                 </label>
                 <label class="radio-inline">
                   <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no"
                          {% if guest.is_attending == False %}checked="checked"{% endif %}
-                         required>{% trans "will not attend" %}
+                         required>{% trans "is unable to attend" %}
                 </label>
                 {% endwith %}
             </div>
             {% if not guest.is_child %}
             <div class="form-group">
                 {% with 'meal-'|add:guest.unique_id as meal_label %}
-                  <label for="{{ meal_label }}" class=" control-label">{% trans "... and will eat" %}</label>
+                  <label for="{{ meal_label }}" class=" control-label">{% trans "... and will eat the" %}</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
                     <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %} required> {{ meal_name }}
