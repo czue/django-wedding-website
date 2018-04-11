@@ -51,7 +51,7 @@ msgid "We're getting married!"
 msgstr "Nous nous marions !"
 
 #: bigday/templates/home.html:51
-msgid "the Wedding Ceremony"
+msgid "The wedding Ceremony"
 msgstr "Le mariage de Théo & Violeta"
 
 #: bigday/templates/home.html:55 bigday/templates/home.html:101

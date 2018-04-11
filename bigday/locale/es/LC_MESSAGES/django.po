@@ -50,7 +50,7 @@ msgid "We're getting married!"
 msgstr "¡Nos vamos a casar!"
 
 #: bigday/templates/home.html:51
-msgid "the Wedding Ceremony"
+msgid "The wedding Ceremony"
 msgstr "La ceremonia civil"
 
 #: bigday/templates/home.html:55 bigday/templates/home.html:101
