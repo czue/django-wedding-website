@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 18:59+0000\n"
-"PO-Revision-Date: 2018-04-05 23:48+0200\n"
+"POT-Creation-Date: 2018-04-11 19:20+0000\n"
+"PO-Revision-Date: 2018-04-11 21:24+0200\n"
 "Last-Translator: Augustin <a.borsu@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: bigday/settings.py:113
 msgid "English"
@@ -66,8 +66,6 @@ msgid "When"
 msgstr "¿Cuándo?"
 
 #: bigday/templates/home.html:60
-#, fuzzy
-#| msgid "Thursday, July 5th at 3:00 pm"
 msgid "Thursday, July 5th at 4 pm"
 msgstr "El jueves 5 de julio a las 4pm"
 
@@ -233,15 +231,15 @@ msgstr "Estás invitado"
 
 #: guests/models.py:54
 msgid "meat option"
-msgstr ""
+msgstr "plato con carne"
 
 #: guests/models.py:55
 msgid "vegetarian option"
-msgstr ""
+msgstr "plato vegetariano"
 
 #: guests/templates/guests/email_templates/email_base.html:221
-msgid "Théo & Violeta's wedding title"
-msgstr "Théo & Violeta's wedding title"
+msgid "Théo & Violeta's wedding"
+msgstr "El matrimonio de Théo y Violeta"
 
 #: guests/templates/guests/email_templates/invitation.html:11
 msgid "Théo and Violeta"
@@ -252,13 +250,19 @@ msgid "View invitation"
 msgstr "Ver la invitación"
 
 #: guests/templates/guests/email_templates/invitation.html:44
-msgid "Théo & Violeta's wedding"
+msgid ""
+"\n"
+"                We are happy to invite you to our wedding, and would be "
+"honoured if you could join us\n"
+"                for this special day of our lives.\n"
+"                "
 msgstr ""
+"\n"
 "Acompáñanos a celebrar nuestro matrimonio. Tenemos el placer de invitarte a "
 "compartir y nos encantaría poder celebrar contigo este momento especial de "
 "nuestras vidas."
 
-#: guests/templates/guests/email_templates/invitation.html:52
+#: guests/templates/guests/email_templates/invitation.html:55
 msgid "Please view the invitation online to rsvp."
 msgstr ""
 "Consulta tu invitación y confirma tu asistencia. Para ver la invitación haz "

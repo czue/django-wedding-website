@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 18:59+0000\n"
-"PO-Revision-Date: 2018-04-05 23:39+0200\n"
+"POT-Creation-Date: 2018-04-11 19:20+0000\n"
+"PO-Revision-Date: 2018-04-11 21:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: bigday/settings.py:113
 msgid "English"
@@ -92,7 +92,9 @@ msgstr "Tram B, C et F, arrêt Broglie."
 
 #: bigday/templates/home.html:72
 msgid "Both parking and tram tickets are available at"
-msgstr "Ticket parking + tram possible sur le "
+msgstr ""
+"Ticket combiné parking + tram possible. Plus d'information en cliquant sur "
+"le "
 
 #: bigday/templates/home.html:75
 msgid "following link."
@@ -136,7 +138,7 @@ msgid ""
 "Are you having troubles finding your way ? Call us on +32 475 98 02 42 or "
 "+33 7 69 82 01 57."
 msgstr ""
-"Des problèmes pour arriver ? Appelez-nous au +32 475 98 02 42 or +33 7 69 82 "
+"Des problèmes pour arriver ? Appelez-nous au +32 475 98 02 42 ou +33 7 69 82 "
 "01 57."
 
 #: bigday/templates/home.html:118
@@ -233,14 +235,14 @@ msgstr "Vous êtes invités"
 
 #: guests/models.py:54
 msgid "meat option"
-msgstr "Choucroute garnie avec cassoulet de foi gras"
+msgstr "plat contenant de la viande"
 
 #: guests/models.py:55
 msgid "vegetarian option"
-msgstr "Salade et étuvée de légume"
+msgstr "plat végétarien"
 
 #: guests/templates/guests/email_templates/email_base.html:221
-msgid "Théo & Violeta's wedding title"
+msgid "Théo & Violeta's wedding"
 msgstr "Le mariage de Théo & Violeta."
 
 #: guests/templates/guests/email_templates/invitation.html:11
@@ -252,12 +254,19 @@ msgid "View invitation"
 msgstr "Voir l'invitation"
 
 #: guests/templates/guests/email_templates/invitation.html:44
-msgid "Théo & Violeta's wedding"
+msgid ""
+"\n"
+"                We are happy to invite you to our wedding, and would be "
+"honoured if you could join us\n"
+"                for this special day of our lives.\n"
+"                "
 msgstr ""
-"Nous avons le plaisir de te faire part de notre union et nous serions "
-"heureux que tu puisses te joindre à nous en ce moment spécial de nos vies."
+"\n"
+"Nous avons le plaisir de vous faire part de notre union et nous serions "
+"heureux que vous puissiez vous joindre à nous en ce moment spécial de nos "
+"vies."
 
-#: guests/templates/guests/email_templates/invitation.html:52
+#: guests/templates/guests/email_templates/invitation.html:55
 msgid "Please view the invitation online to rsvp."
 msgstr ""
 "Merci d'ouvrir l'invitation en ligne pour confirmer votre présence via le "
@@ -273,7 +282,7 @@ msgstr "Jeudi 5 juillet - heure à déterminer"
 
 #: guests/templates/guests/invitation.html:29
 msgid "is able to attend"
-msgstr "assitera"
+msgstr "assistera"
 
 #: guests/templates/guests/invitation.html:34
 msgid "is unable to attend"
@@ -285,7 +294,7 @@ msgstr "et souhaite manger..."
 
 #: guests/templates/guests/invitation.html:53
 msgid "Questions/comments/well wishes"
-msgstr "Questions, commentaires, voeux : "
+msgstr "Questions, commentaires, vœux : "
 
 #: guests/templates/guests/invitation.html:57
 msgid "Submit Response"
