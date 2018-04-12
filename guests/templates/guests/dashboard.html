@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block page_content %}
     <div class="container" id="main">
-        <h1>Dashboard</h1>
+        <h4>Dashboard</h4>
         <table class="table table-striped">
             <tr>
                 <td>Guests Attending / Possible</td>
@@ -22,26 +22,7 @@
         </table>
         <div class="row">
             <div class="col-lg-6">
-                <h1>Guests by category</h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            {% for category in category_breakdown %}
-                            <th>{{ category.party__category }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {% for category in category_breakdown %}
-                            <td>{{ category.count }}</td>
-                            {% endfor %}
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-6">
-                <h1>Meal choices</h1>
+                <h4>Meal choices</h4>
                 <table class="table">
                     <thead>
                         <tr>
@@ -62,20 +43,20 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <h1>Unopened Invitations</h1>
+                <h4>Unopened Invitations</h4>
                 {% with party_list=parties_with_unopen_invites %}
                     {% include "guests/partials/party_list.html" %}
                 {% endwith %}
             </div>
             <div class="col-lg-6">
-                <h1>Open Unresponded Invitations</h1>
+                <h4>Open Unresponded Invitations</h4>
               {% with parties_with_open_unresponded_invites=party_list %}
                     {% include "guests/partials/party_list.html" %}
                 {% endwith %}
             </div>
         </div>
         <div class="col-lg-6">
-            <h1>Attending Guests Without Meals</h1>
+            <h4>Attending Guests Without Meals</h4>
             {% with guest_list=guests_without_meals %}
                 {% include "guests/guest_list.html" %}
             {% endwith %}
