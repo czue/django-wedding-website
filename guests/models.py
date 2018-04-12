@@ -33,7 +33,7 @@ class Party(models.Model):
 
     @classmethod
     def in_default_order(cls):
-        return cls.objects.order_by('category', '-is_invited', 'name')
+        return cls.objects.order_by('-is_invited', 'name')
 
     @property
     def ordered_guests(self):

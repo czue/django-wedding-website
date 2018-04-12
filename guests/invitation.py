@@ -43,7 +43,7 @@ def get_invitation_context(party):
 
 def send_invitation_email(party, test_only=False, recipients=None):
     if recipients is None:
-        recipients = party.guest_emails
+        recipients = list(party.guest_emails)
     if not recipients:
         print('===== WARNING: no valid email addresses found for {} ====='.format(party))
         return
@@ -57,8 +57,12 @@ def send_invitation_email(party, test_only=False, recipients=None):
         reverse('invitation', args=[context['invitation_id']])
     )
     subject = _("You're invited")
+
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
-    msg = EmailMultiAlternatives(subject, template_text, 'Théo and Vio <fieche.gutierrez@gmail.com>', recipients,
+    msg = EmailMultiAlternatives(subject,
+                                 template_text,
+                                 'Théo and Vio <fieche.gutierrez@gmail.com>',
+                                 recipients,
                                  cc=['Théo and Vio <fieche.gutierrez@gmail.com>'],
                                  reply_to=['fieche.gutierrez@gmail.com'])
     msg.attach_alternative(template_html, "text/html")

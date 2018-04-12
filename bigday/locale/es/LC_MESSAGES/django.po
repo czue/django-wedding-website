@@ -258,7 +258,7 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"Tenemos el placer de invitarte a compartir y nos encantaría poder celebrar "
+    "Tenemos el placer de invitarte a compartir y nos encantaría poder celebrar "
 "contigo este momento especial de nuestras vidas."
 
 #: guests/templates/guests/email_templates/invitation.html:55
