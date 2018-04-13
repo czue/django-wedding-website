@@ -13,6 +13,7 @@ def import_guests(path):
 
             party = Party.objects.get_or_create(name=row['Party Name'])[0]
             party.is_invited = True
+            party.lang = row['Language']
             if not party.invitation_id:
                 party.invitation_id = uuid.uuid4().hex
             party.save()
