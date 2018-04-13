@@ -108,10 +108,10 @@ msgstr "Parking"
 msgid ""
 "The following car parks are available next to the Town Hall: Kléber, Opéra,"
 "Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du "
-"Marché Neuf"
+"Marché Neuf."
 msgstr ""
 "Parkings à proximité immédiate de l’hôtel de ville : Kléber, Opéra, Broglie, "
-"Église Saint-Pierre le Jeune, Place du Temple-Neuf et Place du Marché Neuf"
+"Église Saint-Pierre le Jeune, Place du Temple-Neuf et Place du Marché Neuf."
 
 #: bigday/templates/home.html:92
 msgid "Thursday Celebration"
