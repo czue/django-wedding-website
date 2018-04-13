@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 19:20+0000\n"
-"PO-Revision-Date: 2018-04-11 21:24+0200\n"
+"POT-Creation-Date: 2018-04-13 13:51+0000\n"
+"PO-Revision-Date: 2018-04-13 15:51+0200\n"
 "Last-Translator: Augustin <a.borsu@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -50,7 +50,7 @@ msgid "We're getting married!"
 msgstr "¡Nos vamos a casar!"
 
 #: bigday/templates/home.html:51
-msgid "The wedding Ceremony"
+msgid "The Wedding Ceremony"
 msgstr "La ceremonia civil"
 
 #: bigday/templates/home.html:55 bigday/templates/home.html:101
@@ -65,8 +65,8 @@ msgstr "Matrimonio en el ayuntamiento"
 msgid "When"
 msgstr "¿Cuándo?"
 
-#: bigday/templates/home.html:60
-msgid "Thursday, July 5th at 4 pm"
+#: bigday/templates/home.html:60 guests/templates/guests/invitation.html:12
+msgid "Thursday, July 5<sup>th</sup> at 4 pm"
 msgstr "El jueves 5 de julio a las 4pm"
 
 #: bigday/templates/home.html:61 bigday/templates/home.html:105
@@ -90,7 +90,7 @@ msgid "Trams B, C and F; tram stop Broglie. "
 msgstr "Tranvía B, C y F, parada “Broglie”."
 
 #: bigday/templates/home.html:72
-msgid "Both parking and tram tickets are available at"
+msgid "Both parking and tram tickets are available at the"
 msgstr "Tiquetes de transporte + aparcamiento"
 
 #: bigday/templates/home.html:75
@@ -119,7 +119,7 @@ msgid "Our Marriage Celebration"
 msgstr "¡Celebra con nosotros nuestro matrimonio!"
 
 #: bigday/templates/home.html:104
-msgid "Thursday, July 5th after the wedding ceremony"
+msgid "Thursday, July 5<sup>th</sup> after the wedding ceremony"
 msgstr "El jueves 5 de julio después de la ceremonia"
 
 #: bigday/templates/home.html:108
@@ -139,10 +139,10 @@ msgstr "Contáctanos a los números +32 475 98 02 42 or +33 7 69 82 01 57."
 #: bigday/templates/home.html:118
 msgid ""
 "Parking is available at the entrance to the park and along theAvenue de "
-"l'Europe"
+"l'Europe."
 msgstr ""
 "Hay aparcamientos disponibles a la entrada del parque y sobre la Avenue de "
-"l'Europe"
+"l'Europe."
 
 #: bigday/templates/home.html:127
 msgid "Wedding list"
@@ -162,7 +162,7 @@ msgid ""
 "                  to our honeymoon! 😊<br /><br />\n"
 "                  Bank information:<br />\n"
 "                  Fieche – Gutierrez Figueroa<br />\n"
-"                  IBAN : BE35 0017 3448 9837<br />\n"
+"                  IBAN: BE35 0017 3448 9837<br />\n"
 "                  BIC : GEBABEBB\n"
 "              "
 msgstr ""
@@ -172,9 +172,9 @@ msgstr ""
 "tiempo de instalarnos y de preparar nuestro futuro. Su sola presencia nos "
 "llena de alegría. Si de todas maneras desean darnos un presente, puede hacer "
 "un aporte para nuestra luna de miel. 😊<br /><br />\n"
-"                  Coordenadas bancarias:<br />\n"
+"                  Datos bancarios::<br />\n"
 "                  Fieche – Gutierrez Figueroa<br />\n"
-"                  IBAN : BE35 0017 3448 9837<br />\n"
+"                  IBAN: BE35 0017 3448 9837<br />\n"
 "                  BIC : GEBABEBB\n"
 "              "
 
@@ -209,15 +209,15 @@ msgid ""
 "              "
 msgstr ""
 
-#: guests/invitation.py:34
+#: guests/invitation.py:35
 msgid "Théo and Violeta - You're Invited!"
 msgstr "¡Théo y Violeta se casan!"
 
-#: guests/invitation.py:35
+#: guests/invitation.py:36
 msgid "You are invited!"
 msgstr "Nos encantaría celebrar contigo nuestra unión."
 
-#: guests/invitation.py:53
+#: guests/invitation.py:55
 msgid ""
 "You're invited to Théo and Violeta's wedding. To view this invitation, visit "
 "{} in any browser."
@@ -225,15 +225,15 @@ msgstr ""
 "Te invitamos a nuestro matrimonio. Para ver esta invitación, por favor "
 "visita{} desde cualquier navegador."
 
-#: guests/invitation.py:56
+#: guests/invitation.py:58
 msgid "You're invited"
 msgstr "Estás invitado"
 
-#: guests/models.py:54
+#: guests/models.py:52
 msgid "meat option"
 msgstr "plato con carne"
 
-#: guests/models.py:55
+#: guests/models.py:53
 msgid "vegetarian option"
 msgstr "plato vegetariano"
 
@@ -252,28 +252,24 @@ msgstr "Ver la invitación"
 #: guests/templates/guests/email_templates/invitation.html:44
 msgid ""
 "\n"
-"                We are happy to invite you to our wedding, and would be "
-"honoured if you could join us\n"
-"                for this special day of our lives.\n"
+"                We have the pleasure of announcing our union, and would be "
+"thrilled if you could join us\n"
+"                for this special moment in our lives.\n"
 "                "
 msgstr ""
 "\n"
-    "Tenemos el placer de invitarte a compartir y nos encantaría poder celebrar "
-"contigo este momento especial de nuestras vidas."
+"¡Tenemos el placer de anunciarles que nos vamos a casar! Nos encantaría "
+"poder compartir la alegría de nuestra unión con ustedes."
 
 #: guests/templates/guests/email_templates/invitation.html:55
-msgid "Please view the invitation online to rsvp."
+msgid "Please view your invitation online in order to rsvp."
 msgstr ""
 "Consulta tu invitación y confirma tu asistencia. Para ver la invitación haz "
 "clic en el botón \"Ver la invitación\"."
 
 #: guests/templates/guests/invitation.html:10
-msgid "Théo and Violeta Wedding"
+msgid "Théo and Violeta's Wedding"
 msgstr "¡Nos casamos!"
-
-#: guests/templates/guests/invitation.html:12
-msgid "Thursday, July 5th at 3:00 pm"
-msgstr "El jueves 5 de julio a las 4pm"
 
 #: guests/templates/guests/invitation.html:29
 msgid "is able to attend"
@@ -348,8 +344,8 @@ msgstr "Volver a la página de inicio"
 #, fuzzy
 #~ msgid ""
 #~ "\n"
-#~ "                  We are getting married on July 5th at 15:00 in the "
-#~ "Strasbourg Town Hall.\n"
+#~ "                  We are getting married on July 5<sup>th</sup> at 15:00 "
+#~ "in the Strasbourg Town Hall.\n"
 #~ "                  Civil wedding is open and celebrated later.\n"
 #~ "                "
 #~ msgstr ""
@@ -358,7 +354,7 @@ msgstr "Volver a la página de inicio"
 #~ "en el Ayuntamiento de Estrasburgo. Habrá una recepción después de la "
 #~ "ceremonia civil."
 
-#~ msgid "Thursday, July 5th, from 16:00"
+#~ msgid "Thursday, July 5<sup>th</sup>, from 16:00"
 #~ msgstr "Jueves, 5 de julio, hora por definir"
 
 #~ msgid "Same as Civil wedding"

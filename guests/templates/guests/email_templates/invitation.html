@@ -42,8 +42,8 @@
             <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Raleway, Calibri, Arial, Helvetica, sans-serif; color: {{ font_color }};"
                 class="padding-copy" align="center">
                 {% blocktrans %}
-                We are happy to invite you to our wedding, and would be honoured if you could join us
-                for this special day of our lives.
+                We have the pleasure of announcing our union, and would be thrilled if you could join us
+                for this special moment in our lives.
                 {% endblocktrans %}
             </td>
         </tr>
@@ -52,7 +52,7 @@
 {% endblock %}
 {% block footer_content %}
   <a href="{% if email_mode %}https://fiechegutierrez.com{% endif %}{% url 'invitation' invitation_id %}" style="text-decoration:none; color:#eeeeee;">
-    {% trans "Please view the invitation online to rsvp." %}
+    {% trans "Please view your invitation online in order to rsvp." %}
   </a>
     {% if email_mode %}
       <p><a href="https://fiechegutierrez.com" style="text-decoration:none; color:#eeeeee;">https://fiechegutierrez.com</a></p>
