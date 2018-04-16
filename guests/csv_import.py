@@ -6,8 +6,8 @@ from guests.models import Party, Guest
 
 
 def import_guests(path):
-    with open(path, 'r', encoding='latin2') as csvfile:
-        reader = csv.DictReader(csvfile, delimiter=';')
+    with open(path, 'r', encoding='utf8') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=',')
         for row in reader:
             print(row)
 
