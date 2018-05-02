@@ -20,6 +20,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#wedding_list">{% trans "Wedding List" %}</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#accomodation">{% trans "Accomodation" %}</a>
+            </li>
           </ul>
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -66,9 +69,12 @@
                       {% trans "Place Broglie, 67000 Strasbourg, France" %}</a><br>
                 </address>
               </dd>
+              <dt>{% trans "Dress Code" %}</dt>
+              <dd>{% trans "Formal, with an exotic touch! 😊" %}</dd>
               <dt>{% trans "Transportation" %}</dt>
               <dd>
                   {% trans "Trams B, C and F; tram stop Broglie. " %}
+                  {% trans "Trams E; tram stop Droits de l'homme. " %}
                   {% trans "Both parking and tram tickets are available at the" %}
                   <a href="https://www.cts-strasbourg.eu/fr/se-deplacer/Parkings-relais/">
                       {% trans "following link." %}</a>
@@ -144,6 +150,29 @@
             <div class="block-picture">
                 <img src="/static/bigday/images/montagne.jpg"/>
             </div>
+        </article>
+      </section>
+    </div>
+  </section>
+  <section class="section accomodation">
+    <a name="accomodation"></a>
+    <div class="container container-saturday-event">
+    <h2 class="section-heading">{%  trans "Accomodation" %}</h2>
+    <section class="responsive-grid">
+        <article class="grid-item grid-item-picture">
+            <div class="block-picture">
+                <img src="/static/bigday/images/montagne.jpg"/>
+            </div>
+        </article>
+        <article  class="grid-item">
+          <p>
+              {% blocktrans %}
+                  For those of you who do not live in Strasbourg, we suggest you stay at l’Hotêl l’Orangerie, which is located near Pavillon Joséphine.
+                  You can make a reservation by email via the following address: info@hotel-orangerie-strasbourg.com.
+                  You will be granted a discount by stating that you are attending our wedding.
+                  Feel free to browse Airbnb for any available apartments, too.
+              {% endblocktrans %}
+            </p>
         </article>
       </section>
     </div>
