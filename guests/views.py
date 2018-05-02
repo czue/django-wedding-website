@@ -23,7 +23,7 @@ class GuestListView(ListView):
 def export_guests(request):
     export = csv_import.export_guests()
     response = HttpResponse(export.getvalue(), content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename=all-guests.csv'
+    response.content = export.getvalue()
     return response
 
 
