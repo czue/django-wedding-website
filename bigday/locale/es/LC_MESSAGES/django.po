@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-13 13:51+0000\n"
-"PO-Revision-Date: 2018-04-13 15:51+0200\n"
+"POT-Creation-Date: 2018-05-02 16:45+0000\n"
+"PO-Revision-Date: 2018-05-02 18:54+0200\n"
 "Last-Translator: Augustin <a.borsu@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #: bigday/settings.py:113
 msgid "English"
@@ -45,63 +45,79 @@ msgstr "Información"
 msgid "Wedding List"
 msgstr "Lista de bodas"
 
-#: bigday/templates/home.html:44
+#: bigday/templates/home.html:24 bigday/templates/home.html:160
+msgid "Accomodation"
+msgstr "Alojamiento"
+
+#: bigday/templates/home.html:47
 msgid "We're getting married!"
 msgstr "¡Nos vamos a casar!"
 
-#: bigday/templates/home.html:51
+#: bigday/templates/home.html:54
 msgid "The Wedding Ceremony"
 msgstr "La ceremonia civil"
 
-#: bigday/templates/home.html:55 bigday/templates/home.html:101
+#: bigday/templates/home.html:58 bigday/templates/home.html:106
 msgid "What"
 msgstr "¿Qué?"
 
-#: bigday/templates/home.html:57
+#: bigday/templates/home.html:60
 msgid "Our Wedding at Strasbourg Town Hall"
 msgstr "Matrimonio en el ayuntamiento"
 
-#: bigday/templates/home.html:59 bigday/templates/home.html:103
+#: bigday/templates/home.html:62 bigday/templates/home.html:108
 msgid "When"
 msgstr "¿Cuándo?"
 
-#: bigday/templates/home.html:60 guests/templates/guests/invitation.html:12
+#: bigday/templates/home.html:63 guests/templates/guests/invitation.html:12
 msgid "Thursday, July 5<sup>th</sup> at 4 pm"
 msgstr "El jueves 5 de julio a las 4pm"
 
-#: bigday/templates/home.html:61 bigday/templates/home.html:105
+#: bigday/templates/home.html:64 bigday/templates/home.html:110
 msgid "Where"
 msgstr "¿Dónde?"
 
-#: bigday/templates/home.html:64 guests/templates/guests/invitation.html:13
+#: bigday/templates/home.html:67 guests/templates/guests/invitation.html:13
 msgid "Strasbourg Town Hall"
 msgstr "Ayuntamiento de Estrasburgo"
 
-#: bigday/templates/home.html:66 guests/templates/guests/invitation.html:14
+#: bigday/templates/home.html:69 guests/templates/guests/invitation.html:14
 msgid "Place Broglie, 67000 Strasbourg, France"
 msgstr "Plaza Broglie, 67000 Estrasburgo, Francia"
 
-#: bigday/templates/home.html:69 bigday/templates/home.html:113
+#: bigday/templates/home.html:72
+msgid "Dress Code"
+msgstr "¿Traje?"
+
+#: bigday/templates/home.html:73
+msgid "Formal, with an exotic touch! 😊"
+msgstr "Formal, ¡con un toque exótico! 😊"
+
+#: bigday/templates/home.html:74 bigday/templates/home.html:118
 msgid "Transportation"
 msgstr "¿No sabes cómo llegar? "
 
-#: bigday/templates/home.html:71
+#: bigday/templates/home.html:76
 msgid "Trams B, C and F; tram stop Broglie. "
-msgstr "Tranvía B, C y F, parada “Broglie”."
+msgstr "Tranvía B, C y F, parada “Broglie”. "
 
-#: bigday/templates/home.html:72
+#: bigday/templates/home.html:77
+msgid "Trams E; tram stop Droits de l'homme. "
+msgstr "Tranvía E, estación « Droits de “l’homme”. "
+
+#: bigday/templates/home.html:78
 msgid "Both parking and tram tickets are available at the"
 msgstr "Tiquetes de transporte + aparcamiento"
 
-#: bigday/templates/home.html:75
+#: bigday/templates/home.html:80
 msgid "following link."
 msgstr "disponibles."
 
-#: bigday/templates/home.html:77 bigday/templates/home.html:117
+#: bigday/templates/home.html:82 bigday/templates/home.html:122
 msgid "Parking"
 msgstr "Estacionamiento"
 
-#: bigday/templates/home.html:79
+#: bigday/templates/home.html:84
 msgid ""
 "The following car parks are available next to the Town Hall: Kléber, Opéra,"
 "Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du "
@@ -110,33 +126,33 @@ msgstr ""
 "Aparcamientos cercanos al ayuntamiento: Kléber, Opéra, Broglie, Église Saint-"
 "Pierre le Jeune, Place du Temple-Neuf y Place du Marché Neuf."
 
-#: bigday/templates/home.html:92
+#: bigday/templates/home.html:97
 msgid "Thursday Celebration"
 msgstr "La recepción"
 
-#: bigday/templates/home.html:102
+#: bigday/templates/home.html:107
 msgid "Our Marriage Celebration"
 msgstr "¡Celebra con nosotros nuestro matrimonio!"
 
-#: bigday/templates/home.html:104
+#: bigday/templates/home.html:109
 msgid "Thursday, July 5<sup>th</sup> after the wedding ceremony"
 msgstr "El jueves 5 de julio después de la ceremonia"
 
-#: bigday/templates/home.html:108
+#: bigday/templates/home.html:113
 msgid "Pavillon Josephine, Strasbourg"
 msgstr "Pavillon Joséphine, Estrasburgo"
 
-#: bigday/templates/home.html:110
+#: bigday/templates/home.html:115
 msgid "Phone: +33 3 88 36 52 53"
 msgstr "Teléfono: +32 4 87 74 21 05 "
 
-#: bigday/templates/home.html:115
+#: bigday/templates/home.html:120
 msgid ""
 "Are you having troubles finding your way ? Call us on +32 475 98 02 42 or "
 "+33 7 69 82 01 57."
 msgstr "Contáctanos a los números +32 475 98 02 42 or +33 7 69 82 01 57."
 
-#: bigday/templates/home.html:118
+#: bigday/templates/home.html:123
 msgid ""
 "Parking is available at the entrance to the park and along theAvenue de "
 "l'Europe."
@@ -144,11 +160,11 @@ msgstr ""
 "Hay aparcamientos disponibles a la entrada del parque y sobre la Avenue de "
 "l'Europe."
 
-#: bigday/templates/home.html:127
+#: bigday/templates/home.html:132
 msgid "Wedding list"
 msgstr "Lista de bodas"
 
-#: bigday/templates/home.html:131
+#: bigday/templates/home.html:136
 msgid ""
 "\n"
 "                  Thank you all for your kind thoughts and wishes, and we "
@@ -178,7 +194,32 @@ msgstr ""
 "                  BIC : GEBABEBB\n"
 "              "
 
-#: bigday/templates/home.html:185
+#: bigday/templates/home.html:169
+msgid ""
+"\n"
+"                  For those of you who do not live in Strasbourg, we suggest "
+"you stay at l’Hotêl l’Orangerie, which is located near Pavillon Joséphine.\n"
+"                  You can make a reservation by email via the following "
+"address: info@hotel-orangerie-strasbourg.com.\n"
+"                  You will be granted a discount by stating that you are "
+"attending our wedding.\n"
+"                  Feel free to browse Airbnb for any available apartments, "
+"too.\n"
+"              "
+msgstr ""
+"\n"
+"                  Para aquellos de ustedes que no viven en Estrasburgo, le "
+"sugerimos que se alojen en el hotel L'Orangerie, ubicado cerca del Pavillon "
+"Joséphine.\n"
+"                  Puede hacer su reserva escribiendo un correo electrónico a "
+"la siguiente dirección: info@hotel-orangerie-strasbourg.com\n"
+"                  Se les concede un descuento al especificar que asisten a "
+"nuestra boda.\n"
+"                  No duden en consultar también los apartamentos disponibles "
+"en Airbnb.\n"
+"               "
+
+#: bigday/templates/home.html:213
 msgid "We're married!"
 msgstr "¡Nos vamos a casar!"
 
