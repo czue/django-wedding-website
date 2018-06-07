@@ -78,8 +78,13 @@ def send_invitation_email(party, test_only=False, recipients=None):
         msg.send()
 
 
-def send_all_invitations(test_only, mark_as_sent):
-    to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+def send_all_invitations(test_only, mark_as_sent, unopened):
+    if unopened:
+        print('resending emails to partys who did not open their invitation.')
+        to_send_to = Party.in_default_order().filter(is_invited=True, invitation_opened=None).exclude(is_attending=False)
+    else:
+        to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+
     for party in to_send_to:
         send_invitation_email(party, test_only=test_only)
         if mark_as_sent:

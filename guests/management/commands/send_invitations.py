@@ -20,6 +20,13 @@ class Command(BaseCommand):
             default=False,
             help="Mark as sent"
         )
+        parser.add_argument(
+            '--resend-unopened',
+            action='store_true',
+            dest='unopened',
+            default=False,
+            help="Mark as sent"
+        )
 
     def handle(self, *args, **options):
-        send_all_invitations(test_only=not options['send'], mark_as_sent=options['mark_sent'])
+        send_all_invitations(test_only=not options['send'], mark_as_sent=options['mark_sent'], unopened=options['unopened'])
