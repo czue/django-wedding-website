@@ -1,1 +1,1 @@
-web: cd bigday && gunicorn bigday.wsgi
+web: gunicorn bigday.wsgi
