@@ -25,11 +25,23 @@ hr.light {
     border-color: #fff;
 }
 
+hr.dark {
+    border-color: #222;
+}
+
+
 a {
     color: #AB2F52;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+    -webkit-transition: all .15s;
+    -moz-transition: all .15s;
+    transition: all .15s;
+}
+
+
+a.dark,
+a.dark:hover,
+a.dark:focus{
+    color: rgb(28,56,81);
 }
 
 a:hover,
@@ -222,7 +234,7 @@ header .header-content .header-content-inner p {
 }
 
 #second-header {
-    background-image: url('../images/chapmans-peak-view.jpg');
+    background-image: url('../images/ponte-da-saudade.jpg');
 }
 
 @media(min-width:768px) {
@@ -304,7 +316,7 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(21,96,120,.4);
+    background: rgba(21,96,120,.6);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -509,4 +521,16 @@ body {
 #footer {
     background-color: #222;
     padding-bottom: 30px;
+}
+
+.dl-horizontal dt {
+
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
