@@ -1,0 +1,18 @@
+[[source]]
+
+name = "pypi"
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+
+
+[packages]
+
+django = ">=1.11"
+fabric = "==1.10.2"
+"psycopg2" = "==2.7.4"
+gunicorn = "==19.8.1"
+django-heroku = "==0.3.1"
+
+
+[dev-packages]
+

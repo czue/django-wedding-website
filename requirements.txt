@@ -2,3 +2,4 @@ django>=1.11
 Fabric==1.10.2
 psycopg2==2.7.4
 gunicorn==19.8.1
+django_heroku==0.3.1
