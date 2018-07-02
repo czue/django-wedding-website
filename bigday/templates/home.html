@@ -15,7 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Cory and Rowena's Big Day</a>
+                <a class="navbar-brand page-scroll" href="#page-top">João Gabriel & Isabella</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -24,16 +24,16 @@
                         <a class="page-scroll" href="#main-header">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#event">Event</a>
+                        <a class="page-scroll" href="#event">Casamento</a>
+                    </li>
+{#                    <li>#}
+{#                        <a class="page-scroll" href="#niagara">Sobre o Sítio</a>#}
+{#                    </li>#}
+                    <li>
+                        <a class="page-scroll" href="#other-stuff">Presentes</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#niagara">Niagara-on-the-Lake</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#other-stuff">Everything Else</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>We did it!!</h1>
+{#                <h1>10.11.18</h1>#}
                 {% comment %}
                 <hr>
                 <h2>It's wedding week!</h2>
@@ -60,24 +60,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
+                    <h2 class="section-heading">Bem-vindo!</h2>
                     <hr>
                     <p>
-                        Hello friends and family! It's the week of the wedding!
+                        Olá amigos e família! Estamos quase no dia do casamento!
                     </p>
                     <p>
-                        If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Friday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
+                        Se você está procurando informações sobre o evento, aqui você encontrará tudo que precisa!<br>
+                        Veja abaixo todos os detalhes sobre <a href="#event" class="page-scroll">a festa</a>.
                     </p>
+{#                    <p>#}
+{#                        To get added to the wedding whatsapp group first create an account and then send an#}
+{#                        email to <a href="mailto:{{ support_email }}">{{ support_email }}</a>.#}
+{#                        Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky.#}
+{#                    </p>#}
                     <p>
-                        To get added to the wedding whatsapp group first create an account and then send an
-                        email to <a href="mailto:{{ support_email }}">{{ support_email }}</a>.
-                        Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky.
+                        Estamos ansioso para ver todos em breve!
                     </p>
-                    <p>
-                        Looking forward to seeing everyone soon!
-                    </p>
-                    <p class="pull-right">- Cory and Rowena</p>
+                    <p class="pull-right">- João Gabriel e Isabella</p>
                 </div>
             </div>
         </div>
@@ -87,23 +87,23 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/wedding.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    The Event
+                                    O Evento
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#niagara" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
+                    <a href="#reserva" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/the_event_photo.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Niagara-on-the-Lake
+                                    Reserva da Colina
                                 </div>
                             </div>
                         </div>
@@ -111,11 +111,11 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/kiss_couple.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Our Story
+                                    Nossa História
                                 </div>
                             </div>
                         </div>
@@ -125,33 +125,33 @@
         </div>
     </section>
     {% include 'partials/event.html' %}
-    <section id="niagara">
-        {% include 'partials/niagara.html' %}
-    </section>
+{#    <section id="niagara">#}
+{#        {% include 'partials/niagara.html' %}#}
+{#    </section>#}
 {% comment %}
         {% include 'partials/wedding-party.html' %}
 {% endcomment %}
     <section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
     </section>
-    <section id="gifts">
-        {% include 'partials/gifts.html' %}
-    </section>
+{#    <section id="gifts">#}
+{#        {% include 'partials/gifts.html' %}#}
+{#    </section>#}
     <section id="story" class="bg-dark">
         {% include 'partials/story.html' %}
     </section>
     {% include 'partials/proposal.html' %}
-    {% include 'partials/save-the-dates.html' %}
+{#    {% include 'partials/save-the-dates.html' %}#}
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contact us!</h2>
+                    <h2 class="section-heading">Contato</h2>
                     <hr class="primary">
-                    <p>If you have any questions don't hesitate to reach out!</p>
+                    <p>Se você tiver qualquer dúvida, pode nos procurar que teremos o prazer de ajudar :)</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <i class="fa fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
                 </div>
             </div>
