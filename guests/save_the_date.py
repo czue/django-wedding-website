@@ -131,7 +131,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print('sending {} to {}').format(context['name'], ', '.join(recipients))
+    print('sending {} to {}'.format(context['name'], ', '.join(recipients)))
     if not test_only:
         msg.send()
 
