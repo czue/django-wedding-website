@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Party</th>
+            <th>Category</th>
+            <th>Sent to</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for party in party_list %}
+        <tr>
+            <td><a href="{% url 'admin:guests_party_change' party.pk %}" >{{ party.name }}</a></td>
+            <td>{{ party.category }}</td>
+            <td>{{ party.guest_emails|join:"<br>" }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
