@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-from .localsettings import *
+
+try:
+    from .localsettings import *
+except ImportError:
+    pass
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -142,8 +146,3 @@ WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on al
 # Third-party backends can be specified by providing a Python path
 # to a module that defines an EmailBackend class.
 
-
-# try:
-#     from localsettings.py import *
-# except ImportError:
-#     pass
