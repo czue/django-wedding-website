@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from .localsettings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -128,15 +129,21 @@ STATICFILES_DIRS = (
 )
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'You and Your Partner <dmckinno@gmail.com>'
+DEFAULT_WEDDING_FROM_EMAIL = 'You and Your Partner <daniel.mckinnon@colorado.edu>'
 # the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = 'dmckinno@gmail.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'daniel.mckinnon@colorado.edu'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
 
-try:
-    from .localsettings import *
-except ImportError:
-    pass
+# The email backend to use. For possible shortcuts see django.core.mail.
+# The default is to use the SMTP backend.
+# Third-party backends can be specified by providing a Python path
+# to a module that defines an EmailBackend class.
+
+
+# try:
+#     from localsettings.py import *
+# except ImportError:
+#     pass
