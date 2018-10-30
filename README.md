@@ -8,6 +8,12 @@ Live site examples:
 
 There is also [a longer writeup on this project here](https://www.placecard.me/blog/django-wedding-website/).
 
+## How to use
+
+Run python3 manage.py to access all of the commands (import_guests, send_invitations, send_save_the_dates, wipe_guest_list)
+
+Run python3 manage.py runserver to start webserver
+
 ## What's included?
 
 This includes everything we did for our own wedding:
