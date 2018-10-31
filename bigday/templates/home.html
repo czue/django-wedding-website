@@ -45,7 +45,9 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>9.1.19</h1>
+
+                <!-- Inbetween <h1> and </h1> put the date to be displayed in front of photo-->
+                <h1>  </h1>
                 {% comment %}
                 <hr>
                 <h2>It's wedding week!</h2>
@@ -60,21 +62,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
+                    <h2 class="section-heading">Welcome Friends and Family!</h2>
                     <hr>
-                    <p>
+                      <!-- Removed the following:
+                       <p>
                         Hello friends and family!
                     </p>
                     <p>
-                        Thanks for visiting our wedding website. All wedding communications will be shared via email and the website.
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Saturday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Sunday wedding activities</a>.
+                    -->
+                        Thank you for visiting our website. To save the earth and bring weddings into the 20th century,
+                        all wedding invites and communcation will be via email & this website.
+                        For starters, here are the dates and times for <a href="#event" class="page-scroll">Saturday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Sunday wedding activities</a>.
                     </p>
                     <p>
-                        To get added to the wedding Facebook group or text message notifications please text or email us at
+                        Dan created a Facebook Group to coordinate rides, share embarrassing pictures, and get
+                        to know each other before the big-day.
+                        You can also subscribe to text message reminders for the weekend.
+                        To join, just bug dan at this email:
                        <a href="mailto:{{ support_email }}">{{ support_email }}</a>.
                     </p>
                     <p>
-                        We look forward to celebrating with everyone soon!
+                        More details such as the wedding block will be added soon.
+                        We are so excited for the big day and hope you can join us.
                     </p>
                     <p class="pull-right">- Love, Tori & Daniel</p>
                 </div>
@@ -86,11 +95,11 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/HVailChapel.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    The Event
+                                   The Wedding
                                 </div>
                             </div>
                         </div>
@@ -98,11 +107,11 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#niagara" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/HTheLodgeVail.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Niagara-on-the-Lake
+                                    Vail Colorado
                                 </div>
                             </div>
                         </div>
@@ -110,11 +119,11 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/HFakeProposal.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Our Story
+                                    Us
                                 </div>
                             </div>
                         </div>

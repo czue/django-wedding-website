@@ -83,10 +83,15 @@ aside {
     padding: 0;
 }
 
+/*!
+ *Victoria Fry adjusted the background color to transparent to not block dan's face
+ *If a different photo is available, better to change back to #fff
+ */
+
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #fff;
+    background-color: fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -177,10 +182,12 @@ aside {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #f05f40;
     }
+
 }
 
 header {
     position: relative;
+    padding: 100px 0px;
     width: 100%;
     min-height: auto;
     text-align: center;
@@ -193,7 +200,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    background-image: url('../images/FryPhotos/HSaveTheDatePhoto.jpg');
 }
 
 header .header-content {
@@ -209,6 +216,7 @@ header .header-content .header-content-inner h1 {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
+    text-align: left;
 }
 
 header .header-content .header-content-inner hr {
