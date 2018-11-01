@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-
+import django_heroku
 import os
 
 try:
@@ -140,6 +140,10 @@ DEFAULT_WEDDING_REPLY_EMAIL = 'daniel.mckinnon@colorado.edu'
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 
 # The email backend to use. For possible shortcuts see django.core.mail.
 # The default is to use the SMTP backend.
