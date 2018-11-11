@@ -28,8 +28,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'photologue',
+    'sortedm2m',
     'guests',
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,6 +132,8 @@ STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
 
+MEDIA_ROOt = 'media'
+MEDIA_URL = '/media/'
 
 try:
     from .localsettings import *
