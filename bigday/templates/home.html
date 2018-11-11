@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-{% block page_content %}
+{% block content %}
   <section class="section-cover cover text-center">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
       <div class="container">
@@ -13,17 +13,12 @@
         </button>
         <a class="navbar-brand" href="#">{% trans "Wedding" %}</a>
         <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-          <ul class="navbar-nav mt-2 mt-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#info">{% trans "Info" %}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#wedding_list">{% trans "Wedding List" %}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#accomodation">{% trans "Accomodation" %}</a>
-            </li>
-          </ul>
+{#          <ul class="navbar-nav mt-2 mt-md-0">#}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="photologue/gallery/">#}
+{#                  {% trans "Galleries" %}</a>#}
+{#            </li>#}
+{#          </ul>#}
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                data-toggle="dropdown"
@@ -44,175 +39,10 @@
       </div>
     </nav>
     <div class="container-banner">
-        <h1 id="wedding_title">{% trans "We're getting married!" %}</h1>
+        <h1 id="wedding_title">{% trans "We're married!" %}</h1>
         <p id="wedding_timer"></p>
-    </div>
-  </section>
-  <section id="event" class="section section-civil-wedding">
-    <a name="info"></a>
-    <div class="container container-civil-wedding">
-      <h2 class="section-heading">{% trans "The Wedding Ceremony" %}</h2>
-      <section class="responsive-grid">
-        <article  class="grid-item">
-            <dl class="dl-horizontal lead">
-              <dt>{% trans "What" %}</dt>
-              <dd>
-                {% trans "Our Wedding at Strasbourg Town Hall" %}
-              </dd>
-              <dt>{% trans "When" %}</dt>
-              <dd>{% trans "Thursday, July 5<sup>th</sup> at 4 pm" %}</dd>
-              <dt>{% trans "Where" %}</dt>
-              <dd>
-                <address>
-                  {% trans "Strasbourg Town Hall" %}<br>
-                  <a href="https://goo.gl/maps/WshPW2PNFUH2">
-                      {% trans "Place Broglie, 67000 Strasbourg, France" %}</a><br>
-                </address>
-              </dd>
-              <dt>{% trans "Dress Code" %}</dt>
-              <dd>{% trans "Formal, with an exotic touch! 😊" %}</dd>
-              <dt>{% trans "Transportation" %}</dt>
-              <dd>
-                  {% trans "Trams B, C and F; tram stop Broglie. " %}
-                  {% trans "Trams E; tram stop Droits de l'homme. " %}
-                  {% trans "Both parking and tram tickets are available at the" %}
-                  <a href="https://www.cts-strasbourg.eu/fr/se-deplacer/Parkings-relais/">
-                      {% trans "following link." %}</a>
-              </dd>
-              <dt>{% trans "Parking" %}</dt>
-              <dd>
-                  {% trans "The following car parks are available next to the Town Hall: Kléber, Opéra,Broglie, Église Saint-Pierre le Jeune, Place du Temple-Neuf and Place du Marché Neuf." %}</dd>
-            </dl>
-        </article>
-        <article class="grid-item grid-item-picture">
-            <div class="block-picture">
-                <img src="/static/bigday/images/image1.jpg"/>
-            </div>
-        </article>
-      </section>
-    </div>
-  </section>
-  <section id="saturday-event" class="section section-saturday-event">
-      <div class="container container-saturday-event">
-        <h2 class="section-heading">{% trans "Thursday Celebration" %}</h2>
-        <section class="responsive-grid">
-          <article class="grid-item grid-item-picture">
-              <div class="block-picture">
-                  <img src="/static/bigday/images/image3.jpg"/>
-              </div>
-          </article>
-          <article class="grid-item">
-              <dl class="dl-horizontal lead">
-                  <dt>{% trans "What" %}</dt>
-                  <dd>{% trans "Our Marriage Celebration" %}</dd>
-                  <dt>{% trans "When" %}</dt>
-                  <dd>{% trans "Thursday, July 5<sup>th</sup> after the wedding ceremony" %}</dd>
-                  <dt>{% trans "Where" %}</dt>
-                  <dd>
-                    <address>
-                      {% trans "Pavillon Josephine, Strasbourg" %}<br>
-                      <a href="https://goo.gl/maps/wXSMP2gZSqG2">Avenue de l'Europe, 67000 Strasbourg, France</a><br>
-                      {% trans "Phone: +33 3 88 36 52 53" %}
-                    </address>
-                  </dd>
-                  <dt>{% trans "Transportation" %}</dt>
-                  <dd>
-                      {% trans "Are you having troubles finding your way ? Call us on +32 475 98 02 42 or +33 7 69 82 01 57." %}
-                  </dd>
-                  <dt>{% trans "Parking" %}</dt>
-                  <dd>{% trans "Parking is available at the entrance to the park and along theAvenue de l'Europe." %}</dd>
-                </dl>
-          </article>
-          </section>
-      </div>
-  </section>
-  <section class="section section-wedding-list">
-    <a name="wedding_list"></a>
-    <div class="container container-saturday-event">
-    <h2 class="section-heading">{%  trans "Wedding list" %}</h2>
-    <section class="responsive-grid">
-        <article  class="grid-item">
-          <p>
-              {% blocktrans %}
-                  Thank you all for your kind thoughts and wishes, and we will be thrilled  for
-                  you to celebrate our union with us. We have already had time
-                  to settle down and prepare for our future, and your presence
-                  is already a gift to us. If, howewer, you wish to give us a gift, you are welcome to contribute
-                  to our honeymoon! 😊<br /><br />
-                  Bank information:<br />
-                  Fieche – Gutierrez Figueroa<br />
-                  IBAN: BE35 0017 3448 9837<br />
-                  BIC : GEBABEBB
-              {% endblocktrans %}
-            </p>
-        </article>
-        <article class="grid-item grid-item-picture">
-            <div class="block-picture">
-                <img src="/static/bigday/images/montagne.jpg"/>
-            </div>
-        </article>
-      </section>
-    </div>
-  </section>
-  <section class="section accomodation">
-    <a name="accomodation"></a>
-    <div class="container container-saturday-event">
-    <h2 class="section-heading">{%  trans "Accomodation" %}</h2>
-    <section class="responsive-grid">
-        <article class="grid-item grid-item-picture">
-            <div class="block-picture">
-                <img src="/static/bigday/images/montagne.jpg"/>
-            </div>
-        </article>
-        <article  class="grid-item">
-          <p>
-              {% blocktrans %}
-                  For those of you who do not live in Strasbourg, we suggest you stay at l’Hotêl l’Orangerie, which is located near Pavillon Joséphine.
-                  You can make a reservation by email via the following address: info@hotel-orangerie-strasbourg.com.
-                  You will be granted a discount by stating that you are attending our wedding.
-                  Feel free to browse Airbnb for any available apartments, too.
-              {% endblocktrans %}
-            </p>
-        </article>
-      </section>
     </div>
   </section>
 {% endblock %}
 {% block page_js %}
-  <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("Jul 5, 2018 15:00:00 UTC+0100").getTime();
-
-      // Update the count down every 1 second
-      var x = setInterval(function () {
-
-          // Get todays date and time
-          var now = new Date().getTime();
-
-          // Find the distance between now an the count down date
-          var distance = countDownDate - now;
-
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          // Display the result in the element with id="demo"
-          document.getElementById("wedding_timer").innerHTML = '' +
-          '<ul class="final-countdown list-inline">' +
-          '<li class="item item-days list-inline-item"><span class="span-days">' + days + '</span><span class="span-days-label">D</span></li>' +
-          '<li class="item item-hours list-inline-item"><span>' + hours + '</span><span class="span-hours-label">H</span></li>' +
-          '<li class="item item-minutes list-inline-item"><span>' + minutes + '</span><span class="span-minutes-label">M</span></li>' +
-          '<li class="item item-seconds list-inline-item"><span>' + seconds + '</span><span class="span-seconds-label">S</span></li>';
-
-          // If the count down is finished, write some text
-          if (distance < 0) {
-              clearInterval(x);
-              document.getElementById("wedding_timer").innerHTML = "";
-              document.getElementById("wedding_title").innerHTML = "{% trans "We're married!" %}";
-          }
-      }, 1000);
-
-  </script>
 {% endblock %}
