@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'photologue',
     'sortedm2m',
-    'guests',
 ]
+
 SITE_ID = 1
 
 MIDDLEWARE = [
