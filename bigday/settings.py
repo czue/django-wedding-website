@@ -132,7 +132,7 @@ STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
 
-MEDIA_ROOt = 'media'
+MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
 try:
