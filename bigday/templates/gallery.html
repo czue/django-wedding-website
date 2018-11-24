@@ -45,7 +45,11 @@
     </nav>
     <div class="container">
       <div class="galleria">
-            <img src="{% static './bigday/images/image1.jpg' %}">
+        {% for file_name in photos %}
+            {% with './bigday/images/'|add:file_name as image_static %}
+                <img src="{% static image_static %}"/>
+            {% endwith %}
+        {% endfor %}
         </div>
     </div>
   </section>
@@ -56,7 +60,9 @@
 	(function() { 
         Galleria.loadTheme('../static/galleria/themes/classic/galleria.classic.min.js');
         Galleria.configure({
-            lightbox: true
+            lightbox: true,
+            transition: 'fade',
+            autoplay: 7000
         });
         Galleria.run('.galleria');
     }());
