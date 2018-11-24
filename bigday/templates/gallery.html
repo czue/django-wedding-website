@@ -3,7 +3,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block content %}
-  <section class="section-cover cover text-center">
+    <section class="text-center">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -11,7 +11,7 @@
                 aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">{% trans "Wedding" %}</a>
+        <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
         <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
           <ul class="navbar-nav mt-2 mt-md-0">
             <li class="nav-item">
@@ -43,11 +43,22 @@
         </div>
       </div>
     </nav>
-    <div class="container-banner">
-        <h1 id="wedding_title">{% trans "We're married!" %}</h1>
-        <p id="wedding_timer"></p>
+    <div class="container">
+      <div class="galleria">
+            <img src="{% static './bigday/images/image1.jpg' %}">
+        </div>
     </div>
   </section>
 {% endblock %}
 {% block page_js %}
+<script src="{% static 'galleria/galleria-1.5.7.min.js' %}"></script>
+<script>
+	(function() { 
+        Galleria.loadTheme('../static/galleria/themes/classic/galleria.classic.min.js');
+        Galleria.configure({
+            lightbox: true
+        });
+        Galleria.run('.galleria');
+    }());
+</script>
 {% endblock %}

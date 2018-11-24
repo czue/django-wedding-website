@@ -14,7 +14,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^$', views.home, name='home'),
-    url('^gallery/$', partials.gallery, name='gallery'),
+    url(r'^gallery', views.gallery, name='gallery'),
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 )
