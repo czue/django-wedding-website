@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+from __future__ import unicode_literals, print_function
 from copy import copy
 from email.mime.image import MIMEImage
 import os
