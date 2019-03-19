@@ -46,7 +46,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     context = get_invitation_context(party)
     context['email_mode'] = True
     template_html = render_to_string(INVITATION_TEMPLATE, context=context)
-    template_text = "You're invited to Cory and Rowena's wedding. To view this invitation, visit {} in any browser.".format(
+    template_text = "You're invited to Kiro and Magy's wedding. To view this invitation, visit {} in any browser.".format(
         reverse('invitation', args=[context['invitation_id']])
     )
     subject = "You're invited"

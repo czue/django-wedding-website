@@ -108,7 +108,7 @@ def get_save_the_date_context(template_id):
     context['page_title'] = 'Cory and Rowena - Save the Date!'
     context['preheader_text'] = (
         "The date that you've eagerly been waiting for is finally here. "
-        "Cory and Ro are getting married! Save the date!"
+        "Kiro and Magy are getting married! Save the date!"
     )
     return context
 
@@ -117,7 +117,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
     context['email_mode'] = True
     context['rsvp_address'] = settings.DEFAULT_WEDDING_REPLY_EMAIL
     template_html = render_to_string(SAVE_THE_DATE_TEMPLATE, context=context)
-    template_text = "Save the date for Cory and Rowena's wedding! July 2, 2016. Niagata-on-the-Lake, Ontario, Canada"
+    template_text = "Save the date for Kiro and Magy's wedding! June 8, 2019."
     subject = 'Save the Date!'
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
     msg = EmailMultiAlternatives(subject, template_text, settings.DEFAULT_WEDDING_FROM_EMAIL, recipients,
@@ -131,7 +131,7 @@ def send_save_the_date_email(context, recipients, test_only=False):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print( 'sending {} to {}'.format(context['name'], ', '.join(recipients)))
+    print 'sending {} to {}'.format(context['name'], ', '.join(recipients))
     if not test_only:
         msg.send()
 
