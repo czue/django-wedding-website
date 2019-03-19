@@ -14,7 +14,7 @@ def import_guests(path):
                 continue
             party_name, first_name, last_name, party_type, is_child, category, is_invited, email = row[:8]
             if not party_name:
-                print 'skipping row {}'.format(row)
+                print ('skipping row {}'.format(row))
                 continue
             party = Party.objects.get_or_create(name=party_name)[0]
             party.type = party_type
