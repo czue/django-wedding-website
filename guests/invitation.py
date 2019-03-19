@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import Http404
 from django.template.loader import render_to_string
 from guests.models import Party, MEALS
