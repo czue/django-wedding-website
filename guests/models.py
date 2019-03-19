@@ -66,7 +66,7 @@ class Guest(models.Model):
     """
     A single guest
     """
-    party = models.ForeignKey(Party)
+    party = models.ForeignKey('Party', on_delete=models.PROTECT)
     first_name = models.TextField()
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField(null=True, blank=True)
