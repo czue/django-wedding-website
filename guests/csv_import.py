@@ -1,8 +1,10 @@
 import csv
-import StringIO
 import uuid
 from guests.models import Party, Guest
-
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 def import_guests(path):
     with open(path, 'rb') as csvfile:
