@@ -110,10 +110,26 @@ python manage.py runserver
 I recommend forking this project and just manually modifying it by hand to replace everything with what you want.
 Searching for the text on a page in the repository is a great way to find where something lives.
 
+### Sending email
+
+This application uses Django's email framework for sending mail. 
+You need to modify the `EMAIL_HOST`, `EMAIL_PORT` and other associated variables in `settings.py` in order
+to hook it into a real server.
+
+This [thread on stack overflow](https://stackoverflow.com/questions/6367014/how-to-send-email-via-django)
+is a good starting place for learning how to connect to a real mail service.
+
+### Email addresses
+
+To customize the email addresses, see the `DEFAULT_WEDDING_FROM_EMAIL` and
+`DEFAULT_WEDDING_REPLY_EMAIL` variables in `settings.py`.
+
+### Other customizations
+
 If you want to use this project for your wedding but need help getting started just [get in touch](http://www.coryzue.com/contact/) or make an issue
 for anything you encounter and I'm happy to help.
 
 I haven't built out more complete customization docs yet because I wasn't sure anyone would be interested in this,
-but am happy to do that if people are!
+but will add to these instructions whenever I get questions!
 
 -Cory
