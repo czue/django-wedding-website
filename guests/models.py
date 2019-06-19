@@ -34,7 +34,7 @@ class Party(models.Model):
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return 'Party: {}'.format(self.name)
 
     @classmethod
@@ -51,7 +51,7 @@ class Party(models.Model):
 
     @property
     def guest_emails(self):
-        return filter(None, self.guest_set.values_list('email', flat=True))
+        return list(filter(None, self.guest_set.values_list('email', flat=True)))
 
 
 MEALS = [
