@@ -1,6 +1,4 @@
-from optparse import make_option
 from django.core.management import BaseCommand
-from guests import csv_import
 from guests.save_the_date import send_all_save_the_dates, clear_all_save_the_dates
 
 
