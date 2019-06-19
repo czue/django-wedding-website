@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import Http404
 from django.template.loader import render_to_string
 from guests.models import Party, MEALS
@@ -40,7 +40,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     if recipients is None:
         recipients = party.guest_emails
     if not recipients:
-        print '===== WARNING: no valid email addresses found for {} ====='.format(party)
+        print ('===== WARNING: no valid email addresses found for {} ====='.format(party))
         return
 
     context = get_invitation_context(party)
@@ -63,7 +63,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
             msg_img.add_header('Content-ID', '<{}>'.format(filename))
             msg.attach(msg_img)
 
-    print 'sending invitation to {} ({})'.format(party.name, ', '.join(recipients))
+    print ('sending invitation to {} ({})'.format(party.name, ', '.join(recipients)))
     if not test_only:
         msg.send()
 

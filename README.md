@@ -95,6 +95,8 @@ You can easily hook up Google analytics by editing the tracking ID in `google-an
 
 ## Installation
 
+This is developed for Python 3 and Django 2.2.
+
 It's recommended that you setup a virtualenv before development.
 
 Then just install requirements, migrate, and runserver to get started:

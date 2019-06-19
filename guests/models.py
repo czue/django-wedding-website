@@ -34,7 +34,7 @@ class Party(models.Model):
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return 'Party: {}'.format(self.name)
 
     @classmethod
@@ -51,7 +51,7 @@ class Party(models.Model):
 
     @property
     def guest_emails(self):
-        return filter(None, self.guest_set.values_list('email', flat=True))
+        return list(filter(None, self.guest_set.values_list('email', flat=True)))
 
 
 MEALS = [
@@ -66,7 +66,7 @@ class Guest(models.Model):
     """
     A single guest
     """
-    party = models.ForeignKey(Party, on_delete=models.CASCADE,)
+    party = models.ForeignKey('Party', on_delete=models.CASCADE)
     first_name = models.TextField()
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField(null=True, blank=True)
@@ -81,7 +81,7 @@ class Guest(models.Model):
     @property
     def unique_id(self):
         # convert to string so it can be used in the "add" templatetag
-        return unicode(self.pk)
+        return str(self.pk)
 
-    def __unicode__(self):
+    def __str__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
