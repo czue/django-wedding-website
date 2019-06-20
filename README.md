@@ -2,9 +2,9 @@
 
 Live site examples:
 
-- [Standard Wedding Website](http://coryandro.com/)
-- [Random Save The Date Email](http://coryandro.com/save-the-date/) (refresh for more examples)
-- [Sample Personal Invitation Page](http://coryandro.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
+- [Standard Wedding Website](http://rowena-and.coryzue.com/)
+- [Random Save The Date Email](http://rowena-and.coryzue.com/save-the-date/) (refresh for more examples)
+- [Sample Personal Invitation Page](http://rowena-and.coryzue.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
 
 There is also [a longer writeup on this project here](https://www.placecard.me/blog/django-wedding-website/).
 
@@ -75,7 +75,7 @@ The app also comes with a built-in invitation system.
 The template is similar to the save-the-date template, however in addition to the standard invitation content it includes:
 
 - A built in tracking pixel to know whether someone has opened the email or not
-- Unique invitation URLs for each party with pre-populated guest names ([example](http://coryandro.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/))
+- Unique invitation URLs for each party with pre-populated guest names ([example](http://rownena-and.coryzue.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/))
 - Online RSVP system with meal selection and validation
 
 ### Guest dashboard
