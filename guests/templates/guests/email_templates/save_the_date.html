@@ -1,11 +1,11 @@
 {% extends 'guests/email_templates/email_base.html' %}
 {% load staticfiles %}
 {% block main_image %}
-    <a href="http://coryandro.com/"
+    <a href="{{ site_url }}"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
         <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
-             alt="cory and rowena"
+             alt="{{ couple }}"
              style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px;"
              class="img-max" border="0"
              height="400" width="500">
@@ -26,7 +26,7 @@
             <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
                 class="padding-copy"
                 align="center">
-                Cory &amp; Rowena<br>
+                {{ couple }}<br>
                 Niagara-on-the-Lake, Ontario, Canada<br>
             </td>
         </tr>
@@ -36,6 +36,6 @@
 {% block footer_content %}
     Can't make it? Let us know at <a class="moz-txt-link-abbreviated" href="mailto:{{ rsvp_address }}">{{ rsvp_address }}</a>.
     {% if email_mode %}
-        <p><a href="http://coryandro.com">http://coryandro.com</a></p>
+        <p><a href="{{ site_url }}">{{ site_url }}</a></p>
     {% endif %}
 {% endblock %}
