@@ -8,7 +8,7 @@
                 <tbody>
                 <tr>
                     <td>
-                        <a href="{% if email_mode %}http://coryandro.com{% endif %}{% url 'invitation' invitation_id %}" target="_blank"
+                        <a href="{% if email_mode %}{{ site_url }}{% endif %}{% url 'invitation' invitation_id %}" target="_blank"
                            style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color: #337ab7; border-top: 12px solid #337ab7; border-bottom: 12px solid #337ab7; border-right: 18px solid #337ab7; border-left: 18px solid #337ab7; display: inline-block;">
                             View Invitation
                         </a>
@@ -22,7 +22,7 @@
 {% block main_image %}
     {% with "invitation/images/"|add:main_image as main_static_url %}
     <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
-         alt="cory and rowena"
+         alt="{{ couple }}"
          style="display: block; padding: 0; color: #666666;"
          class="img-max" border="0"
          height="512" width="512">
@@ -34,15 +34,15 @@
         <tr>
             <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 20px; font-family: Helvetica, Arial, sans-serif; color: {{ font_color }};"
                 class="padding-copy" align="center">
-                Rowena &amp; Cory's Wedding<br>
+                {{ couple }}'s Wedding<br>
             </td>
         </tr>
         </tbody>
     </table>
 {% endblock %}
 {% block footer_content %}
-    Please <a href="{% if email_mode %}http://coryandro.com{% endif %}{% url 'invitation' invitation_id %}">view the invitation online</a> to rsvp.<br>
+    Please <a href="{% if email_mode %}{{ site_url }}{% endif %}{% url 'invitation' invitation_id %}">view the invitation online</a> to rsvp.<br>
     {% if email_mode %}
-        <p><a href="http://coryandro.com">http://coryandro.com</a></p>
+        <p><a href="{{ site_url }}">{{ site_url }}</a></p>
     {% endif %}
 {% endblock %}
