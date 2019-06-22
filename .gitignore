@@ -1,4 +1,5 @@
 *~
+*.sw[op]
 .idea*
 *.pyc
 localsettings.py
@@ -6,4 +7,5 @@ localsettings.py
 static_root
 _working/
 data/
+static/
 guests/static/save-the-date/images/archive/
