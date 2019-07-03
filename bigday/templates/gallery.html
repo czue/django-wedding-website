@@ -3,7 +3,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block content %}
-    <section class="text-center">
+    <section class="text-center gallery">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -13,17 +13,13 @@
         </button>
         <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
         <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-          <ul class="navbar-nav mt-2 mt-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="photologue/gallery/">
-                  {% trans "Galleries" %}</a>
-            </li>
+          <!-- <ul class="navbar-nav mt-2 mt-md-0">
             <li class="nav-item">
                 <a class="nav-link" href="gallery">
                     {% trans "Galleries" %}
                 </a>
             </li>
-          </ul>
+          </ul> -->
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                data-toggle="dropdown"
@@ -58,7 +54,7 @@
 <script src="{% static 'galleria/galleria-1.5.7.min.js' %}"></script>
 <script>
 	(function() { 
-        Galleria.loadTheme('../static/galleria/themes/classic/galleria.classic.min.js');
+        Galleria.loadTheme('../../static/galleria/themes/classic/galleria.classic.min.js');
         Galleria.configure({
             lightbox: true,
             transition: 'fade',

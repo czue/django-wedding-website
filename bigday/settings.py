@@ -125,7 +125,7 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+SECRET_KEY = 'sfdsfsfd'
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (

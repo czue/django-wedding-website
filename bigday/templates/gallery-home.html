@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block content %}
+<section class="text-center gallery">
+    <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarToggler-1" aria-controls="navbarToggler-1" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
+            <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
+                <ul class="navbar-nav mt-2 mt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery">
+                            {% trans "Galleries" %}
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ LANGUAGE_CODE }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        {% for lang_code, lang_name in LANGUAGES %}
+                        {% if lang_code != LANGUAGE_CODE %}
+                        {% language lang_code %}
+                        <a class="dropdown-item" href="{% url 'home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                        {% endlanguage %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container g-list-sections-container">
+        <ul class="g-list-sections">
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_pro' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block"></div>
+                        <div class="g-section-title">
+                            <p>
+                                Pro
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_perso' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block"></div>
+                        <div class="g-section-title">
+                                <p>
+                                    Pro
+                                </p>
+                            </div>
+                    </div>
+                </a>
+            </li>
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_other' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block"></div>
+                        <div class="g-section-title">
+                                <p>
+                                    Pro
+                                </p>
+                            </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+{% block page_js %}
+{% endblock %}
