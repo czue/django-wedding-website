@@ -13,7 +13,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns(
-    url(r'^$', views.home, name='home'),
+    url(r'^$', views.g_home, name='g_home'),
     url(r'^gallery$', views.g_home, name='g_home'),
     url(r'^gallery/pro', views.g_pro, name='g_pro'),
     url(r'^gallery/friends', views.g_friends, name='g_friends'),

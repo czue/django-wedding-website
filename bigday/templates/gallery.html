@@ -13,13 +13,6 @@
         </button>
         <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
         <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-          <!-- <ul class="navbar-nav mt-2 mt-md-0">
-            <li class="nav-item">
-                <a class="nav-link" href="gallery">
-                    {% trans "Galleries" %}
-                </a>
-            </li>
-          </ul> -->
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                data-toggle="dropdown"
@@ -30,7 +23,7 @@
               {% for lang_code, lang_name in LANGUAGES %}
                 {% if lang_code != LANGUAGE_CODE %}
                   {% language lang_code %}
-                    <a class="dropdown-item" href="{% url 'home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                    <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
                   {% endlanguage %}
                 {% endif %}
               {% endfor %}
