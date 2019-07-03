@@ -4,35 +4,32 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% block content %}
     <section class="text-center gallery">
-    <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
-      <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarToggler-1" aria-controls="navbarToggler-1" aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
-        <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-          <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-               data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              {{ LANGUAGE_CODE }}
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              {% for lang_code, lang_name in LANGUAGES %}
-                {% if lang_code != LANGUAGE_CODE %}
-                  {% language lang_code %}
-                    <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
-                  {% endlanguage %}
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
+                <div class="container g-container">
+                    <div class="g-logo"><a href="/"><img src="{% static 'bigday/images/logo.jpg' %}" alt=""></a></div> 
+                    <div class=" navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ LANGUAGE_CODE }}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    {% for lang_code, lang_name in LANGUAGES %}
+                                    {% if lang_code != LANGUAGE_CODE %}
+                                    {% language lang_code %}
+                                    <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                                    {% endlanguage %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+                
+            </nav>
     <div class="container">
+      <div class="g-back-block"><a href="/"><span class="g-back-button">retour</span></a></div>
       <div class="galleria">
         {% for file_name in photos %}
             {% with './../media/photologue/photos/'|add:file_name as image_static %}
