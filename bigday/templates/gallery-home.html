@@ -13,13 +13,6 @@
             </button>
             <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
             <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-                <ul class="navbar-nav mt-2 mt-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery">
-                            {% trans "Galleries" %}
-                        </a>
-                    </li>
-                </ul>
                 <div class="dropdown show">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,7 +22,7 @@
                         {% for lang_code, lang_name in LANGUAGES %}
                         {% if lang_code != LANGUAGE_CODE %}
                         {% language lang_code %}
-                        <a class="dropdown-item" href="{% url 'home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                        <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
                         {% endlanguage %}
                         {% endif %}
                         {% endfor %}
@@ -44,11 +37,11 @@
                 <a class="g-section-link" href="{% url 'g_pro' %}">
                     <div class="g-section-content" >
                         <div class="g-section-image-block">
-                            <img src="{% static 'bigday/images/party/stella.jpg' %}" class="img-responsive" alt="">
+                            <img src="{% static 'bigday/images/pro.jpg' %}" class="g-image" alt="">
                         </div>
                         <div class="g-section-title">
                             <p>
-                                Pro
+                                {% trans "Professional Pictures" %}
                             </p>
                         </div>
                     </div>
@@ -58,11 +51,12 @@
                 <a class="g-section-link" href="{% url 'g_friends' %}">
                     <div class="g-section-content" >
                         <div class="g-section-image-block">
-                            <img src="{% static 'bigday/images/party/stella.jpg' %}" class="img-responsive" alt="">
+                            <img src="{% static 'bigday/images/friends.jpg' %}" class="g-image" alt="">
                         </div>
                         <div class="g-section-title">
                                 <p>
-                                    Pro
+                                    {% trans "Family Pictures" %}
+                                    
                                 </p>
                             </div>
                     </div>
@@ -76,7 +70,7 @@
                         </div>
                         <div class="g-section-title">
                                 <p>
-                                    Pro
+                                    {% trans "Disposable Cameras Pictures" %}
                                 </p>
                             </div>
                     </div>

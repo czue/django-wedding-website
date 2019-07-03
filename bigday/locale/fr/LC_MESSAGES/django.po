@@ -34,9 +34,17 @@ msgstr "Français"
 msgid "Théo et Violeta's big day"
 msgstr "Notre mariage"
 
-#: bigday/templates/home.html:14
-msgid "Wedding"
-msgstr "Mariage"
+#: bigday/templates/gallery-home.html
+msgid "Professional Pictures"
+msgstr "Photos professionnelles"
+
+#: bigday/templates/gallery-home.html
+msgid "Family Pictures"
+msgstr "Photos famille"
+
+#: bigday/templates/gallery-home.html
+msgid "Disposable Cameras Pictures"
+msgstr "Photos appareils photo jetables"
 
 #: bigday/templates/home.html:18
 msgid "Info"
