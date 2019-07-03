@@ -42,7 +42,7 @@
     <div class="container">
       <div class="galleria">
         {% for file_name in photos %}
-            {% with './bigday/images/'|add:file_name as image_static %}
+            {% with './../media/photologue/photos/'|add:file_name as image_static %}
                 <img src="{% static image_static %}"/>
             {% endwith %}
         {% endfor %}
