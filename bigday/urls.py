@@ -16,8 +16,8 @@ urlpatterns += i18n_patterns(
     url(r'^$', views.home, name='home'),
     url(r'^gallery$', views.g_home, name='g_home'),
     url(r'^gallery/pro', views.g_pro, name='g_pro'),
-    url(r'^gallery/perso', views.g_perso, name='g_perso'),
-    url(r'^gallery/other', views.g_other, name='g_other'),
+    url(r'^gallery/friends', views.g_friends, name='g_friends'),
+    url(r'^gallery/others', views.g_others, name='g_others'),
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 )

@@ -21,8 +21,8 @@ def g_home(request):
 def g_pro(request):
     return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'pro_')})
 
-def g_perso(request):
+def g_friends(request):
     return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'friends_')})
 
-def g_other(request):
+def g_others(request):
     return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'others_')})
