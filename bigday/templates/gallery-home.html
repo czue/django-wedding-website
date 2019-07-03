@@ -5,30 +5,26 @@
 {% block content %}
 <section class="text-center gallery">
     <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarToggler-1" aria-controls="navbarToggler-1" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="/">{% trans "Wedding" %}</a>
-            <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
-                <div class="dropdown show">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ LANGUAGE_CODE }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        {% for lang_code, lang_name in LANGUAGES %}
-                        {% if lang_code != LANGUAGE_CODE %}
-                        {% language lang_code %}
-                        <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
-                        {% endlanguage %}
-                        {% endif %}
-                        {% endfor %}
+        <div class="container g-container">
+            <div class="g-logo"><img src="{% static 'bigday/images/logo.jpg' %}" alt=""></div> 
+            <div class=" navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ LANGUAGE_CODE }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {% for lang_code, lang_name in LANGUAGES %}
+                            {% if lang_code != LANGUAGE_CODE %}
+                            {% language lang_code %}
+                            <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                            {% endlanguage %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </nav>
     <div class="container g-list-sections-container">

@@ -453,7 +453,7 @@ li.nav-item .btn-white {
     .bigday .navbar-collapse {
         padding: 30px;
 
-        background-color: #545b6245;
+        /* background-color: #545b6245; */
     }
     .bigday .dropdown {
         width: 100px;
@@ -505,7 +505,7 @@ li.nav-item .btn-white {
     .bigday .navbar-collapse {
         padding: 30px;
 
-        background-color: #545b6245;
+        /* background-color: #545b6245; */
     }
     .bigday .dropdown {
         width: 100px;
