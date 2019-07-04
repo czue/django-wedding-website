@@ -62,9 +62,9 @@ It's recommended that you setup a virtualenv before development.
 Then just install requirements, migrate, and runserver to get started:
 
 ```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+pip3 install -r requirements.txt
+python3 manage.py migrate
+python3 manage.py runserver
 ```
 
 ## Customization
@@ -79,3 +79,15 @@ I haven't built out more complete customization docs yet because I wasn't sure a
 but am happy to do that if people are!
 
 -Cory
+
+### Photologue compatibility
+Django 2.1.9 (3/08/2019) 
+BC on 2.2.x when create a new gallery by admin tool
+
+### I18N
+Add key/ value in PO files then launch command  'python3 ./manage.py compilemessages' in order to see modifications
+
+
+
+
+

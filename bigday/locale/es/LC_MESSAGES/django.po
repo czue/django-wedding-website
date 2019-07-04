@@ -29,6 +29,8 @@ msgstr "Español"
 msgid "French"
 msgstr "Francés"
 
+
+
 #: bigday/templates/base.html:11
 msgid "Théo et Violeta's big day"
 msgstr "El gran día de Théo y Violeta"
@@ -36,6 +38,18 @@ msgstr "El gran día de Théo y Violeta"
 #: bigday/templates/home.html:14
 msgid "Wedding"
 msgstr "Matrimonio"
+
+#: bigday/templates/gallery-home.html:65
+msgid "Professional Pictures"
+msgstr "Fotos profesionales"
+
+#: bigday/templates/gallery-home.html:65
+msgid "Family Pictures"
+msgstr "Fotos de familia"
+
+#: bigday/templates/gallery-home.html:65
+msgid "Disposable Cameras Pictures"
+msgstr "Fotos cámaras desechables"
 
 #: bigday/templates/home.html:18
 msgid "Info"

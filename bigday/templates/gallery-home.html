@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block content %}
+<section class="text-center gallery">
+    <nav class="navbar navbar-expand-lg navbar-trans navbar-dark">
+        <div class="container g-container">
+                <div class="g-logo"><a href="/"><img src="{% static 'bigday/images/logo.jpg' %}" alt=""></a></div>
+            <div class=" navbar-collapse pull-xs-right justify-content-end" id="navbarToggler-1">
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ LANGUAGE_CODE }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {% for lang_code, lang_name in LANGUAGES %}
+                            {% if lang_code != LANGUAGE_CODE %}
+                            {% language lang_code %}
+                            <a class="dropdown-item" href="{% url 'g_home' %}" title="{{ lang_name }}">{{ lang_code }}</a>
+                            {% endlanguage %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </nav>
+    <div class="container g-list-sections-container">
+        <ul class="g-list-sections">
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_pro' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block">
+                            <img src="{% static 'bigday/images/pro.jpg' %}" class="g-image" alt="">
+                        </div>
+                        <div class="g-section-title">
+                            <p>
+                                {% trans "Professional Pictures" %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_friends' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block">
+                            <img src="{% static 'bigday/images/friends.jpg' %}" class="g-image" alt="">
+                        </div>
+                        <div class="g-section-title">
+                                <p>
+                                    {% trans "Family Pictures" %}
+                                    
+                                </p>
+                            </div>
+                    </div>
+                </a>
+            </li>
+            <li class="g-section-container">
+                <a class="g-section-link" href="{% url 'g_others' %}">
+                    <div class="g-section-content" >
+                        <div class="g-section-image-block">
+                            <img src="{% static 'bigday/images/camera.jpg' %}" class="g-image" alt="">
+                        </div>
+                        <div class="g-section-title">
+                                <p>
+                                    {% trans "Disposable Cameras Pictures" %}
+                                </p>
+                            </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+{% block page_js %}
+{% endblock %}
