@@ -22,7 +22,7 @@ def g_pro(request):
     return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'pro_')})
 
 def g_friends(request):
-    return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'friends_')})
+    return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'friends2_')})
 
 def g_others(request):
     return render(request, 'gallery.html', {'photos': get_file_names_by_prefix("media/photologue/photos", 'others_')})
