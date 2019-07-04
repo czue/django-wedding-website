@@ -39,21 +39,25 @@ msgstr "El gran día de Théo y Violeta"
 msgid "Wedding"
 msgstr "Matrimonio"
 
-#: bigday/templates/gallery-home.html:65
+#: bigday/templates/gallery-home.html
 msgid "Professional Pictures"
 msgstr "Fotos profesionales"
 
-#: bigday/templates/gallery-home.html:65
+#: bigday/templates/gallery-home.html
 msgid "Family Pictures"
 msgstr "Fotos de familia"
 
-#: bigday/templates/gallery-home.html:65
+#: bigday/templates/gallery-home.html
 msgid "Disposable Cameras Pictures"
 msgstr "Fotos cámaras desechables"
 
-#: bigday/templates/home.html:18
-msgid "Info"
-msgstr "Información"
+#: bigday/templates/gallery-home.html
+msgid "Our Paper Anniversary"
+msgstr "Bodas de papel"
+
+#: bigday/templates/gallery.html
+msgid "Back"
+msgstr "Volver"
 
 #: bigday/templates/home.html:21
 msgid "Wedding List"

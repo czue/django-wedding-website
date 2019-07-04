@@ -46,6 +46,14 @@ msgstr "Photos famille"
 msgid "Disposable Cameras Pictures"
 msgstr "Photos appareils photo jetables"
 
+#: bigday/templates/gallery-home.html
+msgid "Our Paper Anniversary"
+msgstr "Noces de coton"
+
+#: bigday/templates/gallery.html
+msgid "Back"
+msgstr "Retour"
+
 #: bigday/templates/home.html:18
 msgid "Info"
 msgstr "Information"
