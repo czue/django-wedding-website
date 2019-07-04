@@ -18,8 +18,9 @@ a {
 
 h1 {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 4rem;
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 36px;
 }
 
 h2 {
@@ -393,7 +394,7 @@ li.nav-item .btn-white {
 
 @media screen and (min-width: 1200px) {
     .bigday .section {
-        min-height: 700px;
+        min-height: 500px;
     }
     .bigday .responsive-grid {
         display: grid;

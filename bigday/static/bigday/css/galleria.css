@@ -1,80 +1,68 @@
-.g-container {
+.main {
     display: flex;
-    flex-flow: nowrap;
-    flex-wrap: nowrap!important;
+    flex-flow: column;
+    align-items: center;
 }
 .g-logo {
     margin: 0 auto;
 }
-.g-list-sections-container {
-    height: 80vh;
+.g-list-container {
     display: flex;
     align-items: center;
 }
 
-.g-list-sections {
+.g-list {
+    display: flex;
+    justify-content: space-evenly;
+
     height: 100%;
     width: 100%;
     padding: 0 0;
-    display: flex;
+
     flex-direction: column;
-    margin-top: 32px;
 }
-.g-section-container {
+.g-item {
 	list-style-type: none;
     height: 30%;
-    min-height: 120px;
+    /* min-height: 120px; */
     max-width: 600px;
-    margin:  0 auto;
-    margin-bottom: 16px;
-}
-
-.g-section-link {
-    text-decoration: none;
-}
-.g-section-content {
-    height: 100%;
     box-shadow: 3px 3px 4px 2px #00000061;
 }
 
-.g-section-image-block{
-    height: 80%;
-    overflow: hidden;
-    background: #eee;
-}
-
-.g-image {
-    
-	object-fit: cover;
-	height: 100%;
-	width: 100%;
-    object-position: left;
-}
-
-.g-section-title{
-    background: #eee;
-    height: 20%;
-    align-content: center;
-    vertical-align: middle;
-}
-
-.g-section-title p{
-    color: #333;
-    display: flex;
+.g-link {
+    text-decoration: none;
     height: 100%;
-    justify-content: center;
+}
+
+.g-image{
+    height: 300px;
+	width: 100%;
+    overflow: hidden;
+	object-fit: cover;
+    object-position: left;
+    background: #eee;   
+}
+
+.g-title.g-title{
+    display: flex;
+	justify-content: center;
     align-items: center;
+    
+    height: 20%;
+    padding: 5%;
     margin-bottom: 0;
+
+    background: #eee;
+    color: #333;
 }
 
 .galleria {
-    max-width: 800px;
     height: 800px;
+    width: 100%;
 }
 
 .g-back-button {
     font-size: 20px;
-    font-weight: bold;
 	color: #eee;
 }
 
@@ -85,28 +73,18 @@
         padding: 20px;
         margin: 10px 0;
     }
-    .g-container {
-        flex-flow: row;
-    }
-    .g-list-sections {
+    .g-list {
         flex-direction: row;
     }
-    .g-list-sections-container {
-        margin-top: 180px;
-    }
-    .g-section-container {
-        float: left;
+    .g-item {
+        display: flex;
         width: 30%;
-        min-height: 400px;
-	    margin-right: 16px; 
     }
-
     .g-image {
         opacity: 0.7;
         transition: .5s ease;
     }
-
-    .g-section-content:hover .g-image{
+    .g-item:hover .g-image{
         opacity: 1;
         transition: .5s ease;
     }
