@@ -185,7 +185,7 @@ header {
     min-height: auto;
     text-align: center;
     color: rgb(28,56,81);
-    background-position: center;
+    background-position: top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -193,7 +193,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    background-image: url('../images/0-barbier.jpg');
 }
 
 header .header-content {

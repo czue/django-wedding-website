@@ -150,5 +150,5 @@ def _supervisor_command(command):
 def print_supervisor_files():
     for fname in os.listdir('deploy/supervisor'):
         with open(os.path.join('deploy', 'supervisor', fname)) as f:
-            print '%s:\n\n' % fname
-            print f.read() % env
+            print('%s:\n\n' % fname)
+            print(f.read() % env)

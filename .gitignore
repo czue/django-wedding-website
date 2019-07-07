@@ -7,5 +7,7 @@ localsettings.py
 static_root
 _working/
 data/
-static/
 guests/static/save-the-date/images/archive/
+.DS_Store
+bigday/.DS_Store
+django/
