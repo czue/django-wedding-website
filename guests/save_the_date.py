@@ -108,7 +108,6 @@ def get_save_the_date_context(template_id):
     context['rsvp_address'] = settings.DEFAULT_WEDDING_REPLY_EMAIL
     context['site_url'] = settings.WEDDING_WEBSITE_URL
     context['couple'] = settings.BRIDE_AND_GROOM
-    template_html = render_to_string(SAVE_THE_DATE_TEMPLATE, context=context)
     context['page_title'] = 'Cory and Rowena - Save the Date!'
     context['preheader_text'] = (
         "The date that you've eagerly been waiting for is finally here. "
