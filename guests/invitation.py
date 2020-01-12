@@ -28,7 +28,7 @@ def get_invitation_context(party):
         'main_image': 'bride-groom.png',
         'main_color': '#fff3e8',
         'font_color': '#666666',
-        'page_title': "Cory and Rowena - You're Invited!",
+        'page_title': "Ana y Guillem - ¡Estáis invitadosand!",
         'preheader_text': "You are invited!",
         'invitation_id': party.invitation_id,
         'party': party,
