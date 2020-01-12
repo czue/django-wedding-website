@@ -25,7 +25,7 @@ SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.35', '127.0.0.1']
 
 
 # Application definition
@@ -135,7 +135,7 @@ DEFAULT_WEDDING_REPLY_EMAIL = 'happilyeverafter@example.com'
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Cory and Rowena'
+BRIDE_AND_GROOM = 'Ana y Guillem'
 
 # This is used in links in save the date / invitations
 WEDDING_WEBSITE_URL = 'http://thehappycouple.com'
