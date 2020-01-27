@@ -2,7 +2,6 @@
 {% load static %}
 {% block page_head %}
     <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"      rel="stylesheet">
 {% endblock %}
 {% block page_content %}
     <div class="container" id="invitation-body">
@@ -24,19 +23,13 @@
             {% for guest in party.ordered_guests.all %}
             <div class="form-group" data-is-child="{{ guest.is_child }}">
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
-                <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required>
-                    </span> ¡Me apunto!
-                    <label class="radio-inline">
-                        <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré venir
-                    </label>
-                    </div>
+                    <label>{{ guest.name }}</label>
+                     <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
+                    <input type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré venir
+                    <input type="text" name="{{ attending_label }}" placeholder="Tu canción" >
                 {% endwith %}
             </div>
             {% endfor %}
-            <i class="material-icons md-48">directions_bus</i> <label for="transporte">Transporte</label><br/>
             <label class="radio-inline">
                 <input class="attending-radio" type="radio" name="transporte" value="no"  required> Vendré por mi cuenta
             </label><br/>
@@ -46,13 +39,10 @@
             <label class="radio-inline">
                 <input class="attending-radio" type="radio" name="transporte" value="canpicafort" required> Bus desde Ca'n Picafort
             </label><br/>
-            <i class="material-icons md-48">assignment</i>  <label for="comments">Comentarios (intolerancias, indicaciones, ...)</label><br/>
+            <label>Comentarios</label>
             <textarea class="col-sm-12"></textarea>
-            <div class="form-group col-sm-12" style="height: 500px;">
-                <input type="text" name="comments" class="form-control" placeholder="Tu canción" >
-                <input type="text" name="comments" class="form-control" placeholder="Tu canción" >
-                <h2>¡El que la pide la baila!</h2>
-            </div>
+            <h2>¡El que la pide la baila!</h2>
+
             <div class="form-group">
                 <div class="text-center">
                     <input type="submit" class="btn btn-primary" value="Enviar" />
