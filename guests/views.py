@@ -79,6 +79,7 @@ def invitation(request, invite_id):
             comments = request.POST.get('comments')
             party.comments = comments if not party.comments else '{}; {}'.format(party.comments, comments)
         party.is_attending = party.any_guests_attending
+        party.transport = request.POST.get('transporte')
         party.save()
         return HttpResponseRedirect(reverse('rsvp-confirm', args=[invite_id]))
     return render(request, template_name='guests/invitation.html', context={

@@ -31,13 +31,13 @@
             </div>
             {% endfor %}
             <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="no" required> Vendré por mi cuenta
+                <input class="attending-radio" type="radio" name="transporte" value="no" {% if party.transport == 'no' %}checked="checked" {% endif %} required> Vendré por mi cuenta
             </label><br/>
             <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="manacor" required> Bus desde Manacor
+                <input class="attending-radio" type="radio" name="transporte" value="manacor" {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Bus desde Manacor
             </label><br/>
             <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="canpicafort" required> Bus desde Ca'n Picafort
+                <input class="attending-radio" type="radio" name="transporte" value="canpicafort" {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Bus desde Ca'n Picafort
             </label><br/>
             <label>Comentarios</label>
             <textarea class="col-sm-12"></textarea>

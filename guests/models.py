@@ -33,6 +33,7 @@ class Party(models.Model):
     rehearsal_dinner = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
+    transport = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return 'Party: {}'.format(self.name)
@@ -73,6 +74,7 @@ class Guest(models.Model):
     is_attending = models.NullBooleanField(default=None)
     is_child = models.BooleanField(default=False)
     song = models.TextField(null=True, blank=True)
+
 
     @property
     def name(self):
