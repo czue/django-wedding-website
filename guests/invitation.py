@@ -42,7 +42,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     if not recipients:
         print ('===== WARNING: no valid email addresses found for {} ====='.format(party))
         return
-
+    print(party.guest_emails)
     context = get_invitation_context(party)
     context['email_mode'] = True
     context['site_url'] = settings.WEDDING_WEBSITE_URL
@@ -68,12 +68,15 @@ def send_invitation_email(party, test_only=False, recipients=None):
 
     print ('sending invitation to {} ({})'.format(party.name, ', '.join(recipients)))
     if not test_only:
+        print ('sending invitation to {} ({})'.format(party.name, ', '.join(recipients)))
         msg.send()
 
 
 def send_all_invitations(test_only, mark_as_sent):
+    print(test_only,mark_as_sent)
     to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
     for party in to_send_to:
+        print(party.name)
         send_invitation_email(party, test_only=test_only)
         if mark_as_sent:
             party.invitation_sent = datetime.now()

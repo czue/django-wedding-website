@@ -127,9 +127,9 @@ STATICFILES_DIRS = (
 )
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'Ana y Guillem <anayguillem@gmail.com>'
+DEFAULT_WEDDING_FROM_EMAIL = 'Ana y Guillem <anayguillemsecasan@gmail.com>'
 # the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = 'anayguillem@gmail.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'anayguillemsecasan@gmail.com'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
@@ -142,7 +142,13 @@ WEDDING_WEBSITE_URL = 'http://anayguillem.com'
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
 
 # change to a real email backend in production
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'anayguillemsecasan@gmail.com'
+EMAIL_HOST_PASSWORD = 'P1ch0n3r0.'
 
 try:
     from .localsettings import *
