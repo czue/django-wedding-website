@@ -22,16 +22,16 @@
             {% csrf_token %}
             {% for guest in party.ordered_guests.all %}
             <div class="form-group" data-is-child="{{ guest.is_child }}">
-                {% with 'attending-'|add:guest.unique_id as attending_label %}
+                {% with guest.unique_id as attending_label %}
                     <label>{{ guest.name }}</label>
-                     <input type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
-                    <input type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré venir
-                    <input type="text" name="{{ attending_label }}" placeholder="Tu canción" >
+                    <input type="radio" name="attending-{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
+                    <input type="radio" name="attending-{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré venir
+                    <input type="text" name="song-{{ attending_label }}" placeholder="Tu canción" value="{{ guest.song }}">
                 {% endwith %}
             </div>
             {% endfor %}
             <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="no"  required> Vendré por mi cuenta
+                <input class="attending-radio" type="radio" name="transporte" value="no" required> Vendré por mi cuenta
             </label><br/>
             <label class="radio-inline">
                 <input class="attending-radio" type="radio" name="transporte" value="manacor" required> Bus desde Manacor

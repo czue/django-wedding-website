@@ -73,7 +73,7 @@ def invitation(request, invite_id):
             guest = Guest.objects.get(pk=response.guest_pk)
             assert guest.party == party
             guest.is_attending = response.is_attending
-            guest.meal = response.meal
+            guest.song = response.song
             guest.save()
         if request.POST.get('comments'):
             comments = request.POST.get('comments')
@@ -87,7 +87,7 @@ def invitation(request, invite_id):
     })
 
 
-InviteResponse = namedtuple('InviteResponse', ['guest_pk', 'is_attending', 'meal'])
+InviteResponse = namedtuple('InviteResponse', ['guest_pk', 'is_attending', 'song'])
 
 
 def _parse_invite_params(params):
@@ -98,14 +98,14 @@ def _parse_invite_params(params):
             response = responses.get(pk, {})
             response['attending'] = True if value == 'yes' else False
             responses[pk] = response
-        elif param.startswith('meal'):
+        elif param.startswith('song'):
             pk = int(param.split('-')[-1])
             response = responses.get(pk, {})
-            response['meal'] = value
+            response['song'] = value
             responses[pk] = response
 
     for pk, response in responses.items():
-        yield InviteResponse(pk, response['attending'], response.get('meal', None))
+        yield InviteResponse(pk, response['attending'], response.get('song', None))
 
 
 def rsvp_confirm(request, invite_id=None):
