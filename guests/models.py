@@ -71,7 +71,6 @@ class Guest(models.Model):
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField(null=True, blank=True)
     is_attending = models.NullBooleanField(default=None)
-    meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
     is_child = models.BooleanField(default=False)
     song = models.TextField(null=True, blank=True)
 
