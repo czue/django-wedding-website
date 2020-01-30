@@ -5,103 +5,65 @@
     <link href="{% static 'bigday/css/creative.css' %}" rel="stylesheet">
 {% endblock %}
 {% block page_content %}
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-{#                <a class="navbar-brand page-scroll" href="#page-top">Cory and Rowena's Big Day</a>#}
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#main-header">Inicio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#ceremonia">La ceremonia</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#fiesta">La fiesta</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#consejos">Consejos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#otros">Otros</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+    <nav class="nav justify-content-end">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#main-header">Inicio</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#ceremonia">La ceremonia</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#fiesta">La fiesta</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#consejos">Consejos</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#otros">Otros</a>
+            </li>
+        </ul>
     </nav>
     {% block main %}
-{#    <header id="main-header">#}
-{#        <div class="header-content">#}
-{#            <div class="header-content-inner">#}
-{#                <hr>#}
-{#                <h2>It's wedding week!</h2>#}
-{#                <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>#}
-{#                <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>#}
-{#                <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </header>#}
-    <section class="bg-info" id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">¡Bienvenidos a nuestra boda!</h2>
-                    <img style="width:500px;" src="{% static 'bigday/images/parque-mirada.jpg' %}">
-                    <hr>
-                    <p>
-                        Aquí podéis encontrar toda la información para acompañarnos en este día.
-                        Tenéis la información de la ceremonia, fiesta, transporte y algunos consejos útiles para que todo vaya rodado.
-                    </p>
-{#                    <p class="pull-right">- Cory and Rowena</p>#}
+        <section class="bg-info" id="welcome">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>¡Bienvenidos a nuestra boda!</h2>
+                        <img style="width:500px;" src="{% static 'bigday/images/parque-mirada.jpg' %}">
+                        <hr>
+                        <p>
+                            Aquí podéis encontrar toda la información para acompañarnos en este día.
+                            Tenéis la información de la ceremonia, fiesta, transporte y algunos consejos útiles para que
+                            todo vaya rodado.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    {% include 'partials/event.html' %}
-    <section id="niagara">
-        {% include 'partials/niagara.html' %}
-    </section>
-{% comment %}
-        {% include 'partials/wedding-party.html' %}
-{% endcomment %}
-    <section id="other-stuff" class="bg-primary">
-        {% include 'partials/misc.html' %}
-    </section>
-{#    <section id="gifts">#}
-{#        {% include 'partials/gifts.html' %}#}
-{#    </section>#}
-{#    <section id="story" class="bg-dark">#}
-{#        {% include 'partials/story.html' %}#}
-{#    </section>#}
-{#    {% include 'partials/proposal.html' %}#}
-    {% include 'partials/save-the-dates.html' %}
-    <section id="contact" class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Nuestro contacto</h2>
-                    <hr class="primary">
-                    <p>Si tienes cualquier duda o consulta, ¡pregunta!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
+        </section>
+        {% include 'partials/event.html' %}
+        <section id="niagara">
+            {% include 'partials/niagara.html' %}
+        </section>
+        <section id="other-stuff" class="bg-primary">
+            {% include 'partials/misc.html' %}
+        </section>
+        {% include 'partials/save-the-dates.html' %}
+        <section id="contact" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="section-heading">Nuestro contacto</h2>
+                        <hr class="primary">
+                        <p>Si tienes cualquier duda o consulta, ¡pregunta!</p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                        <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     {% endblock %}
 {% endblock %}
 {% block page_js %}

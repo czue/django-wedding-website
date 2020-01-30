@@ -12,22 +12,17 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row no-gutter">
+        <div class="row">
             {% for key, context in save_the_dates.items %}
-            <div class="col-lg-4 col-sm-6">
-                <a href="{% url 'save-the-date' key %}" target="_blank" class="portfolio-box page-scroll">
-                    {% with "save-the-date/images/"|add:context.main_image as main_static_url %}
-                    <img src="{% static main_static_url %}" class="img-responsive center-block img-circle" alt="{{ context.title }}">
-                    {% endwith %}
-                    <div class="portfolio-box-caption" style="background: rgba(49, 176, 213, .8);">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
-                                {{ context.title }}
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                <div class="col-sm-6">
+                    <a href="{% url 'save-the-date' key %}" target="_blank" class="portfolio-box page-scroll">
+                        {% with "save-the-date/images/"|add:context.main_image as main_static_url %}
+                            <img src="{% static main_static_url %}"
+                                 class="img-responsive center-block img-circle col-lg-4 col-sm-6"
+                                 alt="{{ context.title }}">
+                        {% endwith %}
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>
