@@ -1,54 +1,66 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block page_head %}
-    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
-{% endblock %}
+{#{% block page_head %}#}
+{#    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">#}
+{#{% endblock %}#}
 {% block page_content %}
-    <div class="container" id="invitation-body">
+    <div class="container">
         <section class="col-md-12 text-center">
-            <div id="invitation-details">
-            <h2>Boda Ana y Guillem</h2>
-            <p class="lead">
-                20 de Junio de 2020, a las 5:30 pm<br>
-                Parroquia de Nuestra Señora de Atocha<br>
-                Casal Santa Eulàlia, Santa Margalida
-            </p>
+            <div>
+                <h2>Boda Ana y Guillem</h2>
+                <p class="lead">
+                    20 de Junio de 2020, a las 5:30 pm<br>
+                    Parroquia de Nuestra Señora de Atocha<br>
+                    Casal Santa Eulàlia, Santa Margalida
+                </p>
             </div>
         </section>
         <section class="col-md-12">
-        <form data-toggle="validator" id="invitation-details" class="form-horizontal" method="post">
-            <h2 id="rsvp-header" class="text-center">Confirmación</h2>
-            <div class="clearfix"></div>
-            {% csrf_token %}
-            {% for guest in party.ordered_guests.all %}
-            <div class="form-group" data-is-child="{{ guest.is_child }}">
-                {% with guest.unique_id as attending_label %}
-                    <label>{{ guest.name }}</label>
-                    <input type="radio" name="attending-{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
-                    <input type="radio" name="attending-{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré venir
-                    <input type="text" name="song-{{ attending_label }}" placeholder="Tu canción" value="{{ guest.song }}">
-                {% endwith %}
-            </div>
-            {% endfor %}
-            <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="no" {% if party.transport == 'no' %}checked="checked" {% endif %} required> Vendré por mi cuenta
-            </label><br/>
-            <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="manacor" {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Bus desde Manacor
-            </label><br/>
-            <label class="radio-inline">
-                <input class="attending-radio" type="radio" name="transporte" value="canpicafort" {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Bus desde Ca'n Picafort
-            </label><br/>
-            <label>Comentarios</label>
-            <textarea class="col-sm-12"></textarea>
-            <h2>¡El que la pide la baila!</h2>
-
-            <div class="form-group">
-                <div class="text-center">
-                    <input type="submit" class="btn btn-primary" value="Enviar" />
+            <form data-toggle="validator" method="post">
+                <h2 id="rsvp-header" class="text-center">Confirmación</h2>
+                {% csrf_token %}
+                {% for guest in party.ordered_guests.all %}
+                    <div class="card" data-is-child="{{ guest.is_child }}">
+                        {% with guest.unique_id as attending_label %}
+                            <div class="card-body">
+                            {{ guest.name }}
+                            <input type="radio" name="attending-{{ attending_label }}" value="yes"
+                                   {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
+                            <input type="radio" name="attending-{{ attending_label }}" value="no"
+                                   {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré
+                            venir
+                            <input type="text" name="song-{{ attending_label }}" placeholder="Tu canción"
+                                   value="{{ guest.song }}">
+                            </div>
+                        {% endwith %}
+                    </div>
+                {% endfor %}
+                <div class="col-md-12">
+                    <label class="radio-inline">
+                        <input class="attending-radio" type="radio" name="transporte" value="no"
+                               {% if party.transport == 'no' %}checked="checked" {% endif %} required> Vendré por mi
+                        cuenta
+                    </label><br/>
+                    <label class="radio-inline">
+                        <input class="attending-radio" type="radio" name="transporte" value="manacor"
+                               {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Bus desde
+                        Manacor
+                    </label><br/>
+                    <label class="radio-inline">
+                        <input class="attending-radio" type="radio" name="transporte" value="canpicafort"
+                               {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Bus
+                        desde Ca'n Picafort
+                    </label><br/>
+                    <label>Comentarios</label>
+                    <textarea class="col-sm-12"></textarea>
+                    <h2>¡El que la pide la baila!</h2>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-primary" value="Enviar"/>
+                    </div>
+                </div>
+            </form>
         </section>
     </div>
 {% endblock %}
