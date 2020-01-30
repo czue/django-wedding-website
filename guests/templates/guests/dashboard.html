@@ -42,19 +42,19 @@
                 </table>
             </div>
             <div class="col-lg-6">
-                <h1>Meal choices</h1>
+                <h1>Transport choices</h1>
                 <table class="table">
                     <thead>
                         <tr>
-                            {% for meal in meal_breakdown %}
-                            <th>{{ meal.meal }}</th>
+                            {% for transport in transport_ocurrences %}
+                            <th>{{ transport.transport }}</th>
                             {% endfor %}
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            {% for meal in meal_breakdown %}
-                            <td>{{ meal.count }}</td>
+                            {% for transport in transport_ocurrences %}
+                            <td>{{ transport.count }}</td>
                             {% endfor %}
                         </tr>
                     </tbody>
@@ -72,13 +72,6 @@
                 <h1>Open Unresponded Invitations</h1>
                 {% with parties_with_open_unresponded_invites as party_list %}
                     {% include "guests/partials/party_list.html" %}
-                {% endwith %}
-            </div>
-        </div>
-        <div class="col-lg-6">
-                <h1>Attending Guests Without Meals</h1>
-                {% with guest_list=guests_without_meals %}
-                    {% include "guests/partials/guest_list.html" %}
                 {% endwith %}
             </div>
         </div>

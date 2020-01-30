@@ -37,14 +37,7 @@ def dashboard(request):
     parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
     attending_guests = Guest.objects.filter(is_attending=True)
-    guests_without_meals = attending_guests.filter(
-        is_child=False
-    ).filter(
-        Q(meal__isnull=True) | Q(meal='')
-    ).order_by(
-        'party__category', 'first_name'
-    )
-    meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
+    transport_ocurrences = Party.objects.all().exclude(transport=None).values('transport').annotate(count=Count('*'))
     category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
     return render(request, 'guests/dashboard.html', context={
         'guests': Guest.objects.filter(is_attending=True).count(),
@@ -52,12 +45,11 @@ def dashboard(request):
         'not_coming_guests': Guest.objects.filter(is_attending=False).count(),
         'pending_invites': parties_with_pending_invites.count(),
         'pending_guests': Guest.objects.filter(party__is_invited=True, is_attending=None).count(),
-        'guests_without_meals': guests_without_meals,
         'parties_with_unopen_invites': parties_with_unopen_invites,
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),
         'total_invites': Party.objects.filter(is_invited=True).count(),
-        'meal_breakdown': meal_breakdown,
+        'transport_ocurrences': transport_ocurrences,
         'category_breakdown': category_breakdown,
     })
 
