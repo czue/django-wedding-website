@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block page_head %}
     <link href="{% static 'bigday/css/rsvp-confirmation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
 {% endblock %}
 {% block page_content %}
     <div class="layer"></div>
     <div class="container" id="main">
-        <h2>!Hola {{ party.name }}! Gracias por contestar a la invitación.</h2>
+        <h2>{% blocktrans %}!Hola {{ party.name }}! Gracias por contestar a la invitación.{% endblocktrans %}</h2>
         {% if party.any_guests_attending %}
             <p>
-                Tenemos muchas ganas de compartir este día con vosotros.
+                {% trans "Tenemos muchas ganas de compartir este día con vosotros." %}
             </p>
         {% else %}
             <p>
-                Es una pena que no podáis asistir, esperamos veros en otro momento para poderos dar la tabarra con las fotos y vídeos :P
+                {% trans "Es una pena que no podáis asistir, esperamos veros en otro momento para poderos dar la tabarra con las fotos y vídeos :P" %}
             </p>
         {% endif %}
         <p>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-01 18:40+0100\n"
+"POT-Creation-Date: 2020-02-01 18:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,8 @@ msgstr "Boda Ana y Guillem"
 msgid ""
 "20 de Junio de 2020, a las 5:30 pm<br>Parroquia de Nuestra Señora de "
 "Atocha<br>Casal Santa Eulàlia, Santa Margalida"
-msgstr "20 de Junio de 2020, a las 5:30 pm<br>Parroquia de Nuestra Señora de "
+msgstr ""
+"20 de Junio de 2020, a las 5:30 pm<br>Parroquia de Nuestra Señora de "
 "Atocha<br>Casal Santa Eulàlia, Santa Margalida"
 
 #: templates/guests/invitation.html:19
@@ -76,3 +77,19 @@ msgstr "¿Alguna alergia o intolerancia?"
 #: templates/guests/invitation.html:60
 msgid "Enviar"
 msgstr "Enviar"
+
+#: templates/guests/rsvp_confirmation.html:10
+#, python-format
+msgid "!Hola %(party.name)s! Gracias por contestar a la invitación."
+msgstr ""
+
+#: templates/guests/rsvp_confirmation.html:13
+msgid "Tenemos muchas ganas de compartir este día con vosotros."
+msgstr "Tenemos muchas ganas de compartir este día con vosotros."
+
+#: templates/guests/rsvp_confirmation.html:17
+msgid ""
+"Es una pena que no podáis asistir, esperamos veros en otro momento para "
+"poderos dar la tabarra con las fotos y vídeos :P"
+msgstr "Es una pena que no podáis asistir, esperamos veros en otro momento para "
+"poderos dar la tabarra con las fotos y vídeos :P"
