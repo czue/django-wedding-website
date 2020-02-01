@@ -23,42 +23,42 @@
                     <div class="card" data-is-child="{{ guest.is_child }}">
                         {% with guest.unique_id as attending_label %}
                             <div class="card-body">
-                            {{ guest.name }}
-                            <input type="radio" name="attending-{{ attending_label }}" value="yes"
-                                   {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Me apunto!
-                            <input type="radio" name="attending-{{ attending_label }}" value="no"
-                                   {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré
-                            venir
-                            <input type="text" name="song-{{ attending_label }}" placeholder="Tu canción"
-                                   value="{{ guest.song }}">
+                                <h5 class="card-title">Hola, {{ guest.name }}</h5>
+                                <div class="form-group">
+                                    <strong><label for="attending-{{ attending_label }}">¿Vendrás?</label><br/></strong>
+                                    <input type="radio" name="attending-{{ attending_label }}" value="yes"
+                                           {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Sí!
+                                    <input type="radio" name="attending-{{ attending_label }}" value="no"
+                                           {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré asistir
+                                    <br/>
+                                    <strong><label for="song-{{ attending_label }}">¿Alguna canción que te gustaría bailar?</label></strong><br/>
+                                    <input type="text" name="song-{{ attending_label }}" required
+                                           value="{{ guest.song }}"><br/>
+                                    <small>Puedes poner el link de Spotify</small>
+                                </div>
                             </div>
                         {% endwith %}
                     </div>
                 {% endfor %}
-                <div class="col-md-12">
-                    <label class="radio-inline">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Necesitáis transporte?</h5>
                         <input class="attending-radio" type="radio" name="transporte" value="no"
-                               {% if party.transport == 'no' %}checked="checked" {% endif %} required> Vendré por mi
-                        cuenta
-                    </label><br/>
-                    <label class="radio-inline">
+                               {% if party.transport == 'no' %}checked="checked" {% endif %} required> No<br/>
                         <input class="attending-radio" type="radio" name="transporte" value="manacor"
-                               {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Bus desde
-                        Manacor
-                    </label><br/>
-                    <label class="radio-inline">
+                               {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Sí, desde Manacor<br/>
                         <input class="attending-radio" type="radio" name="transporte" value="canpicafort"
-                               {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Bus
-                        desde Ca'n Picafort
-                    </label><br/>
-                    <label>Comentarios</label>
-                    <textarea class="col-sm-12"></textarea>
-                    <h2>¡El que la pide la baila!</h2>
-                </div>
-                <div class="form-group">
-                    <div class="text-center">
-                        <input type="submit" class="btn btn-primary" value="Enviar"/>
+                               {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Sí, desde Ca'n Picafort<br/>
                     </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="cart-title">¿Alguna alergia o intolerancia?</h5>
+                            <textarea class="col-sm-12" name="comentarios"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <input type="submit" class="btn btn-primary" value="Enviar"/>
                 </div>
             </form>
         </section>
