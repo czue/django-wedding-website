@@ -34,6 +34,7 @@ class Party(models.Model):
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
     transport = models.TextField(null=True, blank=True)
+    language = models.CharField(max_length=10, default='es')
 
     def __str__(self):
         return 'Party: {}'.format(self.name)

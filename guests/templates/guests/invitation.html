@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {#{% block page_head %}#}
 {#    <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">#}
 {#{% endblock %}#}
@@ -17,15 +18,15 @@
         </section>
         <section class="col-md-12">
             <form data-toggle="validator" method="post">
-                <h2 id="rsvp-header" class="text-center">Confirmación</h2>
+                <h2 id="rsvp-header" class="text-center">{% trans "Confirmación" %}</h2>
                 {% csrf_token %}
                 {% for guest in party.ordered_guests.all %}
                     <div class="card" data-is-child="{{ guest.is_child }}">
                         {% with guest.unique_id as attending_label %}
                             <div class="card-body">
-                                <h5 class="card-title">Hola, {{ guest.name }}</h5>
+                                <h5 class="card-title">{% trans "Hola" %}, {{ guest.name }}</h5>
                                 <div class="form-group">
-                                    <strong><label for="attending-{{ attending_label }}">¿Vendrás?</label><br/></strong>
+                                    <strong><label for="attending-{{ attending_label }}">{% trans "¿Vendrás?" %}</label><br/></strong>
                                     <input type="radio" name="attending-{{ attending_label }}" value="yes"
                                            {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Sí!
                                     <input type="radio" name="attending-{{ attending_label }}" value="no"

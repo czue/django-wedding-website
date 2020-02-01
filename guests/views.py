@@ -9,6 +9,7 @@ from django.db.models import Count, Q
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView
+from django.utils import translation
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
@@ -60,6 +61,7 @@ def invitation(request, invite_id):
         # update if this is the first time the invitation was opened
         party.invitation_opened = datetime.utcnow()
         party.save()
+    translation.activate(party.language)
     if request.method == 'POST':
         for response in _parse_invite_params(request.POST):
             guest = Guest.objects.get(pk=response.guest_pk)
