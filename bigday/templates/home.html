@@ -25,7 +25,7 @@
         </ul>
     </nav>
     {% block main %}
-        <section class="bg-info" id="welcome">
+        <section id="welcome">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col text-center">
@@ -41,9 +41,9 @@
                 </div>
             </div>
         </section>
-        {% include 'partials/event.html' %}
+        {% include 'partials/ceremonia.html' %}
         <section id="consejos">
-            {% include 'partials/niagara.html' %}
+            {% include 'partials/consejos.html' %}
         </section>
         <section id="other-stuff" class="bg-primary">
             {% include 'partials/misc.html' %}
@@ -52,12 +52,11 @@
         <section id="contact" class="bg-dark">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="col text-center">
                         <h2 class="section-heading">Nuestro contacto</h2>
                         <hr class="primary">
                         <p>Si tienes cualquier duda o consulta, ¡pregunta!</p>
-                    </div>
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
+
                         <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                         <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
                     </div>
