@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-01 18:21+0100\n"
+"POT-Creation-Date: 2020-02-01 18:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/guests/invitation.html:21
+#: templates/guests/invitation.html:11
+msgid "Boda Ana y Guillem"
+msgstr "Boda Ana y Guillem"
+
+#: templates/guests/invitation.html:13
+msgid ""
+"20 de Junio de 2020, a las 5:30 pm<br>Parroquia de Nuestra Señora de "
+"Atocha<br>Casal Santa Eulàlia, Santa Margalida"
+msgstr "20 de Junio de 2020, a las 5:30 pm<br>Parroquia de Nuestra Señora de "
+"Atocha<br>Casal Santa Eulàlia, Santa Margalida"
+
+#: templates/guests/invitation.html:19
 msgid "Confirmación"
 msgstr "Confirmación"
 
-#: templates/guests/invitation.html:27
+#: templates/guests/invitation.html:25
 msgid "Hola"
 msgstr "Hola"
 
+#: templates/guests/invitation.html:27
+msgid "¿Asistirás?"
+msgstr "¿Asistirás?"
+
 #: templates/guests/invitation.html:29
-msgid "¿Vendrás?"
-msgstr "¿Vendrás?"
+msgid "¡Sí!"
+msgstr "¡Sí!"
+
+#: templates/guests/invitation.html:31 templates/guests/invitation.html:46
+msgid "No"
+msgstr "No"
+
+#: templates/guests/invitation.html:33
+msgid "¿Alguna canción que te gustaría bailar?"
+msgstr "¿Alguna canción que te gustaría bailar?"
+
+#: templates/guests/invitation.html:36
+msgid "Puedes poner el link de Spotify"
+msgstr "Puedes poner el link de Spotify"
+
+#: templates/guests/invitation.html:44
+msgid "¿Necesitáis transporte?"
+msgstr "¿Necesitáis transporte?"
+
+#: templates/guests/invitation.html:48
+msgid "Sí, desde Manacor"
+msgstr "Sí, desde Manacor"
+
+#: templates/guests/invitation.html:50
+msgid "Sí, desde Ca'n Picafort"
+msgstr "Sí, desde Ca'n Picafort"
+
+#: templates/guests/invitation.html:54
+msgid "¿Alguna alergia o intolerancia?"
+msgstr "¿Alguna alergia o intolerancia?"
+
+#: templates/guests/invitation.html:60
+msgid "Enviar"
+msgstr "Enviar"
