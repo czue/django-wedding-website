@@ -26,16 +26,16 @@
                             <div class="card-body">
                                 <h5 class="card-title">{% trans "Hola" %}, {{ guest.name }}</h5>
                                 <div class="form-group">
-                                    <strong><label for="attending-{{ attending_label }}">{% trans "¿Vendrás?" %}</label><br/></strong>
+                                    <strong><label for="attending-{{ attending_label }}">{% trans "¿Asistirás?" %}</label><br/></strong>
                                     <input type="radio" name="attending-{{ attending_label }}" value="yes"
-                                           {% if guest.is_attending %}checked="checked"{% endif %} required/> ¡Sí!
+                                           {% if guest.is_attending %}checked="checked"{% endif %} required/> {% trans "¡Sí!" %}
                                     <input type="radio" name="attending-{{ attending_label }}" value="no"
-                                           {% if guest.is_attending == False %}checked="checked"{% endif %} required> No podré asistir
+                                           {% if guest.is_attending == False %}checked="checked"{% endif %} required> {% trans "No" %}
                                     <br/>
-                                    <strong><label for="song-{{ attending_label }}">¿Alguna canción que te gustaría bailar?</label></strong><br/>
+                                    <strong><label for="song-{{ attending_label }}">{%  trans "¿Alguna canción que te gustaría bailar?" %}</label></strong><br/>
                                     <input type="text" name="song-{{ attending_label }}" required
                                            value="{{ guest.song }}"><br/>
-                                    <small>Puedes poner el link de Spotify</small>
+                                    <small>{% trans "Puedes poner el link de Spotify" %}</small>
                                 </div>
                             </div>
                         {% endwith %}
@@ -43,23 +43,23 @@
                 {% endfor %}
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">¿Necesitáis transporte?</h5>
+                        <h5 class="card-title">{% trans "¿Necesitáis transporte?" %}</h5>
                         <input class="attending-radio" type="radio" name="transporte" value="no"
-                               {% if party.transport == 'no' %}checked="checked" {% endif %} required> No<br/>
+                               {% if party.transport == 'no' %}checked="checked" {% endif %} required> {% trans "No" %}<br/>
                         <input class="attending-radio" type="radio" name="transporte" value="manacor"
-                               {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> Sí, desde Manacor<br/>
+                               {% if party.transport == 'manacor' %}checked="checked" {% endif %} required> {% trans "Sí, desde Manacor" %}<br/>
                         <input class="attending-radio" type="radio" name="transporte" value="canpicafort"
-                               {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> Sí, desde Ca'n Picafort<br/>
+                               {% if party.transport == 'canpicafort' %}checked="checked" {% endif %} required> {% trans "Sí, desde Ca'n Picafort" %}<br/>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="cart-title">¿Alguna alergia o intolerancia?</h5>
+                            <h5 class="cart-title">{% trans "¿Alguna alergia o intolerancia?" %}</h5>
                             <textarea class="col-sm-12" name="comentarios"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="col text-center">
-                    <input type="submit" class="btn btn-primary" value="Enviar"/>
+                    <input type="submit" class="btn btn-primary" value="{% trans "Enviar" %}"/>
                 </div>
             </form>
         </section>
