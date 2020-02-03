@@ -47,9 +47,11 @@
                         <img style="width:500px;" src="{% static 'bigday/images/parque-mirada.jpg' %}">
                         <hr>
                         <p>
-                            Aquí podéis encontrar toda la información para acompañarnos en este día.
-                            Tenéis la información de la ceremonia, fiesta, transporte y algunos consejos útiles para que
-                            todo vaya rodado.
+                            {% blocktrans %}
+                                Aquí podéis encontrar toda la información para acompañarnos en este día.
+                                Tenéis la información de la ceremonia, fiesta, transporte y algunos consejos útiles para que
+                                todo vaya rodado.
+                            {% endblocktrans %}
                         </p>
                     </div>
                 </div>
@@ -67,9 +69,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
-                        <h2 class="section-heading">Nuestro contacto</h2>
+                        <h2 class="section-heading">{% trans "Nuestro contacto" %}</h2>
                         <hr class="primary">
-                        <p>Si tienes cualquier duda o consulta, ¡pregunta!</p>
+                        <p>{% trans "Si tienes cualquier duda o consulta, ¡pregunta!" %}</p>
 
                         <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                         <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
