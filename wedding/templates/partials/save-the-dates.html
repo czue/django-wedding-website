@@ -1,0 +1,30 @@
+{% load static %}
+<section id="save-the-dates" class="bg-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-heading text-center">Save the Dates</h2>
+                <hr class="primary">
+                <p>
+                    Como no os hemos mandado invitación, aquí podéis escoger la que más os guste.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            {% for key, context in save_the_dates.items %}
+                <div class="col-sm-6">
+                    <a href="{% url 'save-the-date' key %}" target="_blank" class="portfolio-box page-scroll">
+                        {% with "save-the-date/images/"|add:context.main_image as main_static_url %}
+                            <img src="{% static main_static_url %}"
+                                 class="img-responsive center-block img-circle col-lg-4 col-sm-6"
+                                 alt="{{ context.title }}">
+                        {% endwith %}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

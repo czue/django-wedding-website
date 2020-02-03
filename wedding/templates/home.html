@@ -28,10 +28,10 @@
             <input name="next" type="hidden" value="{{ redirect_to }}">
             <select name="language">
                 {% get_current_language as LANGUAGE_CODE %}
-                <option value="es"{% if "es" == LANGUAGE_CODE %} selected{% endif %}>
+                <option value="es"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                     es
                 </option>
-                <option value="ca"{% if "ca" == LANGUAGE_CODE %} selected{% endif %}>
+                <option value="ca"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                     ca
                 </option>
             </select>
@@ -46,7 +46,7 @@
                         <h2>{% trans "¡Bienvenidos a nuestra boda!" %}</h2>
                         <img style="width:500px;" src="{% static 'bigday/images/parque-mirada.jpg' %}">
                         <hr>
-                        <p>
+                        <p>ddd{{ get_current_language }}aaa
                             Aquí podéis encontrar toda la información para acompañarnos en este día.
                             Tenéis la información de la ceremonia, fiesta, transporte y algunos consejos útiles para que
                             todo vaya rodado.
