@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-03 22:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/home.html:46
+msgid "¡Bienvenidos a nuestra boda!"
+msgstr ""
+
+#: templates/home.html:50
+msgid ""
+"\n"
+"                                Aquí podéis encontrar toda la información "
+"para acompañarnos en este día.\n"
+"                                Tenéis la información de la ceremonia, "
+"fiesta, transporte y algunos consejos útiles para que\n"
+"                                todo vaya rodado.\n"
+"                            "
+msgstr ""
+
+#: templates/home.html:72
+msgid "Nuestro contacto"
+msgstr ""
+
+#: templates/home.html:74
+msgid "Si tienes cualquier duda o consulta, ¡pregunta!"
+msgstr ""
+
+#: templates/partials/ceremonia.html:10
+msgid ""
+"La ceremonia será en la Parroquia de Nuestra Señora de Atocha, en Ariany a "
+"las 17:30"
+msgstr ""
+
+#: templates/partials/ceremonia.html:13 templates/partials/ceremonia.html:38
+msgid "Como llegar"
+msgstr ""
+
+#: templates/partials/ceremonia.html:15
+msgid ""
+"\n"
+"                        Para los que estéis en Ca'n Picafort o Manacor, "
+"dispondréis de buses que os recogerán y os llevaran\n"
+"                        tanto a la ceremonia como a la fiesta.\n"
+"                        Si vais a ir a Ariany por vuestros propios medios, "
+"podéis encontrar donde está situado haciendo\n"
+"                        click\n"
+"                    "
+msgstr ""
+
+#: templates/partials/ceremonia.html:22 templates/partials/ceremonia.html:47
+msgid "aquí"
+msgstr ""
+
+#: templates/partials/ceremonia.html:32
+msgid "La fiesta"
+msgstr ""
+
+#: templates/partials/ceremonia.html:36
+msgid ""
+"La celebración de tan magno evento será en Casal Santa Eulàlia, entre Ca'n "
+"Picafort y Santa Margalida"
+msgstr ""
+
+#: templates/partials/ceremonia.html:40
+msgid ""
+"\n"
+"                            Si no queréis llevar vuestro coche igual que "
+"para la ceremonia, habrá un bus que os llevará de\n"
+"                            la Parroquia hasta el lugar de la celebración.\n"
+"                            Si queréis llegar por vuestra cuenta, el Casal "
+"se encuentra\n"
+"                        "
+msgstr ""
+
+#: templates/partials/misc.html:7
+msgid "¿Sin invitación?"
+msgstr ""
+
+#: templates/partials/misc.html:10
+msgid ""
+"\n"
+"                    No queremos hacer gastar papel innecesariamente, por lo "
+"que esta boda es una boda sin invitación física.\n"
+"                    Si te hemos enviado este enlace estás invitado. Por "
+"favor, confirmanos tu asistencia. (tlf1,tlf2).\n"
+"                "
+msgstr ""
+
+#~ msgid "ddd"
+#~ msgstr "cccc"
