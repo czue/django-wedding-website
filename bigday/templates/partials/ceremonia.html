@@ -4,13 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 ">
-                <h2 class="text-center">La ceremonia</h2>
+                <h2 class="text-center">{% trans "La ceremonia" %}</h2>
+                <div class="text-center">
+                    <img class="img-thumbnail" src="{% static 'bigday/images/parroquia.jpg' %}"/>
+                </div>
                 <p>
-                    <img src="{% static 'bigday/images/parroquia.jpg' %}"/><br/>
                     {% trans "La ceremonia será en la Parroquia de Nuestra Señora de Atocha, en Ariany a las 17:30" %}
                 </p>
-                <hr class="primary">
-                <h2 class="section-heading text-center">{% trans "Como llegar" %}</h2>
+                <h4 class="section-heading text-left">{% trans "Como llegar" %}</h4>
                 <p>
                     {% blocktrans %}
                         Para los que estéis en Ca'n Picafort o Manacor, dispondréis de buses que os recogerán y os llevaran
@@ -25,28 +26,29 @@
         </div>
     </div>
 </section>
+<hr class="primary">
 <section id="fiesta">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="section-heading text-center">{% trans "La fiesta" %}</h2>
-                <hr class="primary">
-                <dl class="dl-horizontal lead">
-                    <dt>Foto</dt>
-                    <dd>{% trans "La celebración de tan magno evento será en Casal Santa Eulàlia, entre Ca'n Picafort y Santa Margalida" %}
-                    </dd>
-                    <dt>{% trans "Como llegar" %}</dt>
-                    <dd>
-                        {% blocktrans %}
-                            Si no queréis llevar vuestro coche igual que para la ceremonia, habrá un bus que os llevará de
-                            la Parroquia hasta el lugar de la celebración.
-                            Si queréis llegar por vuestra cuenta, el Casal se encuentra
-                        {% endblocktrans %}
-                        <a
-                                href="https://www.google.com/maps/place/Casal+Santa+Eul%C3%A0lia+Hotel+%26+Restaurant/@39.7543731,3.1326613,17z/data=!3m1!4b1!4m8!3m7!1s0x129632131a8e94f3:0xa35c131e373324f3!5m2!4m1!1i2!8m2!3d39.754369!4d3.13485"
-                                target="_blank">{% trans "aquí" %}</a>
-                    </dd>
-                </dl>
+                <div class="text-center">
+                    <img class="img-thumbnail" src="{% static 'bigday/images/casal-santa-eulalia.jpg' %}"/>
+                </div>
+                <p>
+                    {% trans "La celebración de tan magno evento será en Casal Santa Eulàlia, entre Ca'n Picafort y Santa Margalida" %}
+                </p>
+                <h4 class="section-heading text-left">{% trans "Como llegar" %}</h4>
+                <p>
+                    {% blocktrans %}
+                        Si no queréis llevar vuestro coche igual que para la ceremonia, habrá un bus que os llevará de
+                        la Parroquia hasta el lugar de la celebración.
+                        Si queréis llegar por vuestra cuenta, el Casal se encuentra
+                    {% endblocktrans %}
+                    <a
+                            href="https://www.google.com/maps/place/Casal+Santa+Eul%C3%A0lia+Hotel+%26+Restaurant/@39.7543731,3.1326613,17z/data=!3m1!4b1!4m8!3m7!1s0x129632131a8e94f3:0xa35c131e373324f3!5m2!4m1!1i2!8m2!3d39.754369!4d3.13485"
+                            target="_blank">{% trans "aquí" %}</a>
+                </p>
             </div>
         </div>
     </div>
