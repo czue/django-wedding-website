@@ -1,6 +1,6 @@
 # A Django Wedding Website and Invitation + Guest Management System
 
-Live site examples:
+Live site examples:-
 
 - [Standard Wedding Website](http://rowena-and.coryzue.com/)
 - [Random Save The Date Email](http://rowena-and.coryzue.com/save-the-date/) (refresh for more examples)
@@ -20,7 +20,7 @@ This includes everything we did for our own wedding:
 
 More details on these below.
 
-### The "Standard" Wedding Website
+### The "Standard" Wedding Website!
 
 The standard wedding website is a responsive, single-page, twitter bootstrap-based site (using a modified version of
 [this theme](https://blackrockdigital.github.io/startbootstrap-creative/)).
@@ -114,7 +114,7 @@ Searching for the text on a page in the repository is a great way to find where 
 
 ### Sending email
 
-This application uses Django's email framework for sending mail. 
+This application uses Django's email framework for sending an email. 
 You need to modify the `EMAIL_HOST`, `EMAIL_PORT` and other associated variables in `settings.py` in order
 to hook it into a real server.
 
@@ -129,7 +129,7 @@ To customize the email addresses, see the `DEFAULT_WEDDING_FROM_EMAIL` and
 ### Other customizations
 
 If you want to use this project for your wedding but need help getting started just [get in touch](http://www.coryzue.com/contact/) or make an issue
-for anything you encounter and I'm happy to help.
+for anything you encounter and I'll be happy to help.
 
 I haven't built out more complete customization docs yet because I wasn't sure anyone would be interested in this,
 but will add to these instructions whenever I get questions!
