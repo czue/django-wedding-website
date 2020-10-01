@@ -12,11 +12,11 @@ There is also [a longer writeup on this project here](https://www.placecard.me/b
 
 This includes everything we did for our own wedding:
 
-- A responsive, single-page traditional wedding website
-- A complete guest management application
+- A Responsive, Single-page traditional wedding website
+- A complete Guest Management Application
 - Email framework for sending save the dates
 - Email framework for invitations and built in RSVP system
-- Guest dashboard
+- Guest Dashboard
 
 More details on these below.
 
