@@ -3,7 +3,7 @@
 Live site examples:
 
 - [Standard Wedding Website](http://rowena-and.coryzue.com/)
-- [Random Save The Date Email](http://rowena-and.coryzue.com/save-the-date/) (refresh for more examples)
+- [Random Save The Date Email](http://rowena-and.coryzue.com/save-the-date/) (Refresh this page for more examples)
 - [Sample Personal Invitation Page](http://rowena-and.coryzue.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
 
 There is also [a longer writeup on this project here](https://www.placecard.me/blog/django-wedding-website/).
@@ -17,6 +17,7 @@ This includes everything we did for our own wedding:
 - Email framework for sending save the dates
 - Email framework for invitations and built in RSVP system
 - Guest dashboard
+- Photography and Video shoots facility 
 
 More details on these below.
 
