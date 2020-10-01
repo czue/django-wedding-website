@@ -1,4 +1,4 @@
-# A Django Wedding Website and Invitation + Guest Management System
+# A Django Wedding and Invitation website + Guest Management System
 
 Live site examples:
 
