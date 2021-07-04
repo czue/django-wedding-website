@@ -108,10 +108,11 @@ def get_save_the_date_context(template_id):
     context['rsvp_address'] = settings.DEFAULT_WEDDING_REPLY_EMAIL
     context['site_url'] = settings.WEDDING_WEBSITE_URL
     context['couple'] = settings.BRIDE_AND_GROOM
-    context['page_title'] = 'Cory and Rowena - Save the Date!'
+    context['location'] = settings.WEDDING_LOCATION
+    context['date'] = settings.WEDDING_DATE
+    context['page_title'] = (settings.BRIDE_AND_GROOM + ' - Save the Date!')
     context['preheader_text'] = (
-        "The date that you've eagerly been waiting for is finally here. "
-        "Cory and Ro are getting married! Save the date!"
+        "The date that you've eagerly been waiting for is finally here. " + settings.BRIDE_AND_GROOM + " are getting married! Save the date!"
     )
     return context
 
@@ -122,13 +123,10 @@ def send_save_the_date_email(context, recipients, test_only=False):
     context['site_url'] = settings.WEDDING_WEBSITE_URL
     context['couple'] = settings.BRIDE_AND_GROOM
     template_html = render_to_string(SAVE_THE_DATE_TEMPLATE, context=context)
-    template_text = "Save the date for {}'s wedding! July 2, 2016. Niagata-on-the-Lake, Ontario, Canada".format(
-        settings.BRIDE_AND_GROOM
-    )
+    template_text = ("Save the date for " + settings.BRIDE_AND_GROOM + "'s wedding! " + settings.WEDDING_DATE + ". " + settings.WEDDING_LOCATION)
     subject = 'Save the Date!'
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
-    msg = EmailMultiAlternatives(subject, template_text, settings.DEFAULT_WEDDING_FROM_EMAIL, recipients,
-                                 reply_to=[settings.DEFAULT_WEDDING_REPLY_EMAIL])
+    msg = EmailMultiAlternatives(subject, template_text, settings.DEFAULT_WEDDING_FROM_EMAIL, recipients, reply_to=[settings.DEFAULT_WEDDING_REPLY_EMAIL])
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
     for filename in (context['header_filename'], context['main_image']):
