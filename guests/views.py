@@ -47,6 +47,7 @@ def dashboard(request):
     meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
     category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
     return render(request, 'guests/dashboard.html', context={
+        'couple_name': settings.BRIDE_AND_GROOM,
         'guests': Guest.objects.filter(is_attending=True).count(),
         'possible_guests': Guest.objects.filter(party__is_invited=True).exclude(is_attending=False).count(),
         'not_coming_guests': Guest.objects.filter(is_attending=False).count(),
