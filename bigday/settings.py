@@ -131,7 +131,7 @@ BRIDE_AND_GROOM = 'Bride and Groom'
 # base address for all emails
 DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' ' + DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
+DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
 # the location of your wedding
