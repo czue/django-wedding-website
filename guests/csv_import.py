@@ -68,4 +68,4 @@ def export_guests():
 
 def _is_true(value):
     value = value or ''
-    return value.lower() in ('y', 'yes')
+    return value.lower() in ('y', 'yes', 't', 'true', '1')
