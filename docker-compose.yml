@@ -1,0 +1,10 @@
+version: '3'
+services:
+  wedding:
+    container_name: WeddingSite
+    build: .
+    command: python manage.py runserver 0.0.0.0:7000
+    volumes:
+      - .:/code
+    ports:
+      - "7000:7000"

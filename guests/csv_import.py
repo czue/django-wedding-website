@@ -39,9 +39,9 @@ def import_guests(path):
 
 def export_guests():
     headers = [
-        'party_name', 'first_name', 'last_name', 'party_type',
+        'party_name', 'first_name', 'last_name', 'family','party_type',
         'is_child', 'category', 'is_invited', 'is_attending',
-        'rehearsal_dinner', 'meal', 'email', 'comments'
+        'tea_ceremony', 'meal', 'email', 'comments'
     ]
     file = io.StringIO()
     writer = csv.writer(file)
@@ -53,12 +53,13 @@ def export_guests():
                     party.name,
                     guest.first_name,
                     guest.last_name,
+                    party.family,
                     party.type,
                     guest.is_child,
                     party.category,
                     party.is_invited,
                     guest.is_attending,
-                    party.rehearsal_dinner,
+                    guest.tea_ceremony,
                     guest.meal,
                     guest.email,
                     party.comments,
