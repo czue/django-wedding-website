@@ -78,6 +78,7 @@ class Guest(models.Model):
     tea_ceremony = models.BooleanField(default=False)
     meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
     is_child = models.BooleanField(default=False)
+    comments = models.TextField(null=True, blank=True)
 
     @property
     def name(self):
