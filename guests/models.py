@@ -4,6 +4,7 @@ import uuid
 
 from django.db import models
 from django.dispatch import receiver
+from django import forms
 
 # these will determine the default formality of correspondence
 ALLOWED_TYPES = [
@@ -37,6 +38,8 @@ class Party(models.Model):
     is_invited = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
+    rsvp_username = models.CharField(max_length=32, unique=True, null=True)
+    #rsvp_password = models.CharField(max_length=16, null=True)
 
     def __str__(self):
         return 'Party: {}'.format(self.name)
@@ -91,3 +94,11 @@ class Guest(models.Model):
 
     def __str__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
+
+class RsvpForm(forms.Form): 
+    username = forms.CharField(max_length = 32, help_text="<br><em> This will be your first name and last name with no caps or spaces (e.g. renerjacob) </em>")
+    #password = forms.CharField(max_length = 16, widget = forms.PasswordInput())
+
+    #@property
+    #def authenticateUser():
+    #    print('yo')

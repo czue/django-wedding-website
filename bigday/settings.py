@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,7 +129,7 @@ STATICFILES_DIRS = (
 )
 
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Kim and Jake'
+BRIDE_AND_GROOM = 'Kim and Jacob'
 # base address for all emails
 DEFAULT_WEDDING_EMAIL = 'KimLe.JacobRener@gmail.com'
 # the address your emails (save the dates/invites/etc.) will come from
@@ -161,3 +163,11 @@ try:
     from .localsettings import *
 except ImportError:
     pass
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+ }

@@ -4,22 +4,22 @@ import random
 from datetime import datetime
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.urls import reverse
 from django.db.models import Count, Q
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
-from guests.models import Guest, MEALS, Party
+from guests.models import Guest, MEALS, Party, RsvpForm
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
 
 
 class GuestListView(ListView):
     model = Guest
-
 
 @login_required
 def export_guests(request):
@@ -115,6 +115,37 @@ def rsvp_confirm(request, invite_id=None):
         'party': party,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
     })
+
+def rsvp_login(request):
+    form = RsvpForm
+    context = {
+        'form': form,
+    }
+    if(request.GET.get('username')):
+        print(request.GET.get('username'))
+        l_InvitationID = rsvp_match(request)
+        if(l_InvitationID != 0):
+            return redirect("https://wedding.jacobrener.com/invite/" + l_InvitationID)  
+        else:
+            messages.error(request, "Incorrect Username. Please try again. If problems persist, please contact Jacob Rener at jakerener@gmail.com")
+            return render(request, template_name='guests/rsvp.html', context=context) 
+    else:
+        return render(request, template_name='guests/rsvp.html', context=context)
+
+def rsvp_match(request):
+    Party.objects
+
+    l_username = request.GET.get('username')
+    #l_password = request.GET.get('password')
+
+    try:
+        l_party = Party.objects.get(rsvp_username = l_username)
+        print(l_username)
+        print(l_party.category)
+        return l_party.invitation_id
+    except Party.DoesNotExist:
+        return 0
+
 
 
 @login_required
