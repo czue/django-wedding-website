@@ -30,4 +30,4 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         if options['reset']:
             clear_all_save_the_dates()
-        send_all_save_the_dates(test_only=not options['send'], mark_as_sent=options['mark_sent'])
+        send_all_save_the_dates(test_only=not options['send'], mark_as_sent=True)

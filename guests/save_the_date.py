@@ -18,7 +18,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
         'kimandjacob': {
             'title': "Kim and Jacob",
             'header_filename': 'hearts.png',
-            'main_image': 'cranbrook1.JPG',
+            'main_image': 'save_the_date.jpg',
             'main_color': '#dceffd',
             'font_color': '#666666',
         },        
@@ -67,7 +67,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
     }
 
 
-def send_all_save_the_dates(test_only=False, mark_as_sent=False):
+def send_all_save_the_dates(test_only=False, mark_as_sent=True):
     to_send_to = Party.in_default_order().filter(is_invited=True, save_the_date_sent=None)
     for party in to_send_to:
         send_save_the_date_to_party(party, test_only=test_only)

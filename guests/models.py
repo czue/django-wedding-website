@@ -6,17 +6,10 @@ from django.db import models
 from django.dispatch import receiver
 from django import forms
 
-# these will determine the default formality of correspondence
-ALLOWED_TYPES = [
-    ('formal', 'formal'),
-    ('fun', 'fun'),
-]
-
 FAMILY_SIDE = [
     ('kim', 'Kim'),
-    ('jake', 'Jake'),
+    ('jacob', 'Jacob'),
 ]
-
 
 def _random_uuid():
     return uuid.uuid4().hex
@@ -28,8 +21,7 @@ class Party(models.Model):
     """
     name = models.TextField()
     family = models.CharField(max_length=10, choices=FAMILY_SIDE, default="")
-    type = models.CharField(max_length=10, choices=ALLOWED_TYPES)
-    category = models.CharField(max_length=20, null=True, blank=True)
+    address = models.CharField(max_length=1024, default="")
     save_the_date_sent = models.DateTimeField(null=True, blank=True, default=None)
     save_the_date_opened = models.DateTimeField(null=True, blank=True, default=None)
     invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
@@ -38,15 +30,14 @@ class Party(models.Model):
     is_invited = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
-    rsvp_username = models.CharField(max_length=32, unique=True, null=True)
-    #rsvp_password = models.CharField(max_length=16, null=True)
+    rsvp_code = models.CharField(max_length=32, default="")
 
     def __str__(self):
         return 'Party: {}'.format(self.name)
 
     @classmethod
     def in_default_order(cls):
-        return cls.objects.order_by('category', '-is_invited', 'name')
+        return cls.objects.order_by('family', '-is_invited', 'name')
 
     @property
     def ordered_guests(self):
@@ -62,9 +53,9 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('beef', 'cow'),
-    ('fish', 'fish'),
-    ('hen', 'hen'),
+    ('chicken', 'chicken'),
+    ('beef', 'beef'),
+    ('salmon', 'salmon'),
     ('vegetarian', 'vegetable'),
 ]
 
@@ -96,9 +87,22 @@ class Guest(models.Model):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
 
 class RsvpForm(forms.Form): 
-    username = forms.CharField(max_length = 32, help_text="<br><em> This will be your first name and last name with no caps or spaces (e.g. renerjacob) </em>")
-    #password = forms.CharField(max_length = 16, widget = forms.PasswordInput())
+    rsvp_code = forms.CharField(max_length = 32, help_text="<br><em> This will be your first name and last name with no caps or spaces (e.g. renerjacob) </em>")
+    
+    def __str__(self):
+        return self.name
 
-    #@property
-    #def authenticateUser():
-    #    print('yo')
+class UpdateInfoForm(forms.ModelForm):
+    class Meta:
+        model = Guest
+        fields = ['first_name', 'last_name', 'email']
+        widgets = {
+            'first_name': forms.TextInput(attrs={'required': True}),
+            'last_name': forms.TextInput(attrs={'required': True}),
+            'email': forms.EmailInput(attrs={'required': True}),
+        }
+#Continue from here for next time
+class testUpdateInfoForm(forms.Form): 
+    first_name = forms.TextInput(attrs={'required': True}),
+    last_name = forms.TextInput(attrs={'required': True}),
+    email = forms.EmailInput(attrs={'required': True}),

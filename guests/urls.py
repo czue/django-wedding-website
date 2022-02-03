@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, re_path
 
 from guests.views import GuestListView, rsvp_login, test_email, save_the_date_preview, save_the_date_random, export_guests, \
-    invitation, invitation_email_preview, invitation_email_test, rsvp_confirm, dashboard
+    invitation, invitation_email_preview, invitation_email_test, rsvp_confirm, dashboard, update_information
 
 urlpatterns = [
     url(r'^guests/$', GuestListView.as_view(), name='guest-list'),
@@ -16,4 +16,5 @@ urlpatterns = [
     url(r'^email-test/(?P<template_id>[\w-]+)/$', test_email, name='test-email'),
     url(r'^rsvp/confirm/(?P<invite_id>[\w-]+)/$', rsvp_confirm, name='rsvp-confirm'),
     path('rsvp/', rsvp_login),
+    re_path('update-information/(?P<invite_id>[\w-]+)/$', update_information, name='update_information'),
 ]

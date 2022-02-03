@@ -13,7 +13,7 @@ from django.views.generic import ListView
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
-from guests.models import Guest, MEALS, Party, RsvpForm
+from guests.models import Guest, MEALS, Party, RsvpForm, UpdateInfoForm
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
 
@@ -33,7 +33,7 @@ def export_guests(request):
 def dashboard(request):
     parties_with_pending_invites = Party.objects.filter(
         is_invited=True, is_attending=None
-    ).order_by('category', 'name')
+    ).order_by('name')
     parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
     attending_guests = Guest.objects.filter(is_attending=True)
@@ -42,10 +42,10 @@ def dashboard(request):
     ).filter(
         Q(meal__isnull=True) | Q(meal='')
     ).order_by(
-        'party__category', 'first_name'
+        'first_name'
     )
     meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
-    category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
+    #category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
     return render(request, 'guests/dashboard.html', context={
         'couple_name': settings.BRIDE_AND_GROOM,
         'guests': Guest.objects.filter(is_attending=True).count(),
@@ -59,7 +59,7 @@ def dashboard(request):
         'unopened_invite_count': parties_with_unopen_invites.count(),
         'total_invites': Party.objects.filter(is_invited=True).count(),
         'meal_breakdown': meal_breakdown,
-        'category_breakdown': category_breakdown,
+        #'category_breakdown': category_breakdown,
     })
 
 
@@ -116,32 +116,50 @@ def rsvp_confirm(request, invite_id=None):
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
     })
 
+def update_information(request, invite_id):
+
+
+    if request.method == 'POST':
+        return render(request, template_name='guests/update_information.html', context=context)
+    else:
+        l_party = Party.objects.get(invitation_id = invite_id)
+        guest_num_in_party = Guest.objects.filter(party = l_party).count()
+        print(guest_num_in_party)
+        form = [UpdateInfoForm(prefix=str(x), instance=Guest()) for x in range(0,(guest_num_in_party))]
+        return render(request, template_name='guests/update_information.html', context={'form':form})
+
+        #Continue from here for next time
+        #l_party = Party.objects.get(invitation_id = invite_id)
+        #l_guests = Guest.objects.filter(party = l_party)
+        #print(l_guests)
+        #for guest in l_guests:
+        #    print(guest.first_name)
+            
+
+        #form = [UpdateInfoForm(prefix=str(x), instance=Guest()) for x in range(0,(guest_num_in_party))]
+        #return render(request, template_name='guests/update_information.html', context={'form':form})
+
 def rsvp_login(request):
     form = RsvpForm
     context = {
         'form': form,
     }
-    if(request.GET.get('username')):
-        print(request.GET.get('username'))
+    if(request.GET.get('rsvp_code')):
+        print(request.GET.get('rsvp_code'))
         l_InvitationID = rsvp_match(request)
         if(l_InvitationID != 0):
             return redirect("https://wedding.jacobrener.com/invite/" + l_InvitationID)  
         else:
-            messages.error(request, "Incorrect Username. Please try again. If problems persist, please contact Jacob Rener at jakerener@gmail.com")
+            messages.error(request, "Incorrect RSVP code. Please try again. If problems persist, please contact Jacob Rener at jakerener@gmail.com")
             return render(request, template_name='guests/rsvp.html', context=context) 
     else:
         return render(request, template_name='guests/rsvp.html', context=context)
 
 def rsvp_match(request):
     Party.objects
-
-    l_username = request.GET.get('username')
-    #l_password = request.GET.get('password')
-
+    l_rsvpcode = request.GET.get('rsvp_code')
     try:
-        l_party = Party.objects.get(rsvp_username = l_username)
-        print(l_username)
-        print(l_party.category)
+        l_party = Party.objects.get(rsvp_code = l_rsvpcode)
         return l_party.invitation_id
     except Party.DoesNotExist:
         return 0

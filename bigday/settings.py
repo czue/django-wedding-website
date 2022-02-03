@@ -139,7 +139,7 @@ DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.
 # the location of your wedding
 WEDDING_LOCATION = 'Livonia, MI'
 # the date of your wedding
-WEDDING_DATE = 'September 24th, 2022'
+WEDDING_DATE = 'July 2nd, 2022'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL

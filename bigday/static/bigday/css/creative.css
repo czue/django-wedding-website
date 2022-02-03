@@ -193,7 +193,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/sunflower2.JPEG');
+    background-image: url('../images/engagement_session.jpg');
 }
 
 header .header-content {
@@ -223,7 +223,7 @@ header .header-content .header-content-inner p {
 }
 
 #second-header {
-    background-image: url('../images/chapmans-peak-view.jpg');
+    background-image: url('../images/engagement_session.jpg');
 }
 
 @media(min-width:768px) {
