@@ -56,7 +56,7 @@ MEALS = [
     ('chicken', 'chicken'),
     ('beef', 'beef'),
     ('salmon', 'salmon'),
-    ('vegetarian', 'vegetable'),
+    ('vegetarian', 'vegetarian'),
 ]
 
 
