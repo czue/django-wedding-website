@@ -99,7 +99,7 @@ class UpdateInfoForm(forms.ModelForm):
         widgets = {
             'first_name': forms.TextInput(attrs={'required': True}),
             'last_name': forms.TextInput(attrs={'required': True}),
-            'email': forms.EmailInput(attrs={'required': True}),
+            'email': forms.EmailInput(attrs={'required': False}),
         }
 #Continue from here for next time
 class testUpdateInfoForm(forms.Form): 

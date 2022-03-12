@@ -14,14 +14,15 @@
         <h1><u> Update Information Yo </u></h1>
         <!--<div style = "max-width:470px;"> -->
         <div>
-            {{ form.guest }}
-            {% for guest in form %}
-                {{ guest.as_p }}
-                </br>
-                </br>
-            {% endfor %}
+            <form>
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btnbtn-primary" value="submit" name="submit">
+                </form>
+                <br>
+                <br>
+            </form>
             {% csrf_token %}
-            <input type="submit" class="btnbtn-primary" value="submit" name="submit">
         </div>
         <!--</div>-->
             <!-- Optional Javascript -->

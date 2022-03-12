@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -12,6 +14,7 @@
         
         {% include 'guests/message.html' %}
         <h1><u> RSVP for Jacob Rener and Kim Le's Wedding </u></h1>
+        <h2></h2>
         <!--<div style = "max-width:470px;"> -->
             <form>
                 {{ form.as_p }}

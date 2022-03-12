@@ -45,7 +45,6 @@ def dashboard(request):
         'first_name'
     )
     meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
-    #category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
     return render(request, 'guests/dashboard.html', context={
         'couple_name': settings.BRIDE_AND_GROOM,
         'guests': Guest.objects.filter(is_attending=True).count(),
@@ -59,7 +58,6 @@ def dashboard(request):
         'unopened_invite_count': parties_with_unopen_invites.count(),
         'total_invites': Party.objects.filter(is_invited=True).count(),
         'meal_breakdown': meal_breakdown,
-        #'category_breakdown': category_breakdown,
     })
 
 
@@ -124,20 +122,14 @@ def update_information(request, invite_id):
     else:
         l_party = Party.objects.get(invitation_id = invite_id)
         guest_num_in_party = Guest.objects.filter(party = l_party).count()
-        print(guest_num_in_party)
-        form = [UpdateInfoForm(prefix=str(x), instance=Guest()) for x in range(0,(guest_num_in_party))]
+        guests = Guest.objects.filter(party = l_party)
+        for num in range(0,guest_num_in_party):
+            form = UpdateInfoForm(instance=guests[num])
+            
+        print(form)
+        #form = [UpdateInfoForm(prefix=str(x), instance=Guest()) for x in range(0,(guest_num_in_party))]
         return render(request, template_name='guests/update_information.html', context={'form':form})
 
-        #Continue from here for next time
-        #l_party = Party.objects.get(invitation_id = invite_id)
-        #l_guests = Guest.objects.filter(party = l_party)
-        #print(l_guests)
-        #for guest in l_guests:
-        #    print(guest.first_name)
-            
-
-        #form = [UpdateInfoForm(prefix=str(x), instance=Guest()) for x in range(0,(guest_num_in_party))]
-        #return render(request, template_name='guests/update_information.html', context={'form':form})
 
 def rsvp_login(request):
     form = RsvpForm
@@ -150,7 +142,7 @@ def rsvp_login(request):
         if(l_InvitationID != 0):
             return redirect("https://wedding.jacobrener.com/invite/" + l_InvitationID)  
         else:
-            messages.error(request, "Incorrect RSVP code. Please try again. If problems persist, please contact Jacob Rener at jakerener@gmail.com")
+            messages.error(request, "Incorrect RSVP code. Please try again. If problems persist, please contact Jacob and Kim at kimle.jacobrener@gmail.com")
             return render(request, template_name='guests/rsvp.html', context=context) 
     else:
         return render(request, template_name='guests/rsvp.html', context=context)
@@ -163,8 +155,6 @@ def rsvp_match(request):
         return l_party.invitation_id
     except Party.DoesNotExist:
         return 0
-
-
 
 @login_required
 def invitation_email_preview(request, invite_id):
@@ -181,7 +171,8 @@ def invitation_email_test(request, invite_id):
 
 
 def save_the_date_random(request):
-    template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
+    #template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
+    template_id = 'kimandjacob'
     return save_the_date_preview(request, template_id)
 
 
