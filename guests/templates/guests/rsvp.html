@@ -1,31 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Bootstrap CSS-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
-        <title>RSVP</title>
-    </head>
+{% block page_head %}
+    <link href="{% static 'bigday/css/rsvp.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
+    {% endblock %}
+
+    {% block page_content %}
     <body>
         
         {% include 'guests/message.html' %}
-        <h1><u> RSVP for Jacob Rener and Kim Le's Wedding </u></h1>
-        <h2></h2>
-        <!--<div style = "max-width:470px;"> -->
+        <div id="rsvp-heading">
+            <h1><u> RSVP for Our Wedding! </u></h1>
+        </div>
+        <div class="container" id="rsvp-body">
             <form>
                 {{ form.as_p }}
                 {% csrf_token %}
-                <input type="submit" class="btnbtn-primary" value="submit" name="submit">
+                <p id="rsvp-hint">
+                    The code was sent to you in the invitatiion
+                    </br>
+                    Still stuck: Let us know at <a href="mailto:{{ support_email }}">{{ support_email }}</a>. 
+                </p>
+                <input type="submit" class="btnbtn-primary" value="Submit" name="submit">
             </form>
-        <!--</div>-->
+        </div>
             <!-- Optional Javascript -->
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-      </body>
-</html>
+    </body>
+    {% endblock %}

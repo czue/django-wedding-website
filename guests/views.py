@@ -135,6 +135,7 @@ def rsvp_login(request):
     form = RsvpForm
     context = {
         'form': form,
+        'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
     }
     if(request.GET.get('rsvp_code')):
         print(request.GET.get('rsvp_code'))
@@ -150,6 +151,7 @@ def rsvp_login(request):
 def rsvp_match(request):
     Party.objects
     l_rsvpcode = request.GET.get('rsvp_code')
+    l_rsvpcode = l_rsvpcode.lower()
     try:
         l_party = Party.objects.get(rsvp_code = l_rsvpcode)
         return l_party.invitation_id
