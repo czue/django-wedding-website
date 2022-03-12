@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,17 +129,17 @@ STATICFILES_DIRS = (
 )
 
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Kim and Jake'
+BRIDE_AND_GROOM = 'Kim and Jacob'
 # base address for all emails
-DEFAULT_WEDDING_EMAIL = 'jakerener@gmail.com'
+DEFAULT_WEDDING_EMAIL = 'KimLe.JacobRener@gmail.com'
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
+DEFAULT_WEDDING_FROM_EMAIL = 'KimLe.JacobRener@gmail.com'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
 # the location of your wedding
 WEDDING_LOCATION = 'Livonia, MI'
 # the date of your wedding
-WEDDING_DATE = 'September 24th, 2022'
+WEDDING_DATE = 'July 2nd, 2022'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
@@ -145,12 +147,27 @@ DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 
 # This is used in links in save the date / invitations
 WEDDING_WEBSITE_URL = 'https://wedding.jacobrener.com'
-WEDDING_CC_LIST = ['jakerener@gmail.com']  # put email addresses here if you want to cc someone on all your invitations
+WEDDING_CC_LIST = ['jakerener@gmail.com', 'khle2012@gmail.com']  # put email addresses here if you want to cc someone on all your invitations
 
 # change to a real email backend in production
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'KimLe.JacobRener@gmail.com'
+EMAIL_HOST_PASSWORD = 'hQ2yK8W&PXUTUfpJ'
+EMAIL_PORT = 587
 
 try:
     from .localsettings import *
 except ImportError:
     pass
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+ }

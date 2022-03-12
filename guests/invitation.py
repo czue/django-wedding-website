@@ -28,7 +28,7 @@ def get_invitation_context(party):
         'main_image': 'bride-groom.png',
         'main_color': '#fff3e8',
         'font_color': '#666666',
-        'page_title': "Cory and Rowena - You're Invited!",
+        'page_title': "Jacob and Kim - You're Invited!",
         'preheader_text': "You are invited!",
         'invitation_id': party.invitation_id,
         'party': party,
@@ -74,7 +74,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
 def send_all_invitations(test_only, mark_as_sent):
     to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
     for party in to_send_to:
-        send_invitation_email(party, test_only=test_only)
+        send_invitation_email(party, test_only=False)
         if mark_as_sent:
             party.invitation_sent = datetime.now()
             party.save()
