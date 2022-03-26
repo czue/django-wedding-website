@@ -5,54 +5,7 @@
     <link href="{% static 'bigday/css/creative.css' %}" rel="stylesheet">
 {% endblock %}
 {% block page_content %}
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">{{ couple_name }}'s Big Day</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#main-header">Home</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#ceremony">Event</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#wedding-party">Wedding Party</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#story">Our Story</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#livonia">Lodging and Things to Do</a>
-                    </li>
-                    <!-- /<li>
-                        <a class="page-scroll" href="#gifts">Gifts</a>
-                    </li>-->
-					<li>
-                        <a class="page-scroll" href="#gallery">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="rsvp">RSVP</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+{% include 'navbar.html' %}
     {% block main %}
 
     <header id="main-header">
@@ -79,11 +32,14 @@
                         Hello friends and family! Kim and Jacob are getting married!
                     </p>
                     <p>
-                        If you're looking for information about the Tea Ceremony, the Wedding Ceremony, or the Reception, look no further!
-                        Please see below for all the details regarding the <a href="#teaceremony" class="page-scroll">Tea Ceremony</a>, the <a href="#ceremony" class="page-scroll">Wedding Ceremony</a>, and the <a href="#reception" class="page-scroll">Reception</a>.
+                        If you're looking for information about the Wedding Ceremony or the Reception, look no further!
+                        Please see below for all the details regarding the <a href="#ceremony" class="page-scroll">Wedding Ceremony</a> and the <a href="#reception" class="page-scroll">Reception</a>.
                     </p>
                     <p>
-                        Looking forward to seeing everyone soon!
+                        If you plan on booking a hotel room, we have a wedding block available at the <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1645267315857&key=GRP&app=resvlink">Fairfiled Inn & Suites</a> for $109/night.  Bookings will need to be completed by June 10, 2022.
+                    </p>
+                    <p>
+                        We look forward to seeing everyone soon!
                     </p>
                     <p class="pull-right">- Jacob and Kim</p>
                 </div>
@@ -135,24 +91,21 @@
 	<section id="event">
     {% include 'partials/event.html' %}
 	</section>
-	<section id="wedding-party">
-		{% include 'partials/wedding-party.html' %}
-	</section>
+    <section id="livonia">
+        {% include 'partials/livonia.html' %}
+    </section>
+    <section id="things-to-do">
+        {% include 'partials/things-to-do.html' %}
+    </section>
     <section id="story" class="bg-dark">
         {% include 'partials/story.html' %}
     </section>
 	<section id="proposal">
 		{% include 'partials/proposal.html' %}
-<!--	</section>
-	<section id="save-the-dates">
-		{% include 'partials/save-the-dates.html' %} 
-	</section>  -->
-    <section id="livonia">
-        {% include 'partials/livonia.html' %}
     </section>
-    <!--<section id="gifts">
-        {% include 'partials/gifts.html' %}
-    </section>-->
+    <section id="wedding-party">
+		{% include 'partials/wedding-party.html' %}
+	</section>
     <section id="gallery">
         {% include 'partials/gallery.html' %}
     </section>

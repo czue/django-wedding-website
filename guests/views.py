@@ -112,6 +112,7 @@ def rsvp_confirm(request, invite_id=None):
     return render(request, template_name='guests/rsvp_confirmation.html', context={
         'party': party,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
+        'couple_name': settings.BRIDE_AND_GROOM,
     })
 
 def update_information(request, invite_id):
@@ -136,6 +137,7 @@ def rsvp_login(request):
     context = {
         'form': form,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
+        'couple_name': settings.BRIDE_AND_GROOM,
     }
     if(request.GET.get('rsvp_code')):
         print(request.GET.get('rsvp_code'))
