@@ -2,11 +2,9 @@
 
 Live site examples:
 
-- [Standard Wedding Website](http://rowena-and.coryzue.com/)
-- [Random Save The Date Email](http://rowena-and.coryzue.com/save-the-date/) (refresh for more examples)
-- [Sample Personal Invitation Page](http://rowena-and.coryzue.com/invite/b2ad24ec5dbb4694a36ef4ab616264e0/)
-
-There is also [a longer writeup on this project here](https://www.placecard.me/blog/django-wedding-website/).
+- [Standard Wedding Website](https://wedding.jacobrener.com/)
+- [Save The Date Email](https://wedding.jacobrener.com/save-the-date/)
+- [Sample Personal Invitation Page](https://wedding.jacobrener.com/invite/0c3528edbd0440d282a5dc8b20b87cf2/)
 
 ## What's included?
 
@@ -16,6 +14,7 @@ This includes everything we did for our own wedding:
 - A complete guest management application
 - Email framework for sending save the dates
 - Email framework for invitations and built in RSVP system
+- RSVP codes for people without emails
 - Guest dashboard
 
 More details on these below.
@@ -32,8 +31,6 @@ It is completely customizable to your needs and the content is laid out in stand
 - A photo/hover navigation pane
 - Configurable content sections for every aspect of your site that you want
 - A set of different styles you can use for different sections
-
-![Hero Section of Wedding Website](https://raw.githubusercontent.com/czue/django-wedding-website/master/screenshots/hero-page.png)
 
 ### Guest management
 
@@ -64,11 +61,6 @@ See the `import_guests` management command for more details and `bigday/guests/t
 
 The app comes with a built-in cross-client and mobile-friendly email template for save the dates (see `save_the_date.html`).
 
-You can create multiple save the dates and send them out either randomly or by `Party` type (useful if you want to send formal
-invitations to some people and more playful ones to others).
-
-See `save_the_date.py` and `SAVE_THE_DATE_CONTEXT_MAP` for customizing your save the dates.
-
 ### Invitations and RSVPs
 
 The app also comes with a built-in invitation system.
@@ -85,9 +77,6 @@ has to respond, people who haven't selected a meal, etc.
 It's a great way of tracking your big picture numbers in terms of how many guests to expect.
 
 Just access `/dashboard/` from an account with admin access. Your other guests won't be able to see it.
-
-![Wedding Dashboard](https://raw.githubusercontent.com/czue/django-wedding-website/master/screenshots/wedding-dashboard.png)
-
 ### Other details
 
 You can easily hook up Google analytics by editing the tracking ID in `google-analytics.html`.
@@ -126,12 +115,4 @@ is a good starting place for learning how to connect to a real mail service.
 To customize the email addresses, see the `DEFAULT_WEDDING_FROM_EMAIL` and
 `DEFAULT_WEDDING_REPLY_EMAIL` variables in `settings.py`.
 
-### Other customizations
 
-If you want to use this project for your wedding but need help getting started just [get in touch](http://www.coryzue.com/contact/) or make an issue
-for anything you encounter and I'm happy to help.
-
-I haven't built out more complete customization docs yet because I wasn't sure anyone would be interested in this,
-but will add to these instructions whenever I get questions!
-
--Cory
