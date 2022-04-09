@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Detroit'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -131,9 +131,9 @@ STATICFILES_DIRS = (
 # This is used in a few places where the names of the couple are used
 BRIDE_AND_GROOM = 'Kim and Jacob'
 # base address for all emails
-DEFAULT_WEDDING_EMAIL = 'KimLe.JacobRener@gmail.com'
+DEFAULT_WEDDING_EMAIL = 'lerenerwedding@gmail.com'
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'KimLe.JacobRener@gmail.com'
+DEFAULT_WEDDING_FROM_EMAIL = 'postmaster@mail.jacobrener.com'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
 # the location of your wedding
@@ -142,7 +142,7 @@ WEDDING_LOCATION = 'Livonia, MI'
 WEDDING_DATE = 'July 2nd, 2022'
 
 # when sending test emails it will use this address
-DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
+DEFAULT_WEDDING_TEST_EMAIL = 'lerenerwedding@gmail.com'
 
 
 # This is used in links in save the date / invitations
@@ -154,9 +154,9 @@ WEDDING_CC_LIST = ['jakerener@gmail.com', 'khle2012@gmail.com']  # put email add
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'KimLe.JacobRener@gmail.com'
-EMAIL_HOST_PASSWORD = 'hQ2yK8W&PXUTUfpJ'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@mail.jacobrener.com'
+EMAIL_HOST_PASSWORD = '5f78fad622befa37802a23c8e5140be3-62916a6c-15430437'
 EMAIL_PORT = 587
 
 try:

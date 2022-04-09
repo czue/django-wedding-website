@@ -28,7 +28,7 @@ def import_guests(path):
             if party.address == '':
                 party.address = address
             if party.rsvp_code == '':
-                party.rsvp_code = (last_name + first_name).lower()
+                party.rsvp_code = (last_name + first_name).lower().replace(" ", "")
             party.family == family
             party.is_invited = _is_true(is_invited)
             if not party.invitation_id:
@@ -41,7 +41,7 @@ def import_guests(path):
 
 def export_guests():
     headers = [
-        'party_name', 'first_name', 'last_name', 'family',
+        'party_name', 'rsvp_code','first_name', 'last_name', 'family',
         'is_child', 'is_invited', 'is_attending',
         'tea_ceremony', 'meal', 'email', 'comments'
     ]
@@ -52,6 +52,7 @@ def export_guests():
         for guest in party.guest_set.all():
             writer.writerow([
                 party.name,
+                party.rsvp_code,
                 guest.first_name,
                 guest.last_name,
                 party.family,

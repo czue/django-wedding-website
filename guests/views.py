@@ -77,6 +77,9 @@ def invitation(request, invite_id):
         if request.POST.get('comments'):
             comments = request.POST.get('comments')
             party.comments = comments if not party.comments else '{}; {}'.format(party.comments, comments)
+        if request.POST.get('name_update_comments'):
+            name_update_comments = request.POST.get('name_update_comments')
+            party.name_update_comments = name_update_comments if not party.name_update_comments else '{}; {}'.format(party.name_update_comments, name_update_comments)
         party.is_attending = party.any_guests_attending
         party.save()
         return HttpResponseRedirect(reverse('rsvp-confirm', args=[invite_id]))
@@ -145,7 +148,7 @@ def rsvp_login(request):
         if(l_InvitationID != 0):
             return redirect("https://wedding.jacobrener.com/invite/" + l_InvitationID)  
         else:
-            messages.error(request, "Incorrect RSVP code. Please try again. If problems persist, please contact Jacob and Kim at kimle.jacobrener@gmail.com")
+            messages.error(request, "Incorrect RSVP code. Please try again. If problems persist, please contact Jacob and Kim at " + settings.DEFAULT_WEDDING_REPLY_EMAIL)
             return render(request, template_name='guests/rsvp.html', context=context) 
     else:
         return render(request, template_name='guests/rsvp.html', context=context)
@@ -153,7 +156,7 @@ def rsvp_login(request):
 def rsvp_match(request):
     Party.objects
     l_rsvpcode = request.GET.get('rsvp_code')
-    l_rsvpcode = l_rsvpcode.lower()
+    l_rsvpcode = l_rsvpcode.lower().replace(" ", "")
     try:
         l_party = Party.objects.get(rsvp_code = l_rsvpcode)
         return l_party.invitation_id

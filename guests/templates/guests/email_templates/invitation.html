@@ -20,6 +20,7 @@
     </tr>
 {% endblock %}
 {% block main_image %}
+</br>
     {% with "invitation/images/"|add:main_image as main_static_url %}
     <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
          alt="{{ couple }}"

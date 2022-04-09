@@ -30,6 +30,7 @@ class Party(models.Model):
     is_invited = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
+    name_update_comments = models.TextField(null=True, blank=True)
     rsvp_code = models.CharField(max_length=32, default="")
 
     def __str__(self):
@@ -57,6 +58,7 @@ MEALS = [
     ('beef', 'beef'),
     ('salmon', 'salmon'),
     ('vegetarian', 'vegetarian'),
+    ('kidsmeal', 'kids meal'),
 ]
 
 

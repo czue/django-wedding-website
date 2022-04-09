@@ -9,14 +9,14 @@ class GuestInline(admin.TabularInline):
 
 
 class PartyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'family', 'save_the_date_sent', 'invitation_sent', 'invitation_opened', 'is_invited', 'is_attending')
-    list_filter = ('is_invited', 'is_attending', 'invitation_opened')
+    list_display = ('name', 'family', 'rsvp_code', 'invitation_opened', 'is_attending', 'name_update_comments', 'comments')
+    list_filter = ('is_attending', 'invitation_opened')
     inlines = [GuestInline]
 
 
 class GuestAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email' , 'is_attending', 'is_child', 'meal')
-    list_filter = ('is_attending', 'is_child', 'meal', 'party__is_invited')
+    list_display = ('first_name', 'last_name', 'is_attending', 'party', 'is_child', 'meal')
+    list_filter = ('is_attending', 'is_child', 'meal')
 
 
 admin.site.register(Party, PartyAdmin)
