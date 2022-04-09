@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 from django.contrib.messages import constants as messages
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -152,11 +151,14 @@ WEDDING_CC_LIST = ['jakerener@gmail.com', 'khle2012@gmail.com']  # put email add
 # change to a real email backend in production
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+with open('mailgun_settings.txt') as f:
+    MAILGUN_EMAIL_PASSWORD = f.read().strip()
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'postmaster@mail.jacobrener.com'
-EMAIL_HOST_PASSWORD = '5f78fad622befa37802a23c8e5140be3-62916a6c-15430437'
+EMAIL_HOST_PASSWORD = MAILGUN_EMAIL_PASSWORD
 EMAIL_PORT = 587
 
 try:

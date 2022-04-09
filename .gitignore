@@ -11,3 +11,4 @@ static/
 guests/static/save-the-date/images/archive/
 .DS_Store
 guests/migrations
+.env
