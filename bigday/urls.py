@@ -1,10 +1,10 @@
-from django.conf.urls import url, include
+from django.urls import re_path, include
 from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^', include('wedding.urls')),
-    url(r'^', include('guests.urls')),
-    url(r'^admin/', admin.site.urls),
-    url('^accounts/', include('django.contrib.auth.urls'))
+    re_path(r'^', include('wedding.urls')),
+    re_path(r'^', include('guests.urls')),
+    re_path(r'^admin/', admin.site.urls),
+    re_path('^accounts/', include('django.contrib.auth.urls'))
 ]

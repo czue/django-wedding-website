@@ -31,7 +31,7 @@ class Party(models.Model):
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
     is_invited = models.BooleanField(default=False)
     rehearsal_dinner = models.BooleanField(default=False)
-    is_attending = models.NullBooleanField(default=None)
+    is_attending = models.BooleanField(default=None, null=True)
     comments = models.TextField(null=True, blank=True)
 
     def __str__(self):
@@ -70,7 +70,7 @@ class Guest(models.Model):
     first_name = models.TextField()
     last_name = models.TextField(null=True, blank=True)
     email = models.TextField(null=True, blank=True)
-    is_attending = models.NullBooleanField(default=None)
+    is_attending = models.BooleanField(default=None, null=True)
     meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
     is_child = models.BooleanField(default=False)
 
