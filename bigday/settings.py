@@ -152,10 +152,12 @@ DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
 
-if (MAIL_BACKEND == "console"):
+if (MAIL_BACKEND == 'console'):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+elif (MAIL_BACKEND == 'smtp'):
+
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # Set email backend to use SMTP
     try:
         # To protect your credentials from leaking to your Git server we added "localsettings.py" to the gitignore
         # Rename "localsettings.py.template" to "localsettings.py" and edit your settings.
@@ -168,4 +170,3 @@ else:
     except ImportError:
         print("Your custom settings could not be imported. Falling back to localhost!")
         EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-        pass
