@@ -25,6 +25,9 @@ SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Set to "console" for console output of emails or to "smtp" to send real mails
+MAIL_BACKEND = "console"
+
 ALLOWED_HOSTS = []
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
@@ -152,7 +155,20 @@ WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on al
 # change to a real email backend in production
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-try:
-    from .localsettings import *
-except ImportError:
-    pass
+if (MAIL_BACKEND == "console"):
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    try:
+        # To protect your credentials from leaking to your Git server we added "localsettings.py" to the gitignore
+        # Rename "localsettings.py.template" to "localsettings.py" and edit your settings.
+        from .localsettings import mailvariables
+        EMAIL_HOST = mailvariables.OWN_EMAIL_HOST
+        EMAIL_USE_TLS = mailvariables.OWN_EMAIL_USE_TLS
+        EMAIL_HOST_USER = mailvariables.OWN_EMAIL_HOST_USER
+        EMAIL_HOST_PASSWORD = mailvariables.OWN_EMAIL_HOST_PASSWORD
+        EMAIL_PORT = mailvariables.OWN_EMAIL_PORT
+    except ImportError:
+        print("Your custom settings could not be imported. Falling back to localhost!")
+        EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+        pass

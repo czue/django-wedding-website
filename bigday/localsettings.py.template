@@ -1,0 +1,6 @@
+class mailvariables: 
+    OWN_EMAIL_HOST = 'yourHost'
+    OWN_EMAIL_USE_TLS = True
+    OWN_EMAIL_HOST_USER = 'yourUser'
+    OWN_EMAIL_HOST_PASSWORD = 'YourSecret'
+    OWN_EMAIL_PORT = 587
