@@ -115,11 +115,11 @@ Searching for the text on a page in the repository is a great way to find where 
 ### Sending email
 
 This application uses Django's email framework for sending mail. 
-You need to modify the `EMAIL_HOST`, `EMAIL_PORT` and other associated variables in `settings.py` in order
-to hook it into a real server.
+In order to hook it into a real server, you need to switch the variable `MAIL_BACKEND` of the `bigday/settings.py` from `console` to `smtp`.
+Furthermore, you need to copy or move the `bigday/localsettings.py.template` to `bigday/localsettings.py` and enter your email configuration there.
+`localsettings.py` is excluded from Git, so you won't accidentally submit your credentials to a public repository.
 
-This [thread on stack overflow](https://stackoverflow.com/questions/6367014/how-to-send-email-via-django)
-is a good starting place for learning how to connect to a real mail service.
+This [thread on stack overflow](https://stackoverflow.com/questions/6367014/how-to-send-email-via-django) has a working example for a Gmail configuration.
 
 ### Email addresses
 
