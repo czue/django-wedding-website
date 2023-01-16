@@ -20,7 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
+# This is a default value and must be changed!
+# Rename "localsettings.py.template" to 'localsettings.py' and edit your settings.
+# To protect your credentials from leaking to your Git server we added 'localsettings.py' to the gitignore
+try:
+    from .localsettings import ownSecretKey
+    SECRET_KEY = ownSecretKey.OWN_SECRET
+except ImportError:
+    SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -131,42 +138,54 @@ STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
 
-# This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Bride and Groom'
-# base address for all emails
-DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
-# the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
-# the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
-# the location of your wedding
-WEDDING_LOCATION = 'North Pole, USA'
-# the date of your wedding
-WEDDING_DATE = 'January 1st, 1969'
+# Checks, if the 'localsettings.py' is present and set some couple variables
+# which are used in a few places.
+# Otherwise it will just use some defaults, useful for testing.
 
-# when sending test emails it will use this address
-DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
-
-
-# This is used in links in save the date / invitations
-WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
-WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
+try:
+    from .localsettings import coupleData
+    BRIDE_AND_GROOM = coupleData.OWN_BRIDE_AND_GROOM
+    WEDDING_DATE = coupleData.OWN_WEDDING_DATE
+    WEDDING_LOCATION = coupleData.OWN_WEDDING_LOCATION
+    WEDDING_WEBSITE_URL = coupleData.OWN_WEDDING_WEBSITE_URL
+except ImportError:
+    BRIDE_AND_GROOM = 'Bride and Groom'
+    WEDDING_DATE = 'January 1st, 1969'
+    WEDDING_LOCATION = 'North Pole, USA'
+    WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
 
 if (MAIL_BACKEND == 'console'):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+    WEDDING_CC_LIST = [] 
 
 elif (MAIL_BACKEND == 'smtp'):
 
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # Set email backend to use SMTP
     try:
-        # To protect your credentials from leaking to your Git server we added "localsettings.py" to the gitignore
-        # Rename "localsettings.py.template" to "localsettings.py" and edit your settings.
+        # To protect your credentials from leaking to your Git server we added 'localsettings.py' to the gitignore
+        # Rename "localsettings.py.template" to 'localsettings.py' and edit your settings.
         from .localsettings import mailvariables
         EMAIL_HOST = mailvariables.OWN_EMAIL_HOST
         EMAIL_USE_TLS = mailvariables.OWN_EMAIL_USE_TLS
         EMAIL_HOST_USER = mailvariables.OWN_EMAIL_HOST_USER
         EMAIL_HOST_PASSWORD = mailvariables.OWN_EMAIL_HOST_PASSWORD
         EMAIL_PORT = mailvariables.OWN_EMAIL_PORT
+        DEFAULT_WEDDING_EMAIL = mailvariables.OWN_DEFAULT_WEDDING_EMAIL
+        DEFAULT_WEDDING_REPLY_EMAIL = mailvariables.OWN_DEFAULT_WEDDING_REPLY_EMAIL
+        WEDDING_CC_LIST = mailvariables.OWN_WEDDING_CC_LIST
     except ImportError:
         print("Your custom settings could not be imported. Falling back to localhost!")
         EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+        # Just default to some values, so that you can keep testing if you haven't created the 'localsettings.py'
+        DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+        WEDDING_CC_LIST = [] 
+
+
+# the address your emails (save the dates/invites/etc.) will come from
+DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
+# when sending test emails it will use this address
+DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
+# the default reply-to of your emails
+DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL
