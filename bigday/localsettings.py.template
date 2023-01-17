@@ -1,28 +1,24 @@
-class mailvariables: 
-    # configuration of your email server
-    OWN_EMAIL_HOST = 'yourHost'
-    OWN_EMAIL_USE_TLS = True
-    OWN_EMAIL_HOST_USER = 'yourUser'
-    OWN_EMAIL_HOST_PASSWORD = 'YourSecret'
-    OWN_EMAIL_PORT = 587
+# email server configuration
+EMAIL_HOST = 'yourHost'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yourUser'
+EMAIL_HOST_PASSWORD = 'YourSecret'
+EMAIL_PORT = 587
 
-    # your sending email address
-    OWN_DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
-    # your 'reply to' email address
-    OWN_DEFAULT_WEDDING_REPLY_EMAIL = 'happilyeverafter@example.com'
-    # put email addresses here if you want to cc someone on all your invitations
-    OWN_WEDDING_CC_LIST = []
+# your standard sending addresses
+DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'happilyeverafter@example.com'
+# put email addresses here if you want to cc someone on all your invitations
+WEDDING_CC_LIST = []
 
-class coupleData:
-    # your names
-    OWN_BRIDE_AND_GROOM = 'Your names'
-    # the location of your wedding
-    OWN_WEDDING_LOCATION = 'Somewhere special'
-    # the date of your wedding
-    OWN_WEDDING_DATE = 'January 1st, 1969'
-    # This is used in links in save the date / invitations
-    OWN_WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
+# your names
+BRIDE_AND_GROOM = 'Your names'
+# the location of your wedding
+WEDDING_LOCATION = 'Somewhere special'
+# the date of your wedding
+WEDDING_DATE = 'January 1st, 1969'
+# this is used in links in save the date / invitations
+WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
 
-class ownSecretKey:
-    # Django secret. You must change this!
-    OWN_SECRET = 'Decibel-Dutiful-Nintendo-Gala0'
+# Django secret. You must change this!
+SECRET = 'Decibel-Dutiful-Nintendo-Gala0'
