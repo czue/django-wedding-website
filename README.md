@@ -122,7 +122,7 @@ Searching for the text on a page in the repository is a great way to find where 
 
 Some things are already customizable thanks to the use of variables. 
 Copy `bigday/localsettings.py.template` to `bigday/localsettings.py` and edit the values.
-You definitely need to change the `OWN_SECRET` to a new secure value.
+You definitely need to change the `SECRET_KEY` to a new secure value.
 
 `localsettings.py` is excluded from Git, so you won't accidentally submit your personal data to a public repository.
 
