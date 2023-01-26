@@ -21,4 +21,4 @@ WEDDING_DATE = 'January 1st, 1969'
 WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
 
 # Django secret. You must change this!
-SECRET = 'Decibel-Dutiful-Nintendo-Gala0'
+SECRET_KEY = 'Decibel-Dutiful-Nintendo-Gala0'
