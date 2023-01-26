@@ -148,7 +148,7 @@ python send_invitations -h
 
 ### Email addresses
 
-To customize the email addresses, see the `OWN_DEFAULT_WEDDING_FROM_EMAIL` and
+To customize the email addresses, see the `DEFAULT_WEDDING_FROM_EMAIL` and
 `OWN_DEFAULT_WEDDING_REPLY_EMAIL` variables in `bigday/localsettings.py` (See `Customization`).
 You are also able to CC someone on all your outgoing emails using `OWN_WEDDING_CC_LIST`
 
