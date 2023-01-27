@@ -1,0 +1,24 @@
+# email server configuration
+EMAIL_HOST = 'yourHost'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yourUser'
+EMAIL_HOST_PASSWORD = 'YourSecret'
+EMAIL_PORT = 587
+
+# your standard sending addresses
+DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'happilyeverafter@example.com'
+# put email addresses here if you want to cc someone on all your invitations
+WEDDING_CC_LIST = []
+
+# your names
+BRIDE_AND_GROOM = 'Your names'
+# the location of your wedding
+WEDDING_LOCATION = 'Somewhere special'
+# the date of your wedding
+WEDDING_DATE = 'January 1st, 1969'
+# this is used in links in save the date / invitations
+WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
+
+# Django secret. You must change this!
+SECRET_KEY = 'Decibel-Dutiful-Nintendo-Gala0'
