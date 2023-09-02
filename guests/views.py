@@ -115,6 +115,7 @@ def rsvp_confirm(request, invite_id=None):
     return render(request, template_name='guests/rsvp_confirmation.html', context={
         'party': party,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
+        'couple_name' : settings.BRIDE_AND_GROOM,
     })
 
 
