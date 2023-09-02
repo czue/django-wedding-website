@@ -85,6 +85,7 @@ def invitation(request, invite_id):
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
         'meals': MEALS,
+        'couple_name' : settings.BRIDE_AND_GROOM,
     })
 
 
