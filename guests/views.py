@@ -85,6 +85,7 @@ def invitation(request, invite_id):
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
         'meals': MEALS,
+        'couple_name' : settings.BRIDE_AND_GROOM,
     })
 
 
@@ -114,6 +115,7 @@ def rsvp_confirm(request, invite_id=None):
     return render(request, template_name='guests/rsvp_confirmation.html', context={
         'party': party,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
+        'couple_name' : settings.BRIDE_AND_GROOM,
     })
 
 
