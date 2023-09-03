@@ -36,12 +36,15 @@ def get_invitation_context(party):
     }
 
 
-def send_invitation_email(party, test_only=False, recipients=None):
+def send_invitation_email(party, test_only=False, recipients=None, unique_addresses_only=False):
     if recipients is None:
         recipients = party.guest_emails
     if not recipients:
         print ('===== WARNING: no valid email addresses found for {} ====='.format(party))
         return
+    if unique_addresses_only:
+        # Remove duplicate emails within this party party
+        recipients = list(dict.fromkeys(recipients))
 
     context = get_invitation_context(party)
     context['email_mode'] = True
