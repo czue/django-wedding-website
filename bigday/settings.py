@@ -31,7 +31,8 @@ DEBUG = True
 # Set to "console" for console output of emails or to "smtp" to send real mails
 MAIL_BACKEND = "console"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["my_website_url"]
+CSRF_TRUSTED_ORIGINS = ["my_website_url",'https://.127.0.0.1' ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
