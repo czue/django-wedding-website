@@ -137,13 +137,13 @@ This [thread on stack overflow](https://stackoverflow.com/questions/6367014/how-
 Save the dates and invitations can be send with the following commands:
 ```bash
 python manage.py send_save_the_dates --send --mark-sent
-python send_invitations --send --mark-sent
+python manage.py send_invitations --send --mark-sent
 ```
 
 If you want to know more about the command line options, please use the `-h` option:
 ```bash
 python manage.py send_save_the_dates -h
-python send_invitations -h
+python manage.py send_invitations -h
 ```
 
 ### Email addresses
