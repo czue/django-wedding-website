@@ -32,7 +32,7 @@ DEBUG = True
 MAIL_BACKEND = "console"
 
 ALLOWED_HOSTS = ["my_website_url"]
-CSRF_TRUSTED_ORIGINS = ["my_website_url",'https://.127.0.0.1' ]
+CSRF_TRUSTED_ORIGINS = ["my_website_url",'https://127.0.0.1' ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
