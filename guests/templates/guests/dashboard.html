@@ -60,6 +60,44 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-lg-6">
+                <h1>Attending guests</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for person in guestlist %}
+                        <tr>
+                            <td>{{ person.party.name }}</td>
+                            <td>{{ person.first_name }} {{ person.last_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <h1>Unavailable guests</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for person in notcoming %}
+                        <tr>
+                            <td>{{ person.party.name }}</td>
+                            <td>{{ person.first_name }} {{ person.last_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="row">
             <div class="col-lg-6">
