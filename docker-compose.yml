@@ -1,0 +1,30 @@
+version: "3"
+services:
+  # WARNING: If you want to use this docker-compose file in production, you need to backup your database!
+  postgres:
+    container_name: postgres-wedding
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=wedding
+    ports:
+      - 5432:5432
+  wedding:
+    container_name: wedding
+    build: .
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=changeme
+      - POSTGRES_SERVER=postgres-wedding
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=wedding
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_PORT=5432
+      - DJANGO_SUPERUSER_PASSWORD=changeme
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres

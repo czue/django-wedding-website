@@ -12,9 +12,14 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 
+import environ
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -23,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # This is a default value and must be changed!
 # Rename "localsettings.py.template" to 'localsettings.py' and edit your settings.
 # To protect your credentials from leaking to your Git server we added 'localsettings.py' to the gitignore
-SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
+SECRET_KEY = env('SECRET_KEY', default='u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,7 +97,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    # if you want to use the postgres database just uncomment the following lines and comment out the sqlite3 lines
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': env('POSTGRES_DB'),
+    #     'USER': env('POSTGRES_USER'),
+    #     'PASSWORD': env('POSTGRES_PASSWORD'),
+    #     'HOST': env('POSTGRES_SERVER'),
+    #     'PORT': env('POSTGRES_PORT'),
+    # }
 }
 
 
