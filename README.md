@@ -125,7 +125,11 @@ configuration on how to use the [Postgres](https://www.postgresql.org/) database
 You can also run the project using [Docker](https://www.docker.com/). To build the image and run the container you can run:
 ```bash
 docker build -t django-wedding-website .
-docker run -it -p 8080:8080 django-wedding-website
+docker run -it -p 8080:8080 \
+      -e DJANGO_SUPERUSER_PASSWORD=changeme \
+      -e DJANGO_SUPERUSER_USERNAME=admin \
+      -e DJANGO_SUPERUSER_EMAIL=admin@example.com \
+      django-wedding-website
 ```
 You can now visit your site at `http://localhost:8080`
 
