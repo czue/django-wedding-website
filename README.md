@@ -115,6 +115,28 @@ You can now visit your site at `http://localhost:8000/`.
 The dashboard and admin interface are available at `http://localhost:8000/dashboard/` and `http://localhost:8000/admin/`. 
 Use the superuser created in step three of the commands above.
 
+
+### Database
+The default setup of this project uses a SQLite database, which is persisted on the file system. If you want to use another
+database you can change the `DATABASES` config option in the `settings.py` file. This file already contains an example
+configuration on how to use the [Postgres](https://www.postgresql.org/) database specified in the docker-compose file.
+
+### Docker
+You can also run the project using [Docker](https://www.docker.com/). To build the image and run the container you can run:
+```bash
+docker build -t django-wedding-website .
+docker run -it -p 8080:8080 django-wedding-website
+```
+You can now visit your site at `http://localhost:8080`
+
+#### Docker Compose
+To run the project with a Postgres database, you can
+- Change the `DATABASES` configuration in `settings.py` to use the Postgres database
+- Start the Postgres Database and the project container with `docker-compose up --build`
+- You can now visit your site at `http://localhost:8080`
+
+> Note that if you want to make a production deployment with Docker you need to backup the SQLite or Postgres database!
+
 ## Customization
 
 I recommend forking this project and just manually modifying it by hand to replace everything with what you want.
